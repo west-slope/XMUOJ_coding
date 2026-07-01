@@ -34,7 +34,8 @@
     hintSection: document.getElementById("hintSection"),
     hint: document.getElementById("hint"),
     solutionPath: document.getElementById("solutionPath"),
-    solutionCode: document.getElementById("solutionCode")
+    solutionCode: document.getElementById("solutionCode"),
+    content: document.querySelector(".content")
   };
 
   function flattenProblems() {
@@ -137,6 +138,7 @@
     const fallbackCode = "还没有找到本题答案代码。把代码放到 solutions/<contestId>/<problemId>.<ext> 后重新运行导入脚本。";
     els.solutionCode.innerHTML = highlightCode(solution.code || fallbackCode, solution.language);
     els.copyCode.disabled = !solution.code;
+    if (els.content) els.content.scrollTop = 0;
 
     if (rerenderNav) renderNav();
   }

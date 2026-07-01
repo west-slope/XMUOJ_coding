@@ -20,9 +20,13 @@
 
 body {
   margin: 0;
+  height: 100vh;
   min-height: 100vh;
+  overflow: hidden;
   background: var(--bg);
   color: var(--text);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
 }
 
 .topbar {
@@ -30,9 +34,11 @@ body {
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  padding: 28px 32px 20px;
+  min-height: 92px;
+  padding: 22px 32px 18px;
   border-bottom: 1px solid var(--line);
   background: var(--panel);
+  z-index: 5;
 }
 
 h1,
@@ -80,16 +86,22 @@ a {
 
 .layout {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  min-height: calc(100vh - 104px);
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .sidebar {
   position: relative;
+  min-height: 0;
+  height: 100%;
   border-right: 1px solid var(--line);
   background: var(--panel);
-  padding: 18px;
-  overflow: auto;
+  padding: 16px 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-toggle {
@@ -108,12 +120,12 @@ a {
 }
 
 .layout.sidebar-collapsed {
-  grid-template-columns: 0 minmax(0, 1fr);
+  grid-template-columns: 48px minmax(0, 1fr);
 }
 
 .layout.sidebar-collapsed .sidebar {
-  padding: 0;
-  overflow: visible;
+  padding: 12px 8px;
+  overflow: hidden;
 }
 
 .layout.sidebar-collapsed .search-row,
@@ -123,8 +135,8 @@ a {
 }
 
 .layout.sidebar-collapsed .sidebar-toggle {
-  top: 18px;
-  right: -34px;
+  top: 14px;
+  right: 8px;
 }
 
 .search-row {
@@ -183,7 +195,12 @@ button:hover,
 
 .contest-list {
   display: grid;
+  align-content: start;
   gap: 14px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-gutter: stable;
 }
 
 .contest-group {
@@ -210,7 +227,7 @@ button:hover,
 .problem-link {
   justify-content: flex-start;
   width: 100%;
-  min-height: 44px;
+  min-height: 38px;
   padding: 8px 10px;
   text-align: left;
 }
@@ -233,9 +250,15 @@ button:hover,
 
 .content {
   min-width: 0;
-  padding: 28px 34px 48px;
+  min-height: 0;
+  height: 100%;
+  padding: 24px 34px 48px;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .layout.sidebar-collapsed .content {
@@ -393,7 +416,37 @@ pre {
 }
 
 .code-block {
-  max-height: 680px;
+  max-height: min(680px, 68vh);
+  white-space: pre;
+  word-break: normal;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.contest-list::-webkit-scrollbar,
+.content::-webkit-scrollbar,
+.code-block::-webkit-scrollbar,
+.sample-box::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.contest-list::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb,
+.code-block::-webkit-scrollbar-thumb,
+.sample-box::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #b9c4cc;
+  background-clip: padding-box;
+}
+
+.contest-list::-webkit-scrollbar-thumb:hover,
+.content::-webkit-scrollbar-thumb:hover,
+.code-block::-webkit-scrollbar-thumb:hover,
+.sample-box::-webkit-scrollbar-thumb:hover {
+  background: #95a4af;
+  background-clip: padding-box;
 }
 
 .missing {
@@ -401,8 +454,16 @@ pre {
 }
 
 @media (max-width: 860px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+    display: block;
+  }
+
   .topbar {
     display: block;
+    min-height: 0;
     padding: 22px 18px 16px;
   }
 
@@ -413,11 +474,16 @@ pre {
   .layout,
   .layout.sidebar-collapsed {
     grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
   }
 
   .sidebar {
+    height: auto;
+    max-height: 42vh;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+    overflow: auto;
   }
 
   .sidebar-toggle {
@@ -432,6 +498,8 @@ pre {
 
   .content {
     display: block;
+    height: auto;
+    overflow: visible;
     padding: 22px 16px 36px;
   }
 
