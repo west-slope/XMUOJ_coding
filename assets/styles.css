@@ -109,13 +109,14 @@ a {
   top: 14px;
   right: -15px;
   z-index: 3;
-  width: 30px;
-  min-height: 30px;
+  width: 34px;
+  min-height: 34px;
   padding: 0;
   border-radius: 999px;
   background: var(--panel);
   color: var(--accent-strong);
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: 800;
   line-height: 1;
 }
 
@@ -141,8 +142,17 @@ a {
 
 .search-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 38px;
+  grid-template-columns: minmax(0, 1fr) 30px;
   gap: 8px;
+}
+
+#clearSearch {
+  min-height: 30px;
+  align-self: center;
+  padding: 0;
+  border-radius: 999px;
+  font-size: 16px;
+  line-height: 1;
 }
 
 input,
@@ -182,8 +192,14 @@ button:hover,
 .filters {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
   margin: 12px 0 18px;
+}
+
+.filter {
+  min-height: 30px;
+  padding: 0 8px;
+  font-size: 12px;
 }
 
 .filter.is-active {
@@ -345,8 +361,8 @@ dd {
 
 .two-col {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 .rich-text {
