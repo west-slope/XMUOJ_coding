@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XMUOJ 题解集</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">XMUOJ Solution Archive</p>
+        <h1>题集与答案</h1>
+      </div>
+      <div class="topbar-meta">
+        <span id="generatedAt">未导入</span>
+        <a href="http://www.xmuoj.com/contest" target="_blank" rel="noreferrer">XMUOJ</a>
+      </div>
+    </header>
+
+    <main id="layout" class="layout">
+      <aside id="sidebar" class="sidebar">
+        <button id="toggleSidebar" class="sidebar-toggle" type="button" title="收起侧栏">‹</button>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="搜索比赛、题目、代码" autocomplete="off" />
+          <button id="clearSearch" type="button" title="清空搜索">×</button>
+        </div>
+        <div class="filters">
+          <button class="filter is-active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="solved">有答案</button>
+          <button class="filter" type="button" data-filter="missing">缺答案</button>
+        </div>
+        <nav id="contestList" class="contest-list" aria-label="比赛列表"></nav>
+      </aside>
+
+      <section class="content">
+        <div id="emptyState" class="empty-state">
+          <h2>还没有导入题目</h2>
+          <p>运行 <code>tools/import-xmuoj.ps1</code> 后，这里会显示比赛、题面和你的答案代码。</p>
+        </div>
+
+        <article id="problemView" class="problem-view" hidden>
+          <div class="problem-head">
+            <div>
+              <p id="contestLabel" class="eyebrow"></p>
+              <h2 id="contestTitle"></h2>
+              <p id="problemTitle" class="problem-subtitle"></p>
+            </div>
+            <div class="problem-actions">
+              <a id="sourceLink" class="button-link" href="#" target="_blank" rel="noreferrer">原题</a>
+              <button id="copyCode" type="button">复制答案</button>
+            </div>
+          </div>
+
+          <dl class="meta-grid">
+            <div>
+              <dt>编号</dt>
+              <dd id="problemId"></dd>
+            </div>
+            <div>
+              <dt>时间限制</dt>
+              <dd id="timeLimit"></dd>
+            </div>
+            <div>
+              <dt>内存限制</dt>
+              <dd id="memoryLimit"></dd>
+            </div>
+            <div>
+              <dt>语言</dt>
+              <dd id="solutionLanguage"></dd>
+            </div>
+          </dl>
+
+          <section class="section">
+            <h3>题面</h3>
+            <div id="description" class="rich-text"></div>
+          </section>
+
+          <section class="section two-col">
+            <div>
+              <h3>输入</h3>
+              <div id="inputDescription" class="rich-text"></div>
+            </div>
+            <div>
+              <h3>输出</h3>
+              <div id="outputDescription" class="rich-text"></div>
+            </div>
+          </section>
+
+          <section id="samplesSection" class="section">
+            <h3>样例</h3>
+            <div id="samples"></div>
+          </section>
+
+          <section id="hintSection" class="section">
+            <h3>提示</h3>
+            <div id="hint" class="rich-text"></div>
+          </section>
+
+          <section class="section">
+            <div class="code-title">
+              <h3>答案代码</h3>
+              <span id="solutionPath"></span>
+            </div>
+            <pre class="code-block"><code id="solutionCode"></code></pre>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
