@@ -8,6 +8,10 @@
   --line: #d9e0e6;
   --accent: #237a57;
   --accent-strong: #155a42;
+  --accent-soft: #eaf5ef;
+  --accent-blue: #eaf2fb;
+  --accent-rose: #fff0ee;
+  --accent-gold: #fff7df;
   --warn: #a14f20;
   --code-bg: #171b20;
   --code-text: #e7edf3;
@@ -36,18 +40,36 @@ body {
 .home-page {
   min-height: 100vh;
   padding: 32px;
-  background: #fafaf8;
+  background:
+    linear-gradient(135deg, rgba(234, 245, 239, 0.72), transparent 34%),
+    linear-gradient(315deg, rgba(234, 242, 251, 0.76), transparent 32%),
+    #fafaf8;
   display: grid;
   place-items: center;
 }
 
 .home-shell {
+  position: relative;
+  overflow: hidden;
   width: min(860px, 100%);
   padding: 48px 40px;
   border: 1px solid #ecefeb;
   border-radius: 12px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 12px 38px rgba(29, 35, 41, 0.06);
+  animation: pageIn 360ms ease-out both;
+}
+
+.home-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, #dbeee4, #eaf2fb 50%, #fff0ee);
+}
+
+.home-shell > * {
+  position: relative;
 }
 
 .brand-mark {
@@ -92,7 +114,7 @@ body {
   min-height: 24px;
   padding: 0 12px;
   border-radius: 999px;
-  background: #f1f4f2;
+  background: var(--accent-soft);
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
@@ -127,6 +149,8 @@ body {
 }
 
 .home-contest-card {
+  position: relative;
+  overflow: hidden;
   display: grid;
   gap: 10px;
   min-height: 190px;
@@ -135,12 +159,31 @@ body {
   border-radius: 10px;
   background: #fbfcfb;
   text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.home-contest-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--accent-soft);
+}
+
+.home-contest-card:nth-child(2n)::before {
+  background: var(--accent-blue);
+}
+
+.home-contest-card:nth-child(3n)::before {
+  background: var(--accent-gold);
 }
 
 .home-contest-card:hover {
   border-color: var(--accent);
   background: #f2f7f4;
   color: var(--text);
+  box-shadow: 0 14px 28px rgba(35, 122, 87, 0.1);
+  transform: translateY(-3px);
 }
 
 .home-contest-card strong {
@@ -168,6 +211,12 @@ body {
   gap: 8px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.home-card-meta span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f2f5f4;
 }
 
 .home-meta {
@@ -205,6 +254,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
+  animation: pageIn 260ms ease-out both;
 }
 
 .ghost-button {
@@ -223,6 +273,38 @@ body {
   color: var(--accent-strong);
   font-size: 12px;
   font-weight: 700;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
 }
 
 .topbar {
@@ -358,12 +440,17 @@ a {
   font-size: 12px;
   font-weight: 700;
   text-align: left;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .contest-switch button.is-active {
   border-color: var(--accent);
-  background: var(--panel-soft);
+  background: linear-gradient(90deg, var(--accent-soft), #f8fbf9);
   color: var(--accent-strong);
+}
+
+.contest-switch button:hover {
+  transform: translateX(2px);
 }
 
 #clearSearch {
@@ -492,11 +579,13 @@ button:hover,
   min-height: 38px;
   padding: 8px 10px;
   text-align: left;
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
 }
 
 .problem-link.is-active {
   border-color: var(--accent);
-  background: var(--panel-soft);
+  background: linear-gradient(90deg, var(--accent-soft), #fff);
+  transform: translateX(2px);
 }
 
 .problem-link span {
@@ -520,12 +609,12 @@ button:hover,
 }
 
 .problem-link.has-solution small {
-  background: #e8f4ee;
+  background: var(--accent-soft);
   color: var(--accent-strong);
 }
 
 .problem-link.is-missing small {
-  background: #f6eee9;
+  background: var(--accent-rose);
   color: var(--warn);
 }
 
@@ -566,6 +655,11 @@ button:hover,
 
 .problem-view {
   width: min(1080px, 100%);
+  animation: contentIn 220ms ease-out both;
+}
+
+.problem-view.is-refreshing {
+  animation: contentIn 220ms ease-out both;
 }
 
 .problem-head {
@@ -622,6 +716,15 @@ dd {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
+  box-shadow: 0 8px 24px rgba(29, 35, 41, 0.025);
+}
+
+.section:nth-of-type(2n) {
+  border-color: #dfe9ef;
+}
+
+.section:nth-of-type(3n) {
+  border-color: #efe6dc;
 }
 
 .two-col {

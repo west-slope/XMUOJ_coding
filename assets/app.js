@@ -185,6 +185,10 @@
     els.solutionCode.innerHTML = highlightCode(solution.code || fallbackCode, solution.language);
     els.copyCode.disabled = !solution.code;
     if (els.content) els.content.scrollTop = 0;
+    els.problemView.classList.remove("is-refreshing");
+    window.requestAnimationFrame(() => {
+      els.problemView.classList.add("is-refreshing");
+    });
 
     if (rerenderNav) renderNav();
   }
