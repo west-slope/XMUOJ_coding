@@ -34,6 +34,7 @@
     memoryLimit: document.getElementById("memoryLimit"),
     solutionLanguage: document.getElementById("solutionLanguage"),
     sourceLink: document.getElementById("sourceLink"),
+    sourceInlineLink: document.getElementById("sourceInlineLink"),
     copyCode: document.getElementById("copyCode"),
     description: document.getElementById("description"),
     inputDescription: document.getElementById("inputDescription"),
@@ -172,7 +173,10 @@
     els.timeLimit.textContent = formatLimit(problem.timeLimit, "ms");
     els.memoryLimit.textContent = formatLimit(problem.memoryLimit, "MB");
     els.solutionLanguage.textContent = solution.language || "-";
-    els.sourceLink.href = problem.url || ('http://www.xmuoj.com/contest/' + contest.id + '/problem/' + problem.id + '/');
+    const sourceUrl = problem.url || ('http://www.xmuoj.com/contest/' + contest.id + '/problem/' + problem.id + '/');
+    els.sourceLink.href = sourceUrl;
+    els.sourceInlineLink.href = sourceUrl;
+    els.sourceInlineLink.textContent = 'XMUOJ Contest ' + contest.id + ' / ' + (problem.id || displayProblemId(problem.id) || "-");
     setHtml(els.description, problem.description);
     setHtml(els.inputDescription, problem.inputDescription);
     setHtml(els.outputDescription, problem.outputDescription);
