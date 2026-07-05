@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_DATA = {
-  "generatedAt": "2026-7-4 23:22:13",
+  "generatedAt": "2026-7-5 10:58:25",
   "contests": [
     {
       "id": "359",
@@ -1841,7 +1841,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "abcd123dABdefghjsdef76ki,ab,ef",
               "output": "16"
             }
-          ]
+          ],
+          "solution": {
+            "path": "solutions/359/080.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n#include<cstring>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char a[1000]={0},b[100]={0},c[100]={0};\r\n    char s;\r\n    cin>>s;\r\n    for(int i=0;s!=',';i++)\r\n    {\r\n        a[i]=s;\r\n        cin>>s;\r\n    }\r\n\r\n    cin>>s;\r\n    for(int i=0;s!=',';i++)\r\n    {\r\n        b[i]=s;\r\n        cin>>s;\r\n    }\r\n    cin>>s;\r\n    for(int i=0;s!=','&&s!='\\n'&&cin;i++)\r\n    {\r\n        c[i]=s;\r\n        cin>>s;\r\n    }\r\n\r\n    int m=-1,n=-1;\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        bool flag=false;\r\n        int found=1;\r\n        for(int j=i,k=0;b[k]!='\\0';k++,j++)\r\n        {\r\n            if(a[j]!=b[k])\r\n            {\r\n                found=0;break;\r\n            }\r\n        }\r\n        if(found)\r\n        {\r\n            flag=true;\r\n            m=i+strlen(b);\r\n            break;\r\n        }\r\n    }\r\n    for(int i=strlen(a);i>=m;i--)\r\n    {\r\n        bool flag=false;\r\n        int found=1;\r\n        for(int j=i,k=0;c[k]!='\\0';k++,j++)\r\n        {\r\n            if(a[j]!=c[k])\r\n            {\r\n                found=0;break;\r\n            }\r\n        }\r\n        if(found)\r\n        {\r\n            flag=true;\r\n            n=i;\r\n            break;\r\n        }\r\n    }\r\n    if(m==-1||n==-1){\r\n        cout<<-1;\r\n        return 0;\r\n    }\r\n    else {\r\n        cout<<n-m;\r\n    }\r\n\r\n}"
+          }
         },
         {
           "id": "JD081",
