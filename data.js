@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_DATA = {
-  "generatedAt": "2026-7-5 10:58:25",
+  "generatedAt": "2026-7-5 11:25:28",
   "contests": [
     {
       "id": "359",
@@ -2328,7 +2328,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "solution": {
             "path": "solutions/359/101.cpp",
             "language": "cpp",
-            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nstruct node\r\n{\r\n    int num;\r\n    node *next;\r\n};\r\nint main()\r\n{\r\n\r\n}"
+            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nstruct node\r\n{\r\n    int num;\r\n    node *next;\r\n};\r\nint main()\r\n{\r\n    node *head0=NULL,*head1=NULL,*head2=NULL,*p0,*p1,*p2,*p;\r\n    int m,n;\r\n    cin>>m;\r\n    while(m!=-1)\r\n    {\r\n        p0=new node;p0->num=m;p0->next=NULL;\r\n        if(head1==NULL)head1=p1=p0;\r\n        else {\r\n            p1->next=p0;\r\n            p1=p0;\r\n        }\r\n        cin>>m;\r\n    }\r\n        cin>>n;\r\n        while(n!=-1)\r\n    {\r\n        p0=new node;p0->num=n;p0->next=NULL;\r\n        if(head2==NULL)head2=p2=p0;\r\n        else {\r\n            p2->next=p0;\r\n            p2=p0;\r\n        }\r\n        cin>>n;\r\n    }\r\n    if(head1==NULL)head0=head2;\r\n    else if(head2==NULL)head0=head1;\r\n    else {\r\n        p1=head1,p2=head2;\r\n        while(p1!=NULL&&p2!=NULL)\r\n        {\r\n            if(p1->num>=p2->num)\r\n            {\r\n                p0=new node;\r\n                p0->num=p2->num;\r\n                p0->next=NULL;\r\n                if(head0==NULL)\r\n                {\r\n                    head0=p=p0;\r\n                }\r\n                else {\r\n                    p->next=p0;\r\n                    p=p0;\r\n                }\r\n                p2=p2->next;\r\n            }\r\n            else if(p1->num<p2->num)\r\n            {\r\n                p0=new node;\r\n                p0->num=p1->num;\r\n                p0->next=NULL;\r\n                if(head0==NULL)\r\n                {\r\n                    head0=p=p0;\r\n                }   \r\n                else {\r\n                    p->next=p0;\r\n                    p=p0;\r\n                }\r\n                p1=p1->next;\r\n            }\r\n        }\r\n    \r\n        if(p1==NULL)\r\n            p->next=p2;\r\n        else if(p2==NULL)\r\n            p->next=p1;\r\n    }\r\n    p=head0;\r\n    while(p!=NULL)\r\n    {\r\n        cout<<p->num<<\" \";\r\n        p=p->next;\r\n    }\r\n\r\n\r\n}"
           }
         },
         {
