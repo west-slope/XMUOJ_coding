@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_DATA = {
-  "generatedAt": "2026/7/6 16:22:42",
+  "generatedAt": "2026-07-09 08:54:45",
   "source": "http://www.xmuoj.com",
   "contests": [
     {
@@ -3109,7 +3109,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK01.cpp",
+            "path": "solutions\\362\\LinK01.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n  long long A,B;\r\n  cin>>A>>B;\r\n  cout<<A+B;\r\n  return 0;\r\n}"
           }
@@ -3132,7 +3132,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK02.cpp",
+            "path": "solutions\\362\\LinK02.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n\tint a, b, c, d, N;\r\n\tcin >> N;\r\n\tfor (int i = 2; i <= N; i++)\r\n\t{\r\n\t\tfor (int j = 2; j < N; j++)\r\n\t\t{\r\n\t\t\tfor (int k = j; k < N; k++)\r\n\t\t\t{\r\n\t\t\t\tfor (int l = k; l < N; l++)\r\n\t\t\t\t{\r\n\t\t\t\t\tif (i * i * i == j * j * j + k * k * k + l * l * l)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tcout << \"Cube = \" << i << \", Triple = (\" << j <<\",\"<< k <<\",\" << l << \")\" << endl;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n\treturn 0;\r\n}"
           }
@@ -3155,7 +3155,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK03.cpp",
+            "path": "solutions\\362\\LinK03.cpp",
             "language": "cpp",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int p, e, i, d;\r\n    int m = 1;\r\n    scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    while (p != -1 && e != -1 && i != -1 && d != -1)\r\n    {\r\n        \r\n        for (int j = d+1; j <= d+21252; j++)\r\n        {\r\n            if ((j - p) % 23 == 0 && (j - e) % 28 == 0 && (j - i) % 33 == 0)\r\n            {\r\n                if (d!=365||j!=21252)\r\n                    printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, j - d);\r\n                else printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, 21252);\r\n                break;\r\n            }\r\n        }\r\n        m++;\r\n        scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3178,7 +3178,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK04.cpp",
+            "path": "solutions\\362\\LinK04.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int T;\r\n    cin >> T;\r\n    while (T--)\r\n    {\r\n        int N, value;\r\n        cin >> N;\r\n        vector<int>numbers;\r\n        for (int i = 0; i < N; i++)\r\n        {\r\n            cin >> value;\r\n            numbers.push_back(value);\r\n        }\r\n        sort(numbers.begin(), numbers.end());\r\n        for (int i = 0; i < N; i++)\r\n        {\r\n            if (i > 0)cout << \" \";\r\n            cout << numbers[i];\r\n        }\r\n        cout << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
           }
@@ -3201,7 +3201,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK05.cpp",
+            "path": "solutions\\362\\LinK05.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    int target, n;\r\n    cin >> target >> n;\r\n    vector<int>a;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int x;\r\n        cin >> x;\r\n        a.push_back(x);\r\n    }\r\n    for (int i = 0; i < n - 1; i++)\r\n    {\r\n        for (int j = i + 1; j < n; j++)\r\n        {\r\n            if (a[i] + a[j] == target)\r\n            {\r\n                cout << i << \" \" << j << endl;\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3224,7 +3224,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK06.cpp",
+            "path": "solutions\\362\\LinK06.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    int target, n;\r\n    cin >> target >> n;\r\n    vector<int>a;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int x;\r\n        cin >> x;\r\n        a.push_back(x);\r\n    }\r\n    for (int i = 0; i < n - 1; i++)\r\n    {\r\n        for (int j = i + 1; j < n; j++)\r\n        {\r\n            if (a[i] + a[j] == target)\r\n            {\r\n                cout << i << \" \" << j << endl;\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3247,7 +3247,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK07.cpp",
+            "path": "solutions\\362\\LinK07.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nvector<vector<int>> threeSum(vector<int>& nums, int target)\r\n{\r\n\tvector<vector<int>> res;//储存结果\r\n\tsort(nums.begin(), nums.end());\r\n\tfor(int i=0;i<nums.size();i++)\r\n\t{\r\n\t\tif (i && nums[i] == nums[i - 1])continue;//除去重复项\r\n\t\tfor (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)\r\n\t\t{\r\n\t\t\tif (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项\r\n\t\t\twhile(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)\r\n\t\t\t{\r\n\t\t\t\tk--;\r\n\t\t\t}\r\n\t\t\tif (nums[i] + nums[j] + nums[k] == target)\r\n\t\t\t\tres.push_back({ nums[i],nums[j],nums[k] });\r\n\t\t}\r\n\t}\r\n\treturn res;\r\n}\r\nbool comp(const vector<int>& a, const vector<int>& b)\r\n{\r\n\tif (a[0] != b[0])return a[0] < b[0];\r\n\tif (a[1] != b[1])return a[1] < b[1];\r\n\treturn a[2] < b[2];\r\n}\r\nint main()\r\n{\r\n\tint target, n;\r\n\tcin >> target >> n;\r\n\tvector<int>nums(n);\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin >> nums[i];\r\n\t}\r\n\tvector<vector<int>>res;\r\n\tres = threeSum(nums, target);//求出所有三元组\r\n\tsort(res.begin(), res.end(),comp);//排序\r\n\tfor(auto line:res)\r\n\t{\r\n\t\tcout << line[0] << \" \" << line[1] << \" \" << line[2] << endl;\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}"
           }
@@ -3268,7 +3268,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "17 7\n0 2 5 10 15 18 25 ",
               "output": "0 2 5 10"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK09",
@@ -3276,7 +3277,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK09/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"image.png\" src=\"assets/problem-images/LinK09-04066884e2.png\" width=\"376\" height=\"216\" /><br /></p><p>有三根杆子A，B，C。A杆上有N个(N&gt;1)穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至C杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于B杆，也可将从A杆移出的圆盘重新移回A杆，但都必须遵循上述两条规则。<br /></p><p>问：如何移？最少要移动多少次？</p><p><br /></p><p>解法</p><p>解法的基本思想是递归。假设有A、B、C三个塔，A塔有N块盘，目标是把这些盘全部移到C塔。那么先把A塔顶部的N-1块盘移动到B塔，再把A塔剩下的大盘移到C，最后把B塔的N-1块盘移到C。 每次移动多于一块盘时，则再次使用上述算法来移动。</p>",
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/c9f1809151.png\" width=\"376\" height=\"216\" /><br /></p><p>有三根杆子A，B，C。A杆上有N个(N&gt;1)穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至C杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于B杆，也可将从A杆移出的圆盘重新移回A杆，但都必须遵循上述两条规则。<br /></p><p>问：如何移？最少要移动多少次？</p><p><br /></p><p>解法</p><p>解法的基本思想是递归。假设有A、B、C三个塔，A塔有N块盘，目标是把这些盘全部移到C塔。那么先把A塔顶部的N-1块盘移动到B塔，再把A塔剩下的大盘移到C，最后把B塔的N-1块盘移到C。 每次移动多于一块盘时，则再次使用上述算法来移动。</p>",
           "inputDescription": "<p>盘子个数n(1&lt;=n&lt;=20)</p>",
           "outputDescription": "<p>输出移动的步骤，每行一步，如从A座移动到C座，输出&quot;A-&gt;C&quot;。</p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1qy4y187N1\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3286,7 +3287,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3",
               "output": "A->C\nA->B\nC->B\nA->C\nB->A\nB->C\nA->C"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK10",
@@ -3294,7 +3296,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK10/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"image.png\" src=\"assets/problem-images/LinK10-e4eb3b6f3e.png\" width=\"376\" height=\"216\" /><br /></p><p>有三根杆子A，B，C。A杆上有N个(N&gt;1)穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至C杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于B杆，也可将从A杆移出的圆盘重新移回A杆，但都必须遵循上述两条规则。<br /></p><p>问：如何移？最少要移动多少次？</p>",
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/8c61c1f7d1.png\" width=\"376\" height=\"216\" /><br /></p><p>有三根杆子A，B，C。A杆上有N个(N&gt;1)穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至C杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于B杆，也可将从A杆移出的圆盘重新移回A杆，但都必须遵循上述两条规则。<br /></p><p>问：如何移？最少要移动多少次？</p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">输入为一个整数后面跟三个单字符字符串。</span></p><p><span style=\"color: rgb(35, 31, 23);\">整数为盘子的数目，后三个字符表示三个杆子的编号。</span></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">输出每一步移动盘子的记录。一次移动一行。</span></p><p><span style=\"color: rgb(35, 31, 23);\">每次移动的记录为例如3:a-&gt;b 的形式，即把编号为3的盘子从a杆移至b杆。</span></p><p><span style=\"color: rgb(35, 31, 23);\">我们约定圆盘从小到大编号为1, 2, ...n。即最上面那个最小的圆盘编号为1，最下面最大的圆盘编号为n。</span></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1qy4y187N1\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3304,7 +3306,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3 a b c",
               "output": "1:a->c\n2:a->b\n1:c->b\n3:a->c\n1:b->a\n2:b->c\n1:a->c"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK11",
@@ -3312,7 +3315,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK11/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"assets/problem-images/LinK11-1bbb1eff08.png\" width=\"503\" height=\"315\" /><br /></p><p style=\"margin-left: 0px;\">给定一个整数n，将数字1~n排成一排，将会有很多种排列方法。</p><p>现在，请你按照字典序将所有的排列方法输出。</p><p><span style=\"color: rgb(227, 55, 55);\">数据范围：1&lt;=n&lt;=8</span><br /></p>",
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/724376adb4.png\" width=\"503\" height=\"315\" /><br /></p><p style=\"margin-left: 0px;\">给定一个整数n，将数字1~n排成一排，将会有很多种排列方法。</p><p>现在，请你按照字典序将所有的排列方法输出。</p><p><span style=\"color: rgb(227, 55, 55);\">数据范围：1&lt;=n&lt;=8</span><br /></p>",
           "inputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">共一行，包含一个整数n。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">按字典序输出所有排列方案，每个方案占一行。</span><br /></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1jU4y1a7m3\" target=\"_blank\">Andy讲解(2021)</a><br /></p><p><a href=\"https://www.acwing.com/problem/content/844/\" target=\"_blank\">原题链接</a></p>",
@@ -3322,7 +3325,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3",
               "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK12",
@@ -3340,7 +3344,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "abc",
               "output": "abc\nacb\nbac\nbca\ncab\ncba "
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK13",
@@ -3358,7 +3363,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "4",
               "output": "2413\n3142\n\n"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK14",
@@ -3376,7 +3382,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "2\n1\n92",
               "output": "15863724\n84136275"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK15",
@@ -3394,25 +3401,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3",
               "output": "3"
             }
-          ]
-        },
-        {
-          "id": "LinK14.5",
-          "title": "DFS试炼之n皇后问题",
-          "url": "http://www.xmuoj.com/contest/362/problem/LinK14.5/",
-          "timeLimit": 1000,
-          "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(51, 51, 51);\">n-皇后问题是指将 n 个皇后放在 n∗n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK14.5-ebc5974fc8.png\" width=\"256\" height=\"272\" /><br /></span></p><p><span style=\"color: rgb(227, 55, 55);\">数据范围:1&lt;=n&lt;=12</span></p>",
-          "inputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">共一行，包含整数n。</span><br /></p>",
-          "outputDescription": "<p style=\"margin-left: 0px;\">每个解决方案占n行，每行输出一个长度为n的字符串，用来表示完整的棋盘状态。</p><p>其中”.”表示某一个位置的方格状态为空，”Q”表示某一个位置的方格上摆着皇后。</p><p>每个方案输出完成后，输出一个空行。</p><p>输出方案的顺序请根据样例，按照次序从小到大，从左到右输出。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p><p><a href=\"https://www.acwing.com/video/275/\" target=\"_blank\">Y总讲解</a></p>",
-          "source": "xmu",
-          "samples": [
-            {
-              "input": "4",
-              "output": ".Q..\n...Q\nQ...\n..Q.\n\n..Q.\nQ...\n...Q\n.Q.."
-            }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK16",
@@ -3420,7 +3410,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK16/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK16-62573c03d7.png\" width=\"470\" height=\"233\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">要寻找克罗克果实，林克需要把苹果放在盘子里，其中只有一种情况可以让克罗克果实出现。</span><span style=\"color: rgb(35, 31, 23);\">所以，林克需要尝试所有的放法。</span></p><p><span style=\"color: rgb(35, 31, 23);\">有M个同样的苹果放在N个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的放法？<br /><br />注意：5，1，1和1，5，1 是同一种<span style=\"color: rgb(35, 31, 23);\">放法</span>。</span><br /></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/7b3bce6c56.png\" width=\"470\" height=\"233\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">要寻找克罗克果实，林克需要把苹果放在盘子里，其中只有一种情况可以让克罗克果实出现。</span><span style=\"color: rgb(35, 31, 23);\">所以，林克需要尝试所有的放法。</span></p><p><span style=\"color: rgb(35, 31, 23);\">有M个同样的苹果放在N个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的放法？<br /><br />注意：5，1，1和1，5，1 是同一种<span style=\"color: rgb(35, 31, 23);\">放法</span>。</span><br /></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">第一行是测试数据的数目t（0 &lt;= t &lt;= 20）。以下每行均包含二个整数M和N，以空格分开。0&lt;=M，N&lt;=10。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">对输入的每组数据M和N，用一行输出相应的K。K为正整数，代表共有几种放法。</span><br /></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1y64y1D7AM\" target=\"_blank\">Andy讲解(2021)</a><br /></p><p>改编自《分苹果》</p>",
@@ -3430,7 +3420,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "1\n7 3",
               "output": "8"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK17",
@@ -3448,7 +3439,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "* + 11.0 12.0 + 24.0 35.0",
               "output": "1357.000000"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK18",
@@ -3456,7 +3448,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK18/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"image.png\" src=\"assets/problem-images/LinK18-3a41a5c79b.png\" width=\"490\" height=\"465\" /><br /></p>",
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/1285929844.png\" width=\"490\" height=\"465\" /><br /></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">一个正整数n（n≤20000）。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">一行，符合约定的n的0，2表示（在表示中不能有空格）。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1PA411N7Lg\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3466,7 +3458,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "137",
               "output": "2(2(2)+2+2(0))+2(2+2(0))+2(0)"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK19",
@@ -3484,7 +3477,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3",
               "output": "\n3\n2\n2 3\n1\n1 3\n1 2\n1 2 3\n"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK20",
@@ -3502,7 +3496,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "5 3",
               "output": "1 2 3 \n1 2 4 \n1 2 5 \n1 3 4 \n1 3 5 \n1 4 5 \n2 3 4 \n2 3 5 \n2 4 5 \n3 4 5 "
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK21",
@@ -3520,7 +3515,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3",
               "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK22",
@@ -3542,7 +3538,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3\n5*1+4",
               "output": "9"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK23",
@@ -3550,7 +3547,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK23/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"image.png\" src=\"assets/problem-images/LinK23-70f050ada6.png\" width=\"197\" height=\"134\" /><br /></p><p>在海拉鲁大陆有一种特殊的二进制密码锁，由n个相连的按钮组成（n&lt;30），按钮有凹/凸两种状态，用手按按钮会改变其状态。</p><p>然而让人头疼的是，当按一个按钮时，跟它相邻的两个按钮状态也会反转。当然，如果按的是最左或者最右边的按钮，该按钮只会影响到跟它相邻的一个按钮。</p><p>当前密码锁状态已知，需要解决的问题是，林克至少需要按多少次按钮，才能将密码锁转变为所期望的目标状态。</p>",
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/256a24f724.png\" width=\"197\" height=\"134\" /><br /></p><p>在海拉鲁大陆有一种特殊的二进制密码锁，由n个相连的按钮组成（n&lt;30），按钮有凹/凸两种状态，用手按按钮会改变其状态。</p><p>然而让人头疼的是，当按一个按钮时，跟它相邻的两个按钮状态也会反转。当然，如果按的是最左或者最右边的按钮，该按钮只会影响到跟它相邻的一个按钮。</p><p>当前密码锁状态已知，需要解决的问题是，林克至少需要按多少次按钮，才能将密码锁转变为所期望的目标状态。</p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">两行，给出两个由0、1组成的等长字符串，表示当前/目标密码锁状态，其中0代表凹，1代表凸。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">至少需要进行的按按钮操作次数，如果无法实现转变，则输出impossible。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1Zi4y1N7dU\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3560,7 +3557,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "011\n000",
               "output": "1"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK24",
@@ -3568,7 +3566,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK24/",
           "timeLimit": 10000,
           "memoryLimit": 512,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\">有一个由按钮组成的矩阵，其中每行有6个按钮，共5行。每个按钮的位置上有一盏灯。当按下一个按钮后，该按钮以及周围位置(上边、下边、左边、右边)的灯都会改变一次。即，如果灯原来是点亮的，就会被熄灭；如果灯原来是熄灭的，则会被点亮。在矩阵角上的按钮改变3盏灯的状态；在矩阵边上的按钮改变4盏灯的状态；其他的按钮改变5盏灯的状态。</span></p><p><img src=\"assets/problem-images/LinK24-5bbfb55c19.jpg\" /></p><p><span style=\"color: rgb(35, 31, 23);\">在上图中，左边矩阵中用X标记的按钮表示被按下，右边的矩阵表示灯状态的改变。对矩阵中的每盏灯设置一个初始状态。请你按按钮，直至每一盏等都熄灭。与一盏灯毗邻的多个按钮被按下时，一个操作会抵消另一次操作的结果。在下图中，第2行第3、5列的按钮都被按下，因此第2行、第4列的灯的状态就不改变。</span></p><p><img src=\"assets/problem-images/LinK24-e31d5d67f2.jpg\" /></p><p><span style=\"color: rgb(35, 31, 23);\">请你写一个程序，确定需要按下哪些按钮，恰好使得所有的灯都熄灭。根据上面的规则，我们知道1）第2次按下同一个按钮时，将抵消第1次按下时所产生的结果。因此，每个按钮最多只需要按下一次；2）各个按钮被按下的顺序对最终的结果没有影响；3）对第1行中每盏点亮的灯，按下第2行对应的按钮，就可以熄灭第1行的全部灯。如此重复下去，可以熄灭第1、2、3、4行的全部灯。同样，按下第1、2、3、4、5列的按钮，可以熄灭前5列的灯。</span></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\">有一个由按钮组成的矩阵，其中每行有6个按钮，共5行。每个按钮的位置上有一盏灯。当按下一个按钮后，该按钮以及周围位置(上边、下边、左边、右边)的灯都会改变一次。即，如果灯原来是点亮的，就会被熄灭；如果灯原来是熄灭的，则会被点亮。在矩阵角上的按钮改变3盏灯的状态；在矩阵边上的按钮改变4盏灯的状态；其他的按钮改变5盏灯的状态。</span></p><p><img src=\"http://media.openjudge.cn/images/2811_1.jpg\" /></p><p><span style=\"color: rgb(35, 31, 23);\">在上图中，左边矩阵中用X标记的按钮表示被按下，右边的矩阵表示灯状态的改变。对矩阵中的每盏灯设置一个初始状态。请你按按钮，直至每一盏等都熄灭。与一盏灯毗邻的多个按钮被按下时，一个操作会抵消另一次操作的结果。在下图中，第2行第3、5列的按钮都被按下，因此第2行、第4列的灯的状态就不改变。</span></p><p><img src=\"http://media.openjudge.cn/images/2811_2.jpg\" /></p><p><span style=\"color: rgb(35, 31, 23);\">请你写一个程序，确定需要按下哪些按钮，恰好使得所有的灯都熄灭。根据上面的规则，我们知道1）第2次按下同一个按钮时，将抵消第1次按下时所产生的结果。因此，每个按钮最多只需要按下一次；2）各个按钮被按下的顺序对最终的结果没有影响；3）对第1行中每盏点亮的灯，按下第2行对应的按钮，就可以熄灭第1行的全部灯。如此重复下去，可以熄灭第1、2、3、4行的全部灯。同样，按下第1、2、3、4、5列的按钮，可以熄灭前5列的灯。</span></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">5行组成，每一行包括6个数字（0或1）。</span></p><p><span style=\"color: rgb(35, 31, 23);\">相邻两个数字之间用单个空格隔开。</span></p><p><span style=\"color: rgb(35, 31, 23);\">0表示灯的初始状态是熄灭的，1表示灯的初始状态是点亮的。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">5行组成，每一行包括6个数字（0或1）。</span></p><p><span style=\"color: rgb(35, 31, 23);\">相邻两个数字之间用单个空格隔开。</span></p><p><span style=\"color: rgb(35, 31, 23);\">其中的1表示需要把对应的按钮按下，0则表示不需要按对应的按钮。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1QK4y1J7en\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3578,7 +3576,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "2\n0 1 1 0 1 0\n1 0 0 1 1 1\n0 0 1 0 0 1\n1 0 0 1 0 1\n0 1 1 1 0 0\n0 0 1 0 1 0\n1 0 1 0 1 1\n0 0 1 0 1 1\n1 0 1 1 0 0\n0 1 0 1 0 0",
               "output": "PUZZLE #1\n1 0 1 0 0 1 \n1 1 0 1 0 1 \n0 0 1 0 1 1 \n1 0 0 1 0 0 \n0 1 0 0 0 0 \nPUZZLE #2\n1 0 0 1 1 1 \n1 1 0 0 0 0 \n0 0 0 1 0 0 \n1 1 0 1 0 1 \n1 0 1 1 0 1 \n\n注意：PUZZLE行结尾没有空格，数字行最后有一个空格。"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK25",
@@ -3596,7 +3595,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3 3 0 \n2 2 2 \n2 1 2 ",
               "output": "4 5 8 9 "
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK26",
@@ -3604,7 +3604,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK26/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK26-5948c45c47.png\" width=\"600\" height=\"321.0459183673469\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">林克来到怪物商店，决定开始挑战一道难题：算24！</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">题目是：给出4个小于10的非负整数，你可以使用加减乘除4种运算以及括号把这4个数连接起来得到一个表达式。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">现在的问题是，是否存在一种方式使得得到的表达式的结果等于24。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">这里加减乘除以及括号的运算结果和运算的优先级跟我们平常的定义一致（这里的除法定义是实数除法）。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">比如，对于5，5，5，1，我们知道5 * (5 – 1 / 5) = 24，因此可以得到24。又比如，对于1，1，4，2，我们怎么都不能得到24。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">注意：输入数字的次序可以改变。</span></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/b54dd9013d.png\" width=\"600\" height=\"321.0459183673469\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">林克来到怪物商店，决定开始挑战一道难题：算24！</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">题目是：给出4个小于10的非负整数，你可以使用加减乘除4种运算以及括号把这4个数连接起来得到一个表达式。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">现在的问题是，是否存在一种方式使得得到的表达式的结果等于24。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">这里加减乘除以及括号的运算结果和运算的优先级跟我们平常的定义一致（这里的除法定义是实数除法）。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">比如，对于5，5，5，1，我们知道5 * (5 – 1 / 5) = 24，因此可以得到24。又比如，对于1，1，4，2，我们怎么都不能得到24。</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(35, 31, 23);\">注意：输入数字的次序可以改变。</span></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">输入数据包括多行，每行给出一组测试数据，包括4个小于10的非负整数。最后一组测试数据中包括4个0，表示输入的结束，这组数据不用处理。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">对于每一组测试数据，输出一行，如果可以得到24，输出“YES”；否则，输出“NO”。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV12E411E7u9\" target=\"_blank\">Andy的讲解(2020)</a><br /></p>",
@@ -3614,7 +3614,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "5 5 5 1\n1 1 4 2\n0 0 0 0",
               "output": "YES\nNO"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK27",
@@ -3634,7 +3635,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK27.cpp",
+            "path": "solutions\\362\\LinK27.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint a[100001];\r\n\r\nvoid quick_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int i=l-1,j=r+1,x=arr[l];\r\n    while(i<j)\r\n    {\r\n       do i++; while(a[i]<x);\r\n       do j--; while(a[j]>x);\r\n       if(i<j)swap(a[i],a[j]);\r\n    }\r\n    quick_sort(a,l,j);//ij对调\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    quick_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        printf(\"%d \",a[i]);\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3657,7 +3658,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK28.cpp",
+            "path": "solutions\\362\\LinK28.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint quick_sort(int arr[],int l,int r,int k)\r\n{\r\n    if(l>=r)return arr[l];\r\n    int i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(arr[i]<x);\r\n        do j--;while(arr[j]>x);\r\n        if(i<j)swap(arr[i],arr[j]);\r\n    }\r\n    int s1=j-l+1;\r\n    if(s1>=k)return quick_sort(arr,l,j,k);\r\n    else return quick_sort(arr,j+1,r,k-s1);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int n,k,a[100001];\r\n    cin>>n>>k;\r\n    for(int i=0;i<n;i++) cin>>a[i];\r\n\r\n    cout<<quick_sort(a,0,n-1,k)<<endl;\r\n\r\n}"
           }
@@ -3680,7 +3681,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK29.cpp",
+            "path": "solutions\\362\\LinK29.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL a[100001];\r\nvoid quick_sort(LL arr[],LL l,LL r)\r\n{\r\n    if(l>=r)return;\r\n    LL i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(a[i]<x);\r\n        do j--;while(a[j]>x);\r\n        if(i<j)swap(a[i],a[j]);\r\n    }\r\n    quick_sort(a,l,j);\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n    LL n,k;\r\n    scanf(\"%lld\",&n);\r\n    for(LL i=0;i<n;i++)//数据较多用scanf比较快\r\n        scanf(\"%lld\",&a[i]);\r\n    scanf(\"%lld\",&k);\r\n    quick_sort(a,0,n-1);\r\n    for(LL i=n-1,j=0;j<k;i--,j++)\r\n    {\r\n        printf(\"%lld\\n\",a[i]);\r\n    }\r\n    return 0;\r\n\r\n}"
           }
@@ -3703,7 +3704,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK30.cpp",
+            "path": "solutions\\362\\LinK30.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint temp[100001],a[100001],n;\r\nvoid merge_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int mid=l+r>>1;\r\n    merge_sort(arr,l,mid),merge_sort(arr,mid+1,r);\r\n    int p0=0,p1=l,p2=mid+1;\r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2])temp[p0++]=arr[p1++];\r\n        else temp[p0++]=arr[p2++];\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,k=0;i<=r;i++,k++)arr[i]=temp[k];\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);\r\n    merge_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)cout<<a[i]<<\" \";\r\n}"
           }
@@ -3726,7 +3727,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK31.cpp",
+            "path": "solutions\\362\\LinK31.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\ntypedef long long LL;\r\nconst int N=100001;\r\nLL a[N],temp[N];\r\nint n;\r\n\r\nLL merge_sort(LL arr[],int l,int r)\r\n{\r\n    LL res=0;\r\n    if(l>=r)return 0;\r\n    int mid=l+r>>1;//计算l+r的一半\r\n    res+=merge_sort(arr,l,mid);\r\n    res+=merge_sort(arr,mid+1,r);\r\n    int p0=0,p1=l,p2=mid+1;\r\n    \r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2]) temp[p0++]=arr[p1++];\r\n        else {\r\n            temp[p0++]=arr[p2++];\r\n            res+=mid-p1+1;\r\n        }\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,j=0;i<=r;i++,j++)arr[i]=temp[j];\r\n    return res;\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    cout<<merge_sort(a,0,n-1)<<endl;\r\n}"
           }
@@ -3737,7 +3738,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK32/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(73, 80, 96);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK32-c262dfc36e.png\" width=\"662\" height=\"337\" /><br /></span></p><p><span style=\"color: rgb(73, 80, 96);\">面对铺面而来的波克布林大军，林克需要快速制胜，所谓擒贼先擒王，林克需要锁定目标一击必杀。</span></p><p><span style=\"color: rgb(73, 80, 96);\">假设怪物大军共有N只波克布林（1&lt;=N&lt;=100000）和数组nums存储每个怪的编号。根据情报，需要击杀的目标编号是</span><span style=\"color: rgb(73, 80, 96);\">target。</span></p><p><span style=\"color: rgb(73, 80, 96);\">请从nums中迅速找出target的数组下标，如果找不到请输出-1.</span></p>",
+          "description": "<p><span style=\"color: rgb(73, 80, 96);\"><img alt=\"image.png\" src=\"/public/upload/a653218c64.png\" width=\"662\" height=\"337\" /><br /></span></p><p><span style=\"color: rgb(73, 80, 96);\">面对铺面而来的波克布林大军，林克需要快速制胜，所谓擒贼先擒王，林克需要锁定目标一击必杀。</span></p><p><span style=\"color: rgb(73, 80, 96);\">假设怪物大军共有N只波克布林（1&lt;=N&lt;=100000）和数组nums存储每个怪的编号。根据情报，需要击杀的目标编号是</span><span style=\"color: rgb(73, 80, 96);\">target。</span></p><p><span style=\"color: rgb(73, 80, 96);\">请从nums中迅速找出target的数组下标，如果找不到请输出-1.</span></p>",
           "inputDescription": "<p><span style=\"color: rgb(73, 80, 96);\">第一行N表示数组大小。</span></p><p><span style=\"color: rgb(73, 80, 96);\">第二行为nums的N个元素(不包含重复元素)</span></p><p><span style=\"color: rgb(73, 80, 96);\">第三行T表示接下来又T个元素需要查找。</span></p><p><span style=\"color: rgb(73, 80, 96);\">接下来T行，每行为查找的目标元素target值。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(73, 80, 96);\">输出为T个目标元素的下标，找不到输出-1</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1tA41157aa\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3749,7 +3750,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK32.cpp",
+            "path": "solutions\\362\\LinK32.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint N,T; \r\nint a[100001];\r\n\r\n\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&N);\r\n    for(int i=0;;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    scanf(\"%d\",&T);\r\n    for(int i=0;i<T;i++)\r\n    {\r\n        \r\n    }\r\n\r\n}"
           }
@@ -3760,7 +3761,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK33/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"image.png\" src=\"assets/problem-images/LinK33-5fab93f86e.png\" width=\"513\" height=\"284\" /><br /></p><p>面对铺面而来的怪物大军，林克需要根据怪物类型进行区域攻击。</p><p>假设怪物大军共有N个怪物（1&lt;=N&lt;=100000），升序数组nums存储每个怪物的编号，同一类型的怪物编号相同。</p><p>根据情报，需要击杀的目标编号是target。</p><p>请从nums中迅速找出编号为target的怪物的数组下标范围。</p><p>如果找不到请输出-1 -1.</p>",
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/e07c64f4c5.png\" width=\"513\" height=\"284\" /><br /></p><p>面对铺面而来的怪物大军，林克需要根据怪物类型进行区域攻击。</p><p>假设怪物大军共有N个怪物（1&lt;=N&lt;=100000），升序数组nums存储每个怪物的编号，同一类型的怪物编号相同。</p><p>根据情报，需要击杀的目标编号是target。</p><p>请从nums中迅速找出编号为target的怪物的数组下标范围。</p><p>如果找不到请输出-1 -1.</p>",
           "inputDescription": "<p>第一行包含整数n和q，表示数组长度和询问个数。</p><p>第二行包含n个整数（均在1~10000范围内），表示完整数组。</p><p>接下来q行，每行包含一个整数k，表示一个询问元素。</p><h4><span style=\"color: rgb(227, 55, 55);\">数据范围<br />1≤n≤100000<br />1≤q≤10000<br />1≤k≤10000</span></h4>",
           "outputDescription": "<p>共q行，每行包含两个整数，表示所求元素的起始位置和终止位置<span style=\"color: rgb(51, 51, 51);\">（位置从0开始计数）</span>。</p><p>如果数组中不存在该元素，则返回“-1 -1”。</p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1gi4y1N7XR\" target=\"_blank\">Andy讲解(2021)</a></p><p><a href=\"https://www.acwing.com/problem/content/791/\" target=\"_blank\">原题ACW789</a></p>",
@@ -3770,7 +3771,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "6 3\n1 2 2 3 3 4\n3\n4\n5",
               "output": "3 4\n5 5\n-1 -1"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK34",
@@ -3778,7 +3780,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK34/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>看着小鲁的编程水平再次进阶，小华很欣慰，是时候教导他基本算法的时候了。</p><p>小华喊小鲁过来，对他说：今天要教你一招新招，二分法。这种分而治之的思想是算法中常见的思考方式，也是优化算法必须要掌握的利器。二分法的用途很广。我出道题，你想想要怎么用二分法做。</p><p>说着，小华在纸上写下了一个方程：</p><p><img alt=\"image.png\" src=\"assets/problem-images/LinK34-2d09457353.png\" width=\"200\" height=\"25.85034013605442\" /></p><p>请用二分法求方程的根，<span style=\"color: rgb(51, 51, 51);\">精确到小数点后9位。</span></p>",
+          "description": "<p>看着小鲁的编程水平再次进阶，小华很欣慰，是时候教导他基本算法的时候了。</p><p>小华喊小鲁过来，对他说：今天要教你一招新招，二分法。这种分而治之的思想是算法中常见的思考方式，也是优化算法必须要掌握的利器。二分法的用途很广。我出道题，你想想要怎么用二分法做。</p><p>说着，小华在纸上写下了一个方程：</p><p><img alt=\"image.png\" src=\"/public/upload/bc14963296.png\" width=\"200\" height=\"25.85034013605442\" /></p><p>请用二分法求方程的根，<span style=\"color: rgb(51, 51, 51);\">精确到小数点后9位。</span></p>",
           "inputDescription": "<p>没有输入。</p>",
           "outputDescription": "<p>5.705085930<br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1Cf4y1x7kk\" target=\"_blank\">Andy讲解(2021)</a><br /></p>",
@@ -3788,7 +3790,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "无",
               "output": "5.705085930"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK35",
@@ -3806,7 +3809,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "1000.00",
               "output": "10.000000"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK36",
@@ -3814,7 +3818,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK36/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img src=\"assets/problem-images/LinK36-83a552bb0b.png\" alt=\"image.png\" /><br /></p><p style=\"margin-left: 0px;\">为了升级希卡之石林克来到了阿卡莱研究所。这个海拉鲁大陆最顶级的研究所，每天都要消耗大量的研究经费，</p><p style=\"margin-left: 0px;\">然而令人惊奇的是这个研究所的经费从不短缺，这完全得益于研究所制定预算的能力。</p><p style=\"margin-left: 0px;\">如果谁能搞清楚阿卡来研究所制定预算的算法，并且给出最佳预算的值，那么他就可以免费升级希卡之石。</p><p style=\"margin-left: 0px;\">林克显然不擅长做预算，作为他好朋友的你，可以出手相助吗？</p><p>已知研究所接下来N天（<span style=\"color: rgb(73, 80, 96);\">1≤N≤ 100,000</span><span style=\"color: rgb(73, 80, 96);\">）</span>每日的固定支出预计为X(N)卢比。</p><p>研究所需要将未来的N天分为M组<span style=\"color: rgb(73, 80, 96);\">(1 ≤M≤N)</span><span style=\"color: rgb(73, 80, 96);\">，</span>每组是1天或者连续的几天。</p><p>（假如第1，2，3天为一组，那么该组的总固定支出Total(1)是这三天的固定支出之和X(0)+X(1)+X(2)）</p><p>请问，如果一定要将未来的N天分为M组，<span style=\"color: rgb(51, 51, 51);\">假设分配给每组的预算是一个固定值Budget，并且</span>不同组所得到的卢比即便有结余也不可以挪用。</p><p>求能够完全满足每组支出需要的最小的<span style=\"color: rgb(51, 51, 51);\">Budget</span>值是多少。</p>",
+          "description": "<p style=\"margin-left: 0px;\"><img src=\"http://xmuoj.com/public/upload/efb3594583.png\" alt=\"image.png\" /><br /></p><p style=\"margin-left: 0px;\">为了升级希卡之石林克来到了阿卡莱研究所。这个海拉鲁大陆最顶级的研究所，每天都要消耗大量的研究经费，</p><p style=\"margin-left: 0px;\">然而令人惊奇的是这个研究所的经费从不短缺，这完全得益于研究所制定预算的能力。</p><p style=\"margin-left: 0px;\">如果谁能搞清楚阿卡来研究所制定预算的算法，并且给出最佳预算的值，那么他就可以免费升级希卡之石。</p><p style=\"margin-left: 0px;\">林克显然不擅长做预算，作为他好朋友的你，可以出手相助吗？</p><p>已知研究所接下来N天（<span style=\"color: rgb(73, 80, 96);\">1≤N≤ 100,000</span><span style=\"color: rgb(73, 80, 96);\">）</span>每日的固定支出预计为X(N)卢比。</p><p>研究所需要将未来的N天分为M组<span style=\"color: rgb(73, 80, 96);\">(1 ≤M≤N)</span><span style=\"color: rgb(73, 80, 96);\">，</span>每组是1天或者连续的几天。</p><p>（假如第1，2，3天为一组，那么该组的总固定支出Total(1)是这三天的固定支出之和X(0)+X(1)+X(2)）</p><p>请问，如果一定要将未来的N天分为M组，<span style=\"color: rgb(51, 51, 51);\">假设分配给每组的预算是一个固定值Budget，并且</span>不同组所得到的卢比即便有结余也不可以挪用。</p><p>求能够完全满足每组支出需要的最小的<span style=\"color: rgb(51, 51, 51);\">Budget</span>值是多少。</p>",
           "inputDescription": "<p style=\"margin-left: 0px;\"><span style=\"color: rgb(35, 31, 23);\">第一行包含两个整数N,M，用单个空格隔开。</span></p><p><span style=\"color: rgb(35, 31, 23);\">第二行有N个从<span style=\"color: rgb(35, 31, 23);\">1到10000之间的整数，</span>表示接下来N天里每天的固定支出预算。</span></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">一个整数，即</span><span style=\"color: rgb(35, 31, 23);\"></span><span style=\"color: rgb(51, 51, 51);\">满足每组支出需要的最小的预算值</span><span style=\"color: rgb(51, 51, 51);\">。</span><br /></p>",
           "hint": "<p><span style=\"color: rgb(51, 51, 51);\"><a href=\"https://www.bilibili.com/video/av94908717?pop_share=1\" target=\"_blank\"></a><a href=\"https://www.bilibili.com/video/av94908717?pop_share=1\" target=\"_blank\">Andy讲解(2020)</a><br />本题改编自Guo Wei的《月度开销》</span><br /></p>",
@@ -3824,7 +3828,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "7 5\n100 400 300 100 500 101 400",
               "output": "500"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK37",
@@ -3832,7 +3837,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK37/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img src=\"assets/problem-images/LinK37-a93b3a51c9.png\" alt=\"image.png\" /><br /></p><p style=\"margin-left: 0px;\">林克被造的纪念日快要到了。根据任天堂公司的惯例，每年到这个时间都会一些蛋糕分给林克的朋友。</p><p style=\"margin-left: 0px;\">这些蛋糕有不同的口味，比如南瓜蛋糕、坚果蛋糕、西瓜蛋糕、胡萝卜蛋糕、水果蛋糕等等（有N种不同口味，大小不同的蛋糕）。<br />为了公平，每个朋友都会分到一块大小相同的蛋糕（不需要同样形状，但是要同一种口味，不允许混合口味，否则就会变成奇怪的菜肴）。<br />假设每个蛋糕都是一个高为1，半径不等的圆柱体，一共有F+1个人（F是林克的朋友个数，还要加上林克的设计者)。</p><p>所有人拿到的蛋糕是同样大小的，请问每个人拿到的蛋糕最大尺寸可以是多少？</p>",
+          "description": "<p style=\"margin-left: 0px;\"><img src=\"http://xmuoj.com/public/upload/fe05a9c861.png\" alt=\"image.png\" /><br /></p><p style=\"margin-left: 0px;\">林克被造的纪念日快要到了。根据任天堂公司的惯例，每年到这个时间都会一些蛋糕分给林克的朋友。</p><p style=\"margin-left: 0px;\">这些蛋糕有不同的口味，比如南瓜蛋糕、坚果蛋糕、西瓜蛋糕、胡萝卜蛋糕、水果蛋糕等等（有N种不同口味，大小不同的蛋糕）。<br />为了公平，每个朋友都会分到一块大小相同的蛋糕（不需要同样形状，但是要同一种口味，不允许混合口味，否则就会变成奇怪的菜肴）。<br />假设每个蛋糕都是一个高为1，半径不等的圆柱体，一共有F+1个人（F是林克的朋友个数，还要加上林克的设计者)。</p><p>所有人拿到的蛋糕是同样大小的，请问每个人拿到的蛋糕最大尺寸可以是多少？</p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">第一行包含两个正整数N和F，1 ≤ N, F ≤ 10 000，表示蛋糕的数量和朋友的数量。</span></p><p><span style=\"color: rgb(35, 31, 23);\">第二行包含N个1到10000之间的整数，表示每个蛋糕的半径。</span></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">输出每个人能得到的最大的蛋糕的体积，精确到小数点后三位。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/av94056456/\" target=\"_blank\">Andy讲解(2020)</a><br /></p>",
@@ -3842,7 +3847,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "3 3\n4 3 3",
               "output": "25.133"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK38",
@@ -3850,7 +3856,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK38/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK38-2e703396c4.png\" width=\"677\" height=\"426\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">每一个人心中都有一个林克。每一个林克都不一样。在命运矩阵里面，随着选择的不同，没有哪一个林克的命运会一模一样。</span></p><p><span style=\"color: rgb(35, 31, 23);\">有一个方格型的命运矩阵，矩阵边界在无穷远处。我们做如下假设：</span></p><p><span style=\"color: rgb(35, 31, 23);\">1. 每一个格子象征林克命运中的一次抉择，每次只能从相邻的方格中做选择。</span></p><p><span style=\"color: rgb(35, 31, 23);\">2. 从某个格子出发，只能从当前方格移动一格，走到某个相邻的方格上；</span></p><p><span style=\"color: rgb(35, 31, 23);\">3.选择一旦做出就不可更改，因此走过的格子无法走第二次。</span></p><p><span style=\"color: rgb(35, 31, 23);\">4. 从命运矩阵的第1行出发，只能向下、左、右三个方向走；</span></p><p><span style=\"color: rgb(35, 31, 23);\">请问：如果最高允许在方格矩阵上走n步（也就是林克一生最多能做n个选择）。<br />那么随着n的不同，请问一共会有多少种不同选择的方案导致多少个不同的林克？<br />注意，2种走法只要有一步不一样，即被认为是不同的方案。</span></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/6dbec9b26e.png\" width=\"677\" height=\"426\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\">每一个人心中都有一个林克。每一个林克都不一样。在命运矩阵里面，随着选择的不同，没有哪一个林克的命运会一模一样。</span></p><p><span style=\"color: rgb(35, 31, 23);\">有一个方格型的命运矩阵，矩阵边界在无穷远处。我们做如下假设：</span></p><p><span style=\"color: rgb(35, 31, 23);\">1. 每一个格子象征林克命运中的一次抉择，每次只能从相邻的方格中做选择。</span></p><p><span style=\"color: rgb(35, 31, 23);\">2. 从某个格子出发，只能从当前方格移动一格，走到某个相邻的方格上；</span></p><p><span style=\"color: rgb(35, 31, 23);\">3.选择一旦做出就不可更改，因此走过的格子无法走第二次。</span></p><p><span style=\"color: rgb(35, 31, 23);\">4. 从命运矩阵的第1行出发，只能向下、左、右三个方向走；</span></p><p><span style=\"color: rgb(35, 31, 23);\">请问：如果最高允许在方格矩阵上走n步（也就是林克一生最多能做n个选择）。<br />那么随着n的不同，请问一共会有多少种不同选择的方案导致多少个不同的林克？<br />注意，2种走法只要有一步不一样，即被认为是不同的方案。</span></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">允许在方格上行走的步数n(n &lt;= 20)</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">经过n个选择之后，诞生的不同的林克的个数。</span><br /></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1qZ4y1c7nj?pop_share=1\" target=\"_blank\">Andy(2021)</a></p><p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1Mz411b7DL\" target=\"_blank\">Andy(2020</a>)</p><p>改编自《踩方格》</p>",
@@ -3866,7 +3872,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK38.cpp",
+            "path": "solutions\\362\\LinK38.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=70;\r\nint fates[70][70];\r\n\r\nint dx[3]={0,0,1},dy[3]={1,-1,0};\r\n\r\nlong long dfs(int i,int j,int n)\r\n{\r\n    if(n==0)return 1;//步数用完，当前路径有效，计数+1\r\n    long long res=0;\r\n    fates[i][j]=1;\r\n    for(int k=0;k<3;k++)\r\n    {\r\n        int x=i+dx[k],y=j+dy[k];//移动一格\r\n        if(fates[x][y]==0)//踏入新的区域\r\n        {\r\n            res+=dfs(x,y,n-1);\r\n        }\r\n    }\r\n    fates[i][j]=0;\r\n    return res;\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    cout<<dfs(0,N/2,n);\r\n    return 0;\r\n}"
           }
@@ -3877,8 +3883,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK39/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK39-a1a7183cf9.png\" width=\"539\" height=\"303\" /><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">迷雾森林被加农的玷污了，原本圣洁无比的迷雾森林，如今被彻底玷污，空气中充满着紫色的恶臭。</span></span></p><p><font>林克临危不惧，带上呼吸面罩，挥舞大师之剑的光芒，净化迷雾。林克所到之处，加农褪去，圣洁回归。</font></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">如下图，红色代表墙壁，紫色的迷雾代表需要净化的空间，金色代表林克开始净化的起点。</span></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">从某处开始，林克只能向</span>相邻的紫色区域移动。请问，林克总共能够净化多少区域？</span><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">图1 初始状态                                                                图2   净化中.....</span><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK39-d2f526aafb.png\" width=\"311\" height=\"464\" />-----<img alt=\"image.png\" src=\"assets/problem-images/LinK39-3d4235148f.png\" width=\"313\" height=\"461\" /><br /></span></p>",
-          "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">包括多个数据集合。每个数据集合的第一行是两个整数W和H，分别表示x方向和y方向瓷砖的数量。W和H都不超过20。</span></p><p><span style=\"color: rgb(35, 31, 23);\">在接下来的H行中，每行包括W个字符。</span></p><p><span style=\"color: rgb(35, 31, 23);\">每个字符表示一个区域的状态，规则如下</span></p><p><span style=\"color: rgb(35, 31, 23);\">1）</span><span style=\"color: rgb(227, 55, 55);\">‘.’</span><span style=\"color: rgb(35, 31, 23);\">：代表紫色迷雾<img alt=\"image.png\" src=\"assets/problem-images/LinK39-7cd04e0a62.png\" width=\"42\" height=\"41\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">2）</span><span style=\"color: rgb(227, 55, 55);\">‘#’</span><span style=\"color: rgb(35, 31, 23);\">：代表红墙<img alt=\"image.png\" src=\"assets/problem-images/LinK39-c38a7e7274.png\" width=\"41\" height=\"40\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">3）‘@’：代表<span style=\"color: rgb(35, 31, 23);\">林克的起始位置</span><img alt=\"image.png\" src=\"assets/problem-images/LinK39-1b8220bd09.png\" width=\"43\" height=\"40\" />(该字符在每个数据集合中唯一出现一次。）</span></p><p><span style=\"color: rgb(35, 31, 23);\">当在一行中读入的是两个零时，表示输入结束。</span></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/3ec4db1361.png\" width=\"539\" height=\"303\" /><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">迷雾森林被加农的玷污了，原本圣洁无比的迷雾森林，如今被彻底玷污，空气中充满着紫色的恶臭。</span></span></p><p><font>林克临危不惧，带上呼吸面罩，挥舞大师之剑的光芒，净化迷雾。林克所到之处，加农褪去，圣洁回归。</font></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">如下图，红色代表墙壁，紫色的迷雾代表需要净化的空间，金色代表林克开始净化的起点。</span></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">从某处开始，林克只能向</span>相邻的紫色区域移动。请问，林克总共能够净化多少区域？</span><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">图1 初始状态                                                                图2   净化中.....</span><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/f48cf16664.png\" width=\"311\" height=\"464\" />-----<img alt=\"image.png\" src=\"/public/upload/d72a7d4360.png\" width=\"313\" height=\"461\" /><br /></span></p>",
+          "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">包括多个数据集合。每个数据集合的第一行是两个整数W和H，分别表示x方向和y方向瓷砖的数量。W和H都不超过20。</span></p><p><span style=\"color: rgb(35, 31, 23);\">在接下来的H行中，每行包括W个字符。</span></p><p><span style=\"color: rgb(35, 31, 23);\">每个字符表示一个区域的状态，规则如下</span></p><p><span style=\"color: rgb(35, 31, 23);\">1）</span><span style=\"color: rgb(227, 55, 55);\">‘.’</span><span style=\"color: rgb(35, 31, 23);\">：代表紫色迷雾<img alt=\"image.png\" src=\"/public/upload/668de4a15e.png\" width=\"42\" height=\"41\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">2）</span><span style=\"color: rgb(227, 55, 55);\">‘#’</span><span style=\"color: rgb(35, 31, 23);\">：代表红墙<img alt=\"image.png\" src=\"/public/upload/65762c10c1.png\" width=\"41\" height=\"40\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">3）‘@’：代表<span style=\"color: rgb(35, 31, 23);\">林克的起始位置</span><img alt=\"image.png\" src=\"/public/upload/bb1c64a143.png\" width=\"43\" height=\"40\" />(该字符在每个数据集合中唯一出现一次。）</span></p><p><span style=\"color: rgb(35, 31, 23);\">当在一行中读入的是两个零时，表示输入结束。</span></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">对每个数据集合，分别输出一行，显示林克从初始位置出发能净化的迷雾数(记数时包括初始位置的迷雾)。</span><br /></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1r64y1v7ot?pop_share=1\" target=\"_blank\">Andy(2021)</a></p><p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV13T4y1G7HP\" target=\"_blank\">Andy(2020)</a></p><p>（改编自《<a href=\"http://cxsjsxmooc.openjudge.cn/2020t2springall/018/\" target=\"_blank\">红与黑</a>》）</p>",
           "source": "xmu",
@@ -3889,7 +3895,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK39.cpp",
+            "path": "solutions\\362\\LinK39.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nchar fates[21][21];\r\nint w,h;\r\nint dx[4]{0,0,1,-1},dy[4]={1,-1,0,0};\r\nlong long dfs(int i,int j)\r\n{\r\n    long long res=1;\r\n    fates[i][j]='#';\r\n    for(int k=0;k<4;k++)\r\n    {\r\n        int x=i+dx[k],y=j+dy[k];\r\n        if(x>=0&&y>=0&&x<h&&y<w&&fates[x][y]=='.')\r\n        {\r\n            res+=dfs(x,y);\r\n        }\r\n    }\r\n    return res;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    while(cin>>w>>h,w||h)\r\n    {\r\n        int x,y;\r\n        for(int i=0;i<h;i++)\r\n        {\r\n            for(int j=0;j<w;j++)\r\n            {\r\n                cin>>fates[i][j];\r\n                if(fates[i][j]=='@')\r\n                {\r\n                    x=i;y=j;\r\n                }\r\n            }\r\n        }\r\n        cout<<dfs(x,y)<<endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
           }
@@ -3900,7 +3906,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK40/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><b></b></p><p><b><img alt=\"image.png\" src=\"assets/problem-images/LinK40-b6c5853cee.png\" width=\"476\" height=\"297\" /></b></p><p>林克驰骋在海拉鲁大陆的平原上无比自由，他想起二维空间中的国际象棋同伴，回想起自己也活在2D世代的局限，心生怜悯。</p><p>那些骑士，永远被局限在8×8的棋盘之内厮杀，他们的世界永不改变。因此，林克去到阿卡来研究所寻求帮助，他得到新的道具——变形棋盘。</p><p>这个变形棋盘可以根据输入的两个参数的（p,q）创造全新的棋盘空间。</p><p>如下图分别是<span style=\"color: rgb(51, 51, 51);\">（p,q）为</span>(3,9) , (6,3) ,以及(5,5)的棋盘空间。</p><p><b><img alt=\"image.png\" src=\"assets/problem-images/LinK40-b8a4867026.png\" width=\"362\" height=\"121\" />--<img alt=\"image.png\" src=\"assets/problem-images/LinK40-d342aa69ef.png\" width=\"121\" height=\"244\" />--<img alt=\"image.png\" src=\"assets/problem-images/LinK40-b878d932db.png\" width=\"202\" height=\"202\" /><br /></b></p><p>假设2D世界的骑士，移动的方式按字母次序有如下8种：</p><p><img alt=\"image.png\" src=\"assets/problem-images/LinK40-c7732abd82.png\" width=\"286\" height=\"273\" /><br /></p><p><font>请问对于每一种棋盘<span style=\"color: rgb(51, 51, 51);\">（p,q）</span>，2D骑士是否有一种一次遍历所有棋盘方格的路线？</font></p><p><font>如果有，请输出这条路线（若有多条路线，请输出字典序最小的路线）。</font></p><p><font>如果没有，请输出无。</font></p>",
+          "description": "<p><b></b></p><p><b><img alt=\"image.png\" src=\"/public/upload/b6774f404c.png\" width=\"476\" height=\"297\" /></b></p><p>林克驰骋在海拉鲁大陆的平原上无比自由，他想起二维空间中的国际象棋同伴，回想起自己也活在2D世代的局限，心生怜悯。</p><p>那些骑士，永远被局限在8×8的棋盘之内厮杀，他们的世界永不改变。因此，林克去到阿卡来研究所寻求帮助，他得到新的道具——变形棋盘。</p><p>这个变形棋盘可以根据输入的两个参数的（p,q）创造全新的棋盘空间。</p><p>如下图分别是<span style=\"color: rgb(51, 51, 51);\">（p,q）为</span>(3,9) , (6,3) ,以及(5,5)的棋盘空间。</p><p><b><img alt=\"image.png\" src=\"/public/upload/1535dce661.png\" width=\"362\" height=\"121\" />--<img alt=\"image.png\" src=\"/public/upload/9a40274901.png\" width=\"121\" height=\"244\" />--<img alt=\"image.png\" src=\"/public/upload/33abb03385.png\" width=\"202\" height=\"202\" /><br /></b></p><p>假设2D世界的骑士，移动的方式按字母次序有如下8种：</p><p><img alt=\"image.png\" src=\"/public/upload/348369f95a.png\" width=\"286\" height=\"273\" /><br /></p><p><font>请问对于每一种棋盘<span style=\"color: rgb(51, 51, 51);\">（p,q）</span>，2D骑士是否有一种一次遍历所有棋盘方格的路线？</font></p><p><font>如果有，请输出这条路线（若有多条路线，请输出字典序最小的路线）。</font></p><p><font>如果没有，请输出无。</font></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">输入数据第一行为正整数n，代表有多少组输入样例</span></p><p><span style=\"color: rgb(35, 31, 23);\">接下来n行是两个整数代表行p和列q, 代表变形棋盘的行列参数，其中（1 &lt;= p * q &lt;= 26）。</span><br /></p>",
           "outputDescription": "<p>每个样例的输出2行，格式如下：</p><p style=\"margin-left: 40px;\">&quot;#i:&quot; 其中i代表第i种棋盘</p><p style=\"margin-left: 40px;\">骑士跳过的每个格子（<span style=\"color: rgb(51, 51, 51);\">每个访问的格子用大写字母加数字表示），一条可行的路径输出如</span>(A1B3C1A2B4C2A3B1C3A4B2C4)，</p><p>如果没有可行方案，则第二行输出：none</p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1BK411F7ns\" target=\"_blank\">Andy(2021)</a></p><p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1uK411j7S5\" target=\"_blank\">Andy(2020)</a></p>",
@@ -3912,7 +3918,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
             }
           ],
           "solution": {
-            "path": "solutions/362/LinK40.cpp",
+            "path": "solutions\\362\\LinK40.cpp",
             "language": "cpp",
             "code": "\r\n\r\n\r\n//A1"
           }
@@ -3923,7 +3929,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK41/",
           "timeLimit": 3000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img src=\"assets/problem-images/LinK41-3d477a8d08.jpg\" alt=\"查看源图像\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">塞尔达公主</span>的生日将近，英杰们预备绞尽脑汁要为公主作一个生日蛋糕塔。</span></p><p><span style=\"color: rgb(35, 31, 23);\">这个蛋糕塔一共有N层，每层都是圆柱体，象征英杰们合一平等的关系。</span></p><p><span style=\"color: rgb(35, 31, 23);\">蛋糕塔的总体积是 V * π 。</span></p><p><span style=\"color: rgb(35, 31, 23);\">最底层的蛋糕半径最大，最上层的蛋糕半径最小，这种结构象征英杰们稳固的生命根基。</span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">因此从底层往上层数，第i (1 &lt;= i &lt;= N) 层是半径为 r(i), 高度为h(i) 的圆柱体。当 i &lt; N 时，有r(i) &gt; r(i+ 1) 且 h(i) &gt; h(i+1)。</span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">蛋糕塔每一层圆柱体的半径r(i)和高度h(i)都是整数，象征公主英杰们不打折的忠诚。</span></span></p><p><span style=\"color: rgb(35, 31, 23);\">蛋糕塔的表面积，象征英杰们与公主的亲密关系面临的外部挑战。</span></p><p><span style=\"color: rgb(35, 31, 23);\">因此，对于给定的V和N，我们希望找到一个使表面积最小的蛋糕塔制作方案。</span></p><p><span style=\"color: rgb(35, 31, 23);\">令表面积Q = S<span style=\"color: rgb(35, 31, 23);\">* π，</span></span><span style=\"color: rgb(35, 31, 23);\">对<span style=\"color: rgb(35, 31, 23);\">给定的V和N</span>，请输出使Q最小的S是多少。</span></p><p><span style=\"color: rgb(35, 31, 23);\">（除Q外，以上所有数据皆为正整数，下图是蛋糕塔的俯视图和示意图）</span></p><p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK41-062c8f50ec.png\" width=\"405\" height=\"405\" /></span><img alt=\"image.png\" src=\"assets/problem-images/LinK41-c9310fc942.png\" width=\"322\" height=\"273\" /><span style=\"color: rgb(35, 31, 23);\"><br /></span></p>",
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><img src=\"https://tse4-mm.cn.bing.net/th?id=OIP.CavPwvaW2jmarrEH3iSs3wHaEo&pid=Api&rs=1\" alt=\"查看源图像\" /><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">塞尔达公主</span>的生日将近，英杰们预备绞尽脑汁要为公主作一个生日蛋糕塔。</span></p><p><span style=\"color: rgb(35, 31, 23);\">这个蛋糕塔一共有N层，每层都是圆柱体，象征英杰们合一平等的关系。</span></p><p><span style=\"color: rgb(35, 31, 23);\">蛋糕塔的总体积是 V * π 。</span></p><p><span style=\"color: rgb(35, 31, 23);\">最底层的蛋糕半径最大，最上层的蛋糕半径最小，这种结构象征英杰们稳固的生命根基。</span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">因此从底层往上层数，第i (1 &lt;= i &lt;= N) 层是半径为 r(i), 高度为h(i) 的圆柱体。当 i &lt; N 时，有r(i) &gt; r(i+ 1) 且 h(i) &gt; h(i+1)。</span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">蛋糕塔每一层圆柱体的半径r(i)和高度h(i)都是整数，象征公主英杰们不打折的忠诚。</span></span></p><p><span style=\"color: rgb(35, 31, 23);\">蛋糕塔的表面积，象征英杰们与公主的亲密关系面临的外部挑战。</span></p><p><span style=\"color: rgb(35, 31, 23);\">因此，对于给定的V和N，我们希望找到一个使表面积最小的蛋糕塔制作方案。</span></p><p><span style=\"color: rgb(35, 31, 23);\">令表面积Q = S<span style=\"color: rgb(35, 31, 23);\">* π，</span></span><span style=\"color: rgb(35, 31, 23);\">对<span style=\"color: rgb(35, 31, 23);\">给定的V和N</span>，请输出使Q最小的S是多少。</span></p><p><span style=\"color: rgb(35, 31, 23);\">（除Q外，以上所有数据皆为正整数，下图是蛋糕塔的俯视图和示意图）</span></p><p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/f92aa2fa22.png\" width=\"405\" height=\"405\" /></span><img alt=\"image.png\" src=\"http://www.xmuoj.com/public/upload/5876ef28f6.png\" width=\"322\" height=\"273\" /><span style=\"color: rgb(35, 31, 23);\"><br /></span></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">有两行，第一行为V（V &lt;= 100000），表示待制作的蛋糕的体积为<span style=\"color: rgb(35, 31, 23);\">V * π</span>；第二行为N(N &lt;= 20)，表示蛋糕的层数为N。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">仅一行，是一个正整数S（若无解则S = 0）。</span><br /></p><p><font>提示：根据题意，我们无需计算<span style=\"color: rgb(35, 31, 23);\">π，因此有</span></font></p><p style=\"margin-left: 0px;\">圆柱<span style=\"color: rgb(35, 31, 23);\">体积v&#039; = r</span>*r*h<br />圆柱<span style=\"color: rgb(35, 31, 23);\">侧面积 s&#039; = 2*r*h<br /></span><span style=\"color: rgb(35, 31, 23);\">圆柱底面积c&#039;= r*r</span></p><p><font><span style=\"color: rgb(35, 31, 23);\"><br /></span></font></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1Bp4y1C7Qs\" target=\"_blank\">Andy讲解(B站)</a>（更正：R和H都要逐层递减，题面无误)</p><p>（改编自《生日蛋糕》，<a href=\"https://www.acwing.com/video/481/\" target=\"_blank\">Y总讲解(付费)</a>）</p><p><a href=\"https://www.acwing.com/solution/content/31876/\" target=\"_blank\">参考题解</a></p><p><a href=\"https://www.acwing.com/activity/content/code/content/136866/\" target=\"_blank\">Y总代码</a></p>",
@@ -3933,7 +3939,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "100\n2",
               "output": "68"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK42",
@@ -3941,7 +3948,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK42/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>在海拉鲁大陆冒险，没有绝佳的剑法+想象力是不可能存活下来的。</p><p>这不，林克遇到了一个特别巨大的敌人——黄金蛋糕人马（莱尼尔的变种）</p><p><span style=\"color: rgb(51, 51, 51);\">这黄金蛋糕人马</span>长相非常特别，没有脚没有手没有嘴巴没有头，整个身材就是一个大矩形（喂喂，这不就是黄金莱尼尔吗？）</p><p><img alt=\"image.png\" src=\"assets/problem-images/LinK42-5b64bf1c6e.png\" width=\"863\" height=\"462\" /><br />它的长和宽分别是整数w、h。</p><p>林克举起大师之剑，挥向<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>，要将其切成m块矩形小块打包走，分给自己的朋友（每块都必须是矩形、且长和宽均为整数）。</p><p>大师之剑无比锐利，每一斩带出的剑气能将<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>劈成两半（形成两个小矩形蛋糕）。</p><p>经过m-1斩，<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>居然被劈成m块小蛋糕（喂喂，你的想象力也太丰富了，明明切不开好吗？）</p><p>请计算：最后得到的m块小蛋糕中，最大的那块蛋糕的面积下限。<br /><br /></p><p>假设w= 4,h= 4,m= 4，则下面的斩击可使得其中最大蛋糕块的面积最小。(十字斩)</p><p><img src=\"assets/problem-images/LinK42-43115c4ac6.gif\" /><br /></p><p><span style=\"color: rgb(35, 31, 23);\">假设</span>w<span style=\"color: rgb(35, 31, 23);\">= 4,h= 4,m= 3</span><span style=\"color: rgb(35, 31, 23);\">，则下<span style=\"color: rgb(51, 51, 51);\">面的斩击可</span>使得其中最大蛋糕块的面积最小</span><span style=\"color: rgb(35, 31, 23);\">:.(二连斩)</span><br /></p><p><span style=\"color: rgb(35, 31, 23);\"><img src=\"assets/problem-images/LinK42-994e2d19e6.gif\" /><br /></span></p>",
+          "description": "<p>在海拉鲁大陆冒险，没有绝佳的剑法+想象力是不可能存活下来的。</p><p>这不，林克遇到了一个特别巨大的敌人——黄金蛋糕人马（莱尼尔的变种）</p><p><span style=\"color: rgb(51, 51, 51);\">这黄金蛋糕人马</span>长相非常特别，没有脚没有手没有嘴巴没有头，整个身材就是一个大矩形（喂喂，这不就是黄金莱尼尔吗？）</p><p><img alt=\"image.png\" src=\"/public/upload/c566399d7b.png\" width=\"863\" height=\"462\" /><br />它的长和宽分别是整数w、h。</p><p>林克举起大师之剑，挥向<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>，要将其切成m块矩形小块打包走，分给自己的朋友（每块都必须是矩形、且长和宽均为整数）。</p><p>大师之剑无比锐利，每一斩带出的剑气能将<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>劈成两半（形成两个小矩形蛋糕）。</p><p>经过m-1斩，<span style=\"color: rgb(51, 51, 51);\">黄金蛋糕人马</span>居然被劈成m块小蛋糕（喂喂，你的想象力也太丰富了，明明切不开好吗？）</p><p>请计算：最后得到的m块小蛋糕中，最大的那块蛋糕的面积下限。<br /><br /></p><p>假设w= 4,h= 4,m= 4，则下面的斩击可使得其中最大蛋糕块的面积最小。(十字斩)</p><p><img src=\"http://media.openjudge.cn/images/upload/1372385654.gif\" /><br /></p><p><span style=\"color: rgb(35, 31, 23);\">假设</span>w<span style=\"color: rgb(35, 31, 23);\">= 4,h= 4,m= 3</span><span style=\"color: rgb(35, 31, 23);\">，则下<span style=\"color: rgb(51, 51, 51);\">面的斩击可</span>使得其中最大蛋糕块的面积最小</span><span style=\"color: rgb(35, 31, 23);\">:.(二连斩)</span><br /></p><p><span style=\"color: rgb(35, 31, 23);\"><img src=\"http://media.openjudge.cn/images/upload/1372385663.gif\" /><br /></span></p>",
           "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">共有多行，每行表示一个测试案例。</span></p><p><span style=\"color: rgb(35, 31, 23);\">每行是三个用空格分开的整数w, h, m ，其中1 ≤ w, h, m ≤ 20 ， m ≤ wh.</span></p><p><span style=\"color: rgb(35, 31, 23);\">当 w = h = m = 0 时不需要处理，表示输入结束。</span><br /></p>",
           "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">每个测试案例的结果占一行，输出一个整数，表示最大蛋糕块的面积下限。</span><br /></p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1ti4y1b7s1\" target=\"_blank\">Andy讲解</a><br /></p><p>改编自《<a href=\"https://www.bilibili.com/video/BV1Zb411q7iY?p=33\" target=\"_blank\">分蛋糕</a>》</p>",
@@ -3951,7 +3958,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "4 4 4\n4 4 3\n0 0 0",
               "output": "4\n6"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK43",
@@ -3959,7 +3967,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK43/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"料理.gif\" src=\"assets/problem-images/LinK43-5af5df6aee.gif\" width=\"489\" height=\"366\" /><br /></span></p><p>为了寻找失去的回忆碎片，林克必须预备足够的料理。能够快速突破数独试炼，熟练运用lowbit，才能把难题转换为美味佳肴。</p><p><span style=\"color: rgb(51, 51, 51);\">请用lowbit解决如下问题：</span></p><p><span style=\"color: rgb(51, 51, 51);\">输入一个32位整数，输出该数二进制表示中1的个数。</span><br /></p><p>注意：</p><ul><li>负数在计算机中用其绝对值的补码来表示。</li></ul>",
+          "description": "<p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"料理.gif\" src=\"/public/upload/f9ed434226.gif\" width=\"489\" height=\"366\" /><br /></span></p><p>为了寻找失去的回忆碎片，林克必须预备足够的料理。能够快速突破数独试炼，熟练运用lowbit，才能把难题转换为美味佳肴。</p><p><span style=\"color: rgb(51, 51, 51);\">请用lowbit解决如下问题：</span></p><p><span style=\"color: rgb(51, 51, 51);\">输入一个32位整数，输出该数二进制表示中1的个数。</span><br /></p><p>注意：</p><ul><li>负数在计算机中用其绝对值的补码来表示。</li></ul>",
           "inputDescription": "<pre><code style=\"font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; padding: 0px; color: inherit; background: transparent; border-radius: 3px; margin: 0px; border: none;\">输入：9\n输出：2\n解释：9的二进制表示是1001，一共有2个1。</code></pre>",
           "outputDescription": "<pre><code style=\"font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: inherit; padding: 0px; color: inherit; background: transparent; border-radius: 3px; margin: 0px; border: none;\">输入：-2\n输出：31\n解释：-2在计算机里会被表示成11111111111111111111111111111110，\n      一共有31个1。</code></pre>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1Kf4y1S7mB\" target=\"_blank\">Andy讲解</a><br /></p>",
@@ -3973,7 +3981,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "9",
               "output": "2"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK44",
@@ -3981,8 +3990,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK44/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p><img alt=\"lowbit.jpg\" src=\"assets/problem-images/LinK44-12df9c1ce3.jpg\" width=\"474\" height=\"296\" /><br /></p><p>打表法是寻找回忆不可或缺的重要方法，如果配合上lowbit，那么更难的问题也能迎刃而解。</p><p>请运用打表法和lowbit算法解决如下问题：</p><p>给定一个16位的十进制数，请把该数转换为二进制数来看待。</p><p>请找到该数看为二进制后，其最低位的1出现的位置。</p><p>也就是这个数最低位的1是二进制中的第几位呢？</p>",
-          "inputDescription": "<p>以1开头的二进制数的十进制表示B.</p><p>例如输入9.</p><p><img alt=\"image.png\" src=\"assets/problem-images/LinK44-a53b385fe3.png\" width=\"391\" height=\"119\" /><br /></p>",
+          "description": "<p><img alt=\"lowbit.jpg\" src=\"/public/upload/dcbaca3e1e.jpg\" width=\"474\" height=\"296\" /><br /></p><p>打表法是寻找回忆不可或缺的重要方法，如果配合上lowbit，那么更难的问题也能迎刃而解。</p><p>请运用打表法和lowbit算法解决如下问题：</p><p>给定一个16位的十进制数，请把该数转换为二进制数来看待。</p><p>请找到该数看为二进制后，其最低位的1出现的位置。</p><p>也就是这个数最低位的1是二进制中的第几位呢？</p>",
+          "inputDescription": "<p>以1开头的二进制数的十进制表示B.</p><p>例如输入9.</p><p><img alt=\"image.png\" src=\"/public/upload/22827db03d.png\" width=\"391\" height=\"119\" /><br /></p>",
           "outputDescription": "<p>输出K，表示B中的1在第K位（K=0,1,2....15)</p><p>9的最低位的1出现在位置0.</p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1dC4y1s7LW\" target=\"_blank\">Andy讲解</a></p><p>8 = 2^3 故需要计算以2为底的log(2^3)=3，得到第3位。也就是8的二进制表示中，1出现在第3位。<br /></p><p>用打表法计算Log2。</p>",
           "source": "xmu",
@@ -3995,7 +4004,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "8",
               "output": "3"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK45",
@@ -4003,7 +4013,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK45/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img src=\"assets/problem-images/LinK45-cbcc1d3e1b.jpg\" width=\"400\" height=\"210.5017502917153\" /><br /></p><p style=\"margin-left: 0px;\">在千辛万苦得到一个记忆碎片之后，林克需要辨别真假，若是所得到的并不是发生历史中的碎片，乃是后人捏着的，那么林克如何寻回完整的自己呢？</p><p style=\"margin-left: 0px;\">已知林克找到的记忆碎片9×9矩阵是初始矩阵A的解法，也就是记忆碎片A。空白的部分在初始矩阵中用0表示。</p><p><img src=\"https://cdn.acwing.com/media/article/image/2019/04/18/19_165f3c0a61-1.png\" alt=\"1.png\" width=\"200\" height=\"200\" /><img src=\"https://cdn.acwing.com/media/article/image/2019/04/18/19_18efab2661-2.png\" alt=\"2.png\" width=\"200\" height=\"200\" /><br /></p><p>（初始矩阵A）<span style=\"color: rgb(51, 51, 51);\">（记忆碎片A）</span></p><p>请写一个算法，判定找到的记忆碎片是否是真的？</p>",
+          "description": "<p style=\"margin-left: 0px;\"><img src=\"https://pic2.zhimg.com/80/v2-2b8f66b224724de6cfea455f22d5f3c1_720w.jpg\" width=\"400\" height=\"210.5017502917153\" /><br /></p><p style=\"margin-left: 0px;\">在千辛万苦得到一个记忆碎片之后，林克需要辨别真假，若是所得到的并不是发生历史中的碎片，乃是后人捏着的，那么林克如何寻回完整的自己呢？</p><p style=\"margin-left: 0px;\">已知林克找到的记忆碎片9×9矩阵是初始矩阵A的解法，也就是记忆碎片A。空白的部分在初始矩阵中用0表示。</p><p><img src=\"https://cdn.acwing.com/media/article/image/2019/04/18/19_165f3c0a61-1.png\" alt=\"1.png\" width=\"200\" height=\"200\" /><img src=\"https://cdn.acwing.com/media/article/image/2019/04/18/19_18efab2661-2.png\" alt=\"2.png\" width=\"200\" height=\"200\" /><br /></p><p>（初始矩阵A）<span style=\"color: rgb(51, 51, 51);\">（记忆碎片A）</span></p><p>请写一个算法，判定找到的记忆碎片是否是真的？</p>",
           "inputDescription": "<p>输入的<span style=\"color: rgb(51, 51, 51);\">记忆碎片A</span>是一个9行9列的数独矩阵。</p><p>每行包含9个数字（均不超过数字为1-9）。</p><p>初始矩阵A：</p><p>530070000</p><p>600195000</p><p>098000060</p><p>800060003</p><p>400803001</p><p>700020006</p><p>060000280</p><p>000419005</p><p>000080079</p>",
           "outputDescription": "<p>如果输入数据真的是<span style=\"color: rgb(51, 51, 51);\">初始矩阵A</span>的解，输出Yes，否则输出No</p>",
           "hint": "<p><a href=\"https://www.bilibili.com/video/BV1oU4y1h7hV/\" target=\"_blank\">Andy(2021)</a><br /></p>",
@@ -4021,7 +4031,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "534678912\n672195348\n198342567\n859761423\n42689993791\n713924856\n961537284\n287419635\n345286179",
               "output": "No"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK46",
@@ -4029,7 +4040,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK46/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"assets/problem-images/LinK46-05af94369d.png\" width=\"676\" height=\"349\" /><br /></p><p style=\"margin-left: 0px;\">为了找到百年沉睡的原因，寻回百年前与公主一起的记忆碎片，明白自己是谁，林克必须破解数独谜题。</p><p style=\"margin-left: 0px;\">林克需要在限定时间内，把9×9的数独补充完整，使得图中每行、每列、每个3 × 3的九宫格内数字1~9均恰好出现一次。</p><p style=\"margin-left: 0px;\">林克需要寻回失去的记忆碎片，你，作为林克的朋友，需要帮忙林克寻回9×9棋盘中失去的数字。</p><p style=\"margin-left: 0px;\">或许有一天，林克也能帮助你，寻回关于你是谁，你从哪里来的记忆碎片。</p><p style=\"margin-left: 0px;\">这是数独试炼I（<span style=\"color: rgb(51, 51, 51);\">解密成功可以解锁林克前25%的记忆碎片）</span></p><p><img src=\"assets/problem-images/LinK46-d814e91006.jpg\" /><br /></p>",
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/5651a11e2c.png\" width=\"676\" height=\"349\" /><br /></p><p style=\"margin-left: 0px;\">为了找到百年沉睡的原因，寻回百年前与公主一起的记忆碎片，明白自己是谁，林克必须破解数独谜题。</p><p style=\"margin-left: 0px;\">林克需要在限定时间内，把9×9的数独补充完整，使得图中每行、每列、每个3 × 3的九宫格内数字1~9均恰好出现一次。</p><p style=\"margin-left: 0px;\">林克需要寻回失去的记忆碎片，你，作为林克的朋友，需要帮忙林克寻回9×9棋盘中失去的数字。</p><p style=\"margin-left: 0px;\">或许有一天，林克也能帮助你，寻回关于你是谁，你从哪里来的记忆碎片。</p><p style=\"margin-left: 0px;\">这是数独试炼I（<span style=\"color: rgb(51, 51, 51);\">解密成功可以解锁林克前25%的记忆碎片）</span></p><p><img src=\"http://media.openjudge.cn/images/2982_1.jpg\" /><br /></p>",
           "inputDescription": "<p><font>输入为9×9的数据。一共9行，每行有9个数字。</font></p><p>数字为0表示对应的数字盘为空。<br /></p>",
           "outputDescription": "<p><font>对于每个测试用例，程序应以与输入数据相同的格式打印解决方案(9×9)。</font></p><p><font>空单元格必须根据规则进行填充。</font></p><p><font>如果解决方案不是唯一的，则程序可以打印其中任何一种。</font><br /></p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1mU4y1b7WE/\" target=\"_blank\">Andy(2021)</a></p><p><a href=\"https://www.bilibili.com/video/BV1oC4y1s7sF\" target=\"_blank\">Andy(2020)</a></p><p>改编自：POJ2676<br /></p><p>《算法竞赛进阶指南》</p>",
@@ -4039,7 +4050,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": "103000509\n002109400\n000704000\n300502006\n060000050\n700803004\n000401000\n009205800\n804000107",
               "output": "143628579\n572139468\n986754231\n391542786\n468917352\n725863914\n237481695\n619275843\n854396127"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK47",
@@ -4047,7 +4059,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK47/",
           "timeLimit": 2000,
           "memoryLimit": 256,
-          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"assets/problem-images/LinK47-91cef4de90.png\" width=\"537\" height=\"307\" /><br /></p><p>为了找到百年沉睡的原因，寻回百年前与公主一起的记忆碎片，明白自己是谁，林克必须破解数独谜题：</p><p>林克需要在限定时间内，把9×9的数独补充完整，使得图中每行、每列、每个3 × 3的九宫格内数字1~9均恰好出现一次。</p><p>林克需要寻回失去的记忆碎片，你，作为林克的朋友，需要帮忙林克寻回9×9棋盘中失去的数字。</p><p>或许有一天，林克也能帮助你，寻回关于你是谁，你从哪里来的记忆碎片。</p><p><span style=\"color: rgb(51, 51, 51);\">这是数独试炼II（</span><span style=\"color: rgb(51, 51, 51);\">解密成功可以解锁林克25%的记忆碎片）</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\">请编写一个程序填写数独。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\"><img src=\"assets/problem-images/LinK47-93b57e26e8.png\" alt=\"数独.png\" /><br /></span></p>",
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/13e7012948.png\" width=\"537\" height=\"307\" /><br /></p><p>为了找到百年沉睡的原因，寻回百年前与公主一起的记忆碎片，明白自己是谁，林克必须破解数独谜题：</p><p>林克需要在限定时间内，把9×9的数独补充完整，使得图中每行、每列、每个3 × 3的九宫格内数字1~9均恰好出现一次。</p><p>林克需要寻回失去的记忆碎片，你，作为林克的朋友，需要帮忙林克寻回9×9棋盘中失去的数字。</p><p>或许有一天，林克也能帮助你，寻回关于你是谁，你从哪里来的记忆碎片。</p><p><span style=\"color: rgb(51, 51, 51);\">这是数独试炼II（</span><span style=\"color: rgb(51, 51, 51);\">解密成功可以解锁林克25%的记忆碎片）</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\">请编写一个程序填写数独。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\"><img src=\"https://www.acwing.com/media/article/image/2019/01/16/19_8cb8eda618-%E6%95%B0%E7%8B%AC.png\" alt=\"数独.png\" /><br /></span></p>",
           "inputDescription": "<p>输入包含多组测试用例。</p><p>每个测试用例占一行，包含81个字符，代表数独的81个格内数据（顺序总体由上到下，同行由左到右）。</p><p>每个字符都是一个数字（1-9）或一个”.”（表示尚未填充）。</p><p>您可以假设输入中的每个谜题都只有一个解决方案。</p><p>文件结尾处为包含单词“end”的单行，表示输入结束。</p>",
           "outputDescription": "<p>每个测试用例，输出一行数据，代表填充完全后的数独。</p>",
           "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1uA411V7Nr/\" target=\"_blank\">Andy(2021)</a></p><p><a href=\"https://www.bilibili.com/video/BV1Ki4y1t7mf\" target=\"_blank\">Andy(2020)</a><br /></p><p><a href=\"https://www.acwing.com/problem/content/video/168/\" target=\"_blank\">ACWing讲解</a></p><p>来源：<a href=\"http://bailian.openjudge.cn/practice/2984\" target=\"_blank\">2984</a></p>",
@@ -4057,7 +4069,8 @@ window.XMUOJ_SOLUTIONS_DATA = {
               "input": ".2738..1..1...6735.......293.5692.8...........6.1745.364.......9518...7..8..6534.\n......52..8.4......3...9...5.1...6..2..7........3.....6...1..........7.4.......3.\nend",
               "output": "527389416819426735436751829375692184194538267268174593643217958951843672782965341\n416837529982465371735129468571298643293746185864351297647913852359682714128574936"
             }
-          ]
+          ],
+          "solution": null
         },
         {
           "id": "LinK48",
@@ -4065,12 +4078,18 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK48/",
           "timeLimit": 2000,
           "memoryLimit": 256,
-          "description": "<p>为了寻回百年前与公主一起的记忆碎片，林克历尽千辛万苦总算破解了数独试炼I和II的谜题，寻回50%的记忆碎片。</p><p>如今，摆在他面前是数独试炼III——传说中的靶形数独（通过后可以获得剩下的30%的记忆碎片)。</p><p>靶形数独的方格同普通数独一样，在9×9的大九宫格中有9个3×3的小九宫格（用粗黑色线隔开的）。</p><p>在这个大九宫格中，有一些数字是已知的，根据这些数字，利用逻辑推理，在其他的空格上填入1到9的数字。</p><p>每个数字在每个小九宫格内不能重复出现，每个数字在每行、每列也不能重复出现。</p><p>但靶形数独有一点和普通数独不同，即每一个方格都有一个分值，而且如同一个靶子一样，离中心越近则分值越高（如下图所示）。</p><p>上图具体的分值分布是：</p><p>最里面一格（黄色区域）为10分</p><p>黄色区域外面的一圈（红色区域）每个格子为9分</p><p>再外面一圈（蓝色区域）每个格子为8分</p><p>蓝色区域外面一圈（棕色区域）每个格子为7分</p><p>最外面一圈（白色区域）每个格子为6 分</p><p>每个人必须完成一个给定的数独（每个给定数独可能有不同的填法），而且要争取更高的总分数。</p><p>而这个总分数即每个方格上的分值和完成这个数独时填在相应格上的数字的乘积的总和。</p><p>如图，在以下的这个已经填完数字的靶形数独游戏中，总分数为2829。</p><p>游戏规定，将以总分数的高低决出胜负。</p><p>求对于给定的靶形数独，能够得到的最高分数。</p>",
+          "description": "<p><img src=\"https://tse4-mm.cn.bing.net/th?id=OIP.RSKuXL8d4jPQ3CHnZ5Z3jQHaEo&pid=Api&rs=1\" alt=\"See the source image\" /><br /></p><p>为了寻回百年前与公主一起的记忆碎片，林克历尽千辛万苦总算破解了数独试炼I和II的谜题，寻回50%的记忆碎片。<br /></p><p>如今，摆在他面前是数独试炼III——传说中的靶形数独（通过后可以获得剩下的30%的记忆碎片)。</p><p>靶形数独的方格同普通数独一样，在9×9的大九宫格中有9个3×3的小九宫格（用粗黑色线隔开的）。</p><p>在这个大九宫格中，有一些数字是已知的，根据这些数字，利用逻辑推理，在其他的空格上填入1到9的数字。</p><p>每个数字在每个小九宫格内不能重复出现，每个数字在每行、每列也不能重复出现。</p><p>但靶形数独有一点和普通数独不同，即每一个方格都有一个分值，而且如同一个靶子一样，离中心越近则分值越高（如下图所示）。</p><p><img src=\"https://www.acwing.com/media/article/image/2019/01/17/19_1add32be19-%E9%9D%B6%E5%AD%90.jpe.jpg\" alt=\"靶子.jpe.jpg\" /><br /></p><p><span style=\"color: rgb(51, 51, 51);\">上图具体的分值分布是：</span></p><p style=\"margin-left: 40px;\"><span style=\"color: rgb(51, 51, 51);\">最里面一格（黄色区域）为10分<br /></span>黄色区域外面的一圈（红色区域）每个格子为9分<br />再外面一圈（蓝色区域）每个格子为8分<br />蓝色区域外面一圈（棕色区域）每个格子为7分<br />最外面一圈（白色区域）每个格子为6 分</p><p>每个人必须完成一个给定的数独（每个给定数独可能有不同的填法），而且要争取更高的总分数。</p><p>而这个总分数即每个方格上的分值和完成这个数独时填在相应格上的数字的乘积的总和。</p><p>如图，在以下的这个已经填完数字的靶形数独游戏中，总分数为2829。</p><p>游戏规定，将以总分数的高低决出胜负。</p><p><img src=\"https://www.acwing.com/media/article/image/2019/01/17/19_55aa03a419-%E9%9D%B6%E5%AD%902.jpe.jpg\" alt=\"靶子2.jpe.jpg\" /><br /></p><p><span style=\"color: rgb(51, 51, 51);\">求对于给定的靶形数独，能够得到的最高分数。</span><br /></p>",
           "inputDescription": "<p>输入一共包含9行。</p><p>每行 9 个整数（每个数都在 0—9 的范围内），表示一个尚未填满的数独方格，未填的空格用“0”表示。</p><p>每两个数字之间用一个空格隔开。</p>",
           "outputDescription": "<p>输出可以得到的靶形数独的最高分数。</p><p>如果这个数独无解，则输出整数-1。</p>",
-          "hint": "<p>Andy(2021)</p><p>Andy(2020)</p><p>ACWing的讲解</p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/bv1Qb4y1D7hY\" target=\"_blank\">Andy(2021)</a></p><p><a href=\"https://www.bilibili.com/video/BV1mA411b7hB\" target=\"_blank\">Andy(2020)</a></p><p><a href=\"https://www.acwing.com/video/272/\" target=\"_blank\">ACWing的讲解</a></p>",
           "source": "",
-          "samples": []
+          "samples": [
+            {
+              "input": "7 0 0 9 0 0 0 0 1 \n1 0 0 0 0 5 9 0 0 \n0 0 0 2 0 0 0 8 0 \n0 0 5 0 2 0 0 0 3 \n0 0 0 0 0 0 6 4 8 \n4 1 3 0 0 0 0 0 0 \n0 0 7 0 0 2 0 9 0 \n2 0 1 0 6 0 8 0 4 \n0 8 0 5 0 4 0 1 2 ",
+              "output": "2829"
+            }
+          ],
+          "solution": null
         },
         {
           "id": "LinK49",
@@ -4078,12 +4097,18 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK49/",
           "timeLimit": 5000,
           "memoryLimit": 258,
-          "description": "<p>为了寻回百年前与公主一起的记忆碎片，林克终于来到了数独试炼的终阶——16*16字母数独</p><p>（如果通过，可以获得最后的的20%的记忆碎片)。</p><p>字母数独要求如下：</p><p>将一个16x16的数独填写完整，使得每行、每列、每个4x4十六宫格内字母A~P均恰好出现一次。</p><p>保证每个输入只有唯一解决方案。</p>",
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/452568f066.png\" width=\"652\" height=\"367\" /><br /></p><p>为了寻回百年前与公主一起的记忆碎片，林克终于来到了数独试炼的终阶——16*16字母数独</p><p>（如果通过，可以获得最后的的20%的记忆碎片)。</p><p style=\"margin-left: 0px;\">字母数独要求如下：</p><p style=\"margin-left: 0px;\">将一个16x16的数独填写完整，使得每行、每列、每个4x4十六宫格内字母A~P均恰好出现一次。</p><p>保证每个输入只有唯一解决方案。</p><p><img src=\"https://www.acwing.com/media/article/image/2019/01/16/19_cabce58018-%E6%95%B0%E7%8B%AC2.jpg\" alt=\"数独2.jpg\" /><br /></p>",
           "inputDescription": "<p>输入包含多组测试用例。</p><p>每组测试用例包括16行，每行一组字符串，共16个字符串。</p><p>第i个字符串表示数独的第i行。</p><p>字符串包含字符可能为字母A~P或”-“（表示等待填充）。</p><p>测试用例之间用单个空行分隔，输入至文件结尾处终止。</p>",
           "outputDescription": "<p>对于每个测试用例，均要求保持与输入相同的格式，将填充完成后的数独输出。</p><p>每个测试用例输出结束后，输出一个空行。</p>",
-          "hint": "<p>ACWing讲解</p><p>Andy2021</p><p>(来源《算法竞赛进阶指南》)</p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.acwing.com/video/103/\" target=\"_blank\">ACWing讲解</a></p><p><a href=\"https://www.bilibili.com/video/bv1Tf4y1p7y4\" target=\"_blank\">Andy2021</a></p><p>(来源《算法竞赛进阶指南》)</p>",
           "source": "xmu",
-          "samples": []
+          "samples": [
+            {
+              "input": "--A----C-----O-I\n-J--A-B-P-CGF-H-\n--D--F-I-E----P-\n-G-EL-H----M-J--\n----E----C--G---\n-I--K-GA-B---E-J\nD-GP--J-F----A--\n-E---C-B--DP--O-\nE--F-M--D--L-K-A\n-C--------O-I-L-\nH-P-C--F-A--B---\n---G-OD---J----H\nK---J----H-A-P-L\n--B--P--E--K--A-\n-H--B--K--FI-C--\n--F---C--D--H-N-",
+              "output": "FPAHMJECNLBDKOGI\nOJMIANBDPKCGFLHE\nLNDKGFOIJEAHMBPC\nBGCELKHPOFIMAJDN\nMFHBELPOACKJGNID\nCILNKDGAHBMOPEFJ\nDOGPIHJMFNLECAKB\nJEKAFCNBGIDPLHOM\nEBOFPMIJDGHLNKCA\nNCJDHBAEKMOFIGLP\nHMPLCGKFIAENBDJO\nAKIGNODLBPJCEFMH\nKDEMJIFNCHGAOPBL\nGLBCDPMHEONKJIAF\nPHNOBALKMJFIDCEG\nIAFJOECGLDPBHMNK"
+            }
+          ],
+          "solution": null
         },
         {
           "id": "LinK50",
@@ -4091,12 +4116,254 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/362/problem/LinK50/",
           "timeLimit": 5000,
           "memoryLimit": 258,
-          "description": "<p>为了寻回百年前与公主一起的记忆碎片，林克终于来到了数独试炼的终阶——16*16字母数独</p><p>（如果通过，可以获得最后的的20%的记忆碎片)。</p><p>字母数独要求如下：</p><p>将一个16x16的数独填写完整，使得每行、每列、每个4x4十六宫格内字母A~P均恰好出现一次。</p><p>保证每个输入只有唯一解决方案。</p>",
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/452568f066.png\" width=\"652\" height=\"367\" /><br /></p><p>为了寻回百年前与公主一起的记忆碎片，林克终于来到了数独试炼的终阶——16*16字母数独</p><p>（如果通过，可以获得最后的的20%的记忆碎片)。</p><p style=\"margin-left: 0px;\">字母数独要求如下：</p><p style=\"margin-left: 0px;\">将一个16x16的数独填写完整，使得每行、每列、每个4x4十六宫格内字母A~P均恰好出现一次。</p><p>保证每个输入只有唯一解决方案。</p><p><img src=\"https://www.acwing.com/media/article/image/2019/01/16/19_cabce58018-%E6%95%B0%E7%8B%AC2.jpg\" alt=\"数独2.jpg\" /><br /></p>",
           "inputDescription": "<p>输入包含多组测试用例。</p><p>每组测试用例包括16行，每行一组字符串，共16个字符串。</p><p>第i个字符串表示数独的第i行。</p><p>字符串包含字符可能为字母A~P或”-“（表示等待填充）。</p><p>测试用例之间用单个空行分隔，输入至文件结尾处终止。</p>",
           "outputDescription": "<p>对于每个测试用例，均要求保持与输入相同的格式，将填充完成后的数独输出。</p><p>每个测试用例输出结束后，输出一个空行。</p>",
-          "hint": "<p>ACWing讲解</p><p>Andy2021</p><p>(来源《算法竞赛进阶指南》)</p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.acwing.com/video/103/\" target=\"_blank\">ACWing讲解</a></p><p><a href=\"https://www.bilibili.com/video/bv1Tf4y1p7y4\" target=\"_blank\">Andy2021</a></p><p>(来源《算法竞赛进阶指南》)</p>",
           "source": "xmu",
-          "samples": []
+          "samples": [
+            {
+              "input": "--A----C-----O-I\n-J--A-B-P-CGF-H-\n--D--F-I-E----P-\n-G-EL-H----M-J--\n----E----C--G---\n-I--K-GA-B---E-J\nD-GP--J-F----A--\n-E---C-B--DP--O-\nE--F-M--D--L-K-A\n-C--------O-I-L-\nH-P-C--F-A--B---\n---G-OD---J----H\nK---J----H-A-P-L\n--B--P--E--K--A-\n-H--B--K--FI-C--\n--F---C--D--H-N-",
+              "output": "FPAHMJECNLBDKOGI\nOJMIANBDPKCGFLHE\nLNDKGFOIJEAHMBPC\nBGCELKHPOFIMAJDN\nMFHBELPOACKJGNID\nCILNKDGAHBMOPEFJ\nDOGPIHJMFNLECAKB\nJEKAFCNBGIDPLHOM\nEBOFPMIJDGHLNKCA\nNCJDHBAEKMOFIGLP\nHMPLCGKFIAENBDJO\nAKIGNODLBPJCEFMH\nKDEMJIFNCHGAOPBL\nGLBCDPMHEONKJIAF\nPHNOBALKMJFIDCEG\nIAFJOECGLDPBHMNK"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK51",
+          "title": "净化迷雾森林(广搜)",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK51/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/3ec4db1361.png\" width=\"539\" height=\"303\" /><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">迷雾森林被加农的玷污了，原本圣洁无比的迷雾森林，如今被彻底玷污，空气中充满着紫色的恶臭。</span></span></p><p><font>林克临危不惧，带上呼吸面罩，挥舞大师之剑的光芒，净化迷雾。林克所到之处，加农褪去，圣洁回归。</font></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">如下图，红色代表墙壁，紫色的迷雾代表需要净化的空间，金色代表林克开始净化的起点。</span></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">从某处开始，林克只能向</span>相邻的紫色区域移动。请问，林克总共能够净化多少区域？</span><br /></span></p><p><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\"><span style=\"color: rgb(35, 31, 23);\">图1 初始状态                                                                图2   净化中.....</span><br /></span></span></p><p><span style=\"color: rgb(35, 31, 23);\"><img alt=\"image.png\" src=\"/public/upload/f48cf16664.png\" width=\"311\" height=\"464\" />-----<img alt=\"image.png\" src=\"/public/upload/d72a7d4360.png\" width=\"313\" height=\"461\" /><br /></span></p>",
+          "inputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">包括多个数据集合。每个数据集合的第一行是两个整数W和H，分别表示x方向和y方向瓷砖的数量。W和H都不超过20。</span></p><p><span style=\"color: rgb(35, 31, 23);\">在接下来的H行中，每行包括W个字符。</span></p><p><span style=\"color: rgb(35, 31, 23);\">每个字符表示一个区域的状态，规则如下</span></p><p><span style=\"color: rgb(35, 31, 23);\">1）</span><span style=\"color: rgb(227, 55, 55);\">‘.’</span><span style=\"color: rgb(35, 31, 23);\">：代表紫色迷雾<img alt=\"image.png\" src=\"/public/upload/668de4a15e.png\" width=\"42\" height=\"41\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">2）</span><span style=\"color: rgb(227, 55, 55);\">‘#’</span><span style=\"color: rgb(35, 31, 23);\">：代表红墙<img alt=\"image.png\" src=\"/public/upload/65762c10c1.png\" width=\"41\" height=\"40\" />；</span></p><p><span style=\"color: rgb(35, 31, 23);\">3）‘@’：代表<span style=\"color: rgb(35, 31, 23);\">林克的起始位置</span><img alt=\"image.png\" src=\"/public/upload/bb1c64a143.png\" width=\"43\" height=\"40\" />(该字符在每个数据集合中唯一出现一次。）</span></p><p><span style=\"color: rgb(35, 31, 23);\">当在一行中读入的是两个零时，表示输入结束。</span></p>",
+          "outputDescription": "<p><span style=\"color: rgb(35, 31, 23);\">对每个数据集合，分别输出一行，显示林克从初始位置出发能净化的迷雾数(记数时包括初始位置的迷雾)。</span><br /></p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1P64y1177P/?spm_id_from=333.1387.search.video_card.click&vd_source=49902189d2e9b9f94f057b6a032aed5f\" target=\"_blank\">Andy(2021)</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "6 9 \n....#. \n.....# \n...... \n...... \n...... \n...... \n...... \n#@...# \n.#..#. \n0 0",
+              "output": "45"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK52",
+          "title": "波克布林的巡逻范围",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK52/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/6fd3a750d3.png\" width=\"554\" height=\"227\" /><br /></p><p style=\"margin-left: 0px;\">有一个m行和n列的方阵区域(m＊n)，横纵坐标范围分别是0∼m−1和0∼n−1。</p><p>一只红色的波克布林从坐标0,0的格子开始巡逻，每一次只能向左，右，上，下四个方向移动一格。</p><p>但是不能进入行坐标和列坐标的数位之和大于k的格子。</p><p>请问该<span style=\"color: rgb(51, 51, 51);\">红色</span><span style=\"color: rgb(51, 51, 51);\">波克布林</span>能够达到多少个格子？</p><p>假如输入：k=18, m=40, n=40</p><p><span style=\"color: rgb(51, 51, 51);\">则输出是：1484</span></p><p><span style=\"color: rgb(51, 51, 51);\">根据题意思：当k为18时，<span style=\"color: rgb(51, 51, 51);\">波克布林</span>能够进入方格（35,37），因为3+5+3+7 = 18。      但是，它不能进入方格（35,38），因为3+5+3+8 = 19。</span><br /></p>",
+          "inputDescription": "<p>输入一行，三个整数，由空格隔开，代表k m n</p><p>其中：</p><p><span style=\"color: rgb(51, 51, 51);\">0&lt;=k&lt;=100</span><br /></p><p>0&lt;=m&lt;=50</p><p>0&lt;=n&lt;=50</p>",
+          "outputDescription": "<p>一个整数，表示红色<span style=\"color: rgb(51, 51, 51);\">波克布林能达到的多少格子。</span></p><p><code><br /></code><code><br /></code></p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/BV1Lg4y1z73k\" target=\"_blank\">Andy的讲解</a><br /></p><p><a href=\"https://www.acwing.com/video/148/\" target=\"_blank\">ACWing讲解</a></p><p>《来源：剑指Offer》</p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "18 40 40",
+              "output": "1484"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK53",
+          "title": "加农的入侵",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK53/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><img alt=\"OIP (2).jpg\" src=\"/public/upload/38df660829.jpg\" width=\"474\" height=\"266\" /><br /></p><p>加农是罪的化身，所到之处污秽遍地。原先富丽堂皇的海鲁拉城堡也被加农污秽了。</p><p>根据调查，加农污秽一片地区有如下规律：</p><p>下图是一个矩形区域，Y=3,<span style=\"color: rgb(51, 51, 51);\">X=4。</span><br /></p><p><img alt=\"image.png\" src=\"/public/upload/258c8317af.png\" width=\"81\" height=\"103\" /><br /></p><p><span style=\"color: rgb(51, 51, 51);\">&quot;.&quot;表示干净区域，而&quot;*&quot;表示障碍物。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\">如果加农一开始在左下角(1,1），那么加农将会以如下态势污染区域：<br /></span></p><p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"image.png\" src=\"/public/upload/ecfaa33929.png\" width=\"494\" height=\"124\" /><br /></span></p><p>加农将在4天后污染整个区域。</p><p>设区域为矩形Y×X（1&lt;=Y,X&lt;=100），假设加农从(Mx,My)开始扩散，请问经过几天，加农会完全占据这个区域呢？</p>",
+          "inputDescription": "<p>* 第一行: 四个由空格隔开的整数: X, Y, Mx, My</p><p>* 第2到第Y+1行:<span style=\"color: rgb(51, 51, 51);\">每行包含一个由X个字符（<span style=\"color: rgb(51, 51, 51);\">&quot;.&quot;表示干净区域，而&quot;*&quot;表示障碍物。</span>）构成的字符串，共同描绘了草地的完整地图。</span></p><p><span style=\"color: rgb(51, 51, 51);\">(1≤X,Y≤100)</span><br /></p>",
+          "outputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">输出一个整数，表示加农完全占领该区域所需要的天数。</span><br /></p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/bv1Li4y1t7Av\" target=\"_blank\">Andy的讲解</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "4 3 1 1\n....\n..*.\n.**.",
+              "output": "4"
+            },
+            {
+              "input": "10 10 7 5\n*.........\n..........\n........*.\n..........\n.........*\n..........\n..........\n..........\n..*.......\n..........\n",
+              "output": "6"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK54",
+          "title": "骑士林克的怜悯(2)",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK54/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/49550add79.png\" width=\"527\" height=\"315\" /><br /></p><p><span style=\"color: rgb(73, 80, 96);\">帮助自己的2D骑士同伴进入到变形棋盘世界不久，林克意识到既然棋盘可变，但是骑士们的战斗水平却没有长进。</span></p><p><span style=\"color: rgb(73, 80, 96);\">虽然可以在见到更多的风景，探索更多不同的空间，但是如果自身的实力没有提升，那么骑士们感受不到那真正的自由以及成长的快乐。</span></p><p>林克找到去到阿卡来研究所，得到新的道具——试炼棋盘。</p><p>这个新道具可以在骑士的2D空间中创造试炼场以及2D守护者，让骑士们可以开始实战演练，提升攻击力。</p><p>如下图是一个10列<span style=\"color: rgb(51, 51, 51);\">11行</span>的棋盘（11×10）：</p><p>K代表骑士的位置，H代表守护者的位置。</p><p>. 代表可移动的位置，*代表障碍物。</p><p><img alt=\"image.png\" src=\"/public/upload/7b7e6811e1.png\" width=\"231\" height=\"249\" /><br /></p><p><span style=\"color: rgb(51, 51, 51);\">骑士</span>可以按照下图中的A,B,C,D...这条路径用5次跳跃，抵达守护者的位置偷袭它。（有可能其它路线的长度也是5）：<br /></p><p><img alt=\"image.png\" src=\"/public/upload/dcd9484cd4.png\" width=\"236\" height=\"253\" /><br /></p><p>请问，2D骑士要偷袭守护者，至少要跳多少次？</p>",
+          "inputDescription": "<p>第一行： 两个数，表示棋盘的列数Column(&lt;=150)和行数Row(&lt;=150)</p><p>第二行到结尾: Row行Column列的棋盘。</p>",
+          "outputDescription": "<p>一个数，表示跳跃的最小次数。<br /></p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/bv14i4y1t72T\" target=\"_blank\">Andy讲解</a></p>",
+          "source": "",
+          "samples": [
+            {
+              "input": "10 11\n..........\n....*.....\n..........\n...*.*....\n.......*..\n..*..*...H\n*.........\n...*...*..\n.K........\n...*.....*\n..*....*..\n",
+              "output": "5\n"
+            },
+            {
+              "input": "15 18\n...............\n..*............\n...............\n...*........**.\n.......*.*.....\n...K.*.........\n...............\n..**...........\n.*....*......*.\n........**.*...\n...............\n.....*......*..\n.*........*....\n...............\n....H..........\n.**.*..*.......\n...............\n..*....*.......\n",
+              "output": "6"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK55",
+          "title": "公主的攻击范围",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK55/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/fc4f8b3e16.png\" width=\"844\" height=\"401\" /><br /></p><p>塞尔达公主瘦弱的身体里面蕴含着不可思议的神圣力量，这个力量从公主所在的位置释放，可以逐层扩散到加农污秽掌控的区域。</p><p>给定一个N行M列的区域，代号为1的区域是公主能力释放的初始区，代号为0的区域表示需要洁净的区域。</p><p>每经过1毫秒，公主的神圣之光向外扩散一格，洁净相邻区域（4个方向），请计算每个标记为0的区域中加农的势力最多还能得瑟几毫秒。</p><p><img alt=\"image.png\" src=\"/public/upload/247c7d8854.png\" width=\"962\" height=\"401\" /><br /></p><p>格子与格子之间的距离使用曼哈顿距离计算。</p><p>提示：<br /></p><p><img alt=\"image.png\" src=\"/public/upload/896fdea9e0.png\" width=\"721\" height=\"185\" /><br /></p><p><span style=\"color: rgb(51, 51, 51);\">根据如上公式可知：<span style=\"color: rgb(51, 51, 51);\">曼哈顿距离指</span>两点之间的行坐标i距离和列坐标j距离之和。</span><br /></p><p>题目的意思就是求出矩阵中所有节点为0的点，到节点为1的点的曼哈顿距离。</p>",
+          "inputDescription": "<p>第一行两个整数n,m。</p><p>接下来一个N行M列的01矩阵，数字之间没有空格。</p><h4>数据范围</h4><p>1≤N,M≤1000</p>",
+          "outputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">一个N行M列的矩阵B，相邻两个整数之间用一个空格隔开。每个整数表示加农势力存在的毫秒数（最小<span style=\"color: rgb(51, 51, 51);\">曼哈顿距离值）</span></span><br /></p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/BV1Rk4y1r7dH\" target=\"_blank\">Andy的讲解</a><br /></p><p><a href=\"https://www.acwing.com/problem/content/video/175/\" target=\"_blank\">ACWing讲解</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "3 4\n0001\n0011\n0110",
+              "output": "3 2 1 0\n2 1 0 0\n1 0 0 1"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK56",
+          "title": "滚石柱",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK56/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/a1ca7e018c.png\" width=\"508\" height=\"358\" /><br /></p><p>努力练习用磁铁拖拉滚动大铁箱的林克，想起了自己小时候喜欢的一个游戏，<a href=\"https://www.albinoblacksheep.com/games/bloxorz\" target=\"_blank\">滚石柱</a>。</p><p><img alt=\"image.png\" src=\"http://www.xmuoj.com/public/upload/2f88248417.png\" width=\"689\" height=\"271\" /><br /></p><p>这个游戏的任务是滚动一个1×1×2的长方体<span style=\"color: rgb(51, 51, 51);\">石柱</span>，把它滚动到目的地。</p><p>石柱在地面上有3种放置形式，“立”在地面上（1×1的面接触地面）横“躺”或者竖“趟”在地面上（1×2的面接触地面）</p><p><img alt=\"image.png\" src=\"/public/upload/283bd916f0.png\" width=\"768\" height=\"191\" /><br /></p><p><img alt=\"image.png\" src=\"/public/upload/2e32f16d7c.png\" width=\"760\" height=\"218\" /><br /></p><p>迷宫是一个N行M列的矩阵，每个位置可能是硬地（用”.”表示）、易碎地面（用”E”表示）、禁地（用”#”表示）、起点（用”X”表示）或终点（用”O”表示）。</p><p>在每一步操作中，可以按上下左右四个键之一。</p><p>按下按键之后，<span style=\"color: rgb(51, 51, 51);\">石柱</span>向对应的方向沿着棱滚动90度。</p><p>任意时刻，长方体不能有任何部位接触禁地，并且不能立在易碎地面上。</p><p>字符”X”标识长方体的起始位置，地图上可能有一个”X”或者两个相邻的”X”。</p><p>地图上唯一的一个字符”O”标识目标位置。</p><p>求把<span style=\"color: rgb(51, 51, 51);\">石柱</span>移动到目标位置（即立在”O”上）所需要的最少步数。</p><p>在移动过程中，”X”和”O”标识的位置都可以看作是硬地被利用。</p>",
+          "inputDescription": "<p>输入包含多组测试用例。</p><p>对于每个测试用例，第一行包括两个整数N和M。</p><p>接下来N行用来描述地图，每行包括M个字符，每个字符表示一块地面的具体状态。</p><p>当输入用例N=0，M=0时，表示输入终止，且该用例无需考虑。</p><h4><span style=\"color: rgb(227, 55, 55);\">数据范围</span></h4><p>3≤N,M≤500</p>",
+          "outputDescription": "<p>每个用例输出一个整数表示所需的最少步数，如果无解则输出”Impossible”。</p><p>每个结果占一行。</p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/BV1oK411V7GF\" target=\"_blank\">Andy讲解</a><br /></p><p><a href=\"https://www.acwing.com/problem/content/video/174/\" target=\"_blank\">ACWing讲解</a></p><p><span style=\"color: rgb(51, 51, 51);\">《算法竞赛进阶指南》</span><br /></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "7 7\n#######\n#..X###\n#..##O#\n#....E#\n#....E#\n#.....#\n#######\n0 0",
+              "output": "10"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK57",
+          "title": "Dijkstra求最短路(1)",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK57/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p style=\"margin-left: 0px;\">给定一个n个点m条边的有向图，图中可能存在重边和自环，所有边权均为正值。</p><p>请你求出1号点到n号点的最短距离，如果无法从1号点走到n号点，则输出-1。</p><p><img alt=\"image.png\" src=\"/public/upload/ecc566c4b8.png\" width=\"211\" height=\"104\" /><br /></p>",
+          "inputDescription": "<p>第一行包含整数n和m。</p><p>接下来m行每行包含三个整数x，y，z，表示存在一条从点x到点y的有向边，边长为z。</p>",
+          "outputDescription": "<p>输出一个整数，表示1号点到n号点的最短距离。</p><p>如果路径不存在，则输出-1。</p>",
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/851/\" target=\"_blank\">原题链接</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
+              "output": "3"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK58",
+          "title": "Dijkstra求最短路(2)",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK58/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p style=\"margin-left: 0px;\">给定一个n个点m条边的有向图，图中可能存在重边和自环，所有边权均为非负值。</p><p>请你求出1号点到n号点的最短距离，如果无法从1号点走到n号点，则输出-1。</p><p><img alt=\"image.png\" src=\"/public/upload/eb7a99368d.png\" width=\"286\" height=\"76\" /><br /></p>",
+          "inputDescription": "<p>第一行包含整数n和m。</p><p>接下来m行每行包含三个整数x，y，z，表示存在一条从点x到点y的有向边，边长为z。</p>",
+          "outputDescription": "<p>输出一个整数，表示1号点到n号点的最短距离。</p><p>如果路径不存在，则输出-1。</p>",
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/852/\" target=\"_blank\">原题链接</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
+              "output": "3"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK59",
+          "title": "维修电路",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK59/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"image.png\" src=\"/public/upload/506795aaeb.png\" width=\"554\" height=\"311\" /><br /></span></p><p><span style=\"color: rgb(51, 51, 51);\">林克的大师摩托的飞行装置被撞坏了，极度影响他的卡丁车比赛。下图是飞行装置的</span>电路板示意图。</p><p>电路板的整体结构是一个R行C列的网格（R,C≤500）</p><p><span style=\"color: rgb(51, 51, 51);\"><img src=\"https://www.acwing.com/media/article/image/2019/01/16/19_be6ff7a219-%E7%94%B5%E8%B7%AF.png\" alt=\"电路.png\" /><br /></span></p><p>每个格点都是电线的接点，每个格子都包含一个电子元件。</p><p>电子元件的主要部分是一个<span style=\"color: rgb(227, 55, 55);\">可旋转</span>的、连接一条对角线上的两个接点的短电缆。</p><p>在旋转之后，它就可以连接另一条对角线的两个接点。</p><p>电路板左上角的接点接入直流电源，右下角的接点接入飞行车的发动装置。</p><p>林克发现因为某些元件的方向不小心发生了改变，电路板可能处于断路的状态。</p><p>请问如何旋转最少数量的元件，使电源与发动装置重新连同在一起呢？</p><p>注意：电流只能通过斜向的线段，水平和竖直线段不是电线。</p><p><br /></p><p>提示：<span style=\"color: rgb(51, 51, 51);\">只需要按照下面的方式旋转标准件，就可以使得电源和发动机之间连通。</span></p><p><img src=\"https://www.acwing.com/media/article/image/2019/01/16/19_a0e8e80a19-%E7%94%B5%E8%B7%AF2.png\" alt=\"电路2.png\" /><br /></p>",
+          "inputDescription": "<p>输入文件包含多组测试数据。</p><p>第一行包含一个整数T，表示测试数据的数目。</p><p>对于每组测试数据，第一行包含正整数R和C，表示电路板的行数和列数。</p><p>之后R行，每行C个字符，字符是<code>&quot;/&quot;</code>和<code>&quot;\\&quot;</code>中的一个，表示标准件的方向。</p><h4><b>数据范围</b></h4><p><img alt=\"image.png\" src=\"/public/upload/cc98c64485.png\" width=\"182\" height=\"65\" /></p>",
+          "outputDescription": "<p>对于每组测试数据，在单独的一行输出一个正整数，表示所需的最小旋转次数。</p><p>如果无论怎样都不能使得电源和发动机之间连通，输出NO SOLUTION。</p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1mC4y1W7Zr\" target=\"_blank\">Andy讲解</a></p><p><a href=\"https://www.acwing.com/problem/content/video/177/\" target=\"_blank\">ACWing讲解</a></p><p>改编自《电路维修》</p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "1\n3 5\n\\\\/\\\\\n\\\\///\n/\\\\\\\\",
+              "output": "1"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK60",
+          "title": "突袭路线",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK60/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><img alt=\"image.png\" src=\"/public/upload/d3817e11ae.png\" width=\"554\" height=\"272\" /><br /></p><p>为了解救公主，林克必须深入敌后。<br />在备战前，他拿出“关系分析仪”扫描敌营中每个士兵之间的关系。</p><p>关系分析仪的功能说明如下：<br />如果A的活动范围在B的眼皮底下，那么分析仪就会从B出发连一条射线指向A（B--&gt;A).</p><p>经过扫描，林克得到全营敌兵的相互关系。有些敌人被多个同伴看顾，有些敌人背后一个替他守望的都没有。</p><p>林克决定从背后没有人的敌人开始，潜伏到其背后，突袭之，并且避免被其他人发现。</p><p>军营一共有n个敌人，彼此之间的关系有m条射线，请找到一条可以逐个击破敌人的路线图。</p><p>如果找不到这样一条突袭路线，请则输出-1.</p><p><br />提示：<br />问题转化为：给定一个n个点m条边的有向图，点的编号是1到n，图中可能存在重边和自环。</p><p>请输出任意一个该有向图的拓扑序列，如果拓扑序列不存在，则输出-1。</p><p>若一个由图中所有点构成的序列A满足：对于图中的每条边(x, y)，x在A中都出现在y之前，则称A是该图的一个拓扑序列。</p><p><span style=\"color: rgb(227, 55, 55);\">数据范围：1≤n,m≤10^5</span></p>",
+          "inputDescription": "<p>第一行包含两个整数n和m</p><p>接下来m行，每行包含两个整数x和y，表示存在一条从点x到点y的有向边(x, y)。</p>",
+          "outputDescription": "<p>共一行，如果存在拓扑序列，则输出拓扑序列。</p><p>否则输出-1。</p>",
+          "hint": "<p><a href=\"https://www.bilibili.com/video/BV1x5411s7ev\" target=\"_blank\">Andy讲解</a></p><p><a href=\"https://www.acwing.com/video/280/\" target=\"_blank\">acwing讲解</a></p><p>改编自《<span style=\"color: rgb(73, 80, 96);\"><a href=\"https://www.acwing.com/problem/content/description/850/\" target=\"_blank\">有向图的拓扑序列</a>》</span></p>",
+          "source": "",
+          "samples": [
+            {
+              "input": "3 3\n1 2\n2 3\n1 3",
+              "output": "1 2 3"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK61",
+          "title": "最省赛程",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK61/",
+          "timeLimit": 5000,
+          "memoryLimit": 256,
+          "description": "<p style=\"margin-left: 0px;\"><img alt=\"image.png\" src=\"/public/upload/4af77a00ff.png\" width=\"388\" height=\"216\" /><br /></p><p style=\"margin-left: 0px;\">为了让自己能够驾驭大师摩托，打开了大师摩托的隐藏任务：“赛车试炼”。</p><p style=\"margin-left: 0px;\">然而这个特殊的赛车试炼，竟然比的不是车速，比的是如何“省”油钱。</p><p style=\"margin-left: 0px;\">林克需要驾驶不同邮箱容量各异的赛车，从起点城市S开到终点城市E。</p><p style=\"margin-left: 0px;\">有N个城市（编号0、1…N-1）和M条赛道(构成一张无向图)。<br /></p><p>在每个城市里边都有一个加油站，不同的加油站的单位油价不一样(有些城市油价贵，有些城市油价便宜些)。</p><p>请计算，如果林克驾驶的是一辆油箱容量为C的赛车，那么他从起点城市S开到终点城市E至少要花多少油钱？<br /></p><p><span style=\"color: rgb(51, 51, 51);\">注意：</span><span style=\"color: rgb(51, 51, 51);\">车子初始时油箱是空的，需要在起点城市加油方可起行。</span><br /></p>",
+          "inputDescription": "<p>第一行包含两个整数N和M。</p><p>第二行包含N个整数，代表N个城市的单位油价，第i个数即为第i个城市的油价Pi。</p><p>接下来M行，每行包括三个整数u,v,d，表示城市u与城市v之间存在道路，且赛车从u到v需要消耗的油量为d。</p><p>接下来一行包含一个整数q，代表问题数量（q&lt;100)</p><p>接下来q行，每行包含三个整数C、S、E，分别表示<span style=\"color: rgb(51, 51, 51);\">赛车</span>油箱容量、起点城市S、终点城市E。</p><p><b>数据范围：</b></p><p><img alt=\"image.png\" src=\"/public/upload/e861511252.png\" width=\"150\" height=\"120.33203125\" /><br /></p>",
+          "outputDescription": "<p>对于每个问题，输出一个整数，表示所需的最少油钱。</p><p>如果无法从起点城市开到终点城市，则输出”impossible”。</p><p>每个结果占一行。</p>",
+          "hint": "<p style=\"margin-left: 0px;\"><a href=\"https://www.bilibili.com/video/BV1sf4y1m7V5\" target=\"_blank\">Andy讲解</a></p><p><a href=\"https://www.acwing.com/problem/content/video/178/\" target=\"_blank\">ACWing讲解</a></p><p>改变自《装满的油箱》</p>",
+          "source": "",
+          "samples": [
+            {
+              "input": "5 5\n10 10 20 12 13\n0 1 9\n0 2 8\n1 2 1\n1 3 11\n2 3 7\n2\n10 0 3\n20 1 4",
+              "output": "170\nimpossible"
+            }
+          ],
+          "solution": null
+        },
+        {
+          "id": "LinK14.5",
+          "title": "DFS试炼之n皇后问题",
+          "url": "http://www.xmuoj.com/contest/362/problem/LinK14.5/",
+          "timeLimit": 1000,
+          "memoryLimit": 256,
+          "description": "<p><span style=\"color: rgb(51, 51, 51);\">n-皇后问题是指将 n 个皇后放在 n∗n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"image.png\" src=\"/public/upload/d21377e949.png\" width=\"256\" height=\"272\" /><br /></span></p><p><span style=\"color: rgb(227, 55, 55);\">数据范围:1&lt;=n&lt;=12</span></p>",
+          "inputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">共一行，包含整数n。</span><br /></p>",
+          "outputDescription": "<p style=\"margin-left: 0px;\">每个解决方案占n行，每行输出一个长度为n的字符串，用来表示完整的棋盘状态。</p><p>其中”.”表示某一个位置的方格状态为空，”Q”表示某一个位置的方格上摆着皇后。</p><p>每个方案输出完成后，输出一个空行。</p><p>输出方案的顺序请根据样例，按照次序从小到大，从左到右输出。</p>",
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p><p><a href=\"https://www.acwing.com/video/275/\" target=\"_blank\">Y总讲解</a></p>",
+          "source": "xmu",
+          "samples": [
+            {
+              "input": "4",
+              "output": ".Q..\n...Q\nQ...\n..Q.\n\n..Q.\nQ...\n...Q\n.Q.."
+            }
+          ],
+          "solution": null
         }
       ]
     }
