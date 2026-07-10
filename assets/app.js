@@ -133,6 +133,23 @@
     return candidates;
   }
 
+  function hydrateBundledSolutions() {
+    for (const contest of data.contests || []) {
+      const contestSolutions = bundledSolutions.solutions && bundledSolutions.solutions[String(contest.id)] || {};
+      for (const problem of contest.problems || []) {
+        const problemId = String(problem.id || "");
+        const displayId = displayProblemId(problemId);
+        const bundled = contestSolutions[problemId] || contestSolutions[displayId];
+        if (!bundled || !bundled.code) continue;
+        problem.solutionStatus = "loaded";
+        problem.solution = {
+          path: normalizeSolutionPath(bundled.path || (problem.solution && problem.solution.path)),
+          language: bundled.language || (problem.solution && problem.solution.language) || languageFromPath(bundled.path),
+          code: bundled.code
+        };
+      }
+    }
+  }
   function findBundledSolution(contest, problem) {
     const contestSolutions = bundledSolutions.solutions && bundledSolutions.solutions[String(contest && contest.id)] || {};
     const problemId = String(problem && problem.id || "");
@@ -141,30 +158,18 @@
   }
   async function loadSolutionCode(contest, problem) {
     const solution = problem.solution || {};
-    for (const path of solutionCandidates(contest, problem)) {
-      try {
-        const response = await fetch(path + "?v=" + encodeURIComponent(data.generatedAt || ""), { cache: "no-cache" });
-        if (!response.ok) continue;
-        const code = await response.text();
-        if (!code.trim()) continue;
-        problem.solution = {
-          path,
-          language: solution.language || languageFromPath(path),
-          code
-        };
-        return problem.solution;
-      } catch (error) {
-        // Local file:// previews cannot fetch sibling files in some browsers; keep embedded fallback below.
-      }
-    }
-    if (solution.code) {
+    if (solution.code) return solution;
+    const bundled = findBundledSolution(contest, problem);
+    if (bundled && bundled.code) {
+      problem.solutionStatus = "loaded";
       problem.solution = {
-        path: normalizeSolutionPath(solution.path),
-        language: solution.language || languageFromPath(solution.path),
-        code: solution.code
+        path: normalizeSolutionPath(bundled.path || solution.path),
+        language: bundled.language || solution.language || languageFromPath(bundled.path || solution.path),
+        code: bundled.code
       };
       return problem.solution;
     }
+    problem.solutionStatus = "missing";
     problem.solution = {
       path: normalizeSolutionPath(solution.path || solutionCandidates(contest, problem)[0]),
       language: solution.language || languageFromPath(solution.path || solutionCandidates(contest, problem)[0]),
@@ -477,12 +482,16 @@
       els.problemView.hidden = true;
       return;
     }
+    hydrateBundledSolutions();
+    renderHomeStats();
+    renderHomeCards();
     renderNav();
-    refreshSolutionStatuses();
   }
 
   init();
 })();
+
+
 
 
 

@@ -749,20 +749,16 @@ dd {
 .section {
   margin-top: 16px;
   padding: 18px 20px;
-  border: 1px solid #dfe8e3;
+  border: 1px solid #d9e8f7;
   border-radius: 8px;
-  background: linear-gradient(180deg, #f7fbf8, #ffffff);
+  background: linear-gradient(180deg, #f4f9ff, #ffffff);
   box-shadow: 0 8px 24px rgba(29, 35, 41, 0.025);
 }
 
-.section:nth-of-type(2n) {
-  border-color: #dce8f3;
-  background: linear-gradient(180deg, #f6faff, #ffffff);
-}
-
+.section:nth-of-type(2n),
 .section:nth-of-type(3n) {
-  border-color: #eee5d8;
-  background: linear-gradient(180deg, #fffaf1, #ffffff);
+  border-color: #d9e8f7;
+  background: linear-gradient(180deg, #f4f9ff, #ffffff);
 }
 
 #hintSection,
@@ -1104,4 +1100,5 @@ pre {
 .tok-preprocessor {
   color: #c586c0;
 }
+
 
