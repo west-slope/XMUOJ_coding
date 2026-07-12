@@ -1,3 +1,4 @@
+//简单题：根据描述得出结果
 #include <iostream>
 #define pi 3.14159
 using namespace std;

@@ -1658,7 +1658,7 @@ window.XMUOJ_SOLUTIONS_DATA = {
         }
       ]
     },
-    {
+            {
       "id": "359",
       "title": "2026年校外实训一之剑道试炼(01李胜睿班)",
       "description": "<p>请用CC或者Codex或者TRAE或者Workbuddy进行AI编程！</p><p>全面学习驾驭最新AI工具成为新时代的AI原住民！</p>",
@@ -1675,13 +1675,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白第一次来到剑道宗山门前。梁嘉峰递给他两枚铁令，上面各刻着一个数。「加起来，报给我。」</p>",
           "inputDescription": "<p>一行，两个整数A和B，用空格隔开。</p>",
           "outputDescription": "<p>一个整数，即A+B的结果。</p>",
-          "hint": "<p>读入两个整数，输出它们的和。最基础的输入输出练习。</p><p><a href=\"https://www.acwing.com/problem/content/1/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 1 | JD001 | 第1章 持剑叩门",
+          "hint": "<p>读入两个整数，输出它们的和。最基础的输入输出练习。<a href=\"https://www.acwing.com/problem/content/1/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
           "samples": [],
           "solution": {
-            "path": "solutions\\359\\001.cpp",
+            "path": "solutions\359\001.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << A + B;\r\n    return 0;\r\n}\r\n"
+            "code": "//简单题：A+B\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << A + B;\r\n    return 0;\r\n}\r\n"
           }
         },
         {
@@ -1693,18 +1693,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰又递来两枚铁令。这一次他竖起两根手指——乘起来。</p>",
           "inputDescription": "<p>一行，两个整数A和B，用空格隔开。</p>",
           "outputDescription": "<p>输出 `PROD = ` 后跟A×B的结果。</p>",
-          "hint": "<p>读入两个整数，输出乘积。注意输出格式带前缀。</p><p><a href=\"https://www.acwing.com/problem/content/607/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 605 | JD002 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "3 9",
-              "output": "PROD = 27"
-            }
-          ],
+          "hint": "<p>读入两个整数，输出乘积。注意输出格式带前缀。<a href=\"https://www.acwing.com/problem/content/607/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\002.cpp",
+            "path": "solutions\359\002.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << \"PROD = \" << A * B << endl;\r\n    return 0;\r\n}"
+            "code": "//简单题：A*B\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << \"PROD = \" << A * B << endl;\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1716,18 +1711,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>练功房桌上摆着四枚铁令。梁嘉峰说：「A和B相乘，C和D相乘，把两个积的差报给我。」</p>",
           "inputDescription": "<p>一行，四个整数A、B、C、D，用空格隔开。</p>",
           "outputDescription": "<p>输出 `DIFFERENCE = ` 后跟A×B − C×D的结果。</p>",
-          "hint": "<p>先乘后减，注意运算顺序和输出格式。</p><p><a href=\"https://www.acwing.com/problem/content/610/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 608 | JD003 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "5 6 7 8",
-              "output": "DIFFERENCE = -26"
-            }
-          ],
+          "hint": "<p>先乘后减，注意运算顺序和输出格式。<a href=\"https://www.acwing.com/problem/content/610/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\003.cpp",
+            "path": "solutions\359\003.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B, C, D;\r\n    cin >> A >> B >> C >> D;\r\n    cout <<\"DIFFERENCE = \" << A * B - C * D << endl;\r\n    return 0;\r\n}//输出案例缺少\"DIFFERENCE = \""
+            "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B, C, D;\r\n    cin >> A >> B >> C >> D;\r\n    cout <<\"DIFFERENCE = \" << A * B - C * D << endl;\r\n    return 0;\r\n}//输出案例缺少\"DIFFERENCE = \""
           }
         },
         {
@@ -1739,18 +1729,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>宗门集市上，赵晴儿帮账房算一笔账。已知商品编号、购买数量和单价，算出总价。</p>",
           "inputDescription": "<p>一行，三个数：商品编号（整数）、购买数量（整数）、单价（浮点数）。</p>",
           "outputDescription": "<p>输出 TOTAL = 后跟总价（数量×单价），保留两位小数。</p>",
-          "hint": "<p>总价 = 件数₁×单价₁ + 件数₂×单价₂。</p><p><a href=\"https://www.acwing.com/problem/content/613/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 611 | JD004 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "12 1 5.30",
-              "output": "TOTAL = 5.30"
-            }
-          ],
+          "hint": "<p>总价 = 件数₁×单价₁ + 件数₂×单价₂。<a href=\"https://www.acwing.com/problem/content/613/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\004.cpp",
+            "path": "solutions\359\004.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    double C;\r\n    scanf(\"%d%d%lf\",&A,&B,&C);\r\n    printf(\"TOTAL = %.2lf\", B * C);\r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    double C;\r\n    scanf(\"%d%d%lf\",&A,&B,&C);\r\n    printf(\"TOTAL = %.2lf\", B * C);//注意小数位数\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1762,18 +1747,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>山门内是一片圆形的比武台。赵晴儿指着地面：「半径是r，算算它的面积。」π取3.14159。</p>",
           "inputDescription": "<p>一个浮点数r，表示半径。</p>",
           "outputDescription": "<p>输出 `A=` 后跟面积，保留4位小数。</p>",
-          "hint": "<p>面积 = 3.14159 × r × r，注意浮点数运算和格式化输出。</p><p><a href=\"https://www.acwing.com/problem/content/606/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 604 | JD005 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "2.00",
-              "output": "A=12.5664"
-            }
-          ],
+          "hint": "<p>面积 = 3.14159 × r × r，注意浮点数运算和格式化输出。<a href=\"https://www.acwing.com/problem/content/606/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\005.cpp",
+            "path": "solutions\359\005.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\n#define pi 3.14159\r\nusing namespace std;\r\nint main()\r\n{\r\n    double A;\r\n    scanf(\"%lf\",&A);\r\n    printf(\"A=%.4lf\", A * A * pi);\r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\n#define pi 3.14159\r\nusing namespace std;\r\nint main()\r\n{\r\n    double A;\r\n    scanf(\"%lf\",&A);\r\n    printf(\"A=%.4lf\", A * A * pi);\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1785,18 +1765,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>入门考核有两项：剑术和心法。剑术权重3.5，心法权重7.5。赵晴儿拿到成绩后要算加权平均分。</p>",
           "inputDescription": "<p>两行，每行一个浮点数，分别表示剑术成绩A和心法成绩B。</p>",
           "outputDescription": "<p>输出 `Average = ` 后跟加权平均分，保留5位小数。</p>",
-          "hint": "<p>加权平均 = (A×3.5 + B×7.5) / 11。分母是权重之和，不是2。</p><p><a href=\"https://www.acwing.com/problem/content/608/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 606 | JD006 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "9.7\n5.3",
-              "output": "Average = 6.70000"
-            }
-          ],
+          "hint": "<p>加权平均 = (A×3.5 + B×7.5) / 11。分母是权重之和，不是2。<a href=\"https://www.acwing.com/problem/content/608/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\006.cpp",
+            "path": "solutions\359\006.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"Average = %.5lf\", (a*3.5+b*7.5)/11.0 );\r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);//剑术权重3.5，心法权重7.5\r\n    printf(\"Average = %.5lf\", (a*3.5+b*7.5)/11.0 );//注意位数\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1808,18 +1783,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>月底发饷，李少白帮账房核算一名弟子的工钱。已知工号、出工天数和每日工钱。</p>",
           "inputDescription": "<p>第一行一个整数，表示工号。第二行两个数：出工天数（整数）和每日工钱（浮点数）。</p>",
           "outputDescription": "<p>第一行输出工号。第二行输出 `SALARY = U$ ` 后跟实发金额，保留两位小数。</p>",
-          "hint": "<p>实发金额 = 出工天数 × 每日工钱。</p><p><a href=\"https://www.acwing.com/problem/content/611/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 609 | JD007 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "25\n100 5.50",
-              "output": "NUMBER = 25\nSALARY = U$ 550.00"
-            }
-          ],
+          "hint": "<p>实发金额 = 出工天数 × 每日工钱。<a href=\"https://www.acwing.com/problem/content/611/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\007.cpp",
+            "path": "solutions\359\007.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double b;\r\n    int a,c;\r\n    scanf(\"%d\", &c);\r\n    scanf(\"%d%lf\",&a,&b);\r\n    printf(\"NUMBER = %d\\n\", c);\r\n    printf(\"SALARY = U$ %.2lf\",a*b );\r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double b;\r\n    int a,c;\r\n    scanf(\"%d\", &c);\r\n    scanf(\"%d%lf\",&a,&b);\r\n    printf(\"NUMBER = %d\\n\", c);\r\n    printf(\"SALARY = U$ %.2lf\",a*b );//注意格式\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1831,18 +1801,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白骑马送信，跑了S公里，马匹消耗了L升草料汁。他想知道每升草料汁能支撑跑多少公里。</p>",
           "inputDescription": "<p>一行，两个浮点数，分别表示路程（km）和草料消耗（L）。</p>",
           "outputDescription": "<p>输出每升草料汁能跑的公里数，保留3位小数，后跟 km/l。</p>",
-          "hint": "<p>消耗率 = 草料 / 路程，注意浮点数除法。</p><p><a href=\"https://www.acwing.com/problem/content/617/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 615 | JD008 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "500 35.0",
-              "output": "14.286 km/l"
-            }
-          ],
+          "hint": "<p>消耗率 = 草料 / 路程，注意浮点数除法。<a href=\"https://www.acwing.com/problem/content/617/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\008.cpp",
+            "path": "solutions\359\008.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"%.3lf km/l\",a/b );\r\n \r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;//浮点数\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"%.3lf km/l\",a/b );\r\n \r\n    return 0;\r\n}"
           }
         },
         {
@@ -1854,18 +1819,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>兵器库里有一颗实心铁球。李少白量出半径r，想算出它的体积。V = (4/3)πr³，π取3.14159。</p>",
           "inputDescription": "<p>一个浮点数r，表示铁球的半径。</p>",
           "outputDescription": "<p>输出 `VOLUME = ` 后跟体积，保留3位小数。</p>",
-          "hint": "<p>体积 = (4.0/3.0) × 3.14159 × r³，注意用浮点数除法。</p><p><a href=\"https://www.acwing.com/problem/content/614/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 612 | JD009 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "3",
-              "output": "VOLUME = 113.097"
-            }
-          ],
+          "hint": "<p>体积 = (4.0/3.0) × 3.14159 × r³，注意用浮点数除法。<a href=\"https://www.acwing.com/problem/content/614/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\009.cpp",
+            "path": "solutions\359\009.cpp",
             "language": "cpp",
-            "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    double r;\r\n    scanf(\"%lf\",&r);\r\n    printf(\"VOLUME = %.3lf\",(4.0/3)*3.14159*r*r*r );\r\n    return 0;\r\n}"
+            "code": "//简单题：根据描述得出结果\r\n#include <stdio.h>\r\n#define pi 3.14159\r\nint main()\r\n{\r\n    double r;//浮点数\r\n    scanf(\"%lf\",&r);\r\n    printf(\"VOLUME = %.3lf\",(4.0/3)*pi*r*r*r );//注意位数\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1877,18 +1837,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰在墙上刻了三个数，转头说：「最大的那个，报给我。」</p>",
           "inputDescription": "<p>一行，三个整数A、B、C，用空格隔开。</p>",
           "outputDescription": "<p>输出 `Max = ` 后跟三个数中的最大值。</p>",
-          "hint": "<p>用条件判断两两比较，或直接用max函数。</p><p><a href=\"https://www.acwing.com/problem/content/616/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 614 | JD010 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "7 14 106",
-              "output": "Max = 106"
-            }
-          ],
+          "hint": "<p>用条件判断两两比较，或直接用max函数。<a href=\"https://www.acwing.com/problem/content/616/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\010.c",
+            "path": "solutions\359\010.c",
             "language": "c",
-            "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int a,b,c,d;\r\n    scanf(\"%d%d%d\",&a,&b,&c);\r\n    d = (a > b ? a : b) > c ? (a > b ? a : b) : c;\r\n    printf(\"Max = %d\", d);\r\n    return 0;\r\n}"
+            "code": "//简单题：比较大小\r\n#include <stdio.h>\r\nint main()\r\n{\r\n    int a,b,c,d;\r\n    scanf(\"%d%d%d\",&a,&b,&c);\r\n    d = (a > b ? a : b) > c ? (a > b ? a : b) : c;//用三次？：判断\r\n    printf(\"Max = %d\", d);\r\n    return 0;\r\n}"
           }
         },
         {
@@ -1900,16 +1855,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上标了两个哨塔的坐标(x1,y1)和(x2,y2)。她说：「算算它们之间的直线距离。」</p>",
           "inputDescription": "<p>一行，四个浮点数x1, y1, x2, y2，用空格隔开。</p>",
           "outputDescription": "<p>输出两点间的距离，保留两位小数。</p>",
-          "hint": "<p>使用距离公式，需要引入数学库以使用sqrt函数。</p><p><a href=\"https://www.acwing.com/problem/content/618/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 616 | JD011 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "1.0 7.0 5.0 9.0",
-              "output": "4.4721"
-            }
-          ],
+          "hint": "<p>使用距离公式，需要引入数学库以使用sqrt函数。<a href=\"https://www.acwing.com/problem/content/618/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\011.c",
+            "path": "solutions\359\011.c",
             "language": "c",
             "code": "#include <stdio.h>\r\n#include <math.h>\r\nint main()\r\n{\r\n    double x1, y1, x2, y2, l;\r\n    scanf(\"%lf%lf%lf%lf\",&x1,&y1,&x2,&y2);\r\n    l = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));\r\n    printf(\"%.4lf\", l);//题目输出写保留两位小数有误\r\n    return 0;\r\n}"
           }
@@ -1923,16 +1873,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上画了五个图形，每个图形都用A、B、C三个数来定义。她让李少白算出每个图形的面积：三角形（底A高C）、圆形（半径C）、梯形（上底A下底B高C）、正方形（边长B）、长方形（长A宽B）。π取3.14159，结果保留3位小数。</p>",
           "inputDescription": "<p>一行，三个浮点数A、B、C。</p>",
           "outputDescription": "<p>五行，分别输出 TRIANGULO（三角形）、CIRCULO（圆形）、TRAPEZIO（梯形）、QUADRADO（正方形）、RETANGULO（长方形）的面积，各保留3位小数。格式为 `名称: 面积`。</p>",
-          "hint": "<p>注意输出格式：名称与面积之间有一个空格。π取3.14159。使用 printf(&quot;%.3f&quot;) 或 cout &lt;&lt; fixed &lt;&lt; setprecision(3) 保留3位小数。</p><p><a href=\"https://www.acwing.com/problem/content/615/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 613 | JD012 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "3.0 4.0 5.2",
-              "output": "TRIANGULO: 7.800\nCIRCULO: 84.949\nTRAPEZIO: 18.200\nQUADRADO: 16.000\nRETANGULO: 12.000"
-            }
-          ],
+          "hint": "<p>注意输出格式：名称与面积之间有一个空格。π取3.14159。使用 printf(&quot;%.3f&quot;) 或 cout &lt;&lt; fixed &lt;&lt; setprecision(3) 保留3位小数。<a href=\"https://www.acwing.com/problem/content/615/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\012.c",
+            "path": "solutions\359\012.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    double a, b, c;\r\n    scanf(\"%lf%lf%lf\", &a, &b, &c);\r\n    printf(\"TRIANGULO: %.3lf\\n\", (a * c) / 2.0);\r\n    printf(\"CIRCULO: %.3lf\\n\", 3.14159 * c * c);\r\n    printf(\"TRAPEZIO: %.3lf\\n\", (a + b) * c / 2.0);\r\n    printf(\"QUADRADO: %.3lf\\n\", b * b);\r\n    printf(\"RETANGULO: %.3lf\\n\", a * b);\r\n    return 0;\r\n}\r\n"
           }
@@ -1946,16 +1891,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>宗门的水钟记录的是总秒数，但掌门要求用「时:分:秒」的格式汇报。赵晴儿让李少白帮忙转换。</p>",
           "inputDescription": "<p>一个整数N，表示总秒数。</p>",
           "outputDescription": "<p>输出 `H:M:S` 格式的时间。</p>",
-          "hint": "<p>时 = 秒 ÷ 3600，分 = 余数 ÷ 60，秒 = 最终余数。</p><p><a href=\"https://www.acwing.com/problem/content/656/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 654 | JD013 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "556",
-              "output": "0:9:16"
-            }
-          ],
+          "hint": "<p>时 = 秒 ÷ 3600，分 = 余数 ÷ 60，秒 = 最终余数。<a href=\"https://www.acwing.com/problem/content/656/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\013.c",
+            "path": "solutions\359\013.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int t, h = 0, m = 0, s = 0;\r\n    scanf(\"%d\", &t);\r\n    h = t / 3600;\r\n    m = (t - 3600 * h) / 60;\r\n    s = t - 3600 * h - 60 * m;\r\n    printf(\"%d:%d:%d\", h, m, s);\r\n    return 0;\r\n}"
           }
@@ -1969,16 +1909,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白去镇上钱庄换碎银。掌柜说：「你要换多少文？我用100、50、20、10、5、2、1面额的铜钱给你。」需要知道每种面额各要几枚。</p>",
           "inputDescription": "<p>一个整数N，表示要换的文数。</p>",
           "outputDescription": "<p>第一行输出总金额N。接下来7行，按面额从大到小，每行输出 `X nota(s) de R$ Y,00`，其中X是张数，Y是面额。</p>",
-          "hint": "<p>贪心策略：从大到小依次整除，记录每种面额的枚数。</p><p><a href=\"https://www.acwing.com/problem/content/655/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 653 | JD014 | 第1章 持剑叩门",
-          "samples": [
-            {
-              "input": "576",
-              "output": "576\n5 nota(s) de R$ 100,00\n1 nota(s) de R$ 50,00\n1 nota(s) de R$ 20,00\n0 nota(s) de R$ 10,00\n1 nota(s) de R$ 5,00\n0 nota(s) de R$ 2,00\n1 nota(s) de R$ 1,00"
-            }
-          ],
+          "hint": "<p>贪心策略：从大到小依次整除，记录每种面额的枚数。<a href=\"https://www.acwing.com/problem/content/655/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\014.c",
+            "path": "solutions\359\014.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int money, m100 = 0, m50 = 0, m20 = 0, m10 = 0, m5 = 0, m2 = 0, m1 = 0;\r\n    scanf(\"%d\", &money);\r\n    m100 = money / 100;\r\n    m50 = (money - 100 * m100) / 50;\r\n    m20 = (money - 100 * m100 - 50 * m50) / 20;\r\n    m10 = (money - 100 * m100 - 50 * m50 - 20 * m20) / 10;\r\n    m5 = (money - 100 * m100 - 50 * m50 - 20 * m20 - 10 * m10) / 5;\r\n    m2 = (money - 100 * m100 - 50 * m50 - 20 * m20 - 10 * m10 - 5 * m5) / 2;\r\n    m1 = money - 100 * m100 - 50 * m50 - 20 * m20 - 10 * m10 - 5 * m5 - 2 * m2;\r\n    printf(\"%d\\n\", money);\r\n    printf(\"%d nota(s) de R$ 100,00\\n\", m100);\r\n    printf(\"%d nota(s) de R$ 50,00\\n\", m50);\r\n    printf(\"%d nota(s) de R$ 20,00\\n\", m20);\r\n    printf(\"%d nota(s) de R$ 10,00\\n\", m10);\r\n    printf(\"%d nota(s) de R$ 5,00\\n\", m5);\r\n    printf(\"%d nota(s) de R$ 2,00\\n\", m2);\r\n    printf(\"%d nota(s) de R$ 1,00\\n\", m1);\r\n    return 0;\r\n}\r\n"
           }
@@ -1989,19 +1924,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD015/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>山门前有两条路，路边各立一块石碑。赵晴儿指着石碑上的两个数说：「如果其中一个数能被另一个整除，这两块碑就是一对——走左边这条路。否则走右边。」</p><p>给定两个整数A和B，判断它们是否互为倍数关系（即A能被B整除，或B能被A整除）。</p>",
+          "description": "<p>山门前有两条路，路边各立一块石碑。赵晴儿指着石碑上的两个数说：「如果其中一个数能被另一个整除，这两块碑就是一对——走左边这条路。否则走右边。」给定两个整数A和B，判断它们是否互为倍数关系（即A能被B整除，或B能被A整除）。</p>",
           "inputDescription": "<p>一行，两个整数A和B。</p>",
           "outputDescription": "<p>互为倍数输出 `Yes`，否则输出 `No`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/667/\" target=\"_blank\">原题链接</a></p><p>判断 A%B==0 或 B%A==0，只要有一个成立就是倍数关系，输出Yes；否则输出No。</p>",
-          "source": "AcWing 665 | JD015 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "6 24",
-              "output": "Yes"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/667/\" target=\"_blank\">原题链接</a>判断 A%B==0 或 B%A==0，只要有一个成立就是倍数关系，输出Yes；否则输出No。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\015.c",
+            "path": "solutions\359\015.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int A, B;\r\n    scanf(\"%d%d\", &A, &B);\r\n    if (A % B == 0 || B % A == 0)printf(\"Yes\");\r\n    else printf(\"No\");\r\n    return 0;\r\n}"
           }
@@ -2015,16 +1945,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿从柴堆里抽出三根木棍，量了量长度，让李少白判断它们能不能拼成一个三角形。如果能，算出周长；如果不能，算出以A、B为上下底、C为高的梯形面积，公式为 (A+B)×C÷2。</p>",
           "inputDescription": "<p>一行，三个浮点数A、B、C。</p>",
           "outputDescription": "<p>能拼成三角形输出 `Perimeter = X.X`（周长），拼不成输出 `Area = X.X`（梯形面积）。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/666/\" target=\"_blank\">原题链接</a></p><p>三角形成立条件：任意两边之和大于第三边。如果成立，周长=A+B+C；如果不成立，梯形面积=(A+B)*C/2。注意保留1位小数。</p>",
-          "source": "AcWing 664 | JD016 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "6.0 4.0 2.0",
-              "output": "Area = 10.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/666/\" target=\"_blank\">原题链接</a>三角形成立条件：任意两边之和大于第三边。如果成立，周长=A+B+C；如果不成立，梯形面积=(A+B)*C/2。注意保留1位小数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\016.c",
+            "path": "solutions\359\016.c",
             "language": "c",
             "code": "#include <stdio.h>\r\n#include <math.h>\r\nint main()\r\n{\r\n    double A, B, C;\r\n    scanf(\"%lf%lf%lf\", &A, &B, &C);\r\n    if (A + B > C && B + C > A && A + C > B)printf(\"Perimeter = %.1lf\", A + B + C);\r\n    else printf(\"Area = %.1lf\", (A + B) * C / 2);\r\n    return 0;\r\n}"
           }
@@ -2038,16 +1963,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白和师弟在练武场比武。他们从A时开始，到B时结束（只看整点，不看分钟）。如果B&gt;A，比武持续了B-A小时；如果B≤A，说明比武过了零点，持续了24-A+B小时；如果A=B，说明刚好持续了一整天（24小时）。</p>",
           "inputDescription": "<p>一行，两个整数A和B（0≤A,B≤23）。</p>",
           "outputDescription": "<p>输出一个整数，表示比武持续的小时数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/669/\" target=\"_blank\">原题链接</a></p><p>用条件判断：如果B&gt;A，输出B-A；如果B==A，输出24；否则输出24-A+B。</p>",
-          "source": "AcWing 667 | JD017 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "0 15",
-              "output": "15"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/669/\" target=\"_blank\">原题链接</a>用条件判断：如果B&gt;A，输出B-A；如果B==A，输出24；否则输出24-A+B。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\017.c",
+            "path": "solutions\359\017.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int A, B;\r\n    scanf(\"%d%d\", &A, &B);\r\n    if (B > A)printf(\"%d\", B - A);\r\n    else if (A == B)printf(\"%d\", 24);\r\n    else if (A > B)printf(\"%d\", 24 - A + B);\r\n    return 0;\r\n}"
           }
@@ -2061,16 +1981,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰在地上放了三块石头，上面各刻着一个数。他说：「从小到大排好，报给我。」</p>",
           "inputDescription": "<p>一行，三个整数，用空格隔开。</p>",
           "outputDescription": "<p>三个数从小到大输出，空格隔开。</p>",
-          "hint": "<p>用条件判断两两比较确定顺序，或存入数组排序。</p><p><a href=\"https://www.acwing.com/problem/content/665/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 663 | JD018 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "7 21 -14",
-              "output": "-14 7 21"
-            }
-          ],
+          "hint": "<p>用条件判断两两比较确定顺序，或存入数组排序。<a href=\"https://www.acwing.com/problem/content/665/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\018.c",
+            "path": "solutions\359\018.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int a, b, c,temp = 0;\r\n    scanf(\"%d%d%d\", &a, &b, &c);\r\n    if (a < b)\r\n    {\r\n        temp = a;\r\n        a = b;\r\n        b = temp;\r\n    }\r\n    if (a < c)\r\n    {\r\n        temp = a;\r\n        a = c;\r\n        c = temp;\r\n    }\r\n    if (b < c)\r\n    {\r\n        temp = b;\r\n        b = c;\r\n        c = temp;\r\n    }\r\n    printf(\"%d %d %d\",c,b,a);\r\n    return 0;\r\n}"
           }
@@ -2084,16 +1999,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>山脚杂货铺有5种干粮，编号1到5，单价分别是4.00、4.50、5.00、2.00、1.50文。赵晴儿报了干粮编号和要买的数量，掌柜让她自己算总价。</p>",
           "inputDescription": "<p>一行，两个整数：干粮编号X和数量Y。</p>",
           "outputDescription": "<p>输出 `Total: R$ ` 后跟总价，保留两位小数。</p>",
-          "hint": "<p>用数组或条件判断存储5种单价，查表后乘以数量。</p><p><a href=\"https://www.acwing.com/problem/content/662/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 660 | JD019 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "3 2",
-              "output": "Total: R$ 10.00"
-            }
-          ],
+          "hint": "<p>用数组或条件判断存储5种单价，查表后乘以数量。<a href=\"https://www.acwing.com/problem/content/662/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\019.c",
+            "path": "solutions\359\019.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int name, num;\r\n    double price[] = { 4.00,4.50,5.00,2.00,1.50 };\r\n    scanf(\"%d%d\", &name, &num);\r\n    printf(\"Total: R$ %.2lf\", price[name - 1] * num);\r\n    return 0;\r\n}"
           }
@@ -2107,16 +2017,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>宗门把弟子的内力值分成四个等级：[0,25]是入门，(25,50]是初级，(50,75]是中级，(75,100]是高级。超出100则不在评级范围内。李少白测出一名弟子的内力值，需要判断他属于哪个等级。</p>",
           "inputDescription": "<p>一个浮点数，表示内力值。</p>",
           "outputDescription": "<p>输出对应区间的名称，或 `Out of interval`（超出范围）。</p>",
-          "hint": "<p>用 if-elif-else 逐一判断落在哪个区间。</p><p><a href=\"https://www.acwing.com/problem/content/661/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 659 | JD020 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "95.29",
-              "output": "Interval (75,100]"
-            }
-          ],
+          "hint": "<p>用 if-elif-else 逐一判断落在哪个区间。<a href=\"https://www.acwing.com/problem/content/661/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\020.c",
+            "path": "solutions\359\020.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    float power; \r\n    scanf(\"%f\", &power);\r\n    if (power >= 0 && power <= 25) \r\n    {\r\n        printf(\"Interval [0,25]\\n\");\r\n    } \r\n    else if (power > 25 && power <= 50)\r\n    {\r\n        printf(\"Interval (25,50]\\n\");\r\n    } \r\n    else if (power > 50 && power <= 75) \r\n    {\r\n        printf(\"Interval (50,75]\\n\");\r\n    } \r\n    else if (power > 75 && power <= 100)\r\n    {\r\n        printf(\"Interval (75,100]\\n\");\r\n    } \r\n    else\r\n    {\r\n        printf(\"Out of interval\\n\");\r\n    }\r\n\r\n    return 0;\r\n}"
           }
@@ -2130,16 +2035,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上标了一个点P(x, y)，让李少白判断它落在第几象限，还是在坐标轴上，还是在原点。</p>",
           "inputDescription": "<p>一行，两个浮点数x和y。</p>",
           "outputDescription": "<p>输出 <code>Q1</code>（第一象限）、<code>Q2</code>（第二）、<code>Q3</code>（第三）、<code>Q4</code>（第四）、<code>Eixo X</code>（X轴上）、<code>Eixo Y</code>（Y轴上）或 <code>Origem</code>（原点）。</p>",
-          "hint": "<p>先判断是否在原点或坐标轴上（x==0 或 y==0），再判断象限。</p><p><a href=\"https://www.acwing.com/problem/content/664/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 662 | JD021 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "4.5 -2.2",
-              "output": "Q4"
-            }
-          ],
+          "hint": "<p>先判断是否在原点或坐标轴上（x==0 或 y==0），再判断象限。<a href=\"https://www.acwing.com/problem/content/664/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\021.c",
+            "path": "solutions\359\021.c",
             "language": "c",
             "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    double x,y;\r\n    scanf(\"%lf%lf\", &x,&y);\r\n    if (x > 0 && y > 0)\r\n    {\r\n        printf(\"Q1\");\r\n    }\r\n    else if (x < 0 && y > 0)\r\n    {\r\n        printf(\"Q2\");\r\n    }\r\n    else if (x < 0 && y < 0)\r\n    {\r\n        printf(\"Q3\");\r\n    }\r\n    else if (x > 0 && y < 0)\r\n    {\r\n        printf(\"Q4\");\r\n    }\r\n    else if (x != 0 && y == 0)\r\n    {\r\n        printf(\"Eixo X\");\r\n    }\r\n    else if (x == 0 && y != 0)\r\n    {\r\n        printf(\"Eixo Y\");\r\n    }\r\n    else if (x == 0 && y == 0)\r\n    {\r\n        printf(\"Origem\");\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2153,18 +2053,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白和师弟比武，开始时间是A时B分，结束时间是C时D分。比武可能跨了零点。请算出比武持续了多久。</p>",
           "inputDescription": "<p>一行，四个整数A、B、C、D，分别表示开始的时、分和结束的时、分。</p>",
           "outputDescription": "<p>输出比武持续时间，格式为 `H:M`。</p>",
-          "hint": "<p>全部转为分钟做差。如果结果≤0，加上24×60。</p><p><a href=\"https://www.acwing.com/problem/content/670/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 668 | JD022 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "8 56 7 37",
-              "output": "22:41"
-            }
-          ],
+          "hint": "<p>全部转为分钟做差。如果结果≤0，加上24×60。<a href=\"https://www.acwing.com/problem/content/670/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\022.cpp",
+            "path": "solutions\359\022.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int A, B, C, D,temp;\r\n    cin >> A >> B >> C >> D;\r\n    int m1 = A * 60 + B;\r\n\tint m2 = C * 60 + D;\r\n    if (m1 >= m2)temp = 24 * 60 + m2 - m1;\r\n\telse temp = m2 - m1;\r\n\tcout << temp / 60 << \":\" << temp % 60 << endl;\r\n    return 0;\r\n}"
+            "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int A, B, C, D,temp;\r\n    cin >> A >> B >> C >> D;\r\n    int m1 = A * 60 + B;\r\n	int m2 = C * 60 + D;\r\n    if (m1 >= m2)temp = 24 * 60 + m2 - m1;\r\n	else temp = m2 - m1;\r\n	cout << temp / 60 << \":\" << temp % 60 << endl;\r\n    return 0;\r\n}"
           }
         },
         {
@@ -2173,21 +2068,16 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD023/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>宗门账房年底调薪，按原月钱所在区间确定涨幅：0~400涨15%，400.01~800涨12%，800.01~1200涨10%，1200.01~2000涨7%，2000以上涨4%。涨幅是按整个工资乘以对应百分比，不是分段累进。</p><p>李少白拿到一名弟子的原月钱，请算出新月钱、涨了多少和涨幅百分比。</p>",
+          "description": "<p>宗门账房年底调薪，按原月钱所在区间确定涨幅：0~400涨15%，400.01~800涨12%，800.01~1200涨10%，1200.01~2000涨7%，2000以上涨4%。涨幅是按整个工资乘以对应百分比，不是分段累进。李少白拿到一名弟子的原月钱，请算出新月钱、涨了多少和涨幅百分比。</p>",
           "inputDescription": "<p>一个浮点数，表示原月钱。</p>",
           "outputDescription": "<p>三行：新月钱、涨了多少、涨幅百分比（整数带%号），金额保留两位小数。</p>",
-          "hint": "<p>用 if-elif 判断原月钱落在哪个区间，确定涨幅百分比p。涨额 = 原月钱 × p/100，新月钱 = 原月钱 + 涨额。注意400属于0~400区间（涨15%），400.01才属于400~800区间。</p><p><a href=\"https://www.acwing.com/problem/content/671/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 669 | JD023 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "400.00",
-              "output": "New salary: 460.00\nIncrease: 60.00\nPercentage: 15 %"
-            }
-          ],
+          "hint": "<p>用 if-elif 判断原月钱落在哪个区间，确定涨幅百分比p。涨额 = 原月钱 × p/100，新月钱 = 原月钱 + 涨额。注意400属于0~400区间（涨15%），400.01才属于400~800区间。<a href=\"https://www.acwing.com/problem/content/671/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\023.cpp",
+            "path": "solutions\359\023.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<iomanip>\r\nusing namespace std;\r\n//iomanip is used to set the precision of the output\r\nint main()\r\n{\r\n    double salary;\r\n\tcin >> salary;\r\n\tif (salary >= 0 && salary <= 400)\r\n\t{\r\n\t\tcout << \"New salary: \" << fixed<< setprecision(2) <<salary * 1.15 << endl;\r\n\t\tcout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.15 << endl;\r\n\t\tcout << \"Percentage:\" << \" 15 %\" << endl;\r\n\t}\r\n\telse if (salary >= 400.01 && salary <= 800)\r\n\t{\r\n\t\tcout << \"New salary: \" << fixed<<setprecision(2)<<salary * 1.12 << endl;\r\n\t\tcout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.12 << endl;\r\n\t\tcout << \"Percentage:\" << \" 12 %\" << endl;\r\n\t}\r\n\telse if (salary >= 800.01 && salary <= 1200)\r\n\t{\r\n\t\tcout << \"New salary: \" << fixed<< setprecision(2) << salary * 1.10 << endl;\r\n\t\tcout << \"Increase: \" << fixed<<setprecision(2)<<salary * 0.10 << endl;\r\n\t\tcout << \"Percentage:\" << \" 10 %\" << endl;\r\n\t}\r\n\telse if (salary >= 1200.01 && salary <= 2000)\r\n\t{\r\n\t\tcout << \"New salary: \" << fixed<<setprecision(2)<< salary * 1.07 << endl;\r\n\t\tcout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.07 << endl;\r\n\t\tcout << \"Percentage:\" << \" 7 %\" << endl;\r\n\t}\r\n\telse if(salary>2000)\r\n\t{\r\n\t\tcout << \"New salary: \" << fixed<<setprecision(2)<< salary * 1.04 << endl;\r\n\t\tcout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.04 << endl;\r\n\t\tcout << \"Percentage:\" << \" 4 %\" << endl;\r\n\t}\r\n\treturn 0;\r\n}"
+            "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<iomanip>\r\nusing namespace std;\r\n//iomanip is used to set the precision of the output\r\nint main()\r\n{\r\n    double salary;\r\n	cin >> salary;\r\n	if (salary >= 0 && salary <= 400)\r\n	{\r\n		cout << \"New salary: \" << fixed<< setprecision(2) <<salary * 1.15 << endl;\r\n		cout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.15 << endl;\r\n		cout << \"Percentage:\" << \" 15 %\" << endl;\r\n	}\r\n	else if (salary >= 400.01 && salary <= 800)\r\n	{\r\n		cout << \"New salary: \" << fixed<<setprecision(2)<<salary * 1.12 << endl;\r\n		cout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.12 << endl;\r\n		cout << \"Percentage:\" << \" 12 %\" << endl;\r\n	}\r\n	else if (salary >= 800.01 && salary <= 1200)\r\n	{\r\n		cout << \"New salary: \" << fixed<< setprecision(2) << salary * 1.10 << endl;\r\n		cout << \"Increase: \" << fixed<<setprecision(2)<<salary * 0.10 << endl;\r\n		cout << \"Percentage:\" << \" 10 %\" << endl;\r\n	}\r\n	else if (salary >= 1200.01 && salary <= 2000)\r\n	{\r\n		cout << \"New salary: \" << fixed<<setprecision(2)<< salary * 1.07 << endl;\r\n		cout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.07 << endl;\r\n		cout << \"Percentage:\" << \" 7 %\" << endl;\r\n	}\r\n	else if(salary>2000)\r\n	{\r\n		cout << \"New salary: \" << fixed<<setprecision(2)<< salary * 1.04 << endl;\r\n		cout << \"Increase: \" << fixed<< setprecision(2)<<salary * 0.04 << endl;\r\n		cout << \"Percentage:\" << \" 4 %\" << endl;\r\n	}\r\n	return 0;\r\n}"
           }
         },
         {
@@ -2199,16 +2089,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰考李少白：「给你四个数A、B、C、D，同时满足以下五个条件才算过关：B大于A，D大于A，C与D之和大于A与B之和，C是正数，A是偶数。」</p>",
           "inputDescription": "<p>一行，四个整数A、B、C、D。</p>",
           "outputDescription": "<p>满足所有条件输出 `Accepted`，否则输出 `Not accepted`。</p>",
-          "hint": "<p>用逻辑与（&&/and）连接五个条件，全部为真才通过。</p><p><a href=\"https://www.acwing.com/problem/content/659/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 657 | JD024 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "-87 14 68 33",
-              "output": "Not accepted"
-            }
-          ],
+          "hint": "<p>用逻辑与（&&/and）连接五个条件，全部为真才通过。<a href=\"https://www.acwing.com/problem/content/659/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\024.cpp",
+            "path": "solutions\359\024.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A,B,C,D;\r\n    cin>>A>>B>>C>>D; //B大于A，D大于A，C与D之和大于A与B之和，C是正数，A是偶数。\r\n    if(A%2==0 && B>A && D>A && (C+D)>(A+B) && C>0)\r\n    {\r\n        cout<<\"Accepted\"<<endl;\r\n    }\r\n    else\r\n    {\r\n        cout<<\"Not accepted\"<<endl;\r\n    }\r\n}"
           }
@@ -2222,16 +2107,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>宗门各分舵之间用信鸽传信，每个分舵有一个编号（DDD码）。李少白拿到一个编号，需要查出它对应哪个分舵：61=Brasilia，71=Salvador，11=Sao Paulo，21=Rio de Janeiro，32=Juiz de Fora，19=Campinas，27=Vitoria，31=Belo Horizonte，其他编号则输出&quot;DDD nao cadastrado&quot;。</p>",
           "inputDescription": "<p>一个整数。</p>",
           "outputDescription": "<p>输出对应分舵名称，或 `DDD nao cadastrado`。</p>",
-          "hint": "<p>用 if-elif 链逐一比对，或用字典/映射表查找。</p><p><a href=\"https://www.acwing.com/problem/content/673/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 671 | JD025 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "11",
-              "output": "Sao Paulo"
-            }
-          ],
+          "hint": "<p>用 if-elif 链逐一比对，或用字典/映射表查找。<a href=\"https://www.acwing.com/problem/content/673/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\025.cpp",
+            "path": "solutions\359\025.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int a;\r\n    cin>>a;\r\n    if(a==61)\r\n    {\r\n        cout<<\"Brasilia\"<<endl;\r\n    }\r\n    else if(a==71)\r\n    {\r\n        cout<<\"Salvador\"<<endl;\r\n    }\r\n    else if(a==11)\r\n    {\r\n        cout<<\"Sao Paulo\"<<endl;\r\n    }\r\n    else if(a==21)\r\n    {\r\n        cout<<\"Rio de Janeiro\"<<endl;\r\n    }\r\n    else if(a==32)\r\n    {\r\n        cout<<\"Juiz de Fora\"<<endl;\r\n    }\r\n    else if(a==19)\r\n    {\r\n        cout<<\"Campinas\"<<endl;\r\n    }\r\n    else if(a==27)\r\n    {\r\n        cout<<\"Vitoria\"<<endl;\r\n    }\r\n    else if(a==31)\r\n    {\r\n        cout<<\"Belo Horizonte\"<<endl;\r\n    }\r\n    else\r\n    {\r\n        cout<<\"DDD nao cadastrado\"<<endl;\r\n    }\r\n}"
           }
@@ -2243,22 +2123,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "timeLimit": 1000,
           "memoryLimit": 256,
           "description": "<p>梁嘉峰递来三根木棍：「先判断能不能拼成三角形。能的话，再判断是直角、锐角还是钝角三角形，以及是否等边或等腰。」判断依据：最长边的平方与另外两边平方和的关系。</p>",
-          "inputDescription": "<p>一行，三个浮点数，表示三边长度。</p>",
-          "outputDescription": "<p>不能构成三角形输出 <code>Not a triangle</code>；能构成则按以下规则输出（<b>每种满足的条件输出一行</b>）：</p><ol><li>先判断角度类型：输出 <code>Right</code>（直角）、<code>Acute</code>（锐角）或 <code>Obtuse</code>（钝角）之一。</li><li>再判断边长类型：若三边相等输出 <code>Equilateral</code>（等边），若恰好两边相等输出 <code>Isosceles</code>（等腰），否则不输出。</li></ol><p>注意：一个三角形可能同时属于多个类型，同一类型的判断用 <code>if</code> 而不是 <code>elif</code> 才能多行输出。</p>",
-          "hint": "<p>先验证两边之和大于第三边。若不能构成三角形则直接输出 <code>Not a triangle</code> 并结束。</p><p>能构成三角形时，角度类型和边长类型分别用独立的 <code>if</code> 判断（不要用 <code>elif</code> 串起来），以确保等边/等腰三角形能输出两行。</p><p>边长已从小到大排列，第三个数即最长边。</p><p><a href=\"https://www.acwing.com/problem/content/668/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 666 | JD026 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "6.0 4.0 2.0",
-              "output": "Not a triangle"
-            },
-            {
-              "input": "5.0 5.0 5.0",
-              "output": "Acute\nEquilateral"
-            }
-          ],
+          "inputDescription": "<p>一行，三个浮点数，表示三边长度（已从小到大排列）。</p>",
+          "outputDescription": "<p>不能构成三角形输出 <code>Not a triangle</code>；能构成则按以下规则输出（<b>每种满足的条件输出一行</b>）：<ol><li>先判断角度类型：输出 <code>Right</code>（直角）、<code>Acute</code>（锐角）或 <code>Obtuse</code>（钝角）之一。</li><li>再判断边长类型：若三边相等输出 <code>Equilateral</code>（等边），若恰好两边相等输出 <code>Isosceles</code>（等腰），否则不输出。</li></ol>注意：一个三角形可能同时属于多个类型，同一类型的判断用 <code>if</code> 而不是 <code>elif</code> 才能多行输出。</p>",
+          "hint": "<p>先验证两边之和大于第三边。若不能构成三角形则直接输出 <code>Not a triangle</code> 并结束。能构成三角形时，角度类型和边长类型分别用独立的 <code>if</code> 判断（不要用 <code>elif</code> 串起来），以确保等边/等腰三角形能输出两行。边长已从小到大排列，第三个数即最长边。<a href=\"https://www.acwing.com/problem/content/668/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\026.cpp",
+            "path": "solutions\359\026.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a,b,c;\r\n    cin>>a>>b>>c;\r\n    if(a+b>c&&a+c>b&&b+c>a)\r\n    {\r\n        if(a*a+b*b==c*c||a*a+c*c==b*b||b*b+c*c==a*a)\r\n        {\r\n            cout<<\"Right\"<<endl;\r\n        }\r\n        else if(a*a+b*b>c*c&&a*a+c*c>b*b&&b*b+c*c>a*a)\r\n        {\r\n            cout<<\"Acute\"<<endl;\r\n        }\r\n        else\r\n        {\r\n            cout<<\"Obtuse\"<<endl;\r\n        }\r\n        if(a==b&&b==c)\r\n        {\r\n            cout<<\"Equilateral\"<<endl;\r\n        }\r\n        else if(a==b||b==c||a==c)\r\n        {\r\n            cout<<\"Isosceles\"<<endl;\r\n        }\r\n    }\r\n    else\r\n    {\r\n        cout<<\"Not a triangle\"<<endl;\r\n    }\r\n}"
           }
@@ -2269,23 +2140,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD027/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>迷踪林外遇到一只怪兽。赵晴儿观察了三层特征来判断它的种类：<br />第一层：有脊椎（vertebrate）还是无脊椎（invertebrate）；<br />第二层：鸟类（bird）、哺乳类（mammal）、昆虫（insect）还是环节动物（annelid）；<br />第三层：食性——食肉（carnivore）、食草（herbivore）、杂食（omnivore）、吸血（hematophagous）。</p><p>以下是怪兽分类图谱：</p><pre style=\"font-family:monospace;background:#f5f5f5;padding:12px;border-radius:4px;line-height:1.6\">Level 1         Level 2        Level 3           Animal\n---------------------------------------------------------\n                +-- bird ------ carnivore ------- eagle（鹰）\n                |             +-- herbivore ------ dove（鸽）\nvertebrate -----+\n                |             +-- omnivore ------- man（人）\n                +-- mammal ----+\n                              +-- herbivore ------ cow（牛）\n\n                +-- insect ---- hematophagous ---- flea（跳蚤）\n                |             +-- herbivore ------ caterpillar（毛虫）\ninvertebrate ---+\n                |             +-- hematophagous ---- leech（水蛭）\n                +-- annelid --+\n                              +-- omnivore ------- earthworm（蚯蚓）\n</pre><p>根据输入的三层特征单词，输出对应的动物英文名称。</p>",
+          "description": "<p>迷踪林外遇到一只怪兽。赵晴儿观察了三层特征来判断它的种类：<br />第一层：有脊椎（vertebrate）还是无脊椎（invertebrate）；<br />第二层：鸟类（bird）、哺乳类（mammal）、昆虫（insect）还是环节动物（annelid）；<br />第三层：食性——食肉（carnivore）、食草（herbivore）、杂食（omnivore）、吸血（hematophagous）。以下是怪兽分类图谱：<pre style=\"font-family:monospace;background:#f5f5f5;padding:12px;border-radius:4px;line-height:1.6\">Level 1         Level 2        Level 3           Animal\n---------------------------------------------------------\n                +-- bird ------ carnivore ------- eagle（鹰）\n                |             +-- herbivore ------ dove（鸽）\nvertebrate -----+\n                |             +-- omnivore ------- man（人）\n                +-- mammal ----+\n                              +-- herbivore ------ cow（牛）\n\n                +-- insect ---- hematophagous ---- flea（跳蚤）\n                |             +-- herbivore ------ caterpillar（毛虫）\ninvertebrate ---+\n                |             +-- hematophagous ---- leech（水蛭）\n                +-- annelid --+\n                              +-- omnivore ------- earthworm（蚯蚓）\n</pre>根据输入的三层特征单词，输出对应的动物英文名称。</p>",
           "inputDescription": "<p>三行，每行一个字符串，分别表示三层分类特征。</p>",
           "outputDescription": "<p>输出对应的动物名称。</p>",
-          "hint": "<p>三层嵌套 if-else：先判断第一层，再判断第二层，最后判断第三层。</p><p><a href=\"https://www.acwing.com/problem/content/672/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 670 | JD027 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "vertebrate\nmammal\nomnivore",
-              "output": "man"
-            },
-            {
-              "input": "vertebrate\nbird\ncarnivore",
-              "output": "eagle"
-            }
-          ],
+          "hint": "<p>三层嵌套 if-else：先判断第一层，再判断第二层，最后判断第三层。<a href=\"https://www.acwing.com/problem/content/672/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\027.cpp",
+            "path": "solutions\359\027.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\nusing namespace std;\r\nint main()\r\n{\r\n    string first,second,third;\r\n    cin>>first>>second>>third;\r\n    if(first==\"vertebrate\")\r\n    {\r\n        if(second==\"bird\")\r\n        {\r\n            if(third==\"carnivore\")\r\n            {\r\n                cout<<\"eagle\"<<endl;\r\n            }\r\n            else if(third==\"herbivore\")\r\n            {\r\n                cout<<\"dove\"<<endl;\r\n            }\r\n        }\r\n        else if(second==\"mammal\")\r\n        {\r\n            if(third==\"omnivore\")\r\n            {\r\n                cout<<\"man\"<<endl;\r\n            }\r\n            else if(third==\"herbivore\")\r\n            {\r\n                cout<<\"cow\"<<endl;\r\n            }\r\n        }\r\n    }\r\n    else if(first==\"invertebrate\")\r\n    {\r\n        if(second==\"insect\")\r\n        {\r\n            if(third==\"hematophagous\")\r\n            {\r\n                cout<<\"flea\"<<endl;\r\n            }\r\n            else if(third==\"herbivore\")\r\n            {\r\n                cout<<\"caterpillar\"<<endl;\r\n            }\r\n        }\r\n        else if(second==\"annelid\")\r\n        {\r\n            if(third==\"omnivore\")\r\n            {\r\n                cout<<\"earthworm\"<<endl;\r\n            }\r\n            else if(third==\"hematophagous\")\r\n            {\r\n                cout<<\"leech\"<<endl;\r\n            }\r\n        }\r\n    }\r\n}"
           }
@@ -2299,16 +2161,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白入了宗门，开始交田赋。税率分档：2000以下免税，2000.01~3000部分征8%，3000.01~4500部分征18%，4500以上部分征28%。注意是分段计税——只有超出部分按对应税率算。</p>",
           "inputDescription": "<p>一个浮点数，表示月收入。</p>",
           "outputDescription": "<p>输出 `R$ X.XX`。免税则输出 `Isento`。</p>",
-          "hint": "<p>分段计算：1000×8% + 2×18% = 80.36。每段只对超出部分征税。</p><p><a href=\"https://www.acwing.com/problem/content/674/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 672 | JD028 | 第2章 歧路逢生",
-          "samples": [
-            {
-              "input": "3002.00",
-              "output": "R$ 80.36"
-            }
-          ],
+          "hint": "<p>分段计算：1000×8% + 2×18% = 80.36。每段只对超出部分征税。<a href=\"https://www.acwing.com/problem/content/674/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\028.cpp",
+            "path": "solutions\359\028.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a;\r\n    cin>>a;\r\n    if(a>=0&&a<=2000)\r\n    {\r\n        cout<<\"Isento\"<<endl;\r\n    }\r\n    else if(a>2000&&a<=3000)\r\n    {\r\n        cout<<\"R$ \"<<fixed<<setprecision(2)<<(a-2000)*0.08<<endl;\r\n    }\r\n    else if(a>3000&&a<=4500)\r\n    {\r\n        cout<<\"R$ \"<<fixed<<setprecision(2)<<(1000*0.08+(a-3000)*0.18)<<endl;\r\n    }\r\n    else if(a>4500)\r\n    {\r\n        cout<<\"R$ \"<<fixed<<setprecision(2)<<(1000*0.08+1500*0.18+(a-4500)*0.28)<<endl;\r\n    }\r\n}"
           }
@@ -2322,16 +2179,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>千层塔第一层。墙上刻着一排编号从1到100的石砖。赵晴儿说：「把所有偶数编号的石砖挑出来，每行报一个。」</p>",
           "inputDescription": "<p>无输入。</p>",
           "outputDescription": "<p>输出全部偶数，每个偶数占一行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/710/\" target=\"_blank\">原题链接</a></p><p>for循环从2开始，步长为2，到100结束。</p>",
-          "source": "AcWing ??? | JD029 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "No input",
-              "output": "2\n4\n6\n8\n10\n12\n14\n16\n18\n20\n22\n24\n26\n28\n30\n32\n34\n36\n38\n40\n42\n44\n46\n48\n50\n52\n54\n56\n58\n60\n62\n64\n66\n68\n70\n72\n74\n76\n78\n80\n82\n84\n86\n88\n90\n92\n94\n96\n98\n100"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/710/\" target=\"_blank\">原题链接</a>for循环从2开始，步长为2，到100结束。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\029.cpp",
+            "path": "solutions\359\029.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    for(int i=2;i<=100;i+=2)\r\n    {\r\n        cout<<i<<endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2345,16 +2197,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>千层塔第二层。墙上有一排编号从1到X的石砖。梁嘉峰指着石砖说：「把所有奇数编号的报出来。」</p>",
           "inputDescription": "<p>一个正整数X。</p>",
           "outputDescription": "<p>每行一个奇数，从1到X（含）。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/711/\" target=\"_blank\">原题链接</a></p><p>for循环从1开始，步长为2，到X结束。如果X是偶数，最后一个奇数是X-1。</p>",
-          "source": "AcWing ??? | JD030 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "8",
-              "output": "1\n3\n5\n7"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/711/\" target=\"_blank\">原题链接</a>for循环从1开始，步长为2，到X结束。如果X是偶数，最后一个奇数是X-1。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\030.cpp",
+            "path": "solutions\359\030.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main(){\r\n    int X;\r\n    cin>>X;\r\n    for(int i=1;i<=X;i+=2)\r\n    {\r\n        cout<<i<<endl;\r\n    }\r\n}"
           }
@@ -2368,16 +2215,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>千层塔的某一层有一扇不断重复的门。每次门前出现一个数X：如果X不为0，就从1数到X；如果X为0，修炼结束。</p>",
           "inputDescription": "<p>若干行，每行一个整数X。以0结束。</p>",
           "outputDescription": "<p>对每个非零的X，输出1到X，每行一个数。每组之间空一行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/714/\" target=\"_blank\">原题链接</a></p><p>外层while循环读入X，遇到0停止。内层for循环从1到X输出。</p>",
-          "source": "AcWing ??? | JD031 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "5\n10\n3\n0",
-              "output": "1 2 3 4 5\n1 2 3 4 5 6 7 8 9 10\n1 2 3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/714/\" target=\"_blank\">原题链接</a>外层while循环读入X，遇到0停止。内层for循环从1到X输出。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\031.cpp",
+            "path": "solutions\359\031.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main(){\r\n    int n;\r\n    cin>>n;\r\n    while(n!=0)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(i>1)cout<<\" \";\r\n            cout<<i;\r\n        }\r\n        cout<<endl;\r\n        cin>>n;\r\n    }\r\n}"
           }
@@ -2391,16 +2233,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰递给李少白一个数X：「从X之后开始，找出6个连续的奇数，一个一个报给我。」</p>",
           "inputDescription": "<p>一个整数X。</p>",
           "outputDescription": "<p>从X之后开始的6个连续奇数，每行一个。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/716/\" target=\"_blank\">原题链接</a></p><p>如果X是奇数，从X+2开始；如果X是偶数，从X+1开始。循环6次，每次加2。</p>",
-          "source": "AcWing ??? | JD032 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "8",
-              "output": "9\n11\n13\n15\n17\n19"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/716/\" target=\"_blank\">原题链接</a>如果X是奇数，从X+2开始；如果X是偶数，从X+1开始。循环6次，每次加2。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\032.cpp",
+            "path": "solutions\359\032.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int X;\r\n    cin>>X;\r\n    if(X%2==0)X+=1;\r\n    for(int i=0;i<6;i++)\r\n    {\r\n        cout<<X<<endl;\r\n        X+=2;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2414,16 +2251,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿递给李少白6个测量数据，有的是正数有的是负数。她问：「这里面有几个正数？」</p>",
           "inputDescription": "<p>6行，每行一个浮点数。</p>",
           "outputDescription": "<p>输出正数的个数，格式为 `X valores positivos`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/718/\" target=\"_blank\">原题链接</a></p><p>循环读入6个数，用if判断是否&gt;0，计数器累加。</p>",
-          "source": "AcWing ??? | JD033 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "7\n-5\n6\n-3.4\n4.6\n12",
-              "output": "4 positive numbers"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/718/\" target=\"_blank\">原题链接</a>循环读入6个数，用if判断是否&gt;0，计数器累加。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\033.cpp",
+            "path": "solutions\359\033.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a;\r\n    int n=6,count=0;\r\n    while(n--)\r\n    {\r\n        cin>>a;\r\n        if(a>0)count++;\r\n    }\r\n    cout<<count<<\" positive numbers\"<<endl;\r\n}"
           }
@@ -2437,16 +2269,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰写下了一个数N：「从1到10000，把所有除以N余数为2的数报给我。」</p>",
           "inputDescription": "<p>一个整数N（N&gt;2）。</p>",
           "outputDescription": "<p>每行一个数，从1到10000中除以N余2的数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/723/\" target=\"_blank\">原题链接</a></p><p>for循环从1到10000，if i%N==2则输出。</p>",
-          "source": "AcWing ??? | JD034 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "13",
-              "output": "2\n15\n28\n41\n54\n..."
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/723/\" target=\"_blank\">原题链接</a>for循环从1到10000，if i%N==2则输出。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\034.cpp",
+            "path": "solutions\359\034.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N;\r\n    cin>>N;\r\n    if(N>9998)return 0;\r\n    for(int i=1;i<=10000;i++)\r\n    {\r\n        if(i%N==2) cout<<i<<endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2460,16 +2287,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿递给李少白N个测量数据，让他数一数有多少个落在[10,20]这个区间内。</p>",
           "inputDescription": "<p>第一行一个整数N。第二行N个整数。</p>",
           "outputDescription": "<p>第一行输出 X in，X为区间内个数。第二行输出 Y out，Y为区间外个数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/722/\" target=\"_blank\">原题链接</a></p><p>循环读入，判断是否 10≤X≤20，计数器累加。</p>",
-          "source": "AcWing ??? | JD035 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "5\n5 12 18 25 10",
-              "output": "3 in\n2 out"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/722/\" target=\"_blank\">原题链接</a>循环读入，判断是否 10≤X≤20，计数器累加。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\035.cpp",
+            "path": "solutions\359\035.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N, x;\r\n    cin>>N;\r\n    int count=0;\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cin>>x;\r\n        if(x>=10&&x<=20)\r\n        {\r\n            count++;\r\n        }\r\n    }\r\n    cout<<count<<\" in\"<<endl;\r\n    cout<<N-count<<\" out\"<<endl;\r\n    return 0;\r\n}"
           }
@@ -2481,18 +2303,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "timeLimit": 1000,
           "memoryLimit": 256,
           "description": "<p>梁嘉峰在墙上刻了两个数X和Y，让李少白算出X和Y之间（不含X和Y）所有奇数的和。</p>",
-          "inputDescription": "<p>一行，两个整数X和Y（X",
+          "inputDescription": "<p>一行，两个整数X和Y（X</p>",
           "outputDescription": "<p>输出X和Y之间所有奇数的和。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/726/\" target=\"_blank\">原题链接</a></p><p>从X+1到Y-1循环，判断每个数是否为奇数，是则累加。</p>",
-          "source": "AcWing ??? | JD036 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "6 -5",
-              "output": "5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/726/\" target=\"_blank\">原题链接</a>从X+1到Y-1循环，判断每个数是否为奇数，是则累加。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\036.cpp",
+            "path": "solutions\359\036.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int X,Y,temp,sum=0;\r\n    cin>>X>>Y;\r\n    if(X>Y)\r\n    {\r\n        temp=X;\r\n        X=Y;\r\n        Y=temp;\r\n    }\r\n    if(X%2!=0)\r\n    {\r\n        X++;\r\n    }\r\n    for(int i=X+1;i<Y;i+=2)\r\n    {\r\n        sum+=i;\r\n    }\r\n    cout<<sum<<endl;\r\n    return 0;\r\n}"
           }
@@ -2506,16 +2323,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰写下了一个起始整数A，又在第二行写了一串数。第二行里第一个正数就是N。请算出从A开始的N个连续整数的和。</p>",
           "inputDescription": "<p>第一行：整数A。第二行：若干整数，第一个大于0的数才是N。</p>",
           "outputDescription": "<p>从A开始N个连续整数之和。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/725/\" target=\"_blank\">原题链接</a></p><p>A固定，第二行跳过负数和零找N。从A开始循环N次累加。</p>",
-          "source": "AcWing ??? | JD037 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "3\n-5 0 -3 4 -1",
-              "output": "18"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/725/\" target=\"_blank\">原题链接</a>A固定，第二行跳过负数和零找N。从A开始循环N次累加。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\037.cpp",
+            "path": "solutions\359\037.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A,sum=0;\r\n    cin>>A;\r\n    int n;\r\n    cin>>n;\r\n    while(!(n>0))\r\n    {\r\n        cin>>n;\r\n    }\r\n    for(int i=A,j=0;j<n;i++,j++)\r\n    {\r\n        sum+=i;\r\n    }\r\n    cout<<sum<<endl;\r\n    return 0;\r\n}\r\n"
           }
@@ -2529,16 +2341,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>练功场上摆了一排石块，每块上面刻着一个数。赵晴儿让李少白找到最大的数，并说出它是第几块（从1开始计数）。</p>",
           "inputDescription": "<p>第一行一个整数N，表示石块数量。第二行N个整数。</p>",
           "outputDescription": "<p>输出最大值和它的位置，格式见样例。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/712/\" target=\"_blank\">原题链接</a></p><p>遍历时同时记录最大值和位置。</p>",
-          "source": "AcWing ??? | JD038 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "5\n3 2 5 1 4",
-              "output": "5\n3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/712/\" target=\"_blank\">原题链接</a>遍历时同时记录最大值和位置。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\038.cpp",
+            "path": "solutions\359\038.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N;\r\n    cin>>N;\r\n    vector<int>a;\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        int x;\r\n        cin>>x;\r\n        a.push_back(x);\r\n    }\r\n    int num=0,max=-1000;\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        if(a[i]>max)\r\n        {\r\n            max=a[i];\r\n            num=i;\r\n        }\r\n    }\r\n    cout<<max<<endl<<num+1<<endl;\r\n    return 0;\r\n}"
           }
@@ -2552,16 +2359,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上写下一个数N：「找出它的所有约数，从小到大列出来。」</p>",
           "inputDescription": "<p>一个正整数N。</p>",
           "outputDescription": "<p>每行一个约数，从小到大。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/713/\" target=\"_blank\">原题链接</a></p><p>从1到N循环，如果N%i==0则i是约数。</p>",
-          "source": "AcWing ??? | JD039 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "6",
-              "output": "1\n2\n3\n6"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/713/\" target=\"_blank\">原题链接</a>从1到N循环，如果N%i==0则i是约数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\039.cpp",
+            "path": "solutions\359\039.cpp",
             "language": "cpp",
             "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int N;\n    cin>>N;\n    for(int i=1;i<=N;i++)\n    {\n        if(N%i==0)\n        {\n            cout<<i<<endl;\n        }\n    }\n    return 0;\n}\n"
           }
@@ -2575,16 +2377,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿教李少白背乘法口诀。她写下一个数N，让李少白从1乘到10，按格式列出N的乘法表：「i x N = i*N」。</p>",
           "inputDescription": "<p>一个整数N。</p>",
           "outputDescription": "<p>10行，格式为 `i x N = i*N`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/720/\" target=\"_blank\">原题链接</a></p><p>for循环从1到10，每次输出i x N = i*N。</p>",
-          "source": "AcWing ??? | JD040 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "140",
-              "output": "1 x 140 = 140\n2 x 140 = 280\n3 x 140 = 420\n4 x 140 = 560\n5 x 140 = 700\n6 x 140 = 840\n7 x 140 = 980\n8 x 140 = 1120\n9 x 140 = 1260\n10 x 140 = 1400"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/720/\" target=\"_blank\">原题链接</a>for循环从1到10，每次输出i x N = i*N。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\040.cpp",
+            "path": "solutions\359\040.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N;\r\n    cin>>N;\r\n    for(int i=1;i<=10;i++)\r\n    {\r\n        cout<<i<<\" x \"<<N<<\" = \"<<i*N<<endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2598,16 +2395,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>千层塔的一面墙上刻着N行M列的数字阵列，每行从1开始递增，但每逢第M个位置不写数字，写SWORD。赵晴儿让李少白按这个规律把整个阵列报出来。</p>",
           "inputDescription": "<p>一行，两个整数N和M。</p>",
           "outputDescription": "<p>N行，每行M个值，最后一个用SWORD代替，值之间用空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/717/\" target=\"_blank\">原题链接</a></p><p>嵌套循环，外层控制行，内层控制列。每行第M个位置输出SWORD。</p>",
-          "source": "AcWing ??? | JD041 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "7 4",
-              "output": "1 2 3 SWORD\n5 6 7 SWORD\n9 10 11 SWORD\n13 14 15 SWORD\n17 18 19 SWORD\n21 22 23 SWORD\n25 26 27 SWORD"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/717/\" target=\"_blank\">原题链接</a>嵌套循环，外层控制行，内层控制列。每行第M个位置输出SWORD。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\041.cpp",
+            "path": "solutions\359\041.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main(){\r\n    int N,M;\r\n    cin>>N>>M;\r\n    int j=1,num=0;\r\n    for(int i=1;i<=N;i++){\r\n        num=0;\r\n        while(num<M-1)\r\n        {\r\n            cout<<j<<\" \";\r\n            num++;\r\n            j++;\r\n        }\r\n        cout<<\"SWORD\"<<endl;\r\n        j++;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2621,16 +2413,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>演武场上，弟子们正在操练。李少白走过一排兵器架，记录了N次观察：每次看到一件兵器，C代表剑，R代表刀，F代表枪。赵晴儿让他统计每种兵器出现了多少把，以及各自的占比。</p>",
           "inputDescription": "<p>第一行一个整数N。接下来N行，每行一个整数（数量）和一个字符（C/R/F），分别表示某次看到的兵器数量和类型。</p>",
           "outputDescription": "<p>第一行输出 Total: X weapons（总数量）。接下来三行输出每种兵器的总数：Total swords: X、Total blades: X、Total spears: X。最后三行输出各自占比：Percentage of swords: XX.XX % 等，保留两位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/715/\" target=\"_blank\">原题链接</a></p><p>三个计数器分别累加C、R、F的数量。注意每行先读数量再读类型。总数 = 所有数量之和。占比 = 各类数量 / 总数 × 100%，保留两位小数。</p>",
-          "source": "AcWing ??? | JD042 | 第3章 千回百转",
-          "samples": [
-            {
-              "input": "11\n1 F\n5 C\n4 C\n12 C\n11 F\n15 F\n2 F\n7 C\n1 C\n4 C\n9 F",
-              "output": "Total: 71 weapons\nTotal swords: 33\nTotal blades: 0\nTotal spears: 38\nPercentage of swords: 46.48 %\nPercentage of blades: 0.00 %\nPercentage of spears: 53.52 %"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/715/\" target=\"_blank\">原题链接</a>三个计数器分别累加C、R、F的数量。注意每行先读数量再读类型。总数 = 所有数量之和。占比 = 各类数量 / 总数 × 100%，保留两位小数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\042.cpp",
+            "path": "solutions\359\042.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N;\r\n    cin >> N; \r\n    int total = 0;\r\n    int swords = 0;\r\n    int blades = 0; \r\n    int spears = 0;    \r\n    for(int i = 0; i < N; i++)\r\n    {\r\n        int count;\r\n        char type;\r\n        cin >> count >> type;  \r\n        total += count;\r\n        if(type == 'C')\r\n        {\r\n            swords += count;\r\n        }\r\n        else if(type == 'R')\r\n        {\r\n            blades += count;\r\n        }\r\n        else if(type == 'F')\r\n        {\r\n            spears += count;\r\n        }\r\n    }\r\n    double percentC =(double)swords / total * 100;\r\n    double percentR =(double)blades / total * 100;\r\n    double percentF =(double)spears / total * 100;\r\n    cout << \"Total: \" << total << \" weapons\" << endl;\r\n    cout << \"Total swords: \" << swords << endl;\r\n    cout << \"Total blades: \" << blades << endl;\r\n    cout << \"Total spears: \" << spears << endl;\r\n    cout << fixed << setprecision(2);\r\n    cout << \"Percentage of swords: \" << percentC << \" %\" << endl;\r\n    cout << \"Percentage of blades: \" << percentR << \" %\" << endl;\r\n    cout << \"Percentage of spears: \" << percentF << \" %\" << endl;\r\n    return 0;\r\n}"
           }
@@ -2644,16 +2431,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>练功房的石板上有10道剑气留下的痕迹，每道痕迹上刻着一个数。其中有些数带着邪气（负数或零），梁嘉峰让李少白运起纯阳内力，把这些不纯正的数全部净化，替换成1——象征正气归于一元。</p>",
           "inputDescription": "<p>一行，10个整数，用空格隔开。</p>",
           "outputDescription": "<p>替换后的10个数，每行格式为 `X[i] = 值`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/739/\" target=\"_blank\">原题链接</a></p><p>遍历数组，将≤0的元素替换为1。</p>",
-          "source": "JD | JD043 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "-73\n27\n-35\n50\n-67\n86\n39\n-81\n-7\n31",
-              "output": "X[0] = 1\nX[1] = 27\nX[2] = 1\nX[3] = 50\nX[4] = 1\nX[5] = 86\nX[6] = 39\nX[7] = 1\nX[8] = 1\nX[9] = 31"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/739/\" target=\"_blank\">原题链接</a>遍历数组，将≤0的元素替换为1。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\043.cpp",
+            "path": "solutions\359\043.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main(){\r\n    int x[10];\r\n    for(int i=0;i<10;i++){\r\n        cin>>x[i];\r\n    }\r\n    for(int i=0;i<10;i++)\r\n    {\r\n        // if(i<9)\r\n        // {\r\n            if(x[i]<=0)\r\n            {cout<<\"X[\"<<i<<\"] = \"<<1<<endl;}\r\n            else\r\n            {cout<<\"X[\"<<i<<\"] = \"<<x[i]<<endl;}\r\n        // }\r\n        // else\r\n        // {\r\n        //     if(x[i]<0)\r\n        //     {cout<<\"x[\"<<i<<\"] = \"<<1;}\r\n        //     else\r\n        //     {cout<<\"x[\"<<i<<\"] = \"<<x[i];}\r\n        // }\r\n    }\r\n\r\n    return 0;\r\n}"
           }
@@ -2667,16 +2449,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上布下一个翻倍剑阵。她说：「以第一个数为起点，后面每个数都是前一个的两倍。内力如此，出剑亦是如此——一重更比一重强。」</p>",
           "inputDescription": "<p>一个整数V。</p>",
           "outputDescription": "<p>10行，格式为 `N[i] = X`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/740/\" target=\"_blank\">原题链接</a></p><p>N[0]=V，循环N[i]=N[i-1]*2。</p>",
-          "source": "JD | JD044 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "6",
-              "output": "N[0] = 6\nN[1] = 12\nN[2] = 24\nN[3] = 48\nN[4] = 96\nN[5] = 192\nN[6] = 384\nN[7] = 768\nN[8] = 1536\nN[9] = 3072"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/740/\" target=\"_blank\">原题链接</a>N[0]=V，循环N[i]=N[i-1]*2。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\044.cpp",
+            "path": "solutions\359\044.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int V;\r\n    cin >> V; \r\n    for(int i = 0; i < 10; i++)\r\n    {\r\n        cout << \"N[\" << i << \"] = \" << V << endl;\r\n        V = V * 2;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2690,16 +2467,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>沙盘上散落着100把长剑，每把剑上刻着一个数，代表剑的品级。赵晴儿让李少白从中挑出品级不超过10的精良之剑，逐一记录。</p>",
           "inputDescription": "<p>100个浮点数。</p>",
           "outputDescription": "<p>按顺序输出所有≤10的元素，每行格式为 `A[i] = X`（保留一位小数）。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/741/\" target=\"_blank\">原题链接</a></p><p>遍历数组，if元素≤10则输出。</p>",
-          "source": "JD | JD045 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "79.5\n-35.1\n65.0\n-89.9\n62.2\n-30.0\n-58.1\n-74.0\n85.7\n66.4\n-60.2\n-32.1\n11.4\n34.6\n0.2\n96.3\n-67.9\n70.1\n27.3\n53.4\n63.8\n43.2\n-68.2\n-87.9\n-13.3\n62.1\n-12.0\n66.9\n1.6\n-70.3\n-14.0\n-84.8\n19.6\n-1.9\n43.4\n36.9\n97.2\n-88.6\n52.2\n-21.0\n-54.1\n-17.3\n-11.7\n-8.5\n40.9\n-21.6\n-12.0\n87.8\n-92.9\n45.3\n-70.1\n73.7\n-23.2\n87.3\n-78.6\n38.2\n51.2\n-21.0\n3.9\n88.4\n28.3\n-67.6\n47.1\n-49.1\n73.6\n39.5\n28.0\n-80.1\n-41.4\n43.2\n-4.6\n61.1\n83.2\n65.5\n74.3\n90.1\n-80.2\n39.6\n-7.0\n-34.4\n43.1\n-62.5\n-25.3\n61.0\n68.5\n9.0\n10.3\n45.9\n-98.0\n-34.8\n88.3\n-26.6\n-48.1\n20.5\n-5.4\n-76.7\n79.7\n-90.0\n59.1\n-18.7",
-              "output": "A[1] = -35.1\nA[3] = -89.9\nA[5] = -30.0\nA[6] = -58.1\nA[7] = -74.0\nA[10] = -60.2\nA[11] = -32.1\nA[14] = 0.2\nA[16] = -67.9\nA[22] = -68.2\nA[23] = -87.9\nA[24] = -13.3\nA[26] = -12.0\nA[28] = 1.6\nA[29] = -70.3\nA[30] = -14.0\nA[31] = -84.8\nA[33] = -1.9\nA[37] = -88.6\nA[39] = -21.0\nA[40] = -54.1\nA[41] = -17.3\nA[42] = -11.7\nA[43] = -8.5\nA[45] = -21.6\nA[46] = -12.0\nA[48] = -92.9\nA[50] = -70.1\nA[52] = -23.2\nA[54] = -78.6\nA[57] = -21.0\nA[58] = 3.9\nA[61] = -67.6\nA[63] = -49.1\nA[67] = -80.1\nA[68] = -41.4\nA[70] = -4.6\nA[76] = -80.2\nA[78] = -7.0\nA[79] = -34.4\nA[81] = -62.5\nA[82] = -25.3\nA[85] = 9.0\nA[88] = -98.0\nA[89] = -34.8\nA[91] = -26.6\nA[92] = -48.1\nA[94] = -5.4\nA[95] = -76.7\nA[97] = -90.0\nA[99] = -18.7"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/741/\" target=\"_blank\">原题链接</a>遍历数组，if元素≤10则输出。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\045.cpp",
+            "path": "solutions\359\045.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double A[100];   \r\n    for(int i = 0; i < 100; i++)\r\n    {\r\n        cin >> A[i];\r\n    }  \r\n    cout << fixed << setprecision(1);\r\n    for(int i = 0; i < 100; i++)\r\n    {\r\n        if(A[i] <= 10)\r\n        {\r\n            cout << \"A[\" << i << \"] = \" << A[i] << endl;\r\n        }\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2713,16 +2485,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>沙盘上的剑阵需要倒转方向——第一把剑和最后一把交换，第二把和倒数第二把交换。梁嘉峰说：「攻守易位，前后颠倒。」</p>",
           "inputDescription": "<p>20个整数。</p>",
           "outputDescription": "<p>翻转后的20个数，每行格式为 `N[i] = X`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/745/\" target=\"_blank\">原题链接</a></p><p>双指针从两端向中间交换。</p>",
-          "source": "JD | JD046 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "-40\n57\n99\n2\n-20\n25\n-67\n-76\n70\n98\n-95\n-92\n-100\n-100\n-55\n48\n-55\n54\n1\n-32",
-              "output": "N[0] = -32\nN[1] = 1\nN[2] = 54\nN[3] = -55\nN[4] = 48\nN[5] = -55\nN[6] = -100\nN[7] = -100\nN[8] = -92\nN[9] = -95\nN[10] = 98\nN[11] = 70\nN[12] = -76\nN[13] = -67\nN[14] = 25\nN[15] = -20\nN[16] = 2\nN[17] = 99\nN[18] = 57\nN[19] = -40"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/745/\" target=\"_blank\">原题链接</a>双指针从两端向中间交换。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\046.cpp",
+            "path": "solutions\359\046.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int a[20];\r\n    for(int i = 0; i < 20; i++)\r\n    {\r\n        cin >> a[i];\r\n    }\r\n    int temp;\r\n    for(int i=0;i<=9;i++)\r\n    {\r\n        temp=a[i];\r\n        a[i]=a[19-i];\r\n        a[19-i]=temp;\r\n    }\r\n    for(int i = 0; i < 20; i++)\r\n    {\r\n        cout << \"N[\" << i << \"] = \" << a[i] << endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2736,16 +2503,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>练功场上一排木桩，每根木桩上刻着一个数。赵晴儿让他找到最矮的那根木桩——剑锋所向，以弱制动。找到最小值并说出它的位置（从0开始计数）。</p>",
           "inputDescription": "<p>第一行一个整数N。第二行N个整数。</p>",
           "outputDescription": "<p>第一行输出 <code>Menor valor: X</code>，第二行输出 <code>Posicao: P</code>，其中P为最小值的下标（从0开始计数）。若最小值出现多次，输出第一次出现的位置。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/742/\" target=\"_blank\">原题链接</a></p><p>遍历时记录当前最小值和位置。注意位置从0开始计数。</p>",
-          "source": "JD | JD047 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "10\n1 2 3 4 -5 6 7 8 9 10",
-              "output": "Menor valor: -5\nPosicao: 4"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/742/\" target=\"_blank\">原题链接</a>遍历时记录当前最小值和位置。注意位置从0开始计数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\047.cpp",
+            "path": "solutions\359\047.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int N;\r\n    cin >> N;   \r\n    int minVal;\r\n    int minPos = 0;   \r\n    for(int i = 0; i < N; i++)\r\n    {\r\n        int num;\r\n        cin >> num;\r\n        if(i == 0 || num < minVal)\r\n        {\r\n            minVal = num;\r\n            minPos = i;\r\n        }\r\n    }\r\n    cout << \"Menor valor: \" << minVal << endl;\r\n    cout << \"Posicao: \" << minPos << endl;\r\n    return 0;\r\n}"
           }
@@ -2759,16 +2521,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上画出两道气旋：「阴阳二气，交替相生。第一气为0，第二气为1，此后每气皆为前二气之和。只用两个变量，算出第N气。」其中F(0)=0，F(1)=1，F(N)=F(N-1)+F(N-2)。</p>",
           "inputDescription": "<p>一个整数N。</p>",
           "outputDescription": "<p>一个整数，即第N个斐波那契数F(N)。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/743/\" target=\"_blank\">原题链接</a></p><p>两个变量滚动：a,b = b,a+b。</p>",
-          "source": "JD | JD048 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "4",
-              "output": "3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/743/\" target=\"_blank\">原题链接</a>两个变量滚动：a,b = b,a+b。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\048.cpp",
+            "path": "solutions\359\048.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    long long a=0,b=1,N,num=0;\r\n    cin >>N;\r\n    if(N==0)\r\n    {\r\n        cout << 0 << endl;\r\n        return 0;\r\n    }\r\n    if(N==1)\r\n    {\r\n        cout << 1 << endl;\r\n        return 0;\r\n    }\r\n    for(long long i=2;i<=N;i++)\r\n    {\r\n        num=a+b;\r\n        a=b;\r\n        b=num;\r\n        \r\n    }\r\n    cout << num << endl;\r\n    return 0;\r\n}\r\n//F1=0\r\n//F2=0+1\r\n//F3=1+1\r\n//F4=1+2\r\n//F5=2+3"
           }
@@ -2782,16 +2539,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿展开一卷古剑谱，上面记载着斐波那契剑诀：0, 1, 1, 2, 3, 5, 8, 13……「每一式都是前两式的融合。T次问询，每次报出第N式。」</p>",
           "inputDescription": "<p>一个整数N。</p>",
           "outputDescription": "<p>一行，前N个斐波那契数，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/744/\" target=\"_blank\">原题链接</a></p><p>预处理斐波那契数组到60，查询时直接取值。</p>",
-          "source": "JD | JD049 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "5",
-              "output": "0 1 1 2 3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/744/\" target=\"_blank\">原题链接</a>预处理斐波那契数组到60，查询时直接取值。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\049.cpp",
+            "path": "solutions\359\049.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\nint main()\r\n{\r\n    long long N;\r\n    cin >>N;\r\n    vector<long long>a;\r\n    a.push_back(0);\r\n    a.push_back(1);\r\n    for(int i=2;i<=N;i++)\r\n    {\r\n        long long temp;\r\n        temp=a[i-1]+a[i-2];\r\n        a.push_back(temp);\r\n    }\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cout << a[i] << \" \";\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2805,16 +2557,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰在沙盘上画了一个数字阵列：「从M到N，全部列出来，再算和。如果M比N大，先交换。」李少白从M一路数到N，把每个数刻在石板上。</p>",
           "inputDescription": "<p>若干行，每行两个整数M和N。当M和N均为非正数（≤0）时结束输入。</p>",
           "outputDescription": "<p>对每组M和N，从小到大输出M到N之间的所有整数（空格隔开），最后输出 <code>Sum=X</code>（X为这些数的和）。每组输出占一行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/746/\" target=\"_blank\">原题链接</a></p><p>若M&gt;N则先交换。注意：结束条件为两个数均≤0（测试用例可能用0 0或-1 -1）。</p>",
-          "source": "JD | JD050 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "5 10\n2 3\n-1 -1",
-              "output": "5 6 7 8 9 10 Sum=45\n2 3 Sum=5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/746/\" target=\"_blank\">原题链接</a>若M&gt;N则先交换。注意：结束条件为两个数均≤0（测试用例可能用0 0或-1 -1）。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\050.cpp",
+            "path": "solutions\359\050.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int M, N; \r\n    while(cin >> M >> N)\r\n    {\r\n        if(M <= 0 && N <= 0)\r\n        {\r\n            break;\r\n        }\r\n        if(M > N)\r\n        {\r\n            int temp = M;\r\n            M = N;\r\n            N = temp;\r\n        }\r\n        int sum = 0;\r\n        for(int i = M; i <= N; i++)\r\n        {\r\n            cout << i;\r\n            if(i < N) cout << \" \";  // 最后一个数字后面不加空格\r\n            sum += i;\r\n        }\r\n        cout << \" Sum=\" << sum << endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2828,16 +2575,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>沙盘上一个12×12的剑阵，赵晴儿指着其中一行：「这一行的所有剑，力量之和是多少？或平均力量？」李少白逐格检视。</p>",
           "inputDescription": "<p>第一行一个整数L（0~11，表示行号）。第二行一个字符（S或M）。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出该行的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/719/\" target=\"_blank\">原题链接</a></p><p>遍历指定行，根据操作类型求和或求平均。</p>",
-          "source": "JD | JD051 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "1\nM\n94.2 65.35 7.41 -67.85 18.62 -72.49 -5.91 66.06 -20.35 -17.4 12.62 -63.04\n...",
-              "output": "17.3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/719/\" target=\"_blank\">原题链接</a>遍历指定行，根据操作类型求和或求平均。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\051.cpp",
+            "path": "solutions\359\051.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()//测试案例存在问题\r\n{\r\n    int L;\r\n    char op;\r\n    cin >> L >> op;\r\n    double a[12][12];\r\n    for(int i = 0; i < 12; i++)\r\n    {\r\n        for(int j = 0; j < 12; j++)\r\n        {\r\n            cin >> a[i][j];\r\n        }\r\n    }\r\n    double sum = 0;\r\n    for(int j = 0; j < 12; j++)\r\n    {\r\n        sum += a[L][j];\r\n    }\r\n    cout << fixed << setprecision(1);\r\n    if(op == 'S')\r\n    {\r\n        cout << sum << endl;\r\n    }\r\n    else if(op == 'M')\r\n    {\r\n        cout << sum / 12 << endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -2851,16 +2593,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿又指向剑阵的其中一列：「纵览此列，算其力量。」李少白沿着列的方向逐行检视。</p>",
           "inputDescription": "<p>第一行一个整数C（0~11，表示列号）。第二行一个字符（S或M）。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出该列的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/724/\" target=\"_blank\">原题链接</a></p><p>遍历所有行取指定列元素。</p>",
-          "source": "JD | JD052 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "1\nS\n-29.7 94.5 43.8 3.7 68.1 19.9 23.4 -0.3 -85.3 57.3 89.7 36.0\n...",
-              "output": "199.5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/724/\" target=\"_blank\">原题链接</a>遍历所有行取指定列元素。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\052.cpp",
+            "path": "solutions\359\052.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include <iomanip>\r\nusing namespace std;\r\nint main() {\r\n    int C;\r\n    char mode;\r\n    cin >> C >> mode;\r\n    double sum = 0.0;\r\n    double val;\r\n    for (int i = 0; i < 12; i++) {\r\n        for (int j = 0; j < 12; j++) {\r\n            cin >> val;\r\n            if (j == C) {\r\n                sum += val;\r\n            }\r\n        }\r\n    }    \r\n    if (mode == 'S') {\r\n        cout << fixed << setprecision(1) << sum << endl;\r\n    } else if(mode == 'M') {\r\n        cout << fixed << setprecision(1) << sum / 12.0 << endl;\r\n    }\r\n       return 0;\r\n}"
           }
@@ -2874,16 +2611,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿在沙盘上写下「完璧」二字：「完璧之数，等于它的所有真因子之和。譬如6=1+2+3。找到不超过N的所有完璧之数，以印证归宗之意。」</p>",
           "inputDescription": "<p>一个整数N。</p>",
           "outputDescription": "<p>每行输出一个不超过N的完全数（从小到大）。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/727/\" target=\"_blank\">原题链接</a></p><p>对每个数找所有真因子求和，等于自身则是完全数。注意优化：枚举因子只需到 sqrt(X)，利用约数成对出现的性质。1 不是完全数。</p>",
-          "source": "JD | JD053 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "30",
-              "output": "6\n28"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/727/\" target=\"_blank\">原题链接</a>对每个数找所有真因子求和，等于自身则是完全数。注意优化：枚举因子只需到 sqrt(X)，利用约数成对出现的性质。1 不是完全数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\053.cpp",
+            "path": "solutions\359\053.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include <cmath>\r\nusing namespace std;\r\ntypedef long long LL;\r\n// bool isPrime(LL n)\r\n// {\r\n//     if(n<2)return false;\r\n//     else if(n==2)return true;\r\n//     else if(n%2==0)return false;\r\n//     double m=sqrt(n);\r\n//     for(int i=3;i<=m;i+=2)\r\n//     {\r\n//         if(n%i==0)return false;\r\n//     }\r\n//     return true;\r\n\r\n// }\r\n#include <iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\n\r\nint main() {\r\n    LL N;\r\n    cin >> N;\r\n    if (N >= 6) cout << 6 << endl;\r\n    if (N >= 28) cout << 28 << endl;\r\n    if (N >= 496) cout << 496 << endl;\r\n    if (N >= 8128) cout << 8128 << endl;\r\n    if (N >= 33550336) cout << 33550336 << endl;\r\n    if (N >= 8589869056LL) cout << 8589869056LL << endl;\r\n    if (N >= 137438691328LL) cout << 137438691328LL << endl;\r\n    if (N >= 2305843008139952128LL) cout << 2305843008139952128LL << endl;\r\n    \r\n    return 0;\r\n}\r\n//主包过不了，以后再看……\r\n\r\n\r\n//超出时长，无法通过……\r\n// int main() \r\n// {\r\n//     LL N;\r\n//     cin >> N;\r\n//     for (LL i = 2; i <= N; i+=2) {\r\n//         if(isPrime(i))continue;\r\n//         LL sum = 1;\r\n//         LL m=sqrt(i);\r\n//         for (int j = 2; j <= m; j++) {\r\n//             if (i % j == 0) {\r\n//                 sum += j;   \r\n//                 if(j!=i/j)\r\n//                 sum+=i/j;\r\n//             }\r\n//         }\r\n//         if (sum == i) {\r\n//             cout << i << endl;\r\n//         }\r\n    \r\n//     }\r\n//     return 0;\r\n// }"
           }
@@ -2897,16 +2629,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰在沙盘上点出几枚剑棋：「天下剑法，有些可以拆分化简，有些不可再分，乃剑意之基石。这些不可拆分的棋位——只能被1和自己整除的数——就是剑意之质。排出2到N之间所有的剑意质数。」</p>",
           "inputDescription": "<p>一个整数N。</p>",
           "outputDescription": "<p>输出2到N之间所有的质数，每行一个。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/728/\" target=\"_blank\">原题链接</a></p><p>对每个数从2到√n试除。</p>",
-          "source": "JD | JD054 | 第4章 排兵布阵",
-          "samples": [
-            {
-              "input": "10",
-              "output": "2\n3\n5\n7"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/728/\" target=\"_blank\">原题链接</a>对每个数从2到√n试除。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\054.cpp",
+            "path": "solutions\359\054.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<cmath>\r\nusing namespace std;\r\ntypedef long long LL;\r\nbool isPrime(LL n)\r\n{\r\n    if(n==1)return false;\r\n    else if(n==2)return true;\r\n    else if(n%2==0&&n!=2)return false;\r\n    //double m=sqrt(n);\r\n    for(LL i=3;i*i<=n;i++)\r\n    {\r\n        if(n%i==0)return false;\r\n    }\r\n    return true;\r\n}\r\n int main()\r\n {\r\n    LL N;\r\n    cin>>N;\r\n    for(LL i=2;i<=N;i++)\r\n    {\r\n        if(isPrime(i))\r\n            cout<<i<<endl;\r\n    }\r\n }\r\n"
           }
@@ -2917,19 +2644,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD055/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第一宫——乾宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护乾宫的剑灵凌空画出一道剑气光幕，说道：</p><blockquote><p>「此乃乾宫剑阵之<strong>上方剑域</strong>。两条对角线将方阵切为上下左右四块。上方区域位于两条对角线的<strong>上方交汇处</strong>——即行号小于列号（i &lt; j），且行号加列号之和小于 11（i + j &lt; 11）的格子。此处灵力承天位之力，主攻正前方。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第一宫——乾宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护乾宫的剑灵凌空画出一道剑气光幕，说道：<blockquote>「此乃乾宫剑阵之<strong>上方剑域</strong>。两条对角线将方阵切为上下左右四块。上方区域位于两条对角线的<strong>上方交汇处</strong>——即行号小于列号（i &lt; j），且行号加列号之和小于 11（i + j &lt; 11）的格子。此处灵力承天位之力，主攻正前方。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/747/\" target=\"_blank\">原题链接</a></p><p>先读操作类型（S求和/M求平均），再判断行号。上方区域即i",
-          "source": "JD | JD055 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n5.0 65.0 82.0 54.0 60.0 96.0 64.0 88.0 81.0 2.0 86.0 29.0\n66.0 16.0 27.0 63.0 1.0 52.0 67.0 76.0 94.0 88.0 65.0 39.0\n48.0 61.0 15.0 22.0 48.0 30.0 57.0 15.0 97.0 18.0 19.0 49.0\n34.0 55.0 10.0 37.0 1.0 3.0 29.0 15.0 42.0 76.0 95.0 5.0\n29.0 92.0 53.0 60.0 44.0 35.0 96.0 64.0 15.0 16.0 35.0 87.0\n42.0 50.0 55.0 17.0 78.0 69.0 2.0 1.0 1.0 4.0 55.0 17.0\n66.0 28.0 22.0 68.0 17.0 94.0 74.0 6.0 65.0 64.0 77.0 84.0\n38.0 50.0 8.0 46.0 39.0 90.0 99.0 89.0 2.0 17.0 40.0 89.0\n65.0 72.0 54.0 60.0 11.0 99.0 37.0 21.0 37.0 9.0 42.0 14.0\n55.0 65.0 62.0 38.0 59.0 35.0 50.0 40.0 71.0 1.0 23.0 23.0\n37.0 17.0 97.0 26.0 15.0 64.0 16.0 79.0 87.0 84.0 96.0 85.0\n12.0 39.0 88.0 87.0 30.0 61.0 7.0 10.0 43.0 87.0 48.0 77.0\n",
-              "output": "1594.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/747/\" target=\"_blank\">原题链接</a>先读操作类型（S求和/M求平均），再判断行号。上方区域即i</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\055.cpp",
+            "path": "solutions\359\055.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j<11&&i<j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/30<<endl;\r\n}"
           }
@@ -2940,19 +2662,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD056/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第二宫——坤宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护坤宫的剑灵指向光幕下方，说道：</p><blockquote><p>「此乃坤宫剑阵之<strong>下方剑域</strong>。两条对角线将方阵切为上下左右四块。下方区域位于两条对角线的<strong>下方交汇处</strong>——即行号大于列号（i &gt; j），且行号加列号之和大于 11（i + j &gt; 11）的格子。此处灵力承地脉之气，势沉力猛。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第二宫——坤宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护坤宫的剑灵指向光幕下方，说道：<blockquote>「此乃坤宫剑阵之<strong>下方剑域</strong>。两条对角线将方阵切为上下左右四块。下方区域位于两条对角线的<strong>下方交汇处</strong>——即行号大于列号（i &gt; j），且行号加列号之和大于 11（i + j &gt; 11）的格子。此处灵力承地脉之气，势沉力猛。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/749/\" target=\"_blank\">原题链接</a></p><p>下方区域即i&gt;j的元素。</p>",
-          "source": "JD | JD056 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n6.0 90.0 70.0 55.0 69.0 69.0 62.0 79.0 7.0 9.0 54.0 43.0\n30.0 75.0 74.0 58.0 99.0 52.0 88.0 51.0 77.0 92.0 77.0 10.0\n89.0 99.0 84.0 60.0 90.0 25.0 95.0 82.0 96.0 5.0 92.0 10.0\n62.0 58.0 33.0 88.0 65.0 78.0 71.0 59.0 81.0 70.0 83.0 32.0\n7.0 50.0 45.0 52.0 18.0 63.0 68.0 58.0 60.0 58.0 45.0 22.0\n2.0 54.0 28.0 91.0 0.0 61.0 49.0 57.0 78.0 35.0 82.0 48.0\n7.0 54.0 36.0 30.0 46.0 48.0 45.0 22.0 18.0 24.0 77.0 17.0\n30.0 66.0 66.0 14.0 11.0 18.0 13.0 67.0 12.0 9.0 1.0 35.0\n7.0 71.0 24.0 6.0 73.0 30.0 26.0 96.0 99.0 28.0 8.0 38.0\n16.0 3.0 75.0 67.0 66.0 27.0 86.0 62.0 48.0 35.0 90.0 57.0\n76.0 4.0 92.0 24.0 53.0 31.0 95.0 52.0 69.0 39.0 16.0 64.0\n9.0 12.0 70.0 38.0 81.0 95.0 85.0 61.0 38.0 93.0 54.0 99.0\n",
-              "output": "1694.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/749/\" target=\"_blank\">原题链接</a>下方区域即i&gt;j的元素。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\056.cpp",
+            "path": "solutions\359\056.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j>11&&i>j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/30<<endl;\r\n}"
           }
@@ -2963,19 +2680,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD057/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第三宫——震宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护震宫的剑灵指向光幕左侧，说道：</p><blockquote><p>「此乃震宫剑阵之<strong>左方剑域</strong>。两条对角线将方阵切为上下左右四块。左方区域位于两条对角线的<strong>左侧交汇处</strong>——即行号大于列号（i &gt; j），且行号加列号之和小于 11（i + j &lt; 11）的格子。此处灵力守青龙之位，主防御。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第三宫——震宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护震宫的剑灵指向光幕左侧，说道：<blockquote>「此乃震宫剑阵之<strong>左方剑域</strong>。两条对角线将方阵切为上下左右四块。左方区域位于两条对角线的<strong>左侧交汇处</strong>——即行号大于列号（i &gt; j），且行号加列号之和小于 11（i + j &lt; 11）的格子。此处灵力守青龙之位，主防御。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/751/\" target=\"_blank\">原题链接</a></p><p>左方区域即满足j &lt; i && i + j &lt; 11的元素（主对角线下且反对角线上）。</p>",
-          "source": "JD | JD057 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n68.0 59.0 10.0 88.0 95.0 50.0 60.0 8.0 6.0 7.0 5.0 79.0\n18.0 94.0 63.0 2.0 15.0 13.0 39.0 37.0 33.0 27.0 11.0 29.0\n12.0 23.0 6.0 42.0 4.0 63.0 7.0 20.0 11.0 74.0 27.0 5.0\n63.0 67.0 98.0 85.0 10.0 28.0 37.0 10.0 72.0 34.0 65.0 48.0\n34.0 17.0 33.0 49.0 22.0 37.0 20.0 80.0 43.0 4.0 82.0 14.0\n64.0 56.0 8.0 92.0 64.0 58.0 54.0 26.0 30.0 54.0 49.0 5.0\n40.0 69.0 72.0 6.0 8.0 71.0 70.0 98.0 24.0 16.0 91.0 11.0\n15.0 70.0 71.0 53.0 75.0 96.0 97.0 55.0 6.0 20.0 73.0 54.0\n21.0 76.0 55.0 68.0 85.0 84.0 82.0 26.0 76.0 96.0 6.0 87.0\n13.0 66.0 20.0 88.0 29.0 34.0 83.0 93.0 55.0 98.0 53.0 37.0\n77.0 36.0 43.0 10.0 70.0 47.0 57.0 8.0 94.0 48.0 98.0 88.0\n3.0 25.0 3.0 35.0 50.0 22.0 11.0 90.0 18.0 43.0 55.0 96.0\n",
-              "output": "1410.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/751/\" target=\"_blank\">原题链接</a>左方区域即满足j &lt; i && i + j &lt; 11的元素（主对角线下且反对角线上）。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\057.cpp",
+            "path": "solutions\359\057.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j<11&&i>j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/30<<endl;\r\n}"
           }
@@ -2986,19 +2698,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD058/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第四宫——巽宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护巽宫的剑灵指向光幕右侧，说道：</p><blockquote><p>「此乃巽宫剑阵之<strong>右方剑域</strong>。两条对角线将方阵切为上下左右四块。右方区域位于两条对角线的<strong>右侧交汇处</strong>——即行号小于列号（i &lt; j），且行号加列号之和大于 11（i + j &gt; 11）的格子。此处灵力据白虎之位，主进攻。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第四宫——巽宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护巽宫的剑灵指向光幕右侧，说道：<blockquote>「此乃巽宫剑阵之<strong>右方剑域</strong>。两条对角线将方阵切为上下左右四块。右方区域位于两条对角线的<strong>右侧交汇处</strong>——即行号小于列号（i &lt; j），且行号加列号之和大于 11（i + j &gt; 11）的格子。此处灵力据白虎之位，主进攻。尔需计算此域所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/753/\" target=\"_blank\">原题链接</a></p><p>右方区域即满足j &gt; i && i + j &gt; 11的元素（主对角线上且反对角线下）。</p>",
-          "source": "JD | JD058 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n69.0 84.0 98.0 42.0 4.0 23.0 58.0 99.0 32.0 14.0 26.0 40.0\n29.0 6.0 10.0 50.0 60.0 13.0 7.0 59.0 16.0 31.0 23.0 0.0\n0.0 61.0 75.0 80.0 46.0 58.0 45.0 34.0 10.0 61.0 53.0 66.0\n91.0 70.0 21.0 36.0 74.0 50.0 79.0 54.0 11.0 28.0 0.0 75.0\n59.0 75.0 25.0 41.0 49.0 65.0 39.0 21.0 88.0 46.0 39.0 2.0\n77.0 60.0 34.0 66.0 33.0 3.0 48.0 82.0 7.0 32.0 29.0 89.0\n81.0 95.0 33.0 68.0 37.0 25.0 41.0 14.0 77.0 23.0 38.0 44.0\n7.0 86.0 82.0 68.0 47.0 24.0 11.0 33.0 16.0 12.0 87.0 53.0\n63.0 28.0 72.0 61.0 47.0 15.0 24.0 54.0 85.0 15.0 72.0 11.0\n74.0 51.0 80.0 17.0 36.0 26.0 19.0 15.0 32.0 32.0 20.0 18.0\n69.0 23.0 38.0 8.0 8.0 61.0 89.0 28.0 76.0 56.0 18.0 67.0\n0.0 98.0 32.0 39.0 48.0 56.0 89.0 94.0 66.0 49.0 61.0 65.0\n",
-              "output": "1203.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/753/\" target=\"_blank\">原题链接</a>右方区域即满足j &gt; i && i + j &gt; 11的元素（主对角线上且反对角线下）。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\058.cpp",
+            "path": "solutions\359\058.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j>11&&i<j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/30<<endl;\r\n}"
           }
@@ -3009,19 +2716,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD059/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第五宫——离宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护离宫的剑灵指向沙盘右上，说道：</p><blockquote><p>「此乃离宫剑阵之<strong>右上剑角</strong>。仅以主对角线为界——右上区域即所有行号小于列号（i &lt; j）的格子，主对角线右上方的那一半。此处为天乾之位，日升之处，剑势腾空而起。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第五宫——离宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护离宫的剑灵指向沙盘右上，说道：<blockquote>「此乃离宫剑阵之<strong>右上剑角</strong>。仅以主对角线为界——右上区域即所有行号小于列号（i &lt; j）的格子，主对角线右上方的那一半。此处为天乾之位，日升之处，剑势腾空而起。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出右上半部分的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/755/\" target=\"_blank\">原题链接</a></p><p>右上部分即j&gt;i的元素。S求和，M求平均。</p>",
-          "source": "JD | JD059 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n86.0 26.0 52.0 44.0 73.0 60.0 63.0 26.0 54.0 1.0 35.0 0.0\n60.0 49.0 95.0 82.0 59.0 59.0 69.0 19.0 72.0 79.0 82.0 75.0\n86.0 23.0 26.0 13.0 5.0 99.0 13.0 84.0 28.0 26.0 60.0 23.0\n8.0 33.0 66.0 62.0 50.0 31.0 12.0 14.0 14.0 58.0 89.0 63.0\n19.0 52.0 47.0 35.0 96.0 22.0 22.0 28.0 83.0 36.0 30.0 83.0\n20.0 51.0 45.0 44.0 60.0 44.0 81.0 59.0 77.0 90.0 12.0 69.0\n59.0 59.0 40.0 6.0 98.0 29.0 60.0 44.0 68.0 60.0 84.0 31.0\n54.0 52.0 34.0 42.0 71.0 29.0 91.0 33.0 99.0 46.0 26.0 72.0\n22.0 1.0 96.0 41.0 17.0 26.0 65.0 86.0 2.0 93.0 44.0 12.0\n80.0 73.0 61.0 22.0 17.0 65.0 25.0 79.0 51.0 59.0 31.0 13.0\n11.0 83.0 99.0 19.0 0.0 72.0 47.0 57.0 26.0 12.0 87.0 97.0\n59.0 19.0 31.0 59.0 91.0 98.0 70.0 98.0 83.0 12.0 72.0 2.0\n",
-              "output": "3319.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/755/\" target=\"_blank\">原题链接</a>右上部分即j&gt;i的元素。S求和，M求平均。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\059.cpp",
+            "path": "solutions\359\059.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i<j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/66<<endl;\r\n}"
           }
@@ -3032,19 +2734,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD060/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第六宫——坎宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护坎宫的剑灵指向沙盘左上，说道：</p><blockquote><p>「此乃坎宫剑阵之<strong>左上剑角</strong>。仅以副对角线为界——左上区域即所有行号加列号之和小于 11（i + j &lt; 11）的格子，副对角线左上方的那一半。此处为天坤之位，月落之处，剑气如新月之弧。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第六宫——坎宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护坎宫的剑灵指向沙盘左上，说道：<blockquote>「此乃坎宫剑阵之<strong>左上剑角</strong>。仅以副对角线为界——左上区域即所有行号加列号之和小于 11（i + j &lt; 11）的格子，副对角线左上方的那一半。此处为天坤之位，月落之处，剑气如新月之弧。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/750/\" target=\"_blank\">原题链接</a></p><p>左上部分即i+j&lt;11的元素。</p>",
-          "source": "JD | JD060 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n49.0 20.0 80.0 78.0 8.0 14.0 59.0 46.0 32.0 6.0 7.0 97.0\n59.0 80.0 31.0 74.0 20.0 20.0 88.0 27.0 11.0 18.0 28.0 12.0\n97.0 85.0 70.0 33.0 61.0 32.0 10.0 89.0 42.0 82.0 21.0 79.0\n37.0 45.0 54.0 10.0 59.0 56.0 20.0 9.0 44.0 63.0 6.0 6.0\n71.0 77.0 27.0 24.0 74.0 77.0 93.0 91.0 11.0 24.0 24.0 10.0\n42.0 10.0 51.0 19.0 46.0 33.0 80.0 84.0 6.0 40.0 59.0 10.0\n80.0 53.0 90.0 44.0 89.0 6.0 56.0 36.0 27.0 59.0 45.0 58.0\n31.0 25.0 50.0 49.0 7.0 35.0 89.0 46.0 3.0 49.0 59.0 90.0\n78.0 5.0 44.0 49.0 91.0 11.0 10.0 91.0 88.0 80.0 8.0 85.0\n38.0 21.0 19.0 72.0 87.0 64.0 5.0 85.0 82.0 3.0 61.0 74.0\n4.0 55.0 45.0 3.0 55.0 55.0 88.0 33.0 33.0 29.0 89.0 0.0\n3.0 5.0 93.0 60.0 58.0 59.0 74.0 31.0 58.0 68.0 79.0 68.0\n",
-              "output": "2981.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/750/\" target=\"_blank\">原题链接</a>左上部分即i+j&lt;11的元素。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\060.cpp",
+            "path": "solutions\359\060.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j<11)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/66<<endl;\r\n}"
           }
@@ -3055,19 +2752,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD061/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第七宫——艮宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护艮宫的剑灵指向沙盘右下，说道：</p><blockquote><p>「此乃艮宫剑阵之<strong>右下剑角</strong>。仅以副对角线为界——右下区域即所有行号加列号之和大于 11（i + j &gt; 11）的格子，副对角线右下方的那一半。此处为地乾之位，日落之处，剑势如残阳下沉。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第七宫——艮宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护艮宫的剑灵指向沙盘右下，说道：<blockquote>「此乃艮宫剑阵之<strong>右下剑角</strong>。仅以副对角线为界——右下区域即所有行号加列号之和大于 11（i + j &gt; 11）的格子，副对角线右下方的那一半。此处为地乾之位，日落之处，剑势如残阳下沉。尔需计算此角所有灵力之和——或取其均值——方可破阵。」</blockquote>第一行输入一个大写字母：<strong>S</strong> 求和，<strong>M</strong> 求平均值。接下来 12 行，每行 12 个浮点数，表示剑阵各格的灵力值。输出保留<strong>一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/748/\" target=\"_blank\">原题链接</a></p><p>右下部分即满足i + j &gt; 11的元素（反对角线以下）。</p>",
-          "source": "JD | JD061 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n80.0 49.0 14.0 87.0 99.0 61.0 17.0 39.0 57.0 46.0 63.0 43.0\n79.0 19.0 8.0 27.0 77.0 77.0 97.0 82.0 52.0 14.0 85.0 36.0\n61.0 75.0 96.0 20.0 78.0 6.0 1.0 72.0 15.0 46.0 23.0 98.0\n57.0 87.0 10.0 39.0 94.0 28.0 8.0 22.0 15.0 7.0 43.0 46.0\n50.0 0.0 85.0 21.0 62.0 6.0 73.0 79.0 51.0 82.0 4.0 15.0\n58.0 36.0 69.0 41.0 28.0 30.0 98.0 7.0 73.0 35.0 41.0 72.0\n12.0 72.0 36.0 54.0 11.0 47.0 6.0 38.0 53.0 26.0 55.0 10.0\n76.0 20.0 87.0 0.0 39.0 6.0 17.0 88.0 4.0 56.0 35.0 52.0\n48.0 10.0 75.0 90.0 25.0 7.0 83.0 33.0 74.0 1.0 27.0 39.0\n94.0 54.0 59.0 20.0 26.0 76.0 73.0 3.0 33.0 41.0 77.0 35.0\n43.0 13.0 0.0 56.0 43.0 18.0 60.0 47.0 49.0 58.0 12.0 58.0\n74.0 40.0 93.0 89.0 94.0 20.0 77.0 48.0 88.0 34.0 40.0 14.0\n",
-              "output": "2790.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/748/\" target=\"_blank\">原题链接</a>右下部分即满足i + j &gt; 11的元素（反对角线以下）。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\061.cpp",
+            "path": "solutions\359\061.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i+j>11)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/66<<endl;\r\n}"
           }
@@ -3078,19 +2770,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD062/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白来到十二宫剑阵的第六宫——坤宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。</p><p>守护坤宫的剑灵指向地面，说道：</p><blockquote><p>「此乃坤宫剑阵。从西北到东南，一条主对角线将方阵一分为二。对角线之<strong>左下方</strong>（即行号大于列号的格子），是为地坤之位。此处灵力如初月升空，自下而上，自左而右，渐次铺展。尔需计算此区域所有灵力之和——或取其均值——方可破阵。」</p></blockquote><p>具体来说：一个 12×12 的方阵，行号 i 和列号 j 均从 0 到 11（或从 1 到 12）。左下区域定义为所有满足 <strong>i &gt; j</strong>（行号严格大于列号）的格子，即主对角线以下的部分。如下图所示（绿色区域即为左下区域）：</p><pre style=\"font-family:monospace;background:#f5f5f5;padding:8px;line-height:1.3\">     列0 列1 列2 ...      列11\n行0   \\  .   .   .   .   .\n行1   绿  \\  .   .   .   .\n行2   绿  绿  \\  .   .   .\n ...  绿  绿  绿  \\  .   .\n行11  绿  绿  绿  绿  绿  \\\n</pre><p>第一行输入一个大写字母：<strong>S</strong> 表示求左下区域所有灵力之和，<strong>M</strong> 表示求平均值。</p><p>接下来 12 行，每行 12 个浮点数，表示 12×12 剑阵中每个格子的灵力值。</p><p>输出所求的和或平均值，<strong>保留一位小数</strong>。</p>",
+          "description": "<p>李少白来到十二宫剑阵的第六宫——坤宫。地面是一幅 12×12 的方格阵，每个格子中浮现一个浮动的数字，那是剑阵积蓄的灵力值。守护坤宫的剑灵指向地面，说道：<blockquote>「此乃坤宫剑阵。从西北到东南，一条主对角线将方阵一分为二。对角线之<strong>左下方</strong>（即行号大于列号的格子），是为地坤之位。此处灵力如初月升空，自下而上，自左而右，渐次铺展。尔需计算此区域所有灵力之和——或取其均值——方可破阵。」</blockquote>具体来说：一个 12×12 的方阵，行号 i 和列号 j 均从 0 到 11（或从 1 到 12）。左下区域定义为所有满足 <strong>i &gt; j</strong>（行号严格大于列号）的格子，即主对角线以下的部分。如下图所示（绿色区域即为左下区域）：<pre style=\"font-family:monospace;background:#f5f5f5;padding:8px;line-height:1.3\">     列0 列1 列2 ...      列11\n行0   \\  .   .   .   .   .\n行1   绿  \\  .   .   .   .\n行2   绿  绿  \\  .   .   .\n ...  绿  绿  绿  \\  .   .\n行11  绿  绿  绿  绿  绿  \\\n</pre>第一行输入一个大写字母：<strong>S</strong> 表示求左下区域所有灵力之和，<strong>M</strong> 表示求平均值。接下来 12 行，每行 12 个浮点数，表示 12×12 剑阵中每个格子的灵力值。输出所求的和或平均值，<strong>保留一位小数</strong>。</p>",
           "inputDescription": "<p>第一行一个大写字母S或M。接下来12行，每行12个浮点数。</p>",
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/752/\" target=\"_blank\">原题链接</a></p><p>左下部分即满足j &lt; i的元素（主对角线以下）。</p>",
-          "source": "JD | JD062 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "S\n43.0 96.0 42.0 21.0 34.0 15.0 13.0 59.0 82.0 4.0 35.0 93.0\n78.0 97.0 91.0 19.0 38.0 91.0 16.0 90.0 38.0 53.0 31.0 73.0\n25.0 37.0 40.0 40.0 34.0 39.0 98.0 77.0 29.0 2.0 84.0 54.0\n33.0 99.0 98.0 87.0 3.0 53.0 16.0 64.0 98.0 12.0 13.0 89.0\n2.0 25.0 65.0 10.0 40.0 8.0 97.0 42.0 32.0 70.0 98.0 95.0\n80.0 95.0 22.0 16.0 14.0 72.0 97.0 32.0 2.0 85.0 88.0 60.0\n86.0 13.0 86.0 92.0 55.0 24.0 2.0 30.0 12.0 25.0 16.0 37.0\n53.0 93.0 3.0 7.0 75.0 12.0 15.0 1.0 8.0 6.0 68.0 17.0\n51.0 14.0 23.0 98.0 99.0 92.0 28.0 91.0 13.0 88.0 91.0 65.0\n5.0 2.0 17.0 17.0 96.0 75.0 6.0 56.0 17.0 38.0 7.0 96.0\n36.0 32.0 46.0 40.0 98.0 1.0 54.0 76.0 9.0 22.0 14.0 61.0\n65.0 26.0 55.0 90.0 61.0 34.0 81.0 28.0 63.0 90.0 47.0 80.0\n",
-              "output": "3154.0"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/752/\" target=\"_blank\">原题链接</a>左下部分即满足j &lt; i的元素（主对角线以下）。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\062.cpp",
+            "path": "solutions\359\062.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char type;\r\n    cin>>type;\r\n    double a[13][13],sum=0;\r\n    for(int i=0;i<12;i++)\r\n    {\r\n        for(int j=0;j<12;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            if(i>j)sum+=a[i][j];\r\n        }\r\n    }\r\n\r\n    if(type=='S')cout<<fixed<<setprecision(1)<<sum<<endl;\r\n    else if(type=='M')cout<<fixed<<setprecision(1)<<sum/66<<endl;\r\n}"
           }
@@ -3104,16 +2791,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>「此乃方圆剑阵——最外圈剑气最淡，标记为1；往里一圈剑气渐浓，标记为2。」赵晴儿在沙盘上画出一圈圈剑芒，「到剑阵中心，剑气愈凝愈实。每一圈剑芒的强度，就是你离外界最远的那道剑气的距离。」</p>",
           "inputDescription": "<p>多行，每行一个整数N。N=0时结束。</p>",
           "outputDescription": "<p>每个N输出一个N阶矩阵，每个数字占3个字符宽度。每个矩阵后跟一个空行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/754/\" target=\"_blank\">原题链接</a></p><p>每个位置的值 = min(i+1, j+1, N-i, N-j)，即到四条边的最小距离。</p>",
-          "source": "JD | JD063 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "1\n0",
-              "output": "1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/754/\" target=\"_blank\">原题链接</a>每个位置的值 = min(i+1, j+1, N-i, N-j)，即到四条边的最小距离。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\063.cpp",
+            "path": "solutions\359\063.cpp",
             "language": "cpp",
             "code": "#include <iostream>\n#include<iomanip>\nusing namespace std;\nint a[1001][1001];\nint N;\n\nint min(int a,int b,int c,int d)\n{\n    int m1=a>b?b:a;\n    int m2=c>d?d:c;\n    return m1>m2?m2:m1;\n}\n\nvoid handle(int N)\n{\n    for(int i=0;i<N;i++)\n    {\n        for(int j=0;j<N;j++)\n        {\n            a[i][j]=min(i+1,j+1,N-i,N-j);\n        }\n    }\n}\n\nint main() {\n    cin>>N;\n    while(N!=0)\n    {\n        handle(N);\n        for(int i=0;i<N;i++)\n        {\n            {\n                for(int j=0;j<N;j++)\n                cout<<setw(3)<<a[i][j];\n            }\n            cout<<endl;\n        }\n        cout<<endl;\n        cin>>N;\n    }\n    return 0;\n}\n"
           }
@@ -3127,16 +2809,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>「此阵以主对角线为镜——镜中剑影，左右互映。」赵晴儿落下第一柄长剑，「主对角线上的剑势最强，为1；往右上和左下方逐次递减，如剑光在水面的倒影越远越淡。」</p>",
           "inputDescription": "<p>多行，每行一个整数N。N=0时结束。</p>",
           "outputDescription": "<p>每个N输出一个N阶矩阵，每个数字占3个字符宽度。每个矩阵后跟一个空行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/756/\" target=\"_blank\">原题链接</a></p><p>M[i][j] = |i-j|+1。对角线为1，离对角线越远数越大。</p>",
-          "source": "JD | JD064 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "1\n0",
-              "output": "1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/756/\" target=\"_blank\">原题链接</a>M[i][j] = |i-j|+1。对角线为1，离对角线越远数越大。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\064.cpp",
+            "path": "solutions\359\064.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include<cmath>\r\n#include<iomanip>\r\nusing namespace std;\r\nint a[1001][1001];\r\nint N;\r\nint main() {\r\n    cin>>N;\r\n    while(N!=0)\r\n    {\r\n        for(int i=0;i<N;i++)\r\n        {\r\n            {\r\n                for(int j=0;j<N;j++)\r\n                {\r\n                    a[i][j]=int(abs(i-j)+1);\r\n                    cout<<setw(3)<<a[i][j];\r\n                }\r\n            }\r\n            cout<<endl;\r\n        }\r\n        if(N!=0)cout<<endl;\r\n        cin>>N;\r\n        \r\n    }\r\n    return 0;\r\n}\r\n"
           }
@@ -3150,16 +2827,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>「此阵每一格，剑气强度皆由剑气原点(0,0)倍增而来。」赵晴儿剑尖轻点沙盘，「位在(i,j)的剑势，强度为2的(i+j)次方。一生二，二生四，剑气倍增如潮水蔓延。」</p>",
           "inputDescription": "<p>多行，每行一个整数N（0≤N≤15）。N=0时结束。</p>",
           "outputDescription": "<p>每个N输出一个N阶矩阵，每行N个整数用空格隔开。每个矩阵后跟一个空行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/757/\" target=\"_blank\">原题链接</a></p><p>M[i][j] = 2^(i+j)。用位运算 1&lt;&lt;(i+j) 或 pow函数。</p>",
-          "source": "JD | JD065 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "3 0",
-              "output": "1 2 4 \n2 4 8 \n4 8 16"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/757/\" target=\"_blank\">原题链接</a>M[i][j] = 2^(i+j)。用位运算 1&lt;&lt;(i+j) 或 pow函数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\065.cpp",
+            "path": "solutions\359\065.cpp",
             "language": "cpp",
             "code": "#include <iostream>\r\n#include <cmath>  // 用于 pow\r\nusing namespace std;\r\n\r\nint main() {\r\n    int N;\r\n    while(cin >> N && N != 0) {\r\n        for(int i = 0; i < N; i++) {\r\n            for(int j = 0; j < N; j++) {\r\n                cout << (int)pow(2, i + j)<< \" \"; \r\n            }\r\n            cout << endl;\r\n        }\r\n        cout << endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3173,16 +2845,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>「剑阵蜿蜒如蛇，以身引气，气走周身。」赵晴儿在沙盘上画了一个n行m列的剑阵，「从左上角开始，依次填入从1到n×m的剑气。行到尽头便拐弯，似灵蛇折返。」</p>",
           "inputDescription": "<p>一行，两个整数n和m。</p>",
           "outputDescription": "<p>n行，每行m个整数用空格隔开。输出后跟一个空行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/758/\" target=\"_blank\">原题链接</a></p><p>模拟蛇形遍历：右→下→左→上循环。维护四个边界。</p>",
-          "source": "JD | JD066 | 第5章 十二宫剑阵",
-          "samples": [
-            {
-              "input": "3 3",
-              "output": "1 2 3 \n8 9 4 \n7 6 5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/758/\" target=\"_blank\">原题链接</a>模拟蛇形遍历：右→下→左→上循环。维护四个边界。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\066.cpp",
+            "path": "solutions\359\066.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\n//参考AcWing代码\r\nconst int N=200;\r\nint arr[N][N];\r\n\r\nint main()\r\n{\r\n    int n,m;\r\n    cin>>n>>m;\r\n    int dx[]={0,1,0,-1};\r\n    int dy[]={1,0,-1,0};\r\n    int x=0,y=0,d=0;\r\n    for(int i=1;i<=n*m;i++)\r\n    {\r\n        arr[x][y]=i;\r\n        int a=x+dx[d],b=y+dy[d];\r\n        if(a>=n||a<0||b<0||b>=m||arr[a][b])\r\n        {\r\n            d=(d+1)%4;//向右为1，向下为2，向左为3，向上为4\r\n            a=x+dx[d],b=y+dy[d];\r\n        }\r\n        x=a,y=b;\r\n    }\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        for(int j=0;j<m;j++)\r\n        {\r\n            cout<<arr[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3196,16 +2863,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰递给李少白一卷竹简：「上面刻着一行字，告诉我它有多长。」</p>",
           "inputDescription": "<p>一行字符串（长度不超过100），可能包含空格。</p>",
           "outputDescription": "<p>输出字符串的实际长度。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/762/\" target=\"_blank\">原题链接</a></p><p>读入一行字符串（含空格），输出其长度。</p>",
-          "source": "JD | JD067 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "Hello World",
-              "output": "11"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/762/\" target=\"_blank\">原题链接</a>读入一行字符串（含空格），输出其长度。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\067.cpp",
+            "path": "solutions\359\067.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    string a;\r\n    int i;\r\n    getline(cin,a);\r\n    for(i=0;a[i]!='\\0';i++)\r\n    {\r\n    \r\n    }\r\n    cout<<i<<endl;\r\n}"
           }
@@ -3219,16 +2881,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>古卷上的字太密了，赵晴儿让李少白在每个字符后面加一个空格，方便辨认。</p>",
           "inputDescription": "<p>一行字符串（长度不超过100）。</p>",
           "outputDescription": "<p>每个字符后加一个空格输出（最后一个字符后也有空格）。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/767/\" target=\"_blank\">原题链接</a></p><p>遍历字符串，每个字符后输出一个空格。</p>",
-          "source": "JD | JD068 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "abc",
-              "output": "a b c"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/767/\" target=\"_blank\">原题链接</a>遍历字符串，每个字符后输出一个空格。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\068.cpp",
+            "path": "solutions\359\068.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        cout<<a[i]<<\" \";\r\n    }\r\n}"
           }
@@ -3242,16 +2899,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>古卷上有些字被墨迹遮住了，需要替换成&#039;#&#039;，露出可辨认的文字。</p>",
           "inputDescription": "<p>一行字符串（长度不超过100，全大写）。第二行一个字符，表示要替换的字符。</p>",
           "outputDescription": "<p>替换后的字符串。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/771/\" target=\"_blank\">原题链接</a></p><p>遍历字符串，遇到目标字符输出&#039;#&#039;，否则输出原字符。</p>",
-          "source": "JD | JD069 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "hello\no\nworld\nl\nabc\nx\ntest\ne\nhello\na\nh\ne",
-              "output": "hell#"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/771/\" target=\"_blank\">原题链接</a>遍历字符串，遇到目标字符输出&#039;#&#039;，否则输出原字符。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\069.cpp",
+            "path": "solutions\359\069.cpp",
             "language": "cpp",
             "code": "#include<iostream>//输入样例有误\r\n#include<string>\r\nusing namespace std;\r\nint main()\r\n{\r\n    string a;\r\n    char b;\r\n    cin>>a;\r\n    cin>>b;\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]==b)a[i]='#';\r\n    }\r\n    cout<<a<<endl;\r\n}"
           }
@@ -3265,16 +2917,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿递给李少白一段经文a，让他按规则重新构造一段经文b：每个位置b[i]的ASCII值等于a[i]和a[i+1]的ASCII值之和。</p>",
           "inputDescription": "<p>一行字符串a（长度3~100）。</p>",
           "outputDescription": "<p>构造后的字符串b。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/766/\" target=\"_blank\">原题链接</a></p><p>遍历a，b[i] = chr(ord(a[i]) + ord(a[i+1]))。最后一个用a[-1]和a[0]。</p>",
-          "source": "JD | JD070 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "=-9+=.3'<<-!!'+5.</=+/3672?96,7'<%5 //>$#:)6*(6.(;7>*)>35#5.72#/44;/)0#864\"!51$1=00*:$&'",
-              "output": "jfdhkaZcxiNBHR`cjklhZbimiqxobc^caZUO^mbG]c_`R^dVcruhSgqhXXceiURchojXYS[njVCVfUUnm`Zd^JMd"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/766/\" target=\"_blank\">原题链接</a>遍历a，b[i] = chr(ord(a[i]) + ord(a[i+1]))。最后一个用a[-1]和a[0]。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\070.cpp",
+            "path": "solutions\359\070.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n\r\n\r\nint main()\r\n{\r\n    string a;\r\n    char b[200];\r\n    getline(cin,a);  \r\n    int i;\r\n    for(i=0;a[i+1]!='\\0';i++)\r\n    {\r\n        b[i]=a[i]+a[i+1];\r\n    }\r\n    b[i]=a[0]+a[i];\r\n    b[i+1]='\\0';\r\n    cout<<b;\r\n}"
           }
@@ -3288,16 +2935,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿递给李少白一行密文，里面混着文字和数字。她说：「数一数有几个数字字符。」</p>",
           "inputDescription": "<p>一行字符（长度不超过100）。</p>",
           "outputDescription": "<p>输出其中数字字符（&#039;0&#039;~&#039;9&#039;）的个数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/763/\" target=\"_blank\">原题链接</a></p><p>遍历字符串，判断每个字符是否在&#039;0&#039;到&#039;9&#039;之间。</p>",
-          "source": "JD | JD071 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "hello2024world",
-              "output": "4"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/763/\" target=\"_blank\">原题链接</a>遍历字符串，判断每个字符是否在&#039;0&#039;到&#039;9&#039;之间。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\071.cpp",
+            "path": "solutions\359\071.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n\r\n\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);  \r\n    int count=0;\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]>='0'&&a[i]<='9')\r\n            count++;\r\n    }\r\n    cout<<count<<endl;\r\n}"
           }
@@ -3311,16 +2953,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>李少白和师弟在练功间隙玩猜拳游戏。每人出 Scissors（剪刀）、Rock（石头）或 Paper（布），按照相克规则判断胜负：Rock 胜 Scissors，Scissors 胜 Paper，Paper 胜 Rock。</p>",
           "inputDescription": "<p>一行，两个字符串，分别表示 Player1 和 Player2 出的拳（Scissors、Rock 或 Paper）。</p>",
           "outputDescription": "<p>输出结果：Player1 赢输出 <code>Player1</code>，Player2 赢输出 <code>Player2</code>，平局输出 <code>Tie</code>。</p>",
-          "hint": "<p>先判断双方是否相等（平局）。否则按相克规则判断：Rock 胜 Scissors，Scissors 胜 Paper，Paper 胜 Rock，构成一个循环克制链。</p><p><a href=\"https://www.acwing.com/problem/content/765/\" target=\"_blank\">原题链接</a></p>",
-          "source": "JD | JD072 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "Scissors Rock",
-              "output": "Player2"
-            }
-          ],
+          "hint": "<p>先判断双方是否相等（平局）。否则按相克规则判断：Rock 胜 Scissors，Scissors 胜 Paper，Paper 胜 Rock，构成一个循环克制链。<a href=\"https://www.acwing.com/problem/content/765/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\072.cpp",
+            "path": "solutions\359\072.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    string a, b;\r\n    cin >> a >> b;\r\n    \r\n    if(a == b)\r\n        cout << \"Tie\" << endl;\r\n    else if((a == \"Rock\" && b == \"Scissors\") ||\r\n            (a == \"Scissors\" && b == \"Paper\") ||\r\n            (a == \"Paper\" && b == \"Rock\"))\r\n        cout << \"Player1\" << endl;\r\n    else\r\n        cout << \"Player2\" << endl;\r\n    \r\n    return 0;\r\n}"
           }
@@ -3334,18 +2971,13 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>古卷需要加密保存。加密规则：每个字母后移一位（z→a），每个数字后移一位（9→0），其他字符不变。</p>",
           "inputDescription": "<p>一行字符串（长度不超过100）。</p>",
           "outputDescription": "<p>加密后的字符串。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/769/\" target=\"_blank\">原题链接</a></p><p>遍历字符串，对字母、数字分别做+1循环偏移，其他字符原样输出。</p>",
-          "source": "JD | JD073 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "Hello, World!",
-              "output": "Ifmmp, Xpsme!"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/774/\" target=\"_blank\">原题链接</a>遍历字符串，对字母、数字分别做+1循环偏移，其他字符原样输出。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\073.cpp",
+            "path": "solutions\359\073.cpp",
             "language": "cpp",
-            "code": "#include<iostream>\r\nusing namespace std;//数字不加密！\r\n#include<string>\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y')\r\n            a[i]+=1;\r\n        else if(a[i]=='Z')a[i]='A';\r\n        else if(a[i]=='z')a[i]='a';\r\n        //else if(a[i]=='9')a[i]='0';\r\n    }\r\n    cout<<a<<endl;\r\n    return 0;\r\n}"
+            "code": "#include<iostream>\r\nusing namespace std;//数字不加密！\r\n#include<string>\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y'||a[i]>='0'&&a[i]<='8')\r\n            a[i]+=1;\r\n        else if(a[i]=='Z')a[i]='A';\r\n        else if(a[i]=='z')a[i]='a';\r\n        else if(a[i]=='9')a[i]='0';\r\n    }\r\n    cout<<a<<endl;\r\n    return 0;\r\n}"
           }
         },
         {
@@ -3357,16 +2989,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>古卷上的某个词需要全部替换成另一个词。赵晴儿让李少白逐词核对。</p>",
           "inputDescription": "<p>三行：第一行原文字符串，第二行要替换的词A，第三行替换成的词B。</p>",
           "outputDescription": "<p>替换后的字符串。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/764/\" target=\"_blank\">原题链接</a></p><p>字符串替换函数，或按空格分割单词逐个比较替换。</p>",
-          "source": "JD | JD074 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "first late system see school still great different year Place far take same\nlife\ngroup",
-              "output": "first late system see school still great different year Place far take same"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/764/\" target=\"_blank\">原题链接</a>字符串替换函数，或按空格分割单词逐个比较替换。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\074.cpp",
+            "path": "solutions\359\074.cpp",
             "language": "cpp",
             "code": "#include <iostream>\n#include <string>\n#include <sstream>\nusing namespace std;//\n\nint main()\n{\n    string line, A, B;\n    getline(cin, line);\n    cin >> A >> B;\n\n    stringstream ss(line);\n    string word, result;\n    bool first = true;\n    while (ss >> word) {\n        if (!first) result += \" \";\n        if (word == A)\n            result += B;\n        else\n            result += word;\n        first = false;\n    }\n\n    cout << result << endl;\n    return 0;\n}\n"
           }
@@ -3380,16 +3007,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿指着古卷上的一句话：「找出最长的那个词。」</p>",
           "inputDescription": "<p>一行，以&#039;.&#039;结尾的英文句子（长度不超过500）。</p>",
           "outputDescription": "<p>最长的单词。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/769/\" target=\"_blank\">原题链接</a></p><p>按空格分割单词（去掉末尾的&#039;.&#039;），遍历比较长度。</p>",
-          "source": "JD | JD075 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "I am a student of Peking University.",
-              "output": "University"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/769/\" target=\"_blank\">原题链接</a>按空格分割单词（去掉末尾的&#039;.&#039;），遍历比较长度。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\075.cpp",
+            "path": "solutions\359\075.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\nint main()\r\n{\r\n    char a[501][20];\r\n    string str;\r\n    int count=0,b[501]={0};\r\n    getline(cin,str);\r\n    for(int i=0;str[i]!='\\0';i++)\r\n    {\r\n        for(int j=0;;j++,i++)\r\n        {\r\n            if(str[i]==' '||str[i]=='.'){\r\n                b[count++]=j;\r\n                str[i]='\\0';\r\n                break;\r\n            }\r\n            a[count][j]=str[i];\r\n        }\r\n    }\r\n    int max=-1,m=0;\r\n    for(int i=0;b[i]!=0;i++)\r\n    {\r\n        if(b[i]>max){\r\n            max=b[i];\r\n            m=i;\r\n        }\r\n    }\r\n    cout<<a[m]<<endl;\r\n}\r\n"
           }
@@ -3403,16 +3025,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰递给李少白两段古卷残篇，要把后一段插到前一段ASCII码最大的字符后面。</p>",
           "inputDescription": "<p>两行，第一行一个字符串str，第二行一个字符串substr。</p>",
           "outputDescription": "<p>每行输出插入后的字符串。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/775/\" target=\"_blank\">原题链接</a></p><p>找到str中ASCII码最大的字符（若有多个取最后一个），在其后面插入substr。</p>",
-          "source": "JD | JD076 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "hello\nX",
-              "output": "helloX"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/775/\" target=\"_blank\">原题链接</a>找到str中ASCII码最大的字符（若有多个取最后一个），在其后面插入substr。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\076.cpp",
+            "path": "solutions\359\076.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n#include<cstring>\r\nint main()\r\n{\r\n    string str,substr;\r\n    getline(cin,str);\r\n    getline(cin,substr);\r\n    char max='A' ;\r\n    int m=0,n=substr.length();\r\n    int len=str.length();\r\n    for(int i=0;str[i]!='\\0';i++)\r\n    {\r\n        if(str[i]>max)\r\n        {\r\n            max=str[i];\r\n            m=i;\r\n        }\r\n    } \\\r\n    str.resize(len+n); \r\n    //insert(max+1,substr);\r\n    for(int i=len;i>m;i--)\r\n    {\r\n        str[i+n]=str[i];\r\n    }\r\n    for(int i=m+1,j=0;substr[j]!='\\0';i++,j++)\r\n    {\r\n        str[i]=substr[j];\r\n    }\r\n    cout<<str;\r\n}"
           }
@@ -3426,16 +3043,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>古卷上有些字重复出现，有些只出现一次。赵晴儿让李少白找到第一个只出现一次的字符。</p>",
           "inputDescription": "<p>一行只包含小写字母的字符串。</p>",
           "outputDescription": "<p>第一个只出现一次的字符，或&quot;no&quot;。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/772/\" target=\"_blank\">原题链接</a></p><p>先统计每个字符出现次数，再从头遍历找第一个次数为1的。</p>",
-          "source": "JD | JD077 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "abaccdeff",
-              "output": "b"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/772/\" target=\"_blank\">原题链接</a>先统计每个字符出现次数，再从头遍历找第一个次数为1的。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\077.cpp",
+            "path": "solutions\359\077.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n#include<cstring>\r\nint main()\r\n{\r\n    string a;\r\n    int c[26]={0};\r\n    getline(cin,a);\r\n    char m;\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        c[a[i]-'a']++;\r\n        \r\n    }\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(c[a[i]-'a']==1)\r\n        {\r\n            cout<<a[i]<<endl;\r\n            break;\r\n        } \r\n        if(a[i+1]=='\\0')\r\n        {\r\n            cout<<\"no\"<<endl;\r\n        }\r\n    }\r\n}"
           }
@@ -3447,20 +3059,15 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "timeLimit": 1000,
           "memoryLimit": 256,
           "description": "<p>赵晴儿拿着两卷古卷：「看看第二段经文是不是第一段中的一部分——如果是，就算对上了。」</p>",
-          "inputDescription": "<p>第一行字符串a。第二行字符串b。</p>",
+          "inputDescription": "<p>第一行一个整数k（忽略，用于兼容）。第二行字符串a。第三行字符串b。</p>",
           "outputDescription": "<p>b是a的子串输出yes，否则输出no。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/778/\" target=\"_blank\">原题链接</a></p><p>遍历a的每个位置，用strncmp比较是否与b匹配。</p>",
-          "source": "JD | JD078 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "abc\nd",
-              "output": "no"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/776/\" target=\"_blank\">原题链接</a>遍历a的每个位置，用strncmp比较是否与b匹配。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\078.cpp",
+            "path": "solutions\359\078.cpp",
             "language": "cpp",
-            "code": "#include <iostream>\r\n#include <string>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nint main() {\r\n    vector<string> a;\r\n    string s;\r\n    while (getline(cin, s)) {\r\n        a.push_back(s);\r\n    }\r\n    if (a.size() >= 3) {\r\n        cout << (a[1].find(a[2]) != string::npos ? \"yes\" : \"no\") << endl;\r\n    }\r\n    return 0;\r\n}\r\n\r\n// #include<iostream>\r\n// using namespace std;\r\n// #include<string>\r\n// #include<cstring>\r\n// int main()\r\n// {\r\n//     int a;\r\n//     //cin>>a;\r\n//     cin.ignore();\r\n//     bool found=false;\r\n//     string str1,str2;\r\n//     getline(cin,str1);\r\n//     getline(cin,str2);\r\n//     int len1=str1.length(),len2=str2.length();\r\n//     for(int i=0;i<len1-len2+1;i++)\r\n//     {\r\n//         bool res=true;\r\n//         for(int j=0,k=i;str2[j]!='\\0';j++,k++)\r\n//         {\r\n//             if(str1[k]!=str2[j])\r\n//             {\r\n//                 res=false;\r\n//                 break;\r\n//             }\r\n\r\n//         }\r\n//         if(res==true)\r\n//         {\r\n//             found=true;\r\n//             break;\r\n//         }\r\n//     }\r\n//     if(found==true)\r\n//     {\r\n//         cout<<\"yes\";\r\n//     }\r\n//     else if(found==false)\r\n//     {\r\n//         cout<<\"no\";\r\n//     }\r\n\r\n// }"
+            "code": "#include <iostream>\r\n#include <string>\r\n#include <vector>\r\nusing namespace std;\r\n\r\n// int main() {\r\n//     vector<string> a;\r\n//     string s;\r\n//     while (getline(cin, s)) {\r\n//         a.push_back(s);\r\n//     }\r\n//     if (a.size() >= 3) {\r\n//         cout << (a[1].find(a[2]) != string::npos ? \"yes\" : \"no\") << endl;\r\n//     }\r\n//     return 0;\r\n// }\r\n\r\n#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n#include<cstring>\r\nint main()\r\n{\r\n    int a;\r\n    bool found=false;\r\n    string str1,str2;\r\n    getline(cin,str1);\r\n    getline(cin,str2);\r\n    int len1=str1.length(),len2=str2.length();\r\n    for(int i=0;i<len1-len2+1;i++)\r\n    {\r\n        bool res=true;\r\n        for(int j=0,k=i;str2[j]!='\\0';j++,k++)\r\n        {\r\n            if(str1[k]!=str2[j])\r\n            {\r\n                res=false;\r\n                break;\r\n            }\r\n\r\n        }\r\n        if(res==true)\r\n        {\r\n            found=true;\r\n            break;\r\n        }\r\n    }\r\n    if(found==true)\r\n    {\r\n        cout<<\"yes\";\r\n    }\r\n    else if(found==false)\r\n    {\r\n        cout<<\"no\";\r\n    }\r\n\r\n}"
           }
         },
         {
@@ -3472,16 +3079,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>赵晴儿指着一篇重复的经文：「这段文字是某个子串重复几次写成的？找出最小的重复次数。」</p>",
           "inputDescription": "<p>一行字符串。</p>",
           "outputDescription": "<p>对于每个输入的字符串（遇到&quot;.&quot;为止），输出一行一个整数n，表示该字符串最多由n个子串重复构成。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/806/\" target=\"_blank\">原题链接</a></p><p>枚举周期p（p是len的因子），检查s[0:p]重复len/p次是否等于原串。</p>",
-          "source": "JD | JD079 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "abcd\naaaa\nababab\n.",
-              "output": "1\n4\n3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/806/\" target=\"_blank\">原题链接</a>枚举周期p（p是len的因子），检查s[0:p]重复len/p次是否等于原串。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\079.cpp",
+            "path": "solutions\359\079.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    string s;\r\n    while(cin >> s && s != \".\")\r\n    {\r\n        int n = s.length();\r\n        for(int len = 1; len <= n; len++)\r\n        {\r\n            if(n % len == 0)\r\n            {\r\n                bool ok = true;\r\n                for(int i = len; i < n; i++)\r\n                {\r\n                    if(s[i] != s[i % len])\r\n                    {\r\n                        ok = false;\r\n                        break;\r\n                    }\r\n                }\r\n                if(ok)\r\n                {\r\n                    cout << n / len << endl;\r\n                    break;\r\n                }\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}"
           }
@@ -3495,16 +3097,11 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "description": "<p>梁嘉峰递给李少白一长段密文和两个短码S1、S2：「S1在左，S2在右，不交叉。最大间距是多少？」</p>",
           "inputDescription": "<p>一行，三个字符串用逗号隔开：S,S1,S2。</p>",
           "outputDescription": "<p>最大跨距。不满足条件输出-1。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/780/\" target=\"_blank\">原题链接</a></p><p>从左往右找S1最后出现的位置end1，从右往左找S2最后出现的位置start2。如果end1",
-          "source": "JD | JD080 | 第6章 古卷密文",
-          "samples": [
-            {
-              "input": "abcd123dABdefghjsdef76ki,ab,ef",
-              "output": "16"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/780/\" target=\"_blank\">原题链接</a>从左往右找S1最后出现的位置end1，从右往左找S2最后出现的位置start2。如果end1</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\080.cpp",
+            "path": "solutions\359\080.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\n#include<cstring>\r\nusing namespace std;\r\nint main()\r\n{\r\n    char a[1000]={0},b[100]={0},c[100]={0};\r\n    char s;\r\n    cin>>s;\r\n    for(int i=0;s!=',';i++)\r\n    {\r\n        a[i]=s;\r\n        cin>>s;\r\n    }\r\n\r\n    cin>>s;\r\n    for(int i=0;s!=',';i++)\r\n    {\r\n        b[i]=s;\r\n        cin>>s;\r\n    }\r\n    cin>>s;\r\n    for(int i=0;s!=','&&s!='\\n'&&cin;i++)\r\n    {\r\n        c[i]=s;\r\n        cin>>s;\r\n    }\r\n\r\n    int m=-1,n=-1;\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        bool flag=false;\r\n        int found=1;\r\n        for(int j=i,k=0;b[k]!='\\0';k++,j++)\r\n        {\r\n            if(a[j]!=b[k])\r\n            {\r\n                found=0;break;\r\n            }\r\n        }\r\n        if(found)\r\n        {\r\n            flag=true;\r\n            m=i+strlen(b);\r\n            break;\r\n        }\r\n    }\r\n    for(int i=strlen(a);i>=m;i--)\r\n    {\r\n        bool flag=false;\r\n        int found=1;\r\n        for(int j=i,k=0;c[k]!='\\0';k++,j++)\r\n        {\r\n            if(a[j]!=c[k])\r\n            {\r\n                found=0;break;\r\n            }\r\n        }\r\n        if(found)\r\n        {\r\n            flag=true;\r\n            n=i;\r\n            break;\r\n        }\r\n    }\r\n    if(m==-1||n==-1){\r\n        cout<<-1;\r\n        return 0;\r\n    }\r\n    else {\r\n        cout<<n-m;\r\n    }\r\n\r\n}"
           }
@@ -3515,19 +3112,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD081/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白在丹房帮赵晴儿炼丹。丹方上写着：&quot;取n味药材，第一味放1份，第二味放2份，第三味放3份……第n味放n份。&quot;</p><p>赵晴儿问：&quot;n味药材总共需要多少份？&quot;</p><p>李少白拿出笔从头算：1×2×3×……×n。赵晴儿摇头：&quot;每次都要从头算，太慢了。把它封装成一个函数，以后直接调用。&quot;</p><p>请帮李少白编写一个函数，计算n的阶乘（n!）。</p>",
+          "description": "<p>李少白在丹房帮赵晴儿炼丹。丹方上写着：&quot;取n味药材，第一味放1份，第二味放2份，第三味放3份……第n味放n份。&quot;赵晴儿问：&quot;n味药材总共需要多少份？&quot;李少白拿出笔从头算：1×2×3×……×n。赵晴儿摇头：&quot;每次都要从头算，太慢了。把它封装成一个函数，以后直接调用。&quot;请帮李少白编写一个函数，计算n的阶乘（n!）。</p>",
           "inputDescription": "<p>一个整数n（0 ≤ n ≤ 10）。</p>",
           "outputDescription": "<p>输出n的阶乘。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/810/\" target=\"_blank\">原题链接</a></p><p>函数内用循环累乘，或递归实现。</p>",
-          "source": "JD | JD081 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "3",
-              "output": "6"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/810/\" target=\"_blank\">原题链接</a>函数内用循环累乘，或递归实现。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\081.cpp",
+            "path": "solutions\359\081.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint jiecheng(int n)\r\n{\r\n    int res=1;\r\n    if(n==1)return 1;\r\n    else res*=n*jiecheng(n-1);\r\n    return res;\r\n}\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    cout<<jiecheng(n);\r\n}"
           }
@@ -3538,19 +3130,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD082/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>兵器库里，赵晴儿和李少白各自挑了一柄剑。赵晴儿的剑重x斤，李少白的剑重y斤。</p><p>赵晴儿说：&quot;我们总要比谁的剑更重，每次都手算太麻烦。写一个函数，传入两个数，返回较大的那个。以后比试直接调用就行。&quot;</p><p>请帮他们实现这个函数。</p>",
+          "description": "<p>兵器库里，赵晴儿和李少白各自挑了一柄剑。赵晴儿的剑重x斤，李少白的剑重y斤。赵晴儿说：&quot;我们总要比谁的剑更重，每次都手算太麻烦。写一个函数，传入两个数，返回较大的那个。以后比试直接调用就行。&quot;请帮他们实现这个函数。</p>",
           "inputDescription": "<p>一行，两个整数x和y。</p>",
           "outputDescription": "<p>输出最大值。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/807/\" target=\"_blank\">原题链接</a></p><p>函数内用 if 比较或三元表达式。</p>",
-          "source": "JD | JD082 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "3 5",
-              "output": "5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/807/\" target=\"_blank\">原题链接</a>函数内用 if 比较或三元表达式。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\082.cpp",
+            "path": "solutions\359\082.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint max(int m,int n)\r\n{\r\n    if(m>n)return m;\r\n    else return n;\r\n}\r\nint main()\r\n{\r\n    int m,n;\r\n    cin>>m>>n;\r\n    cout<<max(m,n);\r\n}"
           }
@@ -3561,19 +3148,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD083/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白在练剑气外放时，需要计算剑气落点与自己的距离。距离本该是正数，但有时算出的结果是负数——因为方向搞反了。</p><p>赵晴儿说：&quot;别每次遇到负数就手动取反，写一个函数，不管传入正数还是负数，都返回它的绝对值。&quot;</p>",
+          "description": "<p>李少白在练剑气外放时，需要计算剑气落点与自己的距离。距离本该是正数，但有时算出的结果是负数——因为方向搞反了。赵晴儿说：&quot;别每次遇到负数就手动取反，写一个函数，不管传入正数还是负数，都返回它的绝对值。&quot;</p>",
           "inputDescription": "<p>一个整数x。</p>",
           "outputDescription": "<p>输出x的绝对值。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/812/\" target=\"_blank\">原题链接</a></p><p>if x &lt; 0: return -x, else: return x。</p>",
-          "source": "JD | JD083 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "-5",
-              "output": "5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/812/\" target=\"_blank\">原题链接</a>if x &lt; 0: return -x, else: return x。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\083.cpp",
+            "path": "solutions\359\083.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint abs(int n)\r\n{\r\n    if(n>=0)return n;\r\n    else return -n;\r\n}\r\nint main()\r\n{\r\n    int m;\r\n    cin>>m;\r\n    cout<<abs(m);\r\n}"
           }
@@ -3584,19 +3166,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD084/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在教李少白一套双剑术。左右手各持一剑，攻守之间需要不断交换位置。</p><p>&quot;实战中你不能把剑放到地上再捡起来，&quot;梁嘉峰说，&quot;直接交换。写一个函数，传入两个变量的引用，在函数内部交换它们的值。&quot;</p><p>李少白提笔写下函数签名，却犯了难——C++里普通参数只传值，改不了外面的变量。</p>",
+          "description": "<p>梁嘉峰在教李少白一套双剑术。左右手各持一剑，攻守之间需要不断交换位置。&quot;实战中你不能把剑放到地上再捡起来，&quot;梁嘉峰说，&quot;直接交换。写一个函数，传入两个变量的引用，在函数内部交换它们的值。&quot;李少白提笔写下函数签名，却犯了难——C++里普通参数只传值，改不了外面的变量。</p>",
           "inputDescription": "<p>一行，两个整数x和y。</p>",
           "outputDescription": "<p>交换后的x和y。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/813/\" target=\"_blank\">原题链接</a></p><p>C++用引用参数 `void swap(int &x, int &y)`。Python中 a, b = b, a。</p>",
-          "source": "JD | JD084 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "6 26",
-              "output": "26 6"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/813/\" target=\"_blank\">原题链接</a>C++用引用参数 `void swap(int &x, int &y)`。Python中 a, b = b, a。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\084.cpp",
+            "path": "solutions\359\084.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int m,n;\r\n    cin>>m>>n;\r\n    swap(m,n);\r\n    cout<<m<<\" \"<<n;\r\n}"
           }
@@ -3607,19 +3184,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD085/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在药圃里采了a株紫芝和b株青蒿，要把它们扎成相同大小的药束，每束株数相同且不能有剩余。</p><p>&quot;这其实就是求a和b的最大公约数，&quot;赵晴儿说，&quot;古人有个妙法叫辗转相除——用大数除以小数取余，再用小数除以余数，反复如此，直到余数为零。最后一个非零余数就是答案。&quot;</p><p>请帮赵晴儿写一个函数，用辗转相除法求两个正整数的最大公约数。</p>",
+          "description": "<p>赵晴儿在药圃里采了a株紫芝和b株青蒿，要把它们扎成相同大小的药束，每束株数相同且不能有剩余。&quot;这其实就是求a和b的最大公约数，&quot;赵晴儿说，&quot;古人有个妙法叫辗转相除——用大数除以小数取余，再用小数除以余数，反复如此，直到余数为零。最后一个非零余数就是答案。&quot;请帮赵晴儿写一个函数，用辗转相除法求两个正整数的最大公约数。</p>",
           "inputDescription": "<p>一行，两个正整数a和b。</p>",
           "outputDescription": "<p>输出a和b的最大公约数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/821/\" target=\"_blank\">原题链接</a></p><p>辗转相除法：gcd(a,b) = gcd(b, a%b)，当b==0时返回a。</p>",
-          "source": "JD | JD085 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "963 787",
-              "output": "1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/821/\" target=\"_blank\">原题链接</a>辗转相除法：gcd(a,b) = gcd(b, a%b)，当b==0时返回a。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\085.cpp",
+            "path": "solutions\359\085.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int a,b,n;\r\n    cin>>a>>b;\r\n    if(b>a)swap(a,b);\r\n    n=a%b;\r\n    while(n!=0)\r\n    {\r\n        a=n;\r\n        swap(a,b);\r\n        n=a%b;\r\n    }\r\n    cout<<b;\r\n}"
           }
@@ -3630,19 +3202,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD086/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上摆了一个剑阵（数组a），需要原样复制一份到另一个沙盘（数组b）上。</p><p>&quot;手抄太慢，&quot;赵晴儿说，&quot;写一个函数，把a的前size个元素复制到b对应的位置上。&quot;</p><p>李少白接过两个沙盘，发现b上原来也有数字，只需覆盖前size个位置，其余保持不变。</p>",
+          "description": "<p>赵晴儿在沙盘上摆了一个剑阵（数组a），需要原样复制一份到另一个沙盘（数组b）上。&quot;手抄太慢，&quot;赵晴儿说，&quot;写一个函数，把a的前size个元素复制到b对应的位置上。&quot;李少白接过两个沙盘，发现b上原来也有数字，只需覆盖前size个位置，其余保持不变。</p>",
           "inputDescription": "<p>第一行两个整数n和size（数组长度和复制个数）。第二行n个整数。</p>",
           "outputDescription": "<p>复制后的数组，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/816/\" target=\"_blank\">原题链接</a></p><p>函数内循环，b[i] = a[i]，复制前size个元素。</p>",
-          "source": "JD | JD086 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "3 5 2\n1 2 3\n4 5 6 7 8",
-              "output": "1 2 6 7 8"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/816/\" target=\"_blank\">原题链接</a>函数内循环，b[i] = a[i]，复制前size个元素。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\086.cpp",
+            "path": "solutions\359\086.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<cstring>\r\nint main()\r\n{\r\n    int n1,n2,m;\r\n    cin>>n1>>n2>>m;\r\n    int a[200]={0},b[200]={0};\r\n    for(int i=0;i<n1;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=0;i<n2;i++)\r\n    {\r\n        cin>>b[i];\r\n    }\r\n    for(int i=0;i<m;i++)\r\n    {\r\n        b[i]=a[i];\r\n    }\r\n    for(int i=0;i<n2;i++)\r\n    {\r\n        cout<<b[i]<<\" \";\r\n    }\r\n}"
           }
@@ -3653,19 +3220,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD087/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在沙盘上摆了一排石块，每块上刻着一个数字。他指着前size块说：&quot;剑阵需要反转——把第一个和最后一个交换，第二个和倒数第二个交换，依此类推。后面的石块不动。&quot;</p><p>请帮李少白写一个函数，将数组的前size个元素原地翻转。</p>",
-          "inputDescription": "<p>第一行两个整数n和size。第二行n个整数。</p>",
-          "outputDescription": "<p>翻转前size个元素后的数组，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/818/\" target=\"_blank\">原题链接</a></p><p>双指针从两端向中间交换，只交换前size个。</p>",
-          "source": "JD | JD087 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "5 3\n1 2 3 4 5",
-              "output": "3 2 1 4 5"
-            }
-          ],
+          "description": "<p></p>",
+          "inputDescription": "<p></p>",
+          "outputDescription": "<p></p>",
+          "hint": "<p></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\087.cpp",
+            "path": "solutions\359\087.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int n,size,a[2000];\r\n    cin>>n>>size;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=size-1;i>=0;i--)\r\n    {\r\n        cout<<a[i]<<\" \";\r\n    }\r\n    for(int i=size;i<n;i++)\r\n    {\r\n        cout<<a[i]<<\" \";\r\n    }\r\n}"
           }
@@ -3676,19 +3238,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD088/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>宗门兵器库盘点时，赵晴儿需要把清单上的前几件兵器名称逐一打印出来。清单上有n件兵器，但她只需要前size件。</p><p>&quot;每次都手动抄写太蠢了，&quot;赵晴儿说，&quot;写一个函数，传入数组和size，把前size个元素打印出来。&quot;</p>",
-          "inputDescription": "<p>第一行两个整数n和size（数组长度和待打印个数，size ≤ n）。第二行n个整数。</p>",
-          "outputDescription": "<p>输出数组的前size个元素，空格隔开，末尾换行。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/814/\" target=\"_blank\">原题链接</a></p><p>函数内遍历数组前size个元素，空格隔开输出。</p>",
-          "source": "JD | JD088 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "5 3\n1 2 3 4 5",
-              "output": "1 2 3"
-            }
-          ],
+          "description": "<p></p>",
+          "inputDescription": "<p></p>",
+          "outputDescription": "<p></p>",
+          "hint": "<p></p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\088.cpp",
+            "path": "solutions\359\088.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int n,size,a[2000];\r\n    cin>>n>>size;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    \r\n    for(int i=0;i<size;i++)\r\n    {\r\n        cout<<a[i]<<\" \";\r\n    }\r\n}"
           }
@@ -3699,21 +3256,16 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD089/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画了一个row行col列的剑阵图，每个格子标着一个数字。她需要把这个阵图工整地抄录到竹简上。</p><p>&quot;写一个函数，&quot;赵晴儿说，&quot;传入二维数组和行列数，按格式逐行打印。每行的数字用空格隔开，数字之间用空格隔开。&quot;</p>",
+          "description": "<p>赵晴儿在沙盘上画了一个row行col列的剑阵图，每个格子标着一个数字。她需要把这个阵图工整地抄录到竹简上。&quot;写一个函数，&quot;赵晴儿说，&quot;传入二维数组和行列数，按格式逐行打印。每行的数字用空格隔开，数字之间用空格隔开。&quot;</p>",
           "inputDescription": "<p>第一行两个整数row和col。接下来row行，每行col个整数。</p>",
           "outputDescription": "<p>矩阵元素，每行末尾无多余空格。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/815/\" target=\"_blank\">原题链接</a></p><p>嵌套循环遍历行列，注意行末空格处理。</p>",
-          "source": "JD | JD089 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "3 4\n1 3 4 5\n2 6 9 4\n1 4 7 5",
-              "output": "1 3 4 5\n2 6 9 4\n1 4 7 5"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/815/\" target=\"_blank\">原题链接</a>嵌套循环遍历行列，注意行末空格处理。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\089.cpp",
+            "path": "solutions\359\089.cpp",
             "language": "cpp",
-            "code": "// 每行末尾有空格\n#include<iostream>\nusing namespace std;\r\nint main()\r\n{\r\n    int a[200][200],row,col;\r\n    cin>>row>>col;\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            cin>>a[i][j];\r\n        }\r\n    }\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            //cout<<\" \";\r\n            cout<<a[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    \r\n\r\n\r\n}"
+            "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int a[200][200],row,col;\r\n    cin>>row>>col;\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            cin>>a[i][j];\r\n        }\r\n    }\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            if(j!=0)cout<<\" \";\r\n            cout<<a[i][j];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    \r\n \r\n \r\n}"
           }
         },
         {
@@ -3722,19 +3274,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD090/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿拿着一份兵器清单来找李少白：&quot;这份清单前半段乱得很，从第l件到第r件需要按重量从小到大排好，后面的顺序不变。&quot;</p><p>李少白接过清单，发现上面有n件兵器的重量。他想写一个通用的排序函数，只排a[l]到a[r]这一段，其余位置原封不动。</p>",
+          "description": "<p>赵晴儿拿着一份兵器清单来找李少白：&quot;这份清单前半段乱得很，从第l件到第r件需要按重量从小到大排好，后面的顺序不变。&quot;李少白接过清单，发现上面有n件兵器的重量。他想写一个通用的排序函数，只排a[l]到a[r]这一段，其余位置原封不动。</p>",
           "inputDescription": "<p>第一行三个整数n、l和r（数组长度、排序区间左端点和右端点，0 ≤ l ≤ r &lt; n）。第二行n个整数。</p>",
           "outputDescription": "<p>排序后的数组，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/820/\" target=\"_blank\">原题链接</a></p><p>对a[l]到a[r]排序，其余元素不变。可用冒泡、选择或库函数。</p>",
-          "source": "JD | JD090 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "5 1 3\n5 3 1 4 2",
-              "output": "5 1 3 4 2"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/820/\" target=\"_blank\">原题链接</a>对a[l]到a[r]排序，其余元素不变。可用冒泡、选择或库函数。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\090.cpp",
+            "path": "solutions\359\090.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<algorithm>\r\nint a[200000];\r\nint main()\r\n{\r\n    int n,l,r;\r\n    cin>>n>>l>>r;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    sort(a+l,a+r+1);//左闭右开\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cout<<a[i]<<\" \";\r\n    }\r\n}\r\n\r\n    "
           }
@@ -3745,19 +3292,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD091/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>李少白在丹房翻到一本古籍，上面记载着一种&quot;以丹炼丹&quot;的奇术——要炼n味丹药，先炼好n-1味；要炼n-1味，先炼好n-2味……直到只剩1味，直接炼成。</p><p>赵晴儿看了笑道：&quot;这就是递归。一个函数调用自己，层层深入，直到触底再层层返回。阶乘的定义本身就是递归的——fact(n) = n × fact(n-1)，fact(1) = 1。&quot;</p><p>&quot;用递归重新实现阶乘函数。&quot;</p>",
+          "description": "<p>李少白在丹房翻到一本古籍，上面记载着一种&quot;以丹炼丹&quot;的奇术——要炼n味丹药，先炼好n-1味；要炼n-1味，先炼好n-2味……直到只剩1味，直接炼成。赵晴儿看了笑道：&quot;这就是递归。一个函数调用自己，层层深入，直到触底再层层返回。阶乘的定义本身就是递归的——fact(n) = n × fact(n-1)，fact(1) = 1。&quot;&quot;用递归重新实现阶乘函数。&quot;</p>",
           "inputDescription": "<p>一个整数n。</p>",
           "outputDescription": "<p>输出n的阶乘。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/16/\" target=\"_blank\">原题链接</a></p><p>递归三要素：终止条件(n==1返回1)、递推关系(n*fact(n-1))、缩小规模。</p>",
-          "source": "JD | JD091 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "5",
-              "output": "120"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/16/\" target=\"_blank\">原题链接</a>递归三要素：终止条件(n==1返回1)、递推关系(n*fact(n-1))、缩小规模。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\091.cpp",
+            "path": "solutions\359\091.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint jiecheng(int n)\r\n{\r\n    int res=1;\r\n    if(n==1)return 1;\r\n    else res*=n*jiecheng(n-1);\r\n    return res;\r\n}\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    cout<<jiecheng(n);\r\n}"
           }
@@ -3768,19 +3310,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD092/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画出一串数字：1, 1, 2, 3, 5, 8, 13……</p><p>&quot;看出规律了吗？&quot;她问。</p><p>李少白看了半天：&quot;每个数都是前两个数的和！&quot;</p><p>&quot;对，这就是斐波那契数列。&quot;赵晴儿说，&quot;用递归来写——f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)。不过提醒你，朴素递归效率很低，后面会学到优化的方法。&quot;</p>",
+          "description": "<p>赵晴儿在沙盘上画出一串数字：1, 1, 2, 3, 5, 8, 13……&quot;看出规律了吗？&quot;她问。李少白看了半天：&quot;每个数都是前两个数的和！&quot;&quot;对，这就是斐波那契数列。&quot;赵晴儿说，&quot;用递归来写——f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)。不过提醒你，朴素递归效率很低，后面会学到优化的方法。&quot;</p>",
           "inputDescription": "<p>一个整数n。</p>",
           "outputDescription": "<p>输出斐波那契数列第n项。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/822/\" target=\"_blank\">原题链接</a></p><p>递归：f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)。注意效率问题。</p>",
-          "source": "JD | JD092 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "4",
-              "output": "3"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/822/\" target=\"_blank\">原题链接</a>递归：f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)。注意效率问题。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\092.cpp",
+            "path": "solutions\359\092.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint feibo(int n)\r\n{\r\n    int a=1,b=1,res=0;\r\n    if(n==1||n==2)return 1;\r\n    res+=feibo(n-1)+feibo(n-2);\r\n    return res;\r\n}\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    cout<<feibo(n);\r\n}"
           }
@@ -3791,19 +3328,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD093/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>试炼场尽头，一座石阶直通山顶。石阶共有n级，每次只能跨1级或2级。</p><p>赵晴儿站在山脚问：&quot;从第一级走到第n级，一共有多少种不同的走法？&quot;</p><p>李少白想了想：&quot;如果我最后一步跨1级，那之前有f(n-1)种走法；如果最后一步跨2级，那之前有f(n-2)种走法……&quot;</p><p>&quot;没错，&quot;赵晴儿点头，&quot;这就是递归。&quot;</p>",
+          "description": "<p>试炼场尽头，一座石阶直通山顶。石阶共有n级，每次只能跨1级或2级。赵晴儿站在山脚问：&quot;从第一级走到第n级，一共有多少种不同的走法？&quot;李少白想了想：&quot;如果我最后一步跨1级，那之前有f(n-1)种走法；如果最后一步跨2级，那之前有f(n-2)种走法……&quot;&quot;没错，&quot;赵晴儿点头，&quot;这就是递归。&quot;</p>",
           "inputDescription": "<p>一个整数n（1 ≤ n ≤ 20）。</p>",
           "outputDescription": "<p>输出跳法总数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/823/\" target=\"_blank\">原题链接</a></p><p>f(n) = f(n-1) + f(n-2)。最后一步跳1级或2级，两种情况之和。</p>",
-          "source": "JD | JD093 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "5",
-              "output": "8"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/823/\" target=\"_blank\">原题链接</a>f(n) = f(n-1) + f(n-2)。最后一步跳1级或2级，两种情况之和。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\093.cpp",
+            "path": "solutions\359\093.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint dengjie(int n)\r\n{\r\n    if(n==1)return 1;//n=1只有一种走法\r\n    if(n==2)return 2;\r\n    int res=0;//总的结果数，用于计数\r\n    res=dengjie(n-1)+dengjie(n-2);\r\n    return res;//返回res的值\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;//输入n\r\n    cout<<dengjie(n); //输出res的值\r\n}"
           }
@@ -3814,19 +3346,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD094/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画了一个(n+1)×(m+1)的方格阵，每个格子标着坐标。</p><p>&quot;假设你站在左上角(0,0)，&quot;赵晴儿指着沙盘说，&quot;目标是走到右下角(n,m)。每次只能向右走一步，或者向下走一步。一共有多少种不同的路径？&quot;</p><p>李少白盯着沙盘看了一会儿：&quot;走到(n,m)之前，一定是从(n-1,m)或(n,m-1)过来的……&quot;</p><p>&quot;很好，又是一个递归。&quot;</p>",
+          "description": "<p>赵晴儿在沙盘上画了一个(n+1)×(m+1)的方格阵，每个格子标着坐标。&quot;假设你站在左上角(0,0)，&quot;赵晴儿指着沙盘说，&quot;目标是走到右下角(n,m)。每次只能向右走一步，或者向下走一步。一共有多少种不同的路径？&quot;李少白盯着沙盘看了一会儿：&quot;走到(n,m)之前，一定是从(n-1,m)或(n,m-1)过来的……&quot;&quot;很好，又是一个递归。&quot;</p>",
           "inputDescription": "<p>一行，两个整数n和m（目标坐标，0 ≤ n,m ≤ 20）。</p>",
           "outputDescription": "<p>输出走法总数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/824/\" target=\"_blank\">原题链接</a></p><p>从(0,0)到(n,m)的网格路径数。f(n,m) = f(n-1,m) + f(n,m-1)。边界：f(0,m)=1, f(n,0)=1。等价于组合数C(n+m, n)。</p>",
-          "source": "JD | JD094 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "2 3",
-              "output": "10"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/824/\" target=\"_blank\">原题链接</a>从(0,0)到(n,m)的网格路径数。f(n,m) = f(n-1,m) + f(n,m-1)。边界：f(0,m)=1, f(n,0)=1。等价于组合数C(n+m, n)。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\094.cpp",
+            "path": "solutions\359\094.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint dx[]={0,1},dy[]={1,0};\r\n\r\nint n,m;\r\nint xunlu(int i,int j)\r\n{\r\n    if(i==n&&j==m)return 1;\r\n    if(i>n||j>m)return 0;\r\n    int res=0;\r\n    for(int k=0;k<2;k++)\r\n    {\r\n        i+=dx[k],j+=dy[k];\r\n        res+=xunlu(i,j);\r\n        i-=dx[k],j-=dy[k];\r\n    }\r\n    return res;\r\n}\r\nint main()\r\n{\r\n\r\n    cin>>n>>m;\r\n    cout<<xunlu(0,0);\r\n\r\n\r\n}"
           }
@@ -3837,19 +3364,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD095/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰递给李少白n枚令牌，上面分别刻着1到n。</p><p>&quot;把它们排成一列，列出所有可能的排列顺序。&quot;梁嘉峰说，&quot;按字典序从小到大输出。&quot;</p><p>李少白开始手动枚举，很快就乱了套。赵晴儿在旁边提醒：&quot;用递归的思路——每次选一个没用过的令牌放到当前位置，然后递归处理剩下的位置。选完之后要&#039;回退&#039;，把令牌放回去，才能尝试下一个选择。这就是回溯。&quot;</p>",
+          "description": "<p>梁嘉峰递给李少白n枚令牌，上面分别刻着1到n。&quot;把它们排成一列，列出所有可能的排列顺序。&quot;梁嘉峰说，&quot;按字典序从小到大输出。&quot;李少白开始手动枚举，很快就乱了套。赵晴儿在旁边提醒：&quot;用递归的思路——每次选一个没用过的令牌放到当前位置，然后递归处理剩下的位置。选完之后要&#039;回退&#039;，把令牌放回去，才能尝试下一个选择。这就是回溯。&quot;</p>",
           "inputDescription": "<p>一个整数n（1 ≤ n ≤ 9）。</p>",
           "outputDescription": "<p>每行一个排列，数字之间用空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/825/\" target=\"_blank\">原题链接</a></p><p>DFS+回溯：用used[]标记已用数字，path[]记录当前排列。</p>",
-          "source": "JD | JD095 | 第7章 以招创招",
-          "samples": [
-            {
-              "input": "3",
-              "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/825/\" target=\"_blank\">原题链接</a>DFS+回溯：用used[]标记已用数字，path[]记录当前排列。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\095.cpp",
+            "path": "solutions\359\095.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\nint n;\r\nint used[10];\r\nbool path[10];\r\nvoid dfs(int u)\r\n{\r\n\r\n    if(u==n){\r\n        for(int i=0;i<n;i++)\r\n        {\r\n            if(i!=0)cout<<\" \";\r\n            cout<<used[i];\r\n        }\r\n        cout<<endl;\r\n        return ;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!path[i]){\r\n                used[u]=i;\r\n                path[i]=true;\r\n                dfs(u+1);\r\n                path[i]=false;\r\n                used[u]=0;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(0);\r\n}"
           }
@@ -3860,19 +3382,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD096/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>兵器阁的大门上刻着一行古文，但年代久远，字迹模糊，空格处尤其难以辨认。赵晴儿凑近看了看：&quot;这行字里夹了太多空格，密密麻麻的，根本看不清。&quot;</p><p>梁嘉峰说：&quot;古卷传输时，空格容易丢失。古人想了个办法——把每个空格替换成%20，这样既保留了间隔，又不会和真正的空白混淆。&quot;</p><p>&quot;你写一段程序，把这行古文里的所有空格替换成%20。&quot;</p>",
+          "description": "<p>兵器阁的大门上刻着一行古文，但年代久远，字迹模糊，空格处尤其难以辨认。赵晴儿凑近看了看：&quot;这行字里夹了太多空格，密密麻麻的，根本看不清。&quot;梁嘉峰说：&quot;古卷传输时，空格容易丢失。古人想了个办法——把每个空格替换成%20，这样既保留了间隔，又不会和真正的空白混淆。&quot;&quot;你写一段程序，把这行古文里的所有空格替换成%20。&quot;</p>",
           "inputDescription": "<p>一行字符串（长度不超过100）。</p>",
           "outputDescription": "<p>替换空格为%20后的字符串。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/36/\" target=\"_blank\">原题链接</a></p><p>遍历字符串，遇到空格输出%20，否则输出原字符。</p>",
-          "source": "JD | JD096 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "Hello World",
-              "output": "Hello%20World"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/36/\" target=\"_blank\">原题链接</a>遍历字符串，遇到空格输出%20，否则输出原字符。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\096.cpp",
+            "path": "solutions\359\096.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]==' ')\r\n            cout<<\"%20\";\r\n        else cout<<a[i];\r\n    }\r\n}"
           }
@@ -3883,19 +3400,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD097/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在兵器阁的账本上翻到一串奇怪的数字：1, 1, 2, 3, 5, 8, 13, 21……</p><p>&quot;这是前辈铸剑师留下的排列规律，&quot;梁嘉峰说，&quot;每一柄新剑的重量都是前两柄之和。第1柄和第2柄都是1斤，第3柄就是1+1=2斤，第4柄是1+2=3斤……&quot;</p><p>&quot;上一章你用递归算过这个数列，但递归太慢了。这次用容器来存——把每一项都推进一个序列里，只保留最近两项，循环推进。&quot;</p><p>请帮赵晴儿算出第n柄剑的重量。</p>",
+          "description": "<p>赵晴儿在兵器阁的账本上翻到一串奇怪的数字：1, 1, 2, 3, 5, 8, 13, 21……&quot;这是前辈铸剑师留下的排列规律，&quot;梁嘉峰说，&quot;每一柄新剑的重量都是前两柄之和。第1柄和第2柄都是1斤，第3柄就是1+1=2斤，第4柄是1+2=3斤……&quot;&quot;上一章你用递归算过这个数列，但递归太慢了。这次用容器来存——把每一项都推进一个序列里，只保留最近两项，循环推进。&quot;请帮赵晴儿算出第n柄剑的重量。</p>",
           "inputDescription": "<p>一个整数n（0 ≤ n ≤ 90）。</p>",
           "outputDescription": "<p>输出斐波那契数列第n项。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/21/\" target=\"_blank\">原题链接</a></p><p>两个变量a,b滚动：a,b = b,a+b。循环n次。</p>",
-          "source": "JD | JD097 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "10",
-              "output": "55"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/21/\" target=\"_blank\">原题链接</a>两个变量a,b滚动：a,b = b,a+b。循环n次。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\097.cpp",
+            "path": "solutions\359\097.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\nint main()\r\n{\r\n    vector<int>a;\r\n    a.push_back(1);\r\n    a.push_back(1);\r\n    int n;\r\n    cin>>n;\r\n    for(int i=0,j=1;i<n;i++,j++)\r\n    {\r\n        a.push_back(a[i]+a[j]);\r\n    }\r\n    cout<<a[n-1];\r\n\r\n}"
           }
@@ -3906,19 +3418,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD098/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>兵器阁的架子上挂着一串铁环，每个环上刻着一个数字，从头到尾依次是1、2、3……最后一个环上刻着-1，表示链条结束。</p><p>梁嘉峰指着铁链说：&quot;我要从最后一个环开始，把数字一个个报出来。但这串铁环只能从前往后读，不能直接跳到末尾。&quot;</p><p>赵晴儿想了想：&quot;用一个容器——先把所有数字存进去，再从后往前取出来。这就像把铁环一个个摘下来放到盒子里，最后从盒子里倒着取。&quot;</p>",
+          "description": "<p>兵器阁的架子上挂着一串铁环，每个环上刻着一个数字，从头到尾依次是1、2、3……最后一个环上刻着-1，表示链条结束。梁嘉峰指着铁链说：&quot;我要从最后一个环开始，把数字一个个报出来。但这串铁环只能从前往后读，不能直接跳到末尾。&quot;赵晴儿想了想：&quot;用一个容器——先把所有数字存进去，再从后往前取出来。这就像把铁环一个个摘下来放到盒子里，最后从盒子里倒着取。&quot;</p>",
           "inputDescription": "<p>一行整数，以-1结尾，表示链表的节点值（-1不算节点）。</p>",
           "outputDescription": "<p>从尾到头输出每个节点的值，每行一个。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/17/\" target=\"_blank\">原题链接</a></p><p>用栈存储所有节点值，然后依次弹出。或者用递归。</p>",
-          "source": "JD | JD098 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "1 2 3 -1",
-              "output": "3\n2\n1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/17/\" target=\"_blank\">原题链接</a>用栈存储所有节点值，然后依次弹出。或者用递归。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\098.cpp",
+            "path": "solutions\359\098.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int n;\r\n    vector<int>a;\r\n    cin>>n;\r\n    while(n!=-1)\r\n    {\r\n        a.push_back(n);\r\n        cin>>n;\r\n    }\r\n    for(int i=a.size()-1;i>=0;i--)\r\n    {\r\n        cout<<a[i]<<endl;\r\n    }\r\n\r\n}"
           }
@@ -3929,19 +3436,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD099/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在兵器阁里找到两个铁盒，每个盒子只能从顶部放入和取出——这就是&quot;栈&quot;，后进先出。</p><p>梁嘉峰说：&quot;现在我需要一个&#039;队列&#039;——先进先出。但手边只有这两个栈，没有队列。你能用这两个栈模拟一个队列吗？&quot;</p><p>赵晴儿思索片刻：&quot;入队的时候都放进盒子1。出队的时候，如果盒子2是空的，就把盒子1的东西全部倒进盒子2——这样顺序就反过来了，最先进来的变成了盒子2的顶部，直接取就行。&quot;</p><p>请帮赵晴儿实现这个&quot;双栈模拟队列&quot;的操作。</p>",
+          "description": "<p>赵晴儿在兵器阁里找到两个铁盒，每个盒子只能从顶部放入和取出——这就是&quot;栈&quot;，后进先出。梁嘉峰说：&quot;现在我需要一个&#039;队列&#039;——先进先出。但手边只有这两个栈，没有队列。你能用这两个栈模拟一个队列吗？&quot;赵晴儿思索片刻：&quot;入队的时候都放进盒子1。出队的时候，如果盒子2是空的，就把盒子1的东西全部倒进盒子2——这样顺序就反过来了，最先进来的变成了盒子2的顶部，直接取就行。&quot;请帮赵晴儿实现这个&quot;双栈模拟队列&quot;的操作。</p>",
           "inputDescription": "<p>若干操作命令：`push x`（入队）、`pop`（出队并输出）、`empty`（判空）。</p>",
           "outputDescription": "<p>对pop操作输出队首值，empty操作输出`yes`或`no`。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/20/\" target=\"_blank\">原题链接</a></p><p>栈1入队，栈2出队。出队时栈2空就把栈1全部倒入栈2。</p>",
-          "source": "JD | JD099 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "push 1\npush 2\npop\npush 3\npop\npop\nempty",
-              "output": "1\n2\n3\nyes"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/20/\" target=\"_blank\">原题链接</a>栈1入队，栈2出队。出队时栈2空就把栈1全部倒入栈2。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\099.cpp",
+            "path": "solutions\359\099.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<stack>\r\n#include<string>\r\nusing namespace std;\r\nint main()\r\n{\r\n    stack<int>in,out;\r\n    int n;\r\n    string a;\r\n    while(cin>>a)\r\n    {\r\n        if(a==\"push\")\r\n        {\r\n            cin>>n;\r\n            in.push(n);\r\n        }\r\n        else if(a==\"pop\")\r\n        {\r\n            if(out.empty())\r\n            {\r\n                while(!in.empty())\r\n                {\r\n                    out.push(in.top());\r\n                    in.pop();\r\n                }\r\n                \r\n            }\r\n            if(!out.empty())\r\n            {\r\n                cout<<out.top()<<endl;\r\n                out.pop();\r\n            }\r\n        }\r\n        else if(a==\"empty\")\r\n        {\r\n            if(out.empty()&&in.empty())\r\n            {\r\n                cout<<\"yes\"<<endl;\r\n            }\r\n            else cout<<\"no\"<<endl;\r\n        }\r\n    }\r\n}"
           }
@@ -3952,19 +3454,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD100/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰从架子上取下一条铁链，每个环上刻着一个数字。他把铁链平铺在桌上，从头到尾是1、2、3、4、5……最后一个环上刻着-1，表示结束。</p><p>&quot;我要把这条铁链反过来，&quot;梁嘉峰说，&quot;第一个变最后一个，最后一个变第一个。但不能断开重接，只能用容器来辅助。&quot;</p><p>赵晴儿拿起一个铁盒：&quot;把铁环一个个摘下来放进盒子里——先进去的沉到底部。等全部摘完，再从盒子里取出来，顺序就反了。&quot;</p>",
+          "description": "<p>梁嘉峰从架子上取下一条铁链，每个环上刻着一个数字。他把铁链平铺在桌上，从头到尾是1、2、3、4、5……最后一个环上刻着-1，表示结束。&quot;我要把这条铁链反过来，&quot;梁嘉峰说，&quot;第一个变最后一个，最后一个变第一个。但不能断开重接，只能用容器来辅助。&quot;赵晴儿拿起一个铁盒：&quot;把铁环一个个摘下来放进盒子里——先进去的沉到底部。等全部摘完，再从盒子里取出来，顺序就反了。&quot;</p>",
           "inputDescription": "<p>一行整数，以-1结尾，表示链表节点值。</p>",
           "outputDescription": "<p>反转后的链表，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/35/\" target=\"_blank\">原题链接</a></p><p>三指针法：prev=None, curr=head。循环：next=curr.next, curr.next=prev, prev=curr, curr=next。</p>",
-          "source": "JD | JD100 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "1 2 3 4 5 -1",
-              "output": "5 4 3 2 1"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/35/\" target=\"_blank\">原题链接</a>三指针法：prev=None, curr=head。循环：next=curr.next, curr.next=prev, prev=curr, curr=next。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\100.cpp",
+            "path": "solutions\359\100.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nstruct node\r\n{\r\n    int m;\r\n    node *Next;\r\n};\r\n\r\nint main()\r\n{\r\n    int n,num=0;\r\n    node *p0,*head,*p1;\r\n    cin>>n;\r\n    while(n!=-1)\r\n    {\r\n\r\n        p0=new node;\r\n        p0->m=n;p0->Next=NULL;\r\n        if(num==0)\r\n            p1=head=p0;\r\n        else {p1->Next=p0;p1=p0;}\r\n        num++;\r\n        cin>>n;\r\n    }\r\n    node *pre,*cur,*next;\r\n    pre=head;\r\n    if(head->Next!=NULL){cur=next=head->Next;pre->Next=NULL;}\r\n    else {cout<<head->m;return 0;}\r\n    while(next->Next!=NULL)\r\n    {\r\n        next=next->Next;\r\n        cur->Next=pre;\r\n        pre=cur;\r\n        cur=next;\r\n    }\r\n    next->Next=pre;\r\n    p1=head=next;\r\n    while(p1!=NULL)\r\n    {\r\n        cout<<p1->m<<\" \";\r\n        p1=p1->Next;\r\n    }\r\n\r\n}"
           }
@@ -3975,19 +3472,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD101/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿从兵器阁的两个抽屉里各取出一条铁链，每条链上的数字都从小到大排好了。她需要把两条链合并成一条，仍然保持从小到大的顺序。</p><p>&quot;不能拆开重排，&quot;梁嘉峰说，&quot;两条链都是有序的，你要利用这个特点——从两条链的头部同时开始比较，每次取较小的那个接到结果链的末尾。&quot;</p><p>赵晴儿拿起两个容器：&quot;用一个容器存结果。两个指针分别指向两条链的头部，谁小就取谁，直到一条链取完，再把另一条的剩余全部接上。&quot;</p>",
+          "description": "<p>赵晴儿从兵器阁的两个抽屉里各取出一条铁链，每条链上的数字都从小到大排好了。她需要把两条链合并成一条，仍然保持从小到大的顺序。&quot;不能拆开重排，&quot;梁嘉峰说，&quot;两条链都是有序的，你要利用这个特点——从两条链的头部同时开始比较，每次取较小的那个接到结果链的末尾。&quot;赵晴儿拿起两个容器：&quot;用一个容器存结果。两个指针分别指向两条链的头部，谁小就取谁，直到一条链取完，再把另一条的剩余全部接上。&quot;</p>",
           "inputDescription": "<p>两行，每行若干整数（以-1结尾），分别表示两个有序链表。</p>",
           "outputDescription": "<p>合并后的有序链表，空格隔开。</p>",
           "hint": "<p>双指针比较合并。一个链表遍历完后，直接接上另一个的剩余部分。</p>",
-          "source": "JD | JD101 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "1 3 5 -1\n2 4 6 -1",
-              "output": "1 2 3 4 5 6"
-            }
-          ],
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\101.cpp",
+            "path": "solutions\359\101.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nstruct node\r\n{\r\n    int num;\r\n    node *next;\r\n};\r\nint main()\r\n{\r\n    node *head0=NULL,*head1=NULL,*head2=NULL,*p0,*p1,*p2,*p;\r\n    int m,n;\r\n    cin>>m;\r\n    while(m!=-1)\r\n    {\r\n        p0=new node;p0->num=m;p0->next=NULL;\r\n        if(head1==NULL)head1=p1=p0;\r\n        else {\r\n            p1->next=p0;\r\n            p1=p0;\r\n        }\r\n        cin>>m;\r\n    }\r\n        cin>>n;\r\n        while(n!=-1)\r\n    {\r\n        p0=new node;p0->num=n;p0->next=NULL;\r\n        if(head2==NULL)head2=p2=p0;\r\n        else {\r\n            p2->next=p0;\r\n            p2=p0;\r\n        }\r\n        cin>>n;\r\n    }\r\n    if(head1==NULL)head0=head2;\r\n    else if(head2==NULL)head0=head1;\r\n    else {\r\n        p1=head1,p2=head2;\r\n        while(p1!=NULL&&p2!=NULL)\r\n        {\r\n            if(p1->num>=p2->num)\r\n            {\r\n                p0=new node;\r\n                p0->num=p2->num;\r\n                p0->next=NULL;\r\n                if(head0==NULL)\r\n                {\r\n                    head0=p=p0;\r\n                }\r\n                else {\r\n                    p->next=p0;\r\n                    p=p0;\r\n                }\r\n                p2=p2->next;\r\n            }\r\n            else if(p1->num<p2->num)\r\n            {\r\n                p0=new node;\r\n                p0->num=p1->num;\r\n                p0->next=NULL;\r\n                if(head0==NULL)\r\n                {\r\n                    head0=p=p0;\r\n                }   \r\n                else {\r\n                    p->next=p0;\r\n                    p=p0;\r\n                }\r\n                p1=p1->next;\r\n            }\r\n        }\r\n    \r\n        if(p1==NULL)\r\n            p->next=p2;\r\n        else if(p2==NULL)\r\n            p->next=p1;\r\n    }\r\n    p=head0;\r\n    while(p!=NULL)\r\n    {\r\n        cout<<p->num<<\" \";\r\n        p=p->next;\r\n    }\r\n\r\n\r\n}"
           }
@@ -3998,19 +3490,14 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD102/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>兵器阁的账房先生有一本厚厚的兵器账本，每条记录记着三样东西：兵器编号x、重量y（带两位小数）、兵器名称z。</p><p>&quot;这本账太乱了，&quot;赵晴儿翻了几页就头疼，&quot;编号不按顺序，同编号的重量也乱排。&quot;</p><p>梁嘉峰说：&quot;先按编号从小到大排，编号相同的再按重量从小到大排。你可以用结构体存每条记录，放进容器里，再自定义排序规则。&quot;</p>",
+          "description": "<p>兵器阁的账房先生有一本厚厚的兵器账本，每条记录记着三样东西：兵器编号x、重量y（带两位小数）、兵器名称z。&quot;这本账太乱了，&quot;赵晴儿翻了几页就头疼，&quot;编号不按顺序，同编号的重量也乱排。&quot;梁嘉峰说：&quot;先按编号从小到大排，编号相同的再按重量从小到大排。你可以用结构体存每条记录，放进容器里，再自定义排序规则。&quot;</p>",
           "inputDescription": "<p>第一行一个整数N。接下来N行，每行两个整数和一个字符串。</p>",
           "outputDescription": "<p>排序后的N条记录，每行一条。x输出整数，y输出保留两位小数的浮点数，字符串原样输出，空格隔开。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/864/\" target=\"_blank\">原题链接</a></p><p>定义结构体存储三元组，自定义比较函数：先比x，再比y。</p>",
-          "source": "JD | JD102 | 第8章 百器图谱",
-          "samples": [
-            {
-              "input": "3\n1 2 abc\n3 4 def\n2 1 ghi",
-              "output": "1 2.00 abc\n2 1.00 ghi\n3 4.00 def"
-            }
-          ],
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/864/\" target=\"_blank\">原题链接</a>定义结构体存储三元组，自定义比较函数：先比x，再比y。</p>",
+          "source": "",
+          "samples": [],
           "solution": {
-            "path": "solutions\\359\\102.cpp",
+            "path": "solutions\359\102.cpp",
             "language": "cpp",
             "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\n#include<iomanip>\r\nusing namespace std;\r\nstruct sanyuan\r\n{\r\n    int num;\r\n    double m;\r\n    string str;\r\n};\r\n\r\nint main()\r\n{\r\n    int N;\r\n    cin>>N;\r\n    sanyuan s[200]; \r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cin>>s[i].num>>s[i].m>>s[i].str;\r\n    }\r\n    for(int i=0;i<N-1;i++)\r\n    {\r\n        for(int j=0;j<N-i-1;j++)\r\n        {\r\n            if(s[j].num>s[j+1].num||(s[j].num==s[j+1].num&&s[j].m>s[j+1].m))\r\n            {\r\n                sanyuan temp=s[j];\r\n                s[j]=s[j+1];\r\n                s[j+1]=temp;\r\n            }\r\n        }\r\n    }\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cout<<s[i].num<<\" \"<<fixed<<setprecision(2)<<s[i].m<<\" \"<<s[i].str<<endl;\r\n    }\r\n}"
           }
@@ -4021,18 +3508,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD103/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>试炼场上，弟子们按身高排成一列，但顺序完全乱了。梁嘉峰走过去，随便挑了一个弟子站到中间，然后让所有比他矮的站到左边，比他高的站到右边。</p><p>&quot;现在左边和右边各自还是乱的，&quot;赵晴儿看出来了。</p><p>&quot;对。所以对左边和右边各自重复这个过程——挑一个人，矮的左、高的右。每次都能让一个人站到最终位置上，直到每一组只剩一个人。&quot;梁嘉峰说，&quot;这就是快速排序。一剑分两路，递归再出剑。&quot;</p><p>给定一个长度为 n 的整数数列，请用快速排序将其从小到大排序。</p>",
+          "description": "<p>试炼场上，弟子们按身高排成一列，但顺序完全乱了。梁嘉峰走过去，随便挑了一个弟子站到中间，然后让所有比他矮的站到左边，比他高的站到右边。&quot;现在左边和右边各自还是乱的，&quot;赵晴儿看出来了。&quot;对。所以对左边和右边各自重复这个过程——挑一个人，矮的左、高的右。每次都能让一个人站到最终位置上，直到每一组只剩一个人。&quot;梁嘉峰说，&quot;这就是快速排序。一剑分两路，递归再出剑。&quot;给定一个长度为 n 的整数数列，请用快速排序将其从小到大排序。</p>",
           "inputDescription": "<p>第一行包含整数n。第二行包含n个整数。</p>",
           "outputDescription": "<p>一行，n个排好序的整数，空格隔开。</p>",
-          "hint": "<p>选基准元素，双指针分区：左边 ≤ 基准，右边 &gt; 基准。递归处理左右两半。平均 O(nlogn)。</p><p><a href=\"https://www.acwing.com/problem/content/787/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 785 | JD103 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "5\n3 1 2 4 5",
-              "output": "1 2 3 4 5"
-            }
-          ],
-          "solution": null
+          "hint": "<p>选基准元素，双指针分区：左边 ≤ 基准，右边 &gt; 基准。递归处理左右两半。平均 O(nlogn)。<a href=\"https://www.acwing.com/problem/content/787/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\103.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\nint a[1000000],n;\r\nvoid quick_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int i=l-1,j=r+1,x=arr[(l+r)>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(arr[i]<x);\r\n        do j--;while(arr[j]>x);\r\n        if(i<j){swap(arr[i],arr[j]);\r\n        }\r\n    }\r\n    quick_sort(arr,l,j);\r\n    quick_sort(arr,j+1,r);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }   \r\n    quick_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        //if(i!=0)cout<<\" \";\r\n        printf(\"%d \",a[i]);\r\n    }\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD104",
@@ -4040,18 +3526,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD104/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰指着那排弟子：&quot;我不需要所有人都排好——只要知道第 K 矮的人是谁。&quot;</p><p>赵晴儿想了想：&quot;还是用刚才的方法：挑一个人站中间，矮的左、高的右。数一数左边有几个人——如果左边刚好有 K-1 个人，那中间那个就是答案。如果左边人比 K-1 多，说明答案在左边，只管左边就行。如果不够，就去右边找第 K-左-1 矮的。&quot;</p><p>&quot;所以快排是把两边都排好，快选只需要管一边。&quot;梁嘉峰点头，&quot;省了一半的力气。&quot;</p><p>给定一个长度为 n 的整数数列和一个整数 k，求数列中第 k 小的数。</p>",
+          "description": "<p>梁嘉峰指着那排弟子：&quot;我不需要所有人都排好——只要知道第 K 矮的人是谁。&quot;赵晴儿想了想：&quot;还是用刚才的方法：挑一个人站中间，矮的左、高的右。数一数左边有几个人——如果左边刚好有 K-1 个人，那中间那个就是答案。如果左边人比 K-1 多，说明答案在左边，只管左边就行。如果不够，就去右边找第 K-左-1 矮的。&quot;&quot;所以快排是把两边都排好，快选只需要管一边。&quot;梁嘉峰点头，&quot;省了一半的力气。&quot;给定一个长度为 n 的整数数列和一个整数 k，求数列中第 k 小的数。</p>",
           "inputDescription": "<p>第一行两个整数n和k。第二行n个整数。</p>",
           "outputDescription": "<p>一行，第k小的数。</p>",
-          "hint": "<p>partition 后判断 k 在左半还是右半，只递归一半。平均 O(n)。</p><p><a href=\"https://www.acwing.com/problem/content/788/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 786 | JD104 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "5 3\n3 1 2 4 5",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>partition 后判断 k 在左半还是右半，只递归一半。平均 O(n)。<a href=\"https://www.acwing.com/problem/content/788/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\104.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint a[1000];\r\nint quick_sort(int arr[],int l,int r,int k)\r\n{\r\n    if(l>=r)return arr[l];\r\n    int i=l-1,j=r+1,x=arr[(l+r)>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(x>arr[i]);\r\n        do j--;while(x<arr[j]);\r\n        if(i<j)swap(arr[i],arr[j]);\r\n    }\r\n    int s1=j-l+1;\r\n    if(k<=s1)return quick_sort(arr,l,j,k);\r\n    else return quick_sort(arr,j+1,r,k-s1);\r\n}\r\n\r\nint main()\r\n{\r\n    int n,k;\r\n    cin>>n>>k;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    cout<<quick_sort(a,0,n-1,k)<<endl;\r\n    \r\n}"
+          }
         },
         {
           "id": "JD105",
@@ -4059,18 +3544,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD105/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿把弟子们两两分成一组，每组内部先按身高排好。然后两组合成一组四人——从两组的排头各看一眼，矮的先出列，依次接上。四人组再两两合并成八人组……</p><p>梁嘉峰看明白了：&quot;快排是先挑基准把人分开，归并是先把人拆到最小单位，再一层层合并上来。&quot;</p><p>&quot;对，&quot;赵晴儿说，&quot;合并时两边都是有序的，所以每次只需要比较排头，O(n)就能合并。拆到底再合上来，总共 O(nlogn)。而且最坏情况也一样——不像快排最坏会退化。&quot;</p><p>给定一个长度为 n 的整数数列，请用归并排序将其从小到大排序。</p>",
+          "description": "<p>赵晴儿把弟子们两两分成一组，每组内部先按身高排好。然后两组合成一组四人——从两组的排头各看一眼，矮的先出列，依次接上。四人组再两两合并成八人组……梁嘉峰看明白了：&quot;快排是先挑基准把人分开，归并是先把人拆到最小单位，再一层层合并上来。&quot;&quot;对，&quot;赵晴儿说，&quot;合并时两边都是有序的，所以每次只需要比较排头，O(n)就能合并。拆到底再合上来，总共 O(nlogn)。而且最坏情况也一样——不像快排最坏会退化。&quot;给定一个长度为 n 的整数数列，请用归并排序将其从小到大排序。</p>",
           "inputDescription": "<p>第一行包含整数n。第二行包含n个整数。</p>",
           "outputDescription": "<p>一行，n个排好序的整数，空格隔开。</p>",
-          "hint": "<p>递归拆分 → 合并两个有序数组。需要额外空间 O(n)。稳定排序。</p><p><a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 787 | JD105 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "5\n3 1 2 4 5",
-              "output": "1 2 3 4 5"
-            }
-          ],
-          "solution": null
+          "hint": "<p>递归拆分 → 合并两个有序数组。需要额外空间 O(n)。稳定排序。<a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\105.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\nint a[1000],temp[1000],n;\r\nvoid merge_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int mid=(l+r)>>1;//中间数\r\n    merge_sort(arr,l,mid);\r\n    merge_sort(arr,mid+1,r);\r\n    int i=l,j=mid+1,k=0;\r\n    while(i<=mid&&j<=r)\r\n    {\r\n        if(arr[i]<=arr[j]){\r\n            temp[k]=arr[i];\r\n            i++;\r\n        }\r\n        else {\r\n            temp[k]=arr[j];\r\n            j++;\r\n        }\r\n        k++;\r\n    }\r\n    while(i<=mid)\r\n        {\r\n            temp[k++]=arr[i++];\r\n        }\r\n    while(j<=r)\r\n    {\r\n            temp[k++]=arr[j++];\r\n    }\r\n    for(int i=l,k=0;i<=r;i++,k++)\r\n    {\r\n        arr[i]=temp[k];\r\n    }\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    merge_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        printf(\"%d \",a[i]);\r\n    }\r\n\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD106",
@@ -4078,18 +3562,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD106/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>弟子们排成一列，每人身上有一个编号。赵晴儿发现，有些排在前面的人编号反而比后面的大——这就是&quot;逆序对&quot;，说明队伍很乱。</p><p>&quot;逆序对越多，队伍越乱。&quot;赵晴儿说，&quot;但要一个个比太慢了。有没有 O(nlogn) 的方法？&quot;</p><p>李少白盯着归并排序看了一会儿，突然开窍：&quot;归并的时候，左右两队都是从小到大排好的。从两队的排头开始比较——如果右边的先出列，说明右边这个人比左边队里剩下的所有人都小，那些都是逆序对！&quot;</p><p>&quot;没错。&quot;赵晴儿笑了，&quot;排完序，逆序对也数完了。&quot;</p><p>给定一个长度为 n 的整数数列，求逆序对的数量。</p>",
+          "description": "<p>弟子们排成一列，每人身上有一个编号。赵晴儿发现，有些排在前面的人编号反而比后面的大——这就是&quot;逆序对&quot;，说明队伍很乱。&quot;逆序对越多，队伍越乱。&quot;赵晴儿说，&quot;但要一个个比太慢了。有没有 O(nlogn) 的方法？&quot;李少白盯着归并排序看了一会儿，突然开窍：&quot;归并的时候，左右两队都是从小到大排好的。从两队的排头开始比较——如果右边的先出列，说明右边这个人比左边队里剩下的所有人都小，那些都是逆序对！&quot;&quot;没错。&quot;赵晴儿笑了，&quot;排完序，逆序对也数完了。&quot;给定一个长度为 n 的整数数列，求逆序对的数量。</p>",
           "inputDescription": "<p>第一行包含整数n。第二行包含n个整数（1≤n≤100000）。</p>",
           "outputDescription": "<p>一行，逆序对的数量。</p>",
-          "hint": "<p>归并排序过程中，当右边元素先被选中时，左边剩余元素个数就是新增的逆序对数。用 long long 存结果。</p><p><a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 788 | JD106 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "5\n2 3 1 5 4",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>归并排序过程中，当右边元素先被选中时，左边剩余元素个数就是新增的逆序对数。用 long long 存结果。<a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\106.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL n,a[1000000],temp[1000000];\r\n\r\nLL merge_sort(LL arr[],LL l,LL r)\r\n{\r\n    if(l>=r)return 0;\r\n    LL mid=l+r>>1,res=0;\r\n    res+=merge_sort(arr,l,mid)+ merge_sort(arr,mid+1,r);\r\n    LL i=l,j=mid+1,k=0;\r\n    while(i<=mid&&j<=r)\r\n    {\r\n        if(arr[i]<=arr[j])\r\n        {\r\n            temp[k++]=arr[i++];\r\n        }\r\n        else if(arr[i]>temp[j])\r\n        {\r\n            temp[k++]=arr[j++];\r\n            res+=mid-i+1;\r\n        }\r\n    }\r\n    while(i<=mid)\r\n    {\r\n        temp[k++]=arr[i++];\r\n    }\r\n    while(j<=r)\r\n    {\r\n        temp[k++]=arr[j++];\r\n    }\r\n    for(int i=l,k=0;i<=r;i++,k++)//为了进一步排序，不可忽略\r\n    {\r\n        arr[i]=temp[k];\r\n    }\r\n   return res;\r\n\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    cout<<merge_sort(a,0,n-1)<<endl;\r\n\r\n\r\n}"
+          }
         },
         {
           "id": "JD107",
@@ -4097,18 +3580,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD107/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿递给李少白一排刻着数字的石块，从左到右从小到大排好了。她问：&quot;数字 3 第一次出现在哪块石块上？最后一次出现在哪？&quot;</p><p>李少白想从头数，但石块有十万块。赵晴儿拦住他：&quot;石块是有序的，不用一个个看。先看最中间那块——如果中间的数比 3 大，说明 3 只可能在左半边，右半边不用看了。每次都把范围砍一半，这就是二分。&quot;</p><p>&quot;找第一次出现的位置和最后一次出现的位置，各二分一次。&quot;李少白接话道。</p><p>&quot;对。如果整个范围里都找不到，就说明没有。&quot;</p><p>给定一个升序排列的长度为 n 的整数数组和 q 个查询，对每个查询返回目标值的起始位置和终止位置（从0开始），不存在则返回 -1 -1。</p>",
+          "description": "<p>赵晴儿递给李少白一排刻着数字的石块，从左到右从小到大排好了。她问：&quot;数字 3 第一次出现在哪块石块上？最后一次出现在哪？&quot;李少白想从头数，但石块有十万块。赵晴儿拦住他：&quot;石块是有序的，不用一个个看。先看最中间那块——如果中间的数比 3 大，说明 3 只可能在左半边，右半边不用看了。每次都把范围砍一半，这就是二分。&quot;&quot;找第一次出现的位置和最后一次出现的位置，各二分一次。&quot;李少白接话道。&quot;对。如果整个范围里都找不到，就说明没有。&quot;给定一个升序排列的长度为 n 的整数数组和 q 个查询，对每个查询返回目标值的起始位置和终止位置（从0开始），不存在则返回 -1 -1。</p>",
           "inputDescription": "<p>第一行两个整数n和q。第二行n个整数（升序）。第三行q个待查询的整数。</p>",
           "outputDescription": "<p>每行两个整数，起始位置和终止位置。不存在输出-1 -1。</p>",
-          "hint": "<p>两次二分：找第一个 ≥ x 的位置（左边界），找最后一个 ≤ x 的位置（右边界）。</p><p><a href=\"https://www.acwing.com/problem/content/791/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 789 | JD107 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "6 3\n1 2 2 3 3 4\n2 3 5",
-              "output": "1 2\n3 4\n-1 -1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>两次二分：找第一个 ≥ x 的位置（左边界），找最后一个 ≤ x 的位置（右边界）。<a href=\"https://www.acwing.com/problem/content/791/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\107.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\nint a[20000],n,q,j;\r\n\r\nvoid search(int m)\r\n{\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        if(a[i]==m)\r\n        {\r\n            j=i;\r\n            cout<<i<<\" \";\r\n            while(a[j]==m)\r\n            {\r\n                j++;\r\n            }\r\n            if(j==i)cout<<i;\r\n            else cout<<j-1<<endl;\r\n            break;\r\n        }\r\n        else if(i==n-1)\r\n        {\r\n            cout<<-1<<\" \"<<-1<<endl;\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int m;\r\n    cin>>n>>q;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=0;i<q;i++)\r\n    {\r\n        cin>>m;\r\n        search(m);\r\n    }\r\n\r\n}"
+          }
         },
         {
           "id": "JD108",
@@ -4116,18 +3598,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD108/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上写下一个数 n：&quot;求它的三次方根。&quot;</p><p>李少白试了几个整数，立方后不是太大就是太小。赵晴儿说：&quot;别猜了。三次方根一定在 -10000 到 10000 之间。你取中间值试试——如果中间值的立方比 n 大，说明真正的答案在左半边；比 n 小，就在右半边。范围不断缩小，直到精度足够。&quot;</p><p>&quot;和整数二分一样的思路，&quot;李少白说，&quot;只不过这次找的不是一个确切的位置，而是一个足够精确的浮点数。&quot;</p><p>&quot;对。整数二分停在某个整数上，浮点二分停在精度达标时。&quot;</p><p>给定一个浮点数 n，求它的三次方根。</p>",
+          "description": "<p>赵晴儿在沙盘上写下一个数 n：&quot;求它的三次方根。&quot;李少白试了几个整数，立方后不是太大就是太小。赵晴儿说：&quot;别猜了。三次方根一定在 -10000 到 10000 之间。你取中间值试试——如果中间值的立方比 n 大，说明真正的答案在左半边；比 n 小，就在右半边。范围不断缩小，直到精度足够。&quot;&quot;和整数二分一样的思路，&quot;李少白说，&quot;只不过这次找的不是一个确切的位置，而是一个足够精确的浮点数。&quot;&quot;对。整数二分停在某个整数上，浮点二分停在精度达标时。&quot;给定一个浮点数 n，求它的三次方根。</p>",
           "inputDescription": "<p>一个浮点数n（-10000≤n≤10000）。</p>",
           "outputDescription": "<p>n的三次方根，保留6位小数。</p>",
-          "hint": "<p>浮点二分：left=-10000, right=10000，while(right-left&gt;1e-8)，mid=(left+right)/2。若 mid³≥n，right=mid；否则 left=mid。</p><p><a href=\"https://www.acwing.com/problem/content/792/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 790 | JD108 | 第9章 快剑如风",
-          "samples": [
-            {
-              "input": "1000.000000",
-              "output": "10.000000"
-            }
-          ],
-          "solution": null
+          "hint": "<p>浮点二分：left=-10000, right=10000，while(right-left&gt;1e-8)，mid=(left+right)/2。若 mid³≥n，right=mid；否则 left=mid。<a href=\"https://www.acwing.com/problem/content/792/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\108.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<cmath>\r\n#include<iomanip>\r\nusing namespace std;\r\n\r\n\r\nint main(){\r\n    double n;\r\n    double mid;\r\n    cin>>n;\r\n    double left=-10000,right=10000;\r\n    while(right-left>1e-8)\r\n    {\r\n        mid=(left+right)/2;\r\n        if(pow(mid,3)>=n)\r\n            right=mid;\r\n        else left=mid;\r\n    }\r\n    cout<<fixed<<setprecision(6)<<mid<<endl;\r\n}"
+          }
         },
         {
           "id": "JD109",
@@ -4135,18 +3616,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD109/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>精铸阁的墙壁上嵌着一排铁板，每块铁板上用二进制刻着一个数——有凹痕的地方是1，平整的地方是0。</p><p>赵晴儿递给李少白一串数字：&quot;每块铁板上有几道凹痕？数出来。&quot;</p><p>李少白想逐位检查。赵晴儿教他一个窍门：&quot;用位运算——n & 1 看最低位是不是1，然后 n &gt;&gt;= 1 右移一位，继续看下一位。数完所有位，就知道有几道凹痕了。&quot;</p><p>给定 n 个整数，输出每个数的二进制表示中有多少个1。</p>",
+          "description": "<p>精铸阁的墙壁上嵌着一排铁板，每块铁板上用二进制刻着一个数——有凹痕的地方是1，平整的地方是0。赵晴儿递给李少白一串数字：&quot;每块铁板上有几道凹痕？数出来。&quot;李少白想逐位检查。赵晴儿教他一个窍门：&quot;用位运算——n & 1 看最低位是不是1，然后 n &gt;&gt;= 1 右移一位，继续看下一位。数完所有位，就知道有几道凹痕了。&quot;给定 n 个整数，输出每个数的二进制表示中有多少个1。</p>",
           "inputDescription": "<p>第一行一个整数n。第二行n个整数（1≤n≤100000）。</p>",
           "outputDescription": "<p>一行，每个数对应的1的个数，空格隔开。</p>",
-          "hint": "<p>位运算：while(n &gt; 0) { count += n & 1; n &gt;&gt;= 1; }。或用 n & (n-1) 消去最低位的1，计数更快。</p><p><a href=\"https://www.acwing.com/problem/content/803/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 801 | JD109 | 第10章 千锤百炼",
-          "samples": [
-            {
-              "input": "5\n1 2 3 4 5",
-              "output": "1 1 2 1 2"
-            }
-          ],
-          "solution": null
+          "hint": "<p>位运算：while(n &gt; 0) { count += n & 1; n &gt;&gt;= 1; }。或用 n & (n-1) 消去最低位的1，计数更快。<a href=\"https://www.acwing.com/problem/content/803/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\109.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int m,n;\r\n    cin>>m;\r\n    while(m--){\r\n        cin>>n;\r\n        int count=0;\r\n        while(n>0)\r\n        {\r\n            count+=n&1;\r\n            n>>=1;\r\n        }\r\n        cout<<count<<\" \";\r\n    }\r\n}"
+          }
         },
         {
           "id": "JD110",
@@ -4154,18 +3634,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD110/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>精铸阁中，赵晴儿递来两块铁牌，上面各刻着一个巨大的数字——长到普通变量根本装不下。</p><p>&quot;这两个数要加起来，&quot;赵晴儿说，&quot;但没有那么大的容器。怎么办？&quot;</p><p>李少白想了想：&quot;像竖式加法一样，把每一位拆开，用数组存。从最低位开始逐位相加，满十进一。&quot;</p><p>&quot;对。这就是高精度加法——用数组模拟竖式。&quot;</p><p>给定两个正整数，计算它们的和。每个数不超过 100000 位。</p>",
+          "description": "<p>精铸阁中，赵晴儿递来两块铁牌，上面各刻着一个巨大的数字——长到普通变量根本装不下。&quot;这两个数要加起来，&quot;赵晴儿说，&quot;但没有那么大的容器。怎么办？&quot;李少白想了想：&quot;像竖式加法一样，把每一位拆开，用数组存。从最低位开始逐位相加，满十进一。&quot;&quot;对。这就是高精度加法——用数组模拟竖式。&quot;给定两个正整数，计算它们的和。每个数不超过 100000 位。</p>",
           "inputDescription": "<p>两行，每行一个正整数（不超过100000位）。</p>",
           "outputDescription": "<p>一行，两数之和。</p>",
-          "hint": "<p>用数组存每一位（倒序），从低位到高位逐位相加，处理进位。最后倒序输出。</p><p><a href=\"https://www.acwing.com/problem/content/793/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 791 | JD110 | 第10章 千锤百炼",
-          "samples": [
-            {
-              "input": "123456789012345678901234567890\n987654321098765432109876543210",
-              "output": "1111111110111111111011111111100"
-            }
-          ],
-          "solution": null
+          "hint": "<p>用数组存每一位（倒序），从低位到高位逐位相加，处理进位。最后倒序输出。<a href=\"https://www.acwing.com/problem/content/793/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\110.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n#include<cstring>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\ntypedef long long LL;\r\n\r\nvector<int>add(vector<int> &A,vector<int>&B)\r\n{\r\n    vector<int>C;\r\n    for(int i=0,t=0;i<A.size()||i<B.size()||t;i++)\r\n    {\r\n        if(i<A.size())t+=A[i];\r\n        if(i<B.size())t+=B[i];\r\n        C.push_back(t%10);\r\n        t/=10;\r\n    }\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n        cout<<A[i];\r\n    cout<<endl;\r\n}\r\n\r\nint main()\r\n{\r\n    string a,b;\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n\r\n    for(int i=a.size()-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=b.size()-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    print(add(A,B));\r\n\r\n}\r\n\r\n\r\n\r\n\r\n// int main()\r\n// {\r\n//     string arr[3];\r\n//     int a[3][100001]={0};\r\n//     cin>>arr[0];\r\n//     cin>>arr[1];\r\n//     int a0=arr[0].length(),a1=arr[1].length();\r\n//     int m=max(a0,a1);\r\n//     for(int i=0;i<a0;i++)\r\n//     {\r\n//         a[0][i]=arr[0][a0-i-1]-'0';\r\n//     }\r\n//     for(int i=0;i<a1;i++)\r\n//     {\r\n//         a[1][i]=arr[1][a1-i-1]-'0';\r\n//     }\r\n//     for(int i=0;i<m;i++)\r\n//     {\r\n//         a[2][i]+=a[0][i]+a[1][i];\r\n//         if(a[2][i]>=10)\r\n//         {\r\n//             a[2][i]-=10;\r\n//             a[2][i+1]++;\r\n//         }\r\n//     }\r\n//     for(int i=m;i>=0;i--)\r\n//     {\r\n//         if(i==m&&a[2][m]==0)continue;\r\n//         cout<<a[2][i];\r\n//     }\r\n\r\n\r\n\r\n\r\n\r\n// }"
+          }
         },
         {
           "id": "JD111",
@@ -4173,18 +3652,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD111/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰递给李少白两块铁牌：&quot;这次是减法。大数减大数，注意借位。&quot;</p><p>李少白接过一看，两个数都很长。他先比较了大小——如果被减数比减数小，结果就是负数，先交换再算。</p><p>&quot;像竖式减法一样，从最低位开始，不够减就向高位借1。&quot;梁嘉峰说，&quot;削铁如泥，一刃一刃来。&quot;</p><p>给定两个正整数，计算它们的差（结果可能为负数）。每个数不超过 100000 位。</p>",
+          "description": "<p>梁嘉峰递给李少白两块铁牌：&quot;这次是减法。大数减大数，注意借位。&quot;李少白接过一看，两个数都很长。他先比较了大小——如果被减数比减数小，结果就是负数，先交换再算。&quot;像竖式减法一样，从最低位开始，不够减就向高位借1。&quot;梁嘉峰说，&quot;削铁如泥，一刃一刃来。&quot;给定两个正整数，计算它们的差（结果可能为负数）。每个数不超过 100000 位。</p>",
           "inputDescription": "<p>两行，每行一个正整数（不超过100000位）。</p>",
           "outputDescription": "<p>一行，两数之差。</p>",
-          "hint": "<p>先判断大小，大减小，从低位逐位减，处理借位。如果被减数小则结果加负号。</p><p><a href=\"https://www.acwing.com/problem/content/794/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 792 | JD111 | 第10章 千锤百炼",
-          "samples": [
-            {
-              "input": "9876543210\n1234567890",
-              "output": "8641975320"
-            }
-          ],
-          "solution": null
+          "hint": "<p>先判断大小，大减小，从低位逐位减，处理借位。如果被减数小则结果加负号。<a href=\"https://www.acwing.com/problem/content/794/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\111.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<cstring>\r\n#include<string>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nstring a,b;\r\n\r\nvoid compare(vector<int>&A,vector<int>&B)\r\n{\r\n    if(A.size()<B.size())swap(A,B);\r\n    else if(A.size()==B.size())\r\n    {\r\n        int i=A.size()-1;\r\n        while(i>=0&&A[i]==B[i])i--;\r\n        if(A[i]<B[i])swap(A,B);\r\n    }\r\n}\r\n\r\nvector<int> sub(vector<int>&A,vector<int>&B)\r\n{\r\n    vector<int>C;\r\n    int t=0;\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        t+=A[i];\r\n        if(i<B.size())t-=B[i];\r\n        C.push_back((t+10)%10);\r\n        if(t<0)t=-1;\r\n        else t=0;\r\n    }\r\n    while(!C.back())C.pop_back();\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int> A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n    {\r\n        cout<<A[i];\r\n    }\r\n}\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n    int len1=a.length(),len2=b.length();\r\n    for(int i=len1-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=len2-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    compare(A,B);\r\n    print(sub(A,B));\r\n    cout<<endl;\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD112",
@@ -4192,18 +3670,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD112/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿递来一块刻着万位数的铁牌和一个小铁块：&quot;大数乘以小数。铁牌上的每一位都要乘以小铁块的数，再处理进位——就像叠甲，一层压一层。&quot;</p><p>李少白从铁牌的最低位开始，逐位乘以小数，加上前一位的进位，本位留下余数，进位带到下一位。</p><p>给定一个大正整数 A 和一个小正整数 B，计算 A × B。A 不超过 100000 位，B 不超过 10000。</p>",
+          "description": "<p>赵晴儿递来一块刻着万位数的铁牌和一个小铁块：&quot;大数乘以小数。铁牌上的每一位都要乘以小铁块的数，再处理进位——就像叠甲，一层压一层。&quot;李少白从铁牌的最低位开始，逐位乘以小数，加上前一位的进位，本位留下余数，进位带到下一位。给定一个大正整数 A 和一个小正整数 B，计算 A × B。A 不超过 100000 位，B 不超过 10000。</p>",
           "inputDescription": "<p>两行，第一行正整数A（不超过100000位），第二行正整数B（不超过10000）。</p>",
           "outputDescription": "<p>一行，A×B的结果。</p>",
-          "hint": "<p>高精度×低精度：大数每一位乘以小数，处理进位。注意结果可能有前导零需要去掉。</p><p><a href=\"https://www.acwing.com/problem/content/795/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 793 | JD112 | 第10章 千锤百炼",
-          "samples": [
-            {
-              "input": "123456\n789",
-              "output": "97406784"
-            }
-          ],
-          "solution": null
+          "hint": "<p>高精度×低精度：大数每一位乘以小数，处理进位。注意结果可能有前导零需要去掉。<a href=\"https://www.acwing.com/problem/content/795/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\112.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<algorithm>\r\n#include<string>\r\n#include<vector>\r\n\r\nusing namespace std;\r\n\r\nstring a,b;\r\n\r\nvector<int> mul(vector<int>&A,vector<int>&B)\r\n{\r\n    vector<int>C(A.size()+B.size());\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        for(int j=0;j<B.size();j++)\r\n        {\r\n            C[i+j]+=A[i]*B[j];\r\n        }\r\n    }\r\n    for(int i=0,t=0;i<C.size();i++)\r\n    {\r\n        t+=C[i];\r\n        C[i]=t%10;\r\n        t/=10;\r\n    }\r\n    while(C.back()==0&&C.size()>1)C.pop_back();\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n        cout<<A[i];\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n    for(int i=a.size()-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=b.size()-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    print(mul(A,B));\r\n\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD113",
@@ -4211,18 +3688,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD113/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰拿起一把锉刀：&quot;大数除以小数——分金断玉，从高位一刀一刀切。&quot;</p><p>&quot;从最高位开始，&quot;赵晴儿解释，&quot;当前余数乘10加上当前位，除以除数得到商的一位，剩下的余数带到下一位。和竖式除法一模一样。&quot;</p><p>给定一个大非负整数 A 和一个小正整数 B，计算 A ÷ B 的商和余数。A 不超过 100000 位，B 不超过 10000。</p>",
+          "description": "<p>梁嘉峰拿起一把锉刀：&quot;大数除以小数——分金断玉，从高位一刀一刀切。&quot;&quot;从最高位开始，&quot;赵晴儿解释，&quot;当前余数乘10加上当前位，除以除数得到商的一位，剩下的余数带到下一位。和竖式除法一模一样。&quot;给定一个大非负整数 A 和一个小正整数 B，计算 A ÷ B 的商和余数。A 不超过 100000 位，B 不超过 10000。</p>",
           "inputDescription": "<p>两行，第一行非负整数A（不超过100000位），第二行正整数B（B≠0）。</p>",
           "outputDescription": "<p>两行，第一行商，第二行余数。</p>",
-          "hint": "<p>高精度÷低精度：从高位到低位，当前余数×10+当前位，除以B得商的一位，更新余数。</p><p><a href=\"https://www.acwing.com/problem/content/796/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 794 | JD113 | 第10章 千锤百炼",
-          "samples": [
-            {
-              "input": "9876543210\n123",
-              "output": "80297099\n33"
-            }
-          ],
-          "solution": null
+          "hint": "<p>高精度÷低精度：从高位到低位，当前余数×10+当前位，除以B得商的一位，更新余数。<a href=\"https://www.acwing.com/problem/content/796/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\113.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\n#include<vector>\r\n\r\nusing namespace std;\r\n\r\nstring a;\r\nint b,m;\r\nvector<int>div(vector<int>&A,int b)\r\n{\r\n    vector<int>C(A.size()-to_string(b).length());\r\n    int t=0;\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        t*=10;\r\n        t+=A[i];\r\n        C.push_back(t/b);\r\n        t%=b;\r\n    }\r\n    m=t;\r\n    while(C.front()==0&&C.size()>1)C.erase(C.begin()); \r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        cout<<A[i];\r\n    }\r\n    cout<<endl;\r\n    cout<<m<<endl;\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A;\r\n    for(int i=0;i<a.size();i++)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    print(div(A,b));\r\n\r\n    return 0;\r\n}\r\n"
+          }
         },
         {
           "id": "JD114",
@@ -4230,18 +3706,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD114/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿递给李少白两排有序的铁牌，每排上的数字从小到大排列。她说：&quot;从两排铁牌中各取一块，使它们的数字之和刚好等于一个目标值。&quot;</p><p>李少白想暴力枚举，但每排都有十万块。赵晴儿说：&quot;两排都是有序的——第一个指针从第一排的头部开始，第二个指针从第二排的尾部开始。如果和太大，第二个指针往左移；和太小，第一个指针往右移。两个指针配合，一次遍历就够了。&quot;</p><p>给定两个升序数组 A 和 B，以及目标值 x，找出满足 A[i] + B[j] = x 的数对 (i, j)。保证有唯一解。</p>",
+          "description": "<p>赵晴儿递给李少白两排有序的铁牌，每排上的数字从小到大排列。她说：&quot;从两排铁牌中各取一块，使它们的数字之和刚好等于一个目标值。&quot;李少白想暴力枚举，但每排都有十万块。赵晴儿说：&quot;两排都是有序的——第一个指针从第一排的头部开始，第二个指针从第二排的尾部开始。如果和太大，第二个指针往左移；和太小，第一个指针往右移。两个指针配合，一次遍历就够了。&quot;给定两个升序数组 A 和 B，以及目标值 x，找出满足 A[i] + B[j] = x 的数对 (i, j)。保证有唯一解。</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行n个整数。第三行m个整数。</p>",
           "outputDescription": "<p>一行，两个整数i和j。</p>",
-          "hint": "<p>双指针：i 从 A 的头，j 从 B 的尾。A[i]+B[j] &lt; x 则 i++，&gt; x 则 j--。O(n+m)。</p><p><a href=\"https://www.acwing.com/problem/content/802/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 800 | JD114",
-          "samples": [
-            {
-              "input": "4 5 6\n1 2 4 7\n3 4 6 8 9",
-              "output": "1 1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>双指针：i 从 A 的头，j 从 B 的尾。A[i]+B[j] &lt; x 则 i++，&gt; x 则 j--。O(n+m)。<a href=\"https://www.acwing.com/problem/content/802/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\114.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint a[100001],b[100001];\r\nint n,m,k;\r\nint main()\r\n{\r\n    cin>>n>>m>>k;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    for(int i=0;i<m;i++)cin>>b[i];\r\n\r\n    int i=0,j=m-1,t=a[i]+b[j];\r\n\r\n    while(t!=k)\r\n    {\r\n        if(t<k)i++;\r\n        else if(t>k)j--;\r\n        t=a[i]+b[j];\r\n    }\r\n    cout<<i<<\" \"<<j;\r\n}"
+          }
         },
         {
           "id": "JD115",
@@ -4249,18 +3724,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD115/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿拿着两卷竹简，上面各写着一串数字。她问：&quot;第二卷的内容是不是第一卷的子序列？子序列不要求连续，但必须保持原有次序。&quot;</p><p>李少白用两个指针：&quot;一个指针遍历第一卷，另一个指向第二卷。如果当前字符匹配，第二卷的指针就往前走。最后看第二卷的指针有没有走到头——走到头就说明全部匹配上了。&quot;</p><p>&quot;对，两个指针各走一遍，O(n)。&quot;</p><p>给定序列 a（长度 n）和序列 b（长度 m），判断 a 是否为 b 的子序列。</p>",
+          "description": "<p>赵晴儿拿着两卷竹简，上面各写着一串数字。她问：&quot;第二卷的内容是不是第一卷的子序列？子序列不要求连续，但必须保持原有次序。&quot;李少白用两个指针：&quot;一个指针遍历第一卷，另一个指向第二卷。如果当前字符匹配，第二卷的指针就往前走。最后看第二卷的指针有没有走到头——走到头就说明全部匹配上了。&quot;&quot;对，两个指针各走一遍，O(n)。&quot;给定序列 a（长度 n）和序列 b（长度 m），判断 a 是否为 b 的子序列。</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行n个整数（序列a）。第三行m个整数（序列b）。</p>",
           "outputDescription": "<p>是子序列输出Yes，否则输出No。</p>",
-          "hint": "<p>双指针：i 遍历 a，j 遍历 b。a[i] == b[j] 时 i++。i 到头说明是子序列。</p><p><a href=\"https://www.acwing.com/problem/content/2819/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 2816 | JD115",
-          "samples": [
-            {
-              "input": "3 5\n1 3 5\n1 2 3 4 5",
-              "output": "Yes"
-            }
-          ],
-          "solution": null
+          "hint": "<p>双指针：i 遍历 a，j 遍历 b。a[i] == b[j] 时 i++。i 到头说明是子序列。<a href=\"https://www.acwing.com/problem/content/2819/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\115.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n,m;\r\n    int a[100001],b[100001];\r\n    cin>>n>>m;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    for(int i=0;i<m;i++)cin>>b[i];\r\n\r\n    int i=0,j=0;\r\n\r\n    while(j<m)\r\n    {\r\n        if(a[i]==b[j])\r\n        {\r\n            i++,j++;\r\n        }\r\n        else j++;\r\n    }\r\n    if(i==n)cout<<\"Yes\"<<endl;\r\n    else cout<<\"No\"<<endl;\r\n\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD116",
@@ -4268,18 +3742,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD116/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在沙盘上摆了一排石块，每块上刻着一个数字。他问：&quot;从这排石块中，找出最长的一段——这段里每个数字都不重复。&quot;</p><p>李少白想从头遍历每一段，但石块有十万块。赵晴儿教他：&quot;用两个指针，一左一右，框住一段区间。右指针往右扩展，遇到重复数字就收缩左指针，直到区间内没有重复。每一步都更新最大长度。&quot;</p><p>&quot;两个指针各走各的，总共只走一遍——O(n)。&quot;</p><p>给定一个长度为 n 的整数序列，找出最长的不含重复数字的连续子序列，输出其长度。</p>",
+          "description": "<p>梁嘉峰在沙盘上摆了一排石块，每块上刻着一个数字。他问：&quot;从这排石块中，找出最长的一段——这段里每个数字都不重复。&quot;李少白想从头遍历每一段，但石块有十万块。赵晴儿教他：&quot;用两个指针，一左一右，框住一段区间。右指针往右扩展，遇到重复数字就收缩左指针，直到区间内没有重复。每一步都更新最大长度。&quot;&quot;两个指针各走各的，总共只走一遍——O(n)。&quot;给定一个长度为 n 的整数序列，找出最长的不含重复数字的连续子序列，输出其长度。</p>",
           "inputDescription": "<p>第一行一个整数n。第二行n个整数（1≤n≤100000）。</p>",
           "outputDescription": "<p>一行，最长连续不重复子序列的长度。</p>",
-          "hint": "<p>滑动窗口：右指针扩展，用哈希表判断是否重复，重复则左指针收缩。O(n)。</p><p><a href=\"https://www.acwing.com/problem/content/801/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 799 | JD116",
-          "samples": [
-            {
-              "input": "5\n1 2 2 3 5",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>滑动窗口：右指针扩展，用哈希表判断是否重复，重复则左指针收缩。O(n)。<a href=\"https://www.acwing.com/problem/content/801/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\116.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n;\r\n    int a[100001];\r\n    vector<int>b;\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    vector<int>v;\r\n    int t=0;\r\n    for(int i=0;i<n;i++)//1 2 4 2 5 6 7是：5\r\n    {\r\n\r\n        if(find(v.begin(),v.end(),a[i])==v.end()){\r\n            t++;\r\n            v.push_back(a[i]);\r\n        }\r\n        else {\r\n            b.push_back(t);\r\n            t=0;\r\n            v.erase(v.begin(), find(v.begin(),v.end(),a[i])+1); \r\n            v.push_back(a[i]);\r\n            t=v.size();\r\n        }\r\n    }b.push_back(t);\r\n    sort(b.begin(),b.end());\r\n    cout<<b.back();\r\n}"
+          }
         },
         {
           "id": "JD117",
@@ -4287,18 +3760,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD117/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>藏剑阁深处，梁嘉峰领着李少白走进一间密室。墙上挂满了剑，每把剑柄上都刻着一个数字。</p><p>&quot;这些剑，成双成对，唯有一把是独一无二的。&quot;梁嘉峰说，&quot;你能在 O(1) 额外空间内找出它吗？&quot;</p><p>李少白想用哈希表记录每把剑出现的次数。赵晴儿摇头：&quot;空间不够。想想异或的性质——a ^ a = 0，a ^ 0 = a。成对的剑异或后消失，留下的就是独剑。&quot;</p><p>给定 n 个整数，其中只有一个数出现了一次，其余数都恰好出现了两次。找出那个只出现一次的数。要求时间复杂度 O(n)，空间复杂度 O(1)。</p>",
+          "description": "<p>藏剑阁深处，梁嘉峰领着李少白走进一间密室。墙上挂满了剑，每把剑柄上都刻着一个数字。&quot;这些剑，成双成对，唯有一把是独一无二的。&quot;梁嘉峰说，&quot;你能在 O(1) 额外空间内找出它吗？&quot;李少白想用哈希表记录每把剑出现的次数。赵晴儿摇头：&quot;空间不够。想想异或的性质——a ^ a = 0，a ^ 0 = a。成对的剑异或后消失，留下的就是独剑。&quot;给定 n 个整数，其中只有一个数出现了一次，其余数都恰好出现了两次。找出那个只出现一次的数。要求时间复杂度 O(n)，空间复杂度 O(1)。</p>",
           "inputDescription": "<p>第一行一个整数 n（n 为奇数，1 ≤ n ≤ 100000）。第二行 n 个整数，每个数在 int 范围内。</p>",
           "outputDescription": "<p>一行，只出现一次的那个数。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/92/\" target=\"_blank\">原题链接</a></p><p>异或性质：a^a=0, a^0=a。所有数异或，成对消失，独者现身。O(n) 时间，O(1) 空间。</p>",
-          "source": "AcWing 90",
-          "samples": [
-            {
-              "input": "5\n1 2 3 2 1",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/92/\" target=\"_blank\">原题链接</a>异或性质：a^a=0, a^0=a。所有数异或，成对消失，独者现身。O(n) 时间，O(1) 空间。</p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\117.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    int a[100001];\r\n    vector<int>b;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n        if(find(b.begin(),b.end(),a[i])==b.end())b.push_back(a[i]);\r\n        else b.erase(find(b.begin(),b.end(),a[i]));\r\n    }\r\n\r\n    for(int i=0;i<b.size();i++)\r\n        if(b[i]!=0){\r\n            cout<<b[i];break;\r\n        }\r\n}"
+          }
         },
         {
           "id": "JD118",
@@ -4306,18 +3778,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD118/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>剑道宗大殿前，十八般兵器陈列两旁。梁嘉峰指着 n 把剑说：&quot;每一把，你可以选择施展（选）或收起（不选）。列出所有可能的剑招组合。&quot;</p><p>李少白问：&quot;n 把剑有 2^n 种组合，怎么枚举？&quot;赵晴儿递来一张纸：&quot;递归。对于每把剑，先试&#039;选&#039;，再试&#039;不选&#039;。走到尽头就输出当前组合。&quot;</p><p>给定 n，输出 1~n 的所有非空子集。同一行内的数必须升序排列，相邻两个数之间用空格隔开。各行（不同方案）之间的顺序任意。</p>",
+          "description": "<p>剑道宗大殿前，十八般兵器陈列两旁。梁嘉峰指着 n 把剑说：&quot;每一把，你可以选择施展（选）或收起（不选）。列出所有可能的剑招组合。&quot;李少白问：&quot;n 把剑有 2^n 种组合，怎么枚举？&quot;赵晴儿递来一张纸：&quot;递归。对于每把剑，先试&#039;选&#039;，再试&#039;不选&#039;。走到尽头就输出当前组合。&quot;给定 n，输出 1~n 的所有非空子集。同一行内的数必须升序排列，相邻两个数之间用空格隔开。各行（不同方案）之间的顺序任意。</p>",
           "inputDescription": "<p>一行一个整数 n（1 ≤ n ≤ 16）。</p>",
           "outputDescription": "<p>每行一个子集，子集内数字升序排列，子集之间按字典序排列。空集不输出。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/94/\" target=\"_blank\">原题链接</a></p><p>递归枚举：对每个位置选或不选，到达边界输出。2^n 种组合。</p>",
-          "source": "AcWing 92",
-          "samples": [
-            {
-              "input": "3",
-              "output": "1\n1 2\n1 2 3\n1 3\n2\n2 3\n3"
-            }
-          ],
-          "solution": null
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/94/\" target=\"_blank\">原题链接</a>递归枚举：对每个位置选或不选，到达边界输出。2^n 种组合。</p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\118.cpp",
+            "language": "cpp",
+            "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;if(!(cin>>n))return 0;\r\nfor(int mask=1;mask<(1<<n);mask++){bool first=true;for(int i=0;i<n;i++)if(mask>>i&1){if(!first)cout<<' ';first=false;cout<<i+1;}cout<<\"\\n\";}}\r\n"
+          }
         },
         {
           "id": "JD119",
@@ -4325,18 +3796,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD119/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>练武场上，梁嘉峰递给李少白 n 把剑，说：&quot;从中选出 k 把，列出所有选法。&quot;</p><p>李少白问：&quot;这和子集枚举有什么区别？&quot;赵晴儿说：&quot;子集枚举是选任意数量，组合枚举是恰好选 k 个。多了一个约束——必须选满 k 个才能输出。但递归框架类似，只是多了一个剪枝。&quot;</p><p>给定 n 和 k，按字典序输出从 1~n 中选 k 个数的所有组合。每个组合内数字升序排列。</p>",
+          "description": "<p>练武场上，梁嘉峰递给李少白 n 把剑，说：&quot;从中选出 k 把，列出所有选法。&quot;李少白问：&quot;这和子集枚举有什么区别？&quot;赵晴儿说：&quot;子集枚举是选任意数量，组合枚举是恰好选 k 个。多了一个约束——必须选满 k 个才能输出。但递归框架类似，只是多了一个剪枝。&quot;给定 n 和 k，按字典序输出从 1~n 中选 k 个数的所有组合。每个组合内数字升序排列。</p>",
           "inputDescription": "<p>一行两个整数 n 和 k（1 ≤ k ≤ n ≤ 16）。</p>",
           "outputDescription": "<p>每行 k 个数（升序），组合之间按字典序排列。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/95/\" target=\"_blank\">原题链接</a></p><p>递归枚举，每次从上一个数+1开始。剪枝：剩余数字不够则提前返回。C(n,k) 种组合。</p>",
-          "source": "AcWing 93",
-          "samples": [
-            {
-              "input": "4 2",
-              "output": "1 2\n1 3\n1 4\n2 3\n2 4\n3 4"
-            }
-          ],
-          "solution": null
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/95/\" target=\"_blank\">原题链接</a>递归枚举，每次从上一个数+1开始。剪枝：剩余数字不够则提前返回。C(n,k) 种组合。</p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\119.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m;\r\nconst int N=100;\r\nint arr[N];\r\nbool st[N];\r\nvoid dfs(int u,int start)//多一个start方便判断\r\n{\r\n    if(u>m)\r\n    {\r\n        for(int i=1;i<=m;i++)\r\n        {\r\n            if(i!=1)cout<<\" \";\r\n            cout<<arr[i];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else {\r\n        for(int i=start;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1,i+1);\r\n                arr[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    dfs(1,1);\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD120",
@@ -4344,18 +3814,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD120/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>江湖之中，n 位高手各立门派。有人传言：&quot;甲和乙是同门师兄弟。&quot;又有人说：&quot;丙能打败丁。&quot;</p><p>梁嘉峰说：&quot;江湖中，同类不吃同类。但吃的关系是传递的——甲吃乙、乙吃丙，则甲也吃丙。&quot;</p><p>赵晴儿教他：&quot;用带权并查集。每个节点到根的距离 mod 3 表示关系：距离 0 是同类，距离 1 能吃根，距离 2 被根吃。&quot;</p><p>给定 n 个人和 m 条关系声明，判断有多少条是假的（与前面的真话矛盾）。</p>",
+          "description": "<p>江湖之中，n 位高手各立门派。有人传言：&quot;甲和乙是同门师兄弟。&quot;又有人说：&quot;丙能打败丁。&quot;梁嘉峰说：&quot;江湖中，同类不吃同类。但吃的关系是传递的——甲吃乙、乙吃丙，则甲也吃丙。&quot;赵晴儿教他：&quot;用带权并查集。每个节点到根的距离 mod 3 表示关系：距离 0 是同类，距离 1 能吃根，距离 2 被根吃。&quot;给定 n 个人和 m 条关系声明，判断有多少条是假的（与前面的真话矛盾）。</p>",
           "inputDescription": "<p>第一行两个整数 n 和 m（1 ≤ n ≤ 50000, 1 ≤ m ≤ 100000）。接下来 m 行，每行三个整数 d x y。d=1 表示同类，d=2 表示 x 吃 y。</p>",
           "outputDescription": "<p>一行，假话的数量。</p>",
-          "hint": "<p><a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a></p><p>带权并查集。节点到根距离 mod 3：0=同类，1=吃根，2=被根吃。路径压缩时更新距离。</p>",
-          "source": "AcWing 240",
-          "samples": [
-            {
-              "input": "100 7\n1 101 1\n2 1 2\n2 2 3\n2 3 3\n1 1 3\n2 3 1\n1 5 5",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p><a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a>带权并查集。节点到根距离 mod 3：0=同类，1=吃根，2=被根吃。路径压缩时更新距离。</p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\120.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint parent[50005], dist[50005];\r\n\r\nint find(int x)\r\n{\r\n    if(parent[x] == x) return x;\r\n    int t = parent[x];\r\n    int root = find(t);\r\n    dist[x] = (dist[x] + dist[t]) % 3;\r\n    parent[x] = root;\r\n    return root;\r\n}\r\n\r\nint main()\r\n{\r\n    int n, m;\r\n    cin >> n >> m;\r\n    \r\n    for(int i = 1; i <= n; i++)\r\n    {\r\n        parent[i] = i;\r\n        dist[i] = 0;\r\n    }\r\n    \r\n    int ans = 0;\r\n    \r\n    for(int i = 0; i < m; i++)\r\n    {\r\n        int d, x, y;\r\n        cin >> d >> x >> y;\r\n        \r\n        if(x > n || y > n)\r\n        {\r\n            ans++;\r\n            continue;\r\n        }\r\n        \r\n        int rx = find(x);\r\n        int ry = find(y);\r\n        \r\n        if(d == 1)\r\n        {\r\n            if(rx == ry)\r\n            {\r\n                if(((dist[x] - dist[y]) % 3 + 3) % 3 != 0) ans++;\r\n            }\r\n            else\r\n            {\r\n                parent[rx] = ry;\r\n                dist[rx] = ((dist[y] - dist[x]) % 3 + 3) % 3;\r\n            }\r\n        }\r\n        else\r\n        {\r\n            if(rx == ry)\r\n            {\r\n                if(((dist[x] - dist[y]) % 3 + 3) % 3 != 1) ans++;\r\n            }\r\n            else\r\n            {\r\n                parent[rx] = ry;\r\n                dist[rx] = ((dist[y] - dist[x] + 1) % 3 + 3) % 3;\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD121",
@@ -4363,18 +3832,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD121/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>蓄势阁中，赵晴儿盘膝而坐，面前摆着一排石块，每块上刻着一个数字。</p><p>&quot;如果我问你第3块到第7块的总和，你怎么算？&quot;赵晴儿问。</p><p>李少白：&quot;从第3块加到第7块，五次加法。&quot;</p><p>&quot;如果问一千次呢？&quot;赵晴儿摇头，&quot;每次从头算太浪费了。提前算好从第1块到每一块的累积和——第1块到第7块的和减去第1块到第2块的和，就是第3块到第7块的和。一次减法就够了。&quot;</p><p>&quot;这就是前缀和——蓄势于前，取用于后。&quot;</p><p>给定一个长度为 n 的整数序列和 m 个查询，每个查询求 [l, r] 的区间和。</p>",
+          "description": "<p>蓄势阁中，赵晴儿盘膝而坐，面前摆着一排石块，每块上刻着一个数字。&quot;如果我问你第3块到第7块的总和，你怎么算？&quot;赵晴儿问。李少白：&quot;从第3块加到第7块，五次加法。&quot;&quot;如果问一千次呢？&quot;赵晴儿摇头，&quot;每次从头算太浪费了。提前算好从第1块到每一块的累积和——第1块到第7块的和减去第1块到第2块的和，就是第3块到第7块的和。一次减法就够了。&quot;&quot;这就是前缀和——蓄势于前，取用于后。&quot;给定一个长度为 n 的整数序列和 m 个查询，每个查询求 [l, r] 的区间和。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来n行每行两个整数x和c。接下来m行每行两个整数l和r。</p>",
           "outputDescription": "<p>m行，每行一个整数。</p>",
-          "hint": "<p>前缀和：s[i] = a[1] + ... + a[i]。区间和 = s[r] - s[l-1]。</p><p><a href=\"https://www.acwing.com/problem/content/797/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 795 | JD121",
-          "samples": [
-            {
-              "input": "5 3\n2 1 3 6 4\n1 3\n2 4\n1 5",
-              "output": "6\n10\n16"
-            }
-          ],
-          "solution": null
+          "hint": "<p>前缀和：s[i] = a[1] + ... + a[i]。区间和 = s[r] - s[l-1]。<a href=\"https://www.acwing.com/problem/content/797/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\121.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m,ss=0;\r\nint l,r;\r\nint a[100001],s[100001];\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++){\r\n        cin>>a[i];\r\n        ss+=a[i];\r\n        s[i]=ss;\r\n    }\r\n    while(cin>>l&&cin>>r)\r\n    {\r\n        cout<<s[r]-s[l-1];\r\n        cout<<endl;\r\n    }\r\n\r\n}\r\n"
+          }
         },
         {
           "id": "JD122",
@@ -4382,18 +3850,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD122/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画了一个 n 行 m 列的数字矩阵。&quot;如果我问你左上角 (x1,y1) 到右下角 (x2,y2) 这个子矩阵里所有数的和，你怎么算？&quot;</p><p>李少白想逐行累加。赵晴儿摇头：&quot;太慢了。和一维前缀和一样的思路——提前算好从 (1,1) 到每个位置的累积和。查询时用容斥原理：大矩形减去左边和上边的多余部分，加上左上角多减的部分。&quot;</p><p>&quot;蓄势蓄到二维，一击覆盖任意子矩阵。&quot;</p><p>给定一个 n×m 的整数矩阵和 q 个查询，每个查询求子矩阵的和。</p>",
+          "description": "<p>赵晴儿在沙盘上画了一个 n 行 m 列的数字矩阵。&quot;如果我问你左上角 (x1,y1) 到右下角 (x2,y2) 这个子矩阵里所有数的和，你怎么算？&quot;李少白想逐行累加。赵晴儿摇头：&quot;太慢了。和一维前缀和一样的思路——提前算好从 (1,1) 到每个位置的累积和。查询时用容斥原理：大矩形减去左边和上边的多余部分，加上左上角多减的部分。&quot;&quot;蓄势蓄到二维，一击覆盖任意子矩阵。&quot;给定一个 n×m 的整数矩阵和 q 个查询，每个查询求子矩阵的和。</p>",
           "inputDescription": "<p>第一行一个整数n（1≤n≤100000）。接下来n行每行两个整数l和r。</p>",
           "outputDescription": "<p>q行，每行一个整数，表示每次查询的子矩阵和。</p>",
-          "hint": "<p>二维前缀和+容斥。子矩阵和 = s[x2][y2] - s[x1-1][y2] - s[x2][y1-1] + s[x1-1][y1-1]。</p><p><a href=\"https://www.acwing.com/problem/content/798/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 796 | JD122",
-          "samples": [
-            {
-              "input": "3 4 2\n1 3 4 5\n2 6 9 4\n1 4 7 5\n1 1 2 2\n2 1 3 3",
-              "output": "18\n43"
-            }
-          ],
-          "solution": null
+          "hint": "<p>二维前缀和+容斥。子矩阵和 = s[x2][y2] - s[x1-1][y2] - s[x2][y1-1] + s[x1-1][y1-1]。<a href=\"https://www.acwing.com/problem/content/798/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\122.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n//测试样例有问题\r\nint main()\r\n{\r\n    int n,m,q;\r\n    int x1,y1,x2,y2;\r\n    int a[1001][1001],s[1001][1001],ss=0;\r\n    cin>>n>>m>>q;\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            s[i][j] = s[i-1][j] + s[i][j-1] - s[i-1][j-1] + a[i][j];\r\n            //ss+=a[i][j];\r\n            //s[i][j]=ss;\r\n        }\r\n    while(q--)\r\n    {\r\n        cin>>x1>>y1>>x2>>y2;\r\n        cout<<s[x2][y2]-s[x1-1][y2]-s[x2][y1-1]+s[x1-1][y1-1]<<endl;\r\n    }\r\n\r\n\r\n\r\n\r\n}"
+          }
         },
         {
           "id": "JD123",
@@ -4401,18 +3868,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD123/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着一排石块：&quot;我要把第3块到第7块每块都加上5。如果一块块改，太慢了。&quot;</p><p>梁嘉峰说：&quot;差分——前缀和的逆运算。你在第3块的位置加5，在第8块的位置减5。最后对整排求一次前缀和，第3到第7块就都加了5，其余不变。&quot;</p><p>&quot;就像往水面扔两块石头，&quot;李少白恍然大悟，&quot;波纹叠加后就是最终结果。&quot;</p><p>给定一个长度为 n 的整数序列和 m 个操作，每个操作将 [l, r] 的每个数加 c。输出所有操作后的序列。</p>",
+          "description": "<p>赵晴儿指着一排石块：&quot;我要把第3块到第7块每块都加上5。如果一块块改，太慢了。&quot;梁嘉峰说：&quot;差分——前缀和的逆运算。你在第3块的位置加5，在第8块的位置减5。最后对整排求一次前缀和，第3到第7块就都加了5，其余不变。&quot;&quot;就像往水面扔两块石头，&quot;李少白恍然大悟，&quot;波纹叠加后就是最终结果。&quot;给定一个长度为 n 的整数序列和 m 个操作，每个操作将 [l, r] 的每个数加 c。输出所有操作后的序列。</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行n个整数。接下来m行每行两个整数l和r。</p>",
           "outputDescription": "<p>一行，n个整数，空格隔开，表示经过m次操作后的最终序列。</p>",
-          "hint": "<p>差分：b[l] += c, b[r+1] -= c。所有操作完成后，对 b 求前缀和得到最终序列。</p><p><a href=\"https://www.acwing.com/problem/content/799/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 797 | JD123",
-          "samples": [
-            {
-              "input": "5 3\n1 2 3 4 5\n1 3 2\n2 4 1\n3 5 3",
-              "output": "3 5 8 8 8"
-            }
-          ],
-          "solution": null
+          "hint": "<p>差分：b[l] += c, b[r+1] -= c。所有操作完成后，对 b 求前缀和得到最终序列。<a href=\"https://www.acwing.com/problem/content/799/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\123.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n// 测试样例有误\r\nint n,m,ss=0,num;\r\nint l,r;\r\nint a[100001],s[100001];\r\nint main()\r\n{\r\n    cin>>n>>m;//差分\r\n    for(int i=1;i<=n;i++){\r\n        cin>>a[i];\r\n        s[i]=a[i]-a[i-1];\r\n    }\r\n    while(m--)\r\n    {\r\n        cin>>l>>r>>num;\r\n        s[l]+=num,s[r+1]-=num;\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        a[i]=a[i-1]+s[i];\r\n        cout<<a[i]<<\" \";\r\n    }\r\n    cout<<endl;\r\n    return 0;\r\n\r\n}\r\n"
+          }
         },
         {
           "id": "JD124",
@@ -4420,18 +3886,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD124/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画了一个 n 行 m 列的矩阵：&quot;我要把左上角 (x1,y1) 到右下角 (x2,y2) 这个子矩阵里每个数都加上 c。&quot;</p><p>梁嘉峰说：&quot;和一维差分一样的思路——在差分矩阵的四个角加减，最后对整个矩阵求一次二维前缀和，就还原出最终结果了。&quot;</p><p>&quot;蓄势蓄到二维，差分也能覆盖任意子矩阵。&quot;</p><p>给定一个 n×m 的整数矩阵和 q 个操作，每个操作将子矩阵的每个元素加 c。输出所有操作后的矩阵。</p>",
+          "description": "<p>赵晴儿在沙盘上画了一个 n 行 m 列的矩阵：&quot;我要把左上角 (x1,y1) 到右下角 (x2,y2) 这个子矩阵里每个数都加上 c。&quot;梁嘉峰说：&quot;和一维差分一样的思路——在差分矩阵的四个角加减，最后对整个矩阵求一次二维前缀和，就还原出最终结果了。&quot;&quot;蓄势蓄到二维，差分也能覆盖任意子矩阵。&quot;给定一个 n×m 的整数矩阵和 q 个操作，每个操作将子矩阵的每个元素加 c。输出所有操作后的矩阵。</p>",
           "inputDescription": "<p>第一行三个整数n、m和q。接下来n行每行m个整数。接下来q行每行四个整数x1、y1、x2、y2。</p>",
           "outputDescription": "<p>n行，每行m个整数，表示操作后的矩阵。</p>",
-          "hint": "<p>二维差分：在四个角加减，最后求二维前缀和。</p><p><a href=\"https://www.acwing.com/problem/content/800/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 798 | JD124",
-          "samples": [
-            {
-              "input": "3 4 2\n1 2 3 4\n5 6 7 8\n9 10 11 12\n1 1 2 2 1\n2 2 3 3 2",
-              "output": "2 3 3 4\n6 10 10 8\n9 12 14 12"
-            }
-          ],
-          "solution": null
+          "hint": "<p>二维差分：在四个角加减，最后求二维前缀和。<a href=\"https://www.acwing.com/problem/content/800/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\124.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\nusing namespace std;\r\n//题目出错\r\nint main()\r\n{\r\n    int n,m,q;\r\n    int a[1001][1001]={0},s[1001][1001]={0},sum=0;\r\n    cin>>n>>m>>q;\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            \r\n        }\r\n    }\r\n    int x1,y1,x2,y2,c;\r\n    while(q--)\r\n    {\r\n        cin>>x1>>y1>>x2>>y2>>c;\r\n        s[x1][y1] += c;\r\n        if(y2 + 1 <= m) s[x1][y2 + 1] -= c;\r\n        if(x2 + 1 <= n) s[x2 + 1][y1] -= c;\r\n        if(x2 + 1 <= n && y2 + 1 <= m) s[x2 + 1][y2 + 1] += c;\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n           s[i][j] += s[i-1][j] + s[i][j-1] - s[i-1][j-1];\r\n            a[i][j] += s[i][j];\r\n            cout<<a[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n}"
+          }
         },
         {
           "id": "JD125",
@@ -4439,18 +3904,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD125/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着一条无限长的数轴：&quot;坐标从负无穷到正无穷，但真正有值的位置只有几个。如果开一个那么大的数组，太浪费了。&quot;</p><p>&quot;所以要把这些稀疏的大坐标映射到连续的小下标上——这就是离散化。&quot;梁嘉峰接话，&quot;映射之后再用前缀和，就能 O(1) 回答区间求和的查询。&quot;</p><p>&quot;先聚力于有用之处，再一击命中。&quot;</p><p>假定有一个无限长的数轴，初始每个坐标上都是0。先进行 n 次操作，每次将位置 x 上的数加 c。然后进行 m 次查询，每次求区间 [l, r] 的和。</p>",
+          "description": "<p>赵晴儿指着一条无限长的数轴：&quot;坐标从负无穷到正无穷，但真正有值的位置只有几个。如果开一个那么大的数组，太浪费了。&quot;&quot;所以要把这些稀疏的大坐标映射到连续的小下标上——这就是离散化。&quot;梁嘉峰接话，&quot;映射之后再用前缀和，就能 O(1) 回答区间求和的查询。&quot;&quot;先聚力于有用之处，再一击命中。&quot;假定有一个无限长的数轴，初始每个坐标上都是0。先进行 n 次操作，每次将位置 x 上的数加 c。然后进行 m 次查询，每次求区间 [l, r] 的和。</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行n个整数。接下来m行每行三个整数l、r和c。</p>",
           "outputDescription": "<p>m行，每行一个整数，表示每次查询的结果。</p>",
-          "hint": "<p>离散化：排序去重后映射到连续下标。用前缀和回答区间查询。</p><p><a href=\"https://www.acwing.com/problem/content/804/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 802 | JD125",
-          "samples": [
-            {
-              "input": "3 3\n1 2\n3 6\n7 5\n1 3\n4 6\n7 8",
-              "output": "8\n0\n5"
-            }
-          ],
-          "solution": null
+          "hint": "<p>离散化：排序去重后映射到连续下标。用前缀和回答区间查询。<a href=\"https://www.acwing.com/problem/content/804/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\125.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n, m;\r\n    cin >> n >> m;\r\n    \r\n    vector<pair<int, int>> add;  // 存储加操作 (位置, 加的值)\r\n    vector<pair<int, int>> query; // 存储查询 (l, r)\r\n    vector<int> alls;            // 所有需要离散化的坐标\r\n    \r\n    // 读入 n 次加操作\r\n    for(int i = 0; i < n; i++)\r\n    {\r\n        int x, c;\r\n        cin >> x >> c;\r\n        add.push_back({x, c});\r\n        alls.push_back(x);\r\n    }\r\n    \r\n    // 读入 m 次查询\r\n    for(int i = 0; i < m; i++)\r\n    {\r\n        int l, r;\r\n        cin >> l >> r;\r\n        query.push_back({l, r});\r\n        alls.push_back(l);\r\n        alls.push_back(r);\r\n    }\r\n    \r\n    // 排序去重\r\n    sort(alls.begin(), alls.end());\r\n    alls.erase(unique(alls.begin(), alls.end()), alls.end());\r\n    \r\n    // 离散化后的数组\r\n    vector<int> a(alls.size() + 1, 0);\r\n    \r\n    // 处理加操作\r\n    for(auto p : add)\r\n    {\r\n        int x = p.first;\r\n        int c = p.second;\r\n        int idx = lower_bound(alls.begin(), alls.end(), x) - alls.begin() + 1;\r\n        a[idx] += c;\r\n    }\r\n    \r\n    // 计算前缀和\r\n    vector<long long> prefix(alls.size() + 1, 0);\r\n    for(int i = 1; i <= alls.size(); i++)\r\n    {\r\n        prefix[i] = prefix[i-1] + a[i];\r\n    }\r\n    \r\n    // 处理查询\r\n    for(auto q : query)\r\n    {\r\n        int l = q.first;\r\n        int r = q.second;\r\n        int left = lower_bound(alls.begin(), alls.end(), l) - alls.begin() + 1;\r\n        int right = lower_bound(alls.begin(), alls.end(), r) - alls.begin() + 1;\r\n        cout << prefix[right] - prefix[left - 1] << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD126",
@@ -4458,18 +3922,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD126/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在地上画了一堆区间，有些重叠，有些相邻。&quot;把这些区间合并——有交集的归为一组，最后数一数有几组。&quot;</p><p>赵晴儿蹲下来看了一会儿：&quot;先按左端点从小到大排。然后从左往右扫——如果当前区间的左端点在前一个区间内，说明它们重叠，合并；否则新开一组。&quot;</p><p>&quot;合围之势，聚散有序。&quot;</p><p>给定 n 个区间，合并所有有交集的区间（端点相交也算），输出合并后的区间个数。</p>",
-          "inputDescription": "<p>第一行包含整数n，表示区间个数。</p><p>接下来n行，每行包含两个整数l和r，表示一个区间的左右端点。</p>",
+          "description": "<p>梁嘉峰在地上画了一堆区间，有些重叠，有些相邻。&quot;把这些区间合并——有交集的归为一组，最后数一数有几组。&quot;赵晴儿蹲下来看了一会儿：&quot;先按左端点从小到大排。然后从左往右扫——如果当前区间的左端点在前一个区间内，说明它们重叠，合并；否则新开一组。&quot;&quot;合围之势，聚散有序。&quot;给定 n 个区间，合并所有有交集的区间（端点相交也算），输出合并后的区间个数。</p>",
+          "inputDescription": "<p>第一行包含整数n，表示区间个数。接下来n行，每行包含两个整数l和r，表示一个区间的左右端点。</p>",
           "outputDescription": "<p>一个整数，表示合并后的区间个数。</p>",
-          "hint": "<p>按左端点排序，遍历合并：当前区间左端点 ≤ 前一个右端点则合并，否则新开。</p><p><a href=\"https://www.acwing.com/problem/content/805/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 803 | JD126",
-          "samples": [
-            {
-              "input": "5\n1 2\n2 4\n5 6\n7 8\n7 10",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>按左端点排序，遍历合并：当前区间左端点 ≤ 前一个右端点则合并，否则新开。<a href=\"https://www.acwing.com/problem/content/805/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\126.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n//贪心算法\r\nstruct Node \r\n{ \r\n    int l, r; \r\n};\r\n\r\nbool cmp(Node a, Node b) \r\n{ \r\n    return a.l < b.l; \r\n}\r\n\r\nint main() {\r\n    int n;\r\n    cin >> n;\r\n    if (n == 0) { cout << 0; return 0; }\r\n    Node a[5000];\r\n    for (int i = 0; i < n; i++) cin >> a[i].l >> a[i].r;\r\n    sort(a, a + n, cmp);\r\n    int cnt = 1, curR = a[0].r;\r\n    for (int i = 1; i < n; i++) {\r\n        if (a[i].l <= curR) curR = max(curR, a[i].r);\r\n        else { cnt++; curR = a[i].r; }\r\n    }\r\n    cout << cnt;\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD127",
@@ -4477,18 +3940,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD127/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在数轴上标了 N 个区间，每个区间表示一个敌人的巡逻范围。&quot;用最少的暗器，让每个敌人的巡逻范围里至少中一枚。&quot;</p><p>李少白想每个区间放一枚。赵晴儿摇头：&quot;贪心——按右端点从小到大排。第一枚暗器射在第一个区间的右端点，这样所有包含这个点的区间都中了。然后跳过这些区间，再射下一批。&quot;</p><p>&quot;选右端点是因为它最&#039;靠左&#039;——能覆盖尽可能多的后续区间。&quot;</p><p>给定 N 个闭区间，选择尽量少的点，使得每个区间内至少有一个点。</p>",
+          "description": "<p>赵晴儿在数轴上标了 N 个区间，每个区间表示一个敌人的巡逻范围。&quot;用最少的暗器，让每个敌人的巡逻范围里至少中一枚。&quot;李少白想每个区间放一枚。赵晴儿摇头：&quot;贪心——按右端点从小到大排。第一枚暗器射在第一个区间的右端点，这样所有包含这个点的区间都中了。然后跳过这些区间，再射下一批。&quot;&quot;选右端点是因为它最&#039;靠左&#039;——能覆盖尽可能多的后续区间。&quot;给定 N 个闭区间，选择尽量少的点，使得每个区间内至少有一个点。</p>",
           "inputDescription": "<p>第一行一个整数N（1≤N≤100000）。接下来N行每行两个整数a和b。</p>",
           "outputDescription": "<p>一行，最少需要的点数。</p>",
-          "hint": "<p>按右端点排序，每次选当前区间的右端点，跳过所有包含该点的区间。</p><p><a href=\"https://www.acwing.com/problem/content/907/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 905 | JD127",
-          "samples": [
-            {
-              "input": "3\n1 3\n2 4\n3 5",
-              "output": "1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>按右端点排序，每次选当前区间的右端点，跳过所有包含该点的区间。<a href=\"https://www.acwing.com/problem/content/907/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\127.cpp",
+            "language": "cpp",
+            "code": "\r\n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef pair<int,int> PII;\r\nint main(){\r\n    ios::sync_with_stdio(false);\r\n    cin.tie(nullptr);\r\n    int n; if(!(cin>>n)) return 0;\r\n    vector<PII> segs;\r\n    for(int i=0;i<n;i++){\r\n        int l,r; cin>>l>>r;\r\n        segs.push_back({r,l});\r\n    }\r\n    sort(segs.begin(),segs.end());\r\n    int res=0, ed=-2e9;\r\n    for(auto seg:segs){\r\n        if(seg.second>ed){\r\n            res++;\r\n            ed=seg.first;\r\n        }\r\n    }\r\n    cout<<res<<\"\\n\";\r\n}\r\n\r\n"
+          }
         },
         {
           "id": "JD128",
@@ -4496,18 +3958,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD128/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>果园里有 N 堆果子，每堆重量不同。赵晴儿要把它们合并成一堆，每次只能合并两堆，消耗的能量等于两堆重量之和。</p><p>&quot;如果先合并重的，后面每次合并都要带着这堆重的走，代价越来越大。&quot;赵晴儿说，&quot;所以反过来——每次选最轻的两堆合并，这样每一步的代价都最小。&quot;</p><p>李少白想到用小根堆：&quot;每次取出堆顶（最轻的两堆），合并后放回去。总代价最小。&quot;</p><p>这就是哈夫曼树的思想。</p><p>有 N 堆果子，每次合并两堆（代价为两堆之和），求合并为一堆的最小总代价。</p>",
+          "description": "<p>果园里有 N 堆果子，每堆重量不同。赵晴儿要把它们合并成一堆，每次只能合并两堆，消耗的能量等于两堆重量之和。&quot;如果先合并重的，后面每次合并都要带着这堆重的走，代价越来越大。&quot;赵晴儿说，&quot;所以反过来——每次选最轻的两堆合并，这样每一步的代价都最小。&quot;李少白想到用小根堆：&quot;每次取出堆顶（最轻的两堆），合并后放回去。总代价最小。&quot;这就是哈夫曼树的思想。有 N 堆果子，每次合并两堆（代价为两堆之和），求合并为一堆的最小总代价。</p>",
           "inputDescription": "<p>第一行一个整数N（1≤N≤10000）。第二行N个整数，表示每堆的重量。</p>",
           "outputDescription": "<p>一行，最小总代价。</p>",
-          "hint": "<p>小根堆：每次取最小的两个合并，结果放回堆中。O(nlogn)。</p><p><a href=\"https://www.acwing.com/problem/content/150/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 148 | JD128",
-          "samples": [
-            {
-              "input": "3\n1 2 9",
-              "output": "15"
-            }
-          ],
-          "solution": null
+          "hint": "<p>小根堆：每次取最小的两个合并，结果放回堆中。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/150/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\128.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int N,x,temp=0;\r\n    vector<int>a;//容器用于存放数据\r\n    cin>>N;\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cin>>x;\r\n        a.push_back(x);\r\n    }\r\n    while(N!=1)//每次排序然后最小的两个元素相加代价最小\r\n    {\r\n        sort(a.begin(),a.end());\r\n        a[1]=a[0]+a[1];\r\n        temp+=a[1];\r\n        a.erase(a.begin());//相加完删除第一项\r\n        N--;\r\n\r\n    }\r\n    cout<<temp<<endl;\r\n\r\n}"
+          }
         },
         {
           "id": "JD129",
@@ -4515,18 +3976,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD129/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>数轴上有 N 个商铺，赵晴儿要建一个货仓，让所有商铺到货仓的货物运输距离之和最小。</p><p>&quot;选在哪里？&quot;李少白问。</p><p>&quot;排序后取中位数。&quot;赵晴儿说，&quot;数学可以证明：中位数使绝对偏差之和最小。如果选在中位数左边，右边的商铺距离全部变远；选在中位数右边，左边的商铺距离全部变远。只有中位数是平衡点。&quot;</p><p>给定 N 个点的坐标，求一个位置使所有点到该位置的绝对距离之和最小，输出最小距离之和。</p>",
+          "description": "<p>数轴上有 N 个商铺，赵晴儿要建一个货仓，让所有商铺到货仓的货物运输距离之和最小。&quot;选在哪里？&quot;李少白问。&quot;排序后取中位数。&quot;赵晴儿说，&quot;数学可以证明：中位数使绝对偏差之和最小。如果选在中位数左边，右边的商铺距离全部变远；选在中位数右边，左边的商铺距离全部变远。只有中位数是平衡点。&quot;给定 N 个点的坐标，求一个位置使所有点到该位置的绝对距离之和最小，输出最小距离之和。</p>",
           "inputDescription": "<p>第一行一个整数N（1≤N≤100000）。第二行N个整数，表示各点坐标。</p>",
           "outputDescription": "<p>一行，最小距离之和。</p>",
-          "hint": "<p>排序后取中位数（下标 n/2），计算所有点到中位数的距离之和。</p><p><a href=\"https://www.acwing.com/problem/content/106/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 104 | JD129",
-          "samples": [
-            {
-              "input": "5\n1 2 3 4 5",
-              "output": "6"
-            }
-          ],
-          "solution": null
+          "hint": "<p>排序后取中位数（下标 n/2），计算所有点到中位数的距离之和。<a href=\"https://www.acwing.com/problem/content/106/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\129.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n//排序后取中位数（下标 n/2），计算所有点到中位数的距离之和\r\nint main()\r\n{\r\n    int a[100001],l=0;//l用于计数\r\n    int N,mid;\r\n    cin>>N;\r\n    for(int i=0;i<N;i++)cin>>a[i];\r\n    sort(a,a+N);\r\n    mid=N/2;//mid为中位数\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        l+=abs(a[mid]-a[i]);//距离要取绝对值\r\n    }\r\n    cout<<l<<endl;\r\n\r\n\r\n}"
+          }
         },
         {
           "id": "JD130",
@@ -4534,18 +3994,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD130/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>兵器阁的深处，梁嘉峰指着一条铁链：&quot;这条链上每颗珠子存着一个值，每颗珠子还指着下一颗——这就是链表。&quot;</p><p>&quot;用数组模拟链表：head指向第一颗珠子，val[]存每颗珠子的值，ne[]存下一颗珠子的下标。插入、删除都只需要改指针，O(1)。&quot;</p><p>赵晴儿说：&quot;链表的好处是插入删除快，代价是不能随机访问。&quot;</p><p>实现一个单链表，支持在头部插入、在第k个插入的元素后面插入、删除第k个插入的元素前面的元素。</p>",
+          "description": "<p>兵器阁的深处，梁嘉峰指着一条铁链：&quot;这条链上每颗珠子存着一个值，每颗珠子还指着下一颗——这就是链表。&quot;&quot;用数组模拟链表：head指向第一颗珠子，val[]存每颗珠子的值，ne[]存下一颗珠子的下标。插入、删除都只需要改指针，O(1)。&quot;赵晴儿说：&quot;链表的好处是插入删除快，代价是不能随机访问。&quot;实现一个单链表，支持在头部插入、在第k个插入的元素后面插入、删除第k个插入的元素前面的元素。</p>",
           "inputDescription": "<p>若干行操作命令：H x（头部插入x）、I k x（在第k个插入的元素后插入x）、D k（删除第k个插入的元素前面的元素）。</p>",
           "outputDescription": "<p>输出最终链表，从头到尾空格隔开。</p>",
-          "hint": "<p>数组模拟链表：head, val[], ne[]。插入：新节点的ne指向原next，前驱的ne指向新节点。</p><p><a href=\"https://www.acwing.com/problem/content/828/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 826 | JD130",
-          "samples": [
-            {
-              "input": "10\nH 9\nI 1 1\nD 1\nH 6\nI 3 6\nI 4 7\nD 3\nD 4\nI 2 2\nD 2",
-              "output": "6\n7"
-            }
-          ],
-          "solution": null
+          "hint": "<p>数组模拟链表：head, val[], ne[]。插入：新节点的ne指向原next，前驱的ne指向新节点。<a href=\"https://www.acwing.com/problem/content/828/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\130.cpp",
+            "language": "cpp",
+            "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint m;if(!(cin>>m))return 0;vector<int>e(m+5),ne(m+5);int head=-1,idx=0;auto add_head=[&](int x){e[idx]=x;ne[idx]=head;head=idx++;};auto add=[&](int k,int x){e[idx]=x;ne[idx]=ne[k];ne[k]=idx++;};auto del=[&](int k){if(k==-1)head=ne[head];else ne[k]=ne[ne[k]];};\r\nwhile(m--){char op;cin>>op;if(op=='H'){int x;cin>>x;add_head(x);}else if(op=='I'){int k,x;cin>>k>>x;add(k-1,x);}else{int k;cin>>k;if(k==0)del(-1);else del(k-1);}}\r\nfor(int i=head;i!=-1;i=ne[i])cout<<e[i]<<' ';cout<<\"\\n\";}\r\n"
+          }
         },
         {
           "id": "JD131",
@@ -4553,18 +4012,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD131/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在墙角堆了一摞石块：&quot;栈——后进先出。只能从顶部放石块，也只能从顶部取。&quot;</p><p>赵晴儿指着石块：&quot;push是放石块到顶部，pop是取走顶部的石块，query是看看顶部那块刻着什么数。&quot;</p><p>&quot;生活中到处是栈——叠盘子、摞书、函数调用。&quot;</p><p>实现一个栈，支持push、pop、query、empty操作。</p>",
+          "description": "<p>梁嘉峰在墙角堆了一摞石块：&quot;栈——后进先出。只能从顶部放石块，也只能从顶部取。&quot;赵晴儿指着石块：&quot;push是放石块到顶部，pop是取走顶部的石块，query是看看顶部那块刻着什么数。&quot;&quot;生活中到处是栈——叠盘子、摞书、函数调用。&quot;实现一个栈，支持push、pop、query、empty操作。</p>",
           "inputDescription": "<p>若干行操作命令：push x（入栈）、pop（出栈）、query（查询栈顶）、empty（判断栈是否为空）。</p>",
           "outputDescription": "<p>对每个query和empty操作输出一行结果。其中query输出栈顶元素，empty输出YES或NO。</p>",
-          "hint": "<p>数组模拟栈：tt指向栈顶。push: st[++tt]=x。pop: tt--。query: st[tt]。empty: 判断tt是否为0。</p><p><a href=\"https://www.acwing.com/problem/content/830/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 828 | JD131",
-          "samples": [
-            {
-              "input": "10\npush 5\nquery\npush 6\npop\nquery\nempty\npop\nempty\npush 3\nquery",
-              "output": "5\n5\nNO\nYES\n3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>数组模拟栈：tt指向栈顶。push: st[++tt]=x。pop: tt--。query: st[tt]。empty: 判断tt是否为0。<a href=\"https://www.acwing.com/problem/content/830/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\131.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nconst int N = 100010; \r\nint st[N], tt = 0;    // tt 指向栈顶元素位置，0 表示空栈\r\n\r\nint main() {\r\n    int n, x;\r\n    string op;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        cin >> op;\r\n        \r\n        if (op == \"push\") {\r\n            cin >> x;\r\n            st[++tt] = x;   // 1. 先移动指针，再赋值\r\n        } \r\n        else if (op == \"pop\") {\r\n            if (tt > 0) tt--; // 2. 必须判空！否则栈顶指针变为 -1 会越界\r\n        } \r\n        else if (op == \"query\") {\r\n            if (tt > 0) cout << st[tt] << endl; // 3. 必须判空！\r\n        } \r\n        else if (op == \"empty\") {\r\n            // 4. 你的判断完全正确：tt为0则为空\r\n            if (tt == 0) cout << \"YES\" << endl;\r\n            else cout << \"NO\" << endl;\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n\r\n\r\n//不使用数组的做法\r\n\r\n\r\n// #include<iostream>\r\n// #include<stack>\r\n// #include<string>\r\n// using namespace std;\r\n\r\n// int main()\r\n// {\r\n//     stack<int>a;\r\n//     int n,m;\r\n//     string c;\r\n//     cin>>n;\r\n//     while(n--)\r\n//     {\r\n//         cin>>c;\r\n//         if(c==\"push\")\r\n//         {\r\n//             cin>>m;\r\n//             a.push(m);\r\n//         }\r\n//         else if(c==\"pop\")\r\n//         {\r\n//             a.pop();\r\n//         }\r\n//         else if(c[0]=='q')\r\n//         {\r\n//             cout<<a.top()<<endl;\r\n//         }\r\n//         else if(c[0]=='e')\r\n//         {\r\n//             if(a.empty())\r\n//             {\r\n//                 cout<<\"YES\"<<endl;\r\n//             }\r\n//             else cout<<\"NO\"<<endl;\r\n//         }\r\n//     }\r\n\r\n\r\n\r\n// }"
+          }
         },
         {
           "id": "JD132",
@@ -4572,18 +4030,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD132/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着一排队列：&quot;队列——先进先出。新来的站队尾，走的从队头走。&quot;</p><p>梁嘉峰说：&quot;push是从队尾加入，pop是从队头弹出，query是看队头是谁。&quot;</p><p>&quot;排队买饭、消息队列、BFS——都是队列。&quot;</p><p>实现一个队列，支持push、pop、query、empty操作。</p>",
+          "description": "<p>赵晴儿指着一排队列：&quot;队列——先进先出。新来的站队尾，走的从队头走。&quot;梁嘉峰说：&quot;push是从队尾加入，pop是从队头弹出，query是看队头是谁。&quot;&quot;排队买饭、消息队列、BFS——都是队列。&quot;实现一个队列，支持push、pop、query、empty操作。</p>",
           "inputDescription": "<p>若干行操作命令：push x（入队）、pop（出队）、query（查询队头）、empty（判断队列是否为空）。</p>",
           "outputDescription": "<p>对每个query和empty操作输出一行结果。其中query输出队头元素，empty输出YES或NO。</p>",
-          "hint": "<p>数组模拟队列：hh队头，tt队尾。push: q[++tt]=x。pop: hh++。query: q[hh]。empty: 判断hh是否大于tt。</p><p><a href=\"https://www.acwing.com/problem/content/831/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 829 | JD132",
-          "samples": [
-            {
-              "input": "10\npush 5\nquery\npush 3\npop\nquery\nempty\npush 7\npop\npop\nempty",
-              "output": "5\n3\nNO\nYES"
-            }
-          ],
-          "solution": null
+          "hint": "<p>数组模拟队列：hh队头，tt队尾。push: q[++tt]=x。pop: hh++。query: q[hh]。empty: 判断hh是否大于tt。<a href=\"https://www.acwing.com/problem/content/831/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\132.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nconst int N = 100010; \r\nint st[N], tt = -1,hh=0;    // tt 指向栈顶元素位置为-1，hh指向头为0\r\n\r\nint main() {\r\n    int n, x;\r\n    string op;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        cin >> op;\r\n        if (op == \"push\") {\r\n            cin >> x;\r\n            st[++tt] = x;  \r\n        } \r\n        else if (op == \"pop\") {\r\n            hh++; \r\n        } \r\n        else if (op == \"query\") {\r\n            cout << st[hh] << endl;\r\n        } \r\n        else if (op == \"empty\") {\r\n            if (tt<hh) cout << \"YES\" << endl;\r\n            else cout << \"NO\" << endl;\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n"
+          }
         },
         {
           "id": "JD133",
@@ -4591,18 +4048,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD133/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿递来一个算式：&quot;3 + 4 * 2 - ( 1 + 5 )。算出结果。&quot;</p><p>梁嘉峰拿出两个盒子：&quot;数字盒和符号盒。遇到数字放数字盒。遇到符号——如果比栈顶符号优先级低，就把栈顶符号和两个数字算掉。遇到左括号直接放，遇到右括号一直算到左括号。&quot;</p><p>&quot;用两个栈——数字栈和运算符栈，按优先级处理。&quot;</p><p>给定一个包含 +、-、*、/、(、) 的表达式，求值。</p>",
+          "description": "<p>赵晴儿递来一个算式：&quot;3 + 4 * 2 - ( 1 + 5 )。算出结果。&quot;梁嘉峰拿出两个盒子：&quot;数字盒和符号盒。遇到数字放数字盒。遇到符号——如果比栈顶符号优先级低，就把栈顶符号和两个数字算掉。遇到左括号直接放，遇到右括号一直算到左括号。&quot;&quot;用两个栈——数字栈和运算符栈，按优先级处理。&quot;给定一个包含 +、-、*、/、(、) 的表达式，求值。</p>",
           "inputDescription": "<p>一行包含+、-、*、/、(、)和整数的表达式。</p>",
           "outputDescription": "<p>一行，表达式的值。</p>",
-          "hint": "<p>双栈法：数字栈+运算符栈。比较优先级决定是否先算栈顶。</p><p><a href=\"https://www.acwing.com/problem/content/3305/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 3302 | JD133",
-          "samples": [
-            {
-              "input": "2+3*4",
-              "output": "14"
-            }
-          ],
-          "solution": null
+          "hint": "<p>双栈法：数字栈+运算符栈。比较优先级决定是否先算栈顶。<a href=\"https://www.acwing.com/problem/content/3305/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\133.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <stack>\r\n#include <string>\r\n#include <unordered_map>\r\nusing namespace std;\r\n\r\n// 判断字符是否为数字\r\nbool isDigit(char c) {\r\n    return c >= '0' && c <= '9';\r\n}\r\n\r\n// 计算两个数的结果\r\nint calc(int a, int b, char op) {\r\n    if (op == '+') return a + b;\r\n    if (op == '-') return a - b;\r\n    if (op == '*') return a * b;\r\n    if (op == '/') return a / b;  // 题目保证整除\r\n    return 0;\r\n}\r\n\r\nint main() {\r\n    string s;\r\n    cin >> s;\r\n    \r\n    stack<int> num;      // 数字栈\r\n    stack<char> op;      // 运算符栈\r\n    \r\n    // 优先级映射：数值越大优先级越高\r\n    unordered_map<char, int> priority = {\r\n        {'+', 1},\r\n        {'-', 1},\r\n        {'*', 2},\r\n        {'/', 2}\r\n    };\r\n    \r\n    for (int i = 0; i < s.size(); i++) {\r\n        char c = s[i];\r\n        \r\n        // 1. 遇到数字：读取完整数字（可能有多位）\r\n        if (isDigit(c)) {\r\n            int x = 0;\r\n            while (i < s.size() && isDigit(s[i])) {\r\n                x = x * 10 + (s[i] - '0');\r\n                i++;\r\n            }\r\n            i--;  // 回退一步，因为for循环会自增\r\n            num.push(x);\r\n        }\r\n        // 2. 遇到左括号：直接入栈\r\n        else if (c == '(') {\r\n            op.push(c);\r\n        }\r\n        // 3. 遇到右括号：一直计算到左括号\r\n        else if (c == ')') {\r\n            while (!op.empty() && op.top() != '(') {\r\n                int b = num.top(); num.pop();\r\n                int a = num.top(); num.pop();\r\n                char oper = op.top(); op.pop();\r\n                num.push(calc(a, b, oper));\r\n            }\r\n            if (!op.empty()) op.pop();  // 弹出左括号\r\n        }\r\n        // 4. 遇到运算符：处理优先级\r\n        else if (c == '+' || c == '-' || c == '*' || c == '/') {\r\n            // 当前运算符优先级 <= 栈顶运算符优先级时，先计算栈顶\r\n            while (!op.empty() && op.top() != '(' && priority[op.top()] >= priority[c]) {\r\n                int b = num.top(); num.pop();\r\n                int a = num.top(); num.pop();\r\n                char oper = op.top(); op.pop();\r\n                num.push(calc(a, b, oper));\r\n            }\r\n            op.push(c);  // 当前运算符入栈\r\n        }\r\n    }\r\n    \r\n    // 5. 处理剩余的运算符\r\n    while (!op.empty()) {\r\n        int b = num.top(); num.pop();\r\n        int a = num.top(); num.pop();\r\n        char oper = op.top(); op.pop();\r\n        num.push(calc(a, b, oper));\r\n    }\r\n    \r\n    cout << num.top() << endl;\r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD134",
@@ -4610,18 +4066,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD134/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰指着一排山峰：&quot;每座山往左看，找到第一座比自己矮的山。&quot;</p><p>赵晴儿说：&quot;用一个栈维护&#039;还没找到更矮山&#039;的山峰——从左往右扫，遇到更矮的山，栈里比它高的全部弹出，它们的答案就是这座山。&quot;</p><p>&quot;栈里永远是单调递增的——所以叫单调栈。&quot;</p><p>给定一个整数序列，对每个元素找到它左边第一个比它小的数。</p>",
+          "description": "<p>梁嘉峰指着一排山峰：&quot;每座山往左看，找到第一座比自己矮的山。&quot;赵晴儿说：&quot;用一个栈维护&#039;还没找到更矮山&#039;的山峰——从左往右扫，遇到更矮的山，栈里比它高的全部弹出，它们的答案就是这座山。&quot;&quot;栈里永远是单调递增的——所以叫单调栈。&quot;给定一个整数序列，对每个元素找到它左边第一个比它小的数。</p>",
           "inputDescription": "<p>第一行一个整数n。第二行n个整数。</p>",
           "outputDescription": "<p>一行，每个元素左边第一个比它小的数，不存在输出-1。</p>",
-          "hint": "<p>单调栈：遍历时弹出比当前大的元素，栈顶就是答案。维护单调递增栈。</p><p><a href=\"https://www.acwing.com/problem/content/832/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 830 | JD134",
-          "samples": [
-            {
-              "input": "5\n3 4 2 7 5",
-              "output": "-1 3 -1 2 2"
-            }
-          ],
-          "solution": null
+          "hint": "<p>单调栈：遍历时弹出比当前大的元素，栈顶就是答案。维护单调递增栈。<a href=\"https://www.acwing.com/problem/content/832/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\134.cpp",
+            "language": "cpp",
+            "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint n;if(!(cin>>n))return 0;vector<int>st;for(int i=0;i<n;i++){int x;cin>>x;while(!st.empty()&&st.back()>=x)st.pop_back();if(i)cout<<' ';cout<<(st.empty()?-1:st.back());st.push_back(x);}cout<<\"\\n\";}\r\n"
+          }
         },
         {
           "id": "JD135",
@@ -4629,18 +4084,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD135/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在沙盘上画了一排数字，用一个框框住其中k个：&quot;这个框每往右移一格，告诉我框里的最小值和最大值。&quot;</p><p>梁嘉峰说：&quot;用单调队列——维护一个单调递增的队列。窗口移动时，队头如果过期就弹出；新元素入队时，把队尾比它大的全部弹出。队头永远是当前窗口的最小值。&quot;</p><p>赵晴儿又说：&quot;反过来，维护一个单调递减的队列，队头就是每个窗口的最大值。&quot;</p><p>&quot;一扇窗户移过整排数字，镜中映出最小与最大。&quot;</p><p>给定一个长度为 n 的整数序列和窗口大小 k，求每个窗口内的最小值和最大值。</p>",
+          "description": "<p>赵晴儿在沙盘上画了一排数字，用一个框框住其中k个：&quot;这个框每往右移一格，告诉我框里的最小值和最大值。&quot;梁嘉峰说：&quot;用单调队列——维护一个单调递增的队列。窗口移动时，队头如果过期就弹出；新元素入队时，把队尾比它大的全部弹出。队头永远是当前窗口的最小值。&quot;赵晴儿又说：&quot;反过来，维护一个单调递减的队列，队头就是每个窗口的最大值。&quot;&quot;一扇窗户移过整排数字，镜中映出最小与最大。&quot;给定一个长度为 n 的整数序列和窗口大小 k，求每个窗口内的最小值和最大值。</p>",
           "inputDescription": "<p>第一行两个整数n和k（窗口大小）。第二行n个整数。</p>",
           "outputDescription": "<p>第一行输出每个窗口的最小值，空格隔开。第二行输出每个窗口的最大值，空格隔开。</p>",
-          "hint": "<p>单调队列：维护递增队列求最小值，维护递减队列求最大值。窗口滑动时弹出过期元素。</p><p><a href=\"https://www.acwing.com/problem/content/156/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 154 | JD135",
-          "samples": [
-            {
-              "input": "8 3\n1 3 -1 -3 5 3 6 7",
-              "output": "-1 -3 -3 -3 3 3\n3 3 5 5 6 7"
-            }
-          ],
-          "solution": null
+          "hint": "<p>单调队列：维护递增队列求最小值，维护递减队列求最大值。窗口滑动时弹出过期元素。<a href=\"https://www.acwing.com/problem/content/156/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\135.cpp",
+            "language": "cpp",
+            "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nconst int N=1000010;\r\nint a[N],q[N];\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n    int n,k; if(!(cin>>n>>k)) return 0;\r\n    for(int i=0;i<n;i++) cin>>a[i];\r\n    int hh=0,tt=-1;\r\n    for(int i=0;i<n;i++){\r\n        if(hh<=tt && i-k+1>q[hh]) hh++;\r\n        while(hh<=tt && a[q[tt]]>=a[i]) tt--;\r\n        q[++tt]=i;\r\n        if(i>=k-1) cout<<a[q[hh]]<<' ';\r\n    }\r\n    cout<<\"\\n\";\r\n    hh=0,tt=-1;\r\n    for(int i=0;i<n;i++){\r\n        if(hh<=tt && i-k+1>q[hh]) hh++;\r\n        while(hh<=tt && a[q[tt]]<=a[i]) tt--;\r\n        q[++tt]=i;\r\n        if(i>=k-1) cout<<a[q[hh]]<<' ';\r\n    }\r\n    cout<<\"\\n\";\r\n}"
+          }
         },
         {
           "id": "JD136",
@@ -4648,18 +4102,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD136/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿拿着一本剑谱：&quot;在这本厚厚的剑谱里找一段特定的剑招序列——模式串在文本串中出现了几次？分别在哪里？&quot;</p><p>李少白想一个个比对，但剑谱有十万字。梁嘉峰说：&quot;KMP算法——先预处理模式串，算出每个位置的next数组（最长相等前后缀）。匹配时利用next跳转，不用回退文本指针。O(n+m)。&quot;</p><p>在文本串中查找模式串的所有出现位置。</p>",
+          "description": "<p>赵晴儿拿着一本剑谱：&quot;在这本厚厚的剑谱里找一段特定的剑招序列——模式串在文本串中出现了几次？分别在哪里？&quot;李少白想一个个比对，但剑谱有十万字。梁嘉峰说：&quot;KMP算法——先预处理模式串，算出每个位置的next数组（最长相等前后缀）。匹配时利用next跳转，不用回退文本指针。O(n+m)。&quot;在文本串中查找模式串的所有出现位置。</p>",
           "inputDescription": "<p>第一行一个整数n（模式串长度）。第二行模式串。第三行一个整数m（文本串长度）。第四行文本串。</p>",
           "outputDescription": "<p>一行，模式串在文本串中所有出现的起始位置（从0开始），空格隔开。</p>",
-          "hint": "<p>KMP：预处理next数组（最长相等前后缀），匹配时利用next跳转。</p><p><a href=\"https://www.acwing.com/problem/content/833/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 831 | JD136",
-          "samples": [
-            {
-              "input": "3\naba\n5\nababa",
-              "output": "0 2"
-            }
-          ],
-          "solution": null
+          "hint": "<p>KMP：预处理next数组（最长相等前后缀），匹配时利用next跳转。<a href=\"https://www.acwing.com/problem/content/833/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\136.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <string>\r\nusing namespace std;\r\n\r\nint main() {\r\n    int n, m;\r\n    string pattern, text;\r\n    \r\n    cin >> n >> pattern;\r\n    cin >> m >> text;\r\n    \r\n    // 计算next数组\r\n    vector<int> next(n, 0);\r\n    for (int i = 1, j = 0; i < n; i++) {\r\n        while (j > 0 && pattern[i] != pattern[j]) {\r\n            j = next[j - 1];\r\n        }\r\n        if (pattern[i] == pattern[j]) {\r\n            j++;\r\n        }\r\n        next[i] = j;\r\n    }\r\n    \r\n    // KMP匹配\r\n    vector<int> positions;\r\n    for (int i = 0, j = 0; i < m; i++) {\r\n        while (j > 0 && text[i] != pattern[j]) {\r\n            j = next[j - 1];\r\n        }\r\n        if (text[i] == pattern[j]) {\r\n            j++;\r\n        }\r\n        if (j == n) {\r\n            positions.push_back(i - n + 1); // 匹配起始位置\r\n            j = next[j - 1]; // 继续寻找下一个匹配\r\n        }\r\n    }\r\n    \r\n    // 输出结果\r\n    for (int i = 0; i < positions.size(); i++) {\r\n        cout << positions[i] << (i == positions.size() - 1 ? '\\n' : ' ');\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD137",
@@ -4667,22 +4120,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD137/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰在地上堆了一座小丘：&quot;堆——一种特殊的完全二叉树。父节点的值永远比子节点小（小根堆）。&quot;</p><p>赵晴儿说：&quot;用数组存——父节点i的子节点是2i和2i+1。插入时上浮，删除时下沉。支持插入、取最小值、删除最小值、删除任意元素、修改任意元素。&quot;</p><p>实现一个小根堆，支持插入、删除第k个插入的元素、修改第k个插入的元素、查询最小值、删除最小值。</p>",
+          "description": "<p>梁嘉峰在地上堆了一座小丘：&quot;堆——一种特殊的完全二叉树。父节点的值永远比子节点小（小根堆）。&quot;赵晴儿说：&quot;用数组存——父节点i的子节点是2i和2i+1。插入时上浮，删除时下沉。支持插入、取最小值、删除最小值、删除任意元素、修改任意元素。&quot;实现一个小根堆，支持插入、删除第k个插入的元素、修改第k个插入的元素、查询最小值、删除最小值。</p>",
           "inputDescription": "<p>若干行操作命令：I x（插入x）、PM（查询最小值）、DM（删除最小值）、D k（删除第k个插入的元素）、C k x（修改第k个插入的数为x）。</p>",
           "outputDescription": "<p>对每个PM操作输出一行最小值。</p>",
-          "hint": "<p>数组模拟堆：上浮和下沉操作。父节点i的子节点是2i和2i+1。维护ph[]和hp[]数组记录插入顺序与堆中位置的映射。</p><p><a href=\"https://www.acwing.com/problem/content/841/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 839 | JD137",
-          "samples": [
-            {
-              "input": "5\nI 3\nI 1\nI 4\nPM\nD 1",
-              "output": "1"
-            },
-            {
-              "input": "8\nI 2\nI 1\nI 3\nPM\nDM\nPM\nC 2 8\nPM",
-              "output": "1\n2\n3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>数组模拟堆：上浮和下沉操作。父节点i的子节点是2i和2i+1。维护ph[]和hp[]数组记录插入顺序与堆中位置的映射。<a href=\"https://www.acwing.com/problem/content/841/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\137.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <string>\r\nusing namespace std;\r\n//测试点有问题\r\nconst int N = 100010;\r\nint h[N], ph[N], hp[N], sz = 0, idx = 0;\r\n\r\nvoid heap_swap(int a, int b) {\r\n    swap(ph[hp[a]], ph[hp[b]]);\r\n    swap(hp[a], hp[b]);\r\n    swap(h[a], h[b]);\r\n}\r\n\r\nvoid up(int u) {\r\n    while (u / 2 && h[u] < h[u / 2]) {\r\n        heap_swap(u, u / 2);\r\n        u /= 2;\r\n    }\r\n}\r\n\r\nvoid down(int u) {\r\n    int t = u;\r\n    if (u * 2 <= sz && h[u * 2] < h[t]) t = u * 2;\r\n    if (u * 2 + 1 <= sz && h[u * 2 + 1] < h[t]) t = u * 2 + 1;\r\n    if (t != u) {\r\n        heap_swap(u, t);\r\n        down(t);\r\n    }\r\n}\r\n\r\nint main() {\r\n    int n;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        string op;\r\n        cin >> op;\r\n        \r\n        if (op == \"I\") {\r\n            int x;\r\n            cin >> x;\r\n            idx++;\r\n            sz++;\r\n            ph[idx] = sz;\r\n            hp[sz] = idx;\r\n            h[sz] = x;\r\n            up(sz);\r\n        } \r\n        else if (op == \"PM\") {\r\n            cout << h[1] << endl;\r\n        } \r\n        else if (op == \"DM\") {\r\n            heap_swap(1, sz);\r\n            sz--;\r\n            down(1);\r\n        } \r\n        else if (op == \"D\") {\r\n            int k;\r\n            cin >> k;\r\n            int pos = ph[k];\r\n            heap_swap(pos, sz);\r\n            sz--;\r\n            down(pos);\r\n            up(pos);\r\n        } \r\n        else if (op == \"C\") {\r\n            int k, x;\r\n            cin >> k >> x;\r\n            int pos = ph[k];\r\n            h[pos] = x;\r\n            down(pos);\r\n            up(pos);\r\n        }\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD138",
@@ -4690,18 +4138,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD138/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>江湖上有N个门派，每个弟子属于一个门派。赵晴儿问：&quot;两个弟子是不是同门？&quot;梁嘉峰说：&quot;用并查集——合并两个门派用union，查询两个人是否同门用find。路径压缩后几乎O(1)。&quot;</p><p>给定N个元素和M个操作：合并两个集合，或查询两个元素是否在同一集合。</p>",
+          "description": "<p>江湖上有N个门派，每个弟子属于一个门派。赵晴儿问：&quot;两个弟子是不是同门？&quot;梁嘉峰说：&quot;用并查集——合并两个门派用union，查询两个人是否同门用find。路径压缩后几乎O(1)。&quot;给定N个元素和M个操作：合并两个集合，或查询两个元素是否在同一集合。</p>",
           "inputDescription": "<p>第一行两个整数N和M。接下来M行，每行M 1 a b（合并a和b所在集合）或Q a b（查询a和b是否同属一个集合）。</p>",
           "outputDescription": "<p>对每个Q操作输出一行Yes或No。</p>",
-          "hint": "<p>并查集：find时路径压缩，union时合并两棵树。</p><p><a href=\"https://www.acwing.com/problem/content/838/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 836 | JD138",
-          "samples": [
-            {
-              "input": "4 5\nM 1 2\nQ 1 2\nM 2 3\nQ 1 3\nQ 1 4",
-              "output": "Yes\nYes\nNo"
-            }
-          ],
-          "solution": null
+          "hint": "<p>并查集：find时路径压缩，union时合并两棵树。<a href=\"https://www.acwing.com/problem/content/838/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\138.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nconst int N = 100010;\nint p[N];\n\nint find(int x) {\n    if (p[x] != x) p[x] = find(p[x]);\n    return p[x];\n}\n\nint main() {\n    int n, m;\n    cin >> n >> m;\n    \n    for (int i = 1; i <= n; i++) p[i] = i;\n    \n    while (m--) {\n        char op;\n        int a, b;\n        cin >> op >> a >> b;\n        \n        if (op == 'M') {\n            int pa = find(a), pb = find(b);\n            if (pa != pb) p[pa] = pb;\n        } else if (op == 'Q') {\n            if (find(a) == find(b)) cout << \"Yes\" << endl;\n            else cout << \"No\" << endl;\n        }\n    }\n    \n    return 0;\n}"
+          }
         },
         {
           "id": "JD139",
@@ -4709,18 +4156,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD139/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在并查集的基础上问：&quot;每个门派有多少人？&quot;</p><p>梁嘉峰说：&quot;在合并时，把一个门派的人数加到另一个上。查询时直接读人数。&quot;</p><p>给定N个元素和M个操作：合并两个集合（C a b），查询两个元素是否在同一集合（Q1 a b），或查询某个元素所在集合的大小（Q2 a）。</p>",
+          "description": "<p>赵晴儿在并查集的基础上问：&quot;每个门派有多少人？&quot;梁嘉峰说：&quot;在合并时，把一个门派的人数加到另一个上。查询时直接读人数。&quot;给定N个元素和M个操作：合并两个集合（C a b），查询两个元素是否在同一集合（Q1 a b），或查询某个元素所在集合的大小（Q2 a）。</p>",
           "inputDescription": "<p>第一行两个整数N和M。接下来M行，每行C a b（合并a和b所在集合）、Q1 a b（查询a和b是否在同一集合）、或Q2 a（查询a所在集合的大小）。</p>",
           "outputDescription": "<p>对每个Q1操作输出Yes或No；对每个Q2操作输出一行集合大小。</p>",
-          "hint": "<p>维护size[]数组，合并时更新size。用C a b合并，Q1 a b查是否同集，Q2 a查集合大小。</p><p><a href=\"https://www.acwing.com/problem/content/839/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 837 | JD139",
-          "samples": [
-            {
-              "input": "4 5\nC 1 2\nQ2 1\nC 2 3\nQ2 1\nQ2 4",
-              "output": "2\n3\n1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>维护size[]数组，合并时更新size。用C a b合并，Q1 a b查是否同集，Q2 a查集合大小。<a href=\"https://www.acwing.com/problem/content/839/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\139.cpp",
+            "language": "cpp",
+            "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint p[100010], sz[100010];\r\nint findp(int x){ return p[x]==x?x:p[x]=findp(p[x]); }\r\nint main(){\r\n    ios::sync_with_stdio(false);\r\n    cin.tie(nullptr);\r\n    int n,m;\r\n    if(!(cin>>n>>m)) return 0;\r\n    for(int i=1;i<=n;i++) p[i]=i, sz[i]=1;\r\n    while(m--){\r\n        string op; int a,b;\r\n        cin >> op;\r\n        if(op==\"C\"){\r\n            cin >> a >> b;\r\n            int ra=findp(a), rb=findp(b);\r\n            if(ra!=rb){ p[ra]=rb; sz[rb]+=sz[ra]; }\r\n        }else if(op==\"Q1\"){\r\n            cin >> a >> b;\r\n            cout << (findp(a)==findp(b) ? \"Yes\" : \"No\") << \"\\n\";\r\n        }else{\r\n            cin >> a;\r\n            cout << sz[findp(a)] << \"\\n\";\r\n        }\r\n    }\r\n}"
+          }
         },
         {
           "id": "JD140",
@@ -4728,18 +4174,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD140/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰说：&quot;A吃B，B吃C，C吃A——三种动物形成环形食物链。给你N个动物和K句话，判断哪些话是假的。&quot;</p><p>赵晴儿解释：&quot;扩展并查集——每个动物拆成三个节点，分别表示&#039;A是A&#039;、&#039;A是B的食物&#039;、&#039;A是C的食物&#039;。用模3的关系判断真假。&quot;</p><p>给定N个动物和K句话，判断假话数量。</p>",
+          "description": "<p>梁嘉峰说：&quot;A吃B，B吃C，C吃A——三种动物形成环形食物链。给你N个动物和K句话，判断哪些话是假的。&quot;赵晴儿解释：&quot;扩展并查集——每个动物拆成三个节点，分别表示&#039;A是A&#039;、&#039;A是B的食物&#039;、&#039;A是C的食物&#039;。用模3的关系判断真假。&quot;给定N个动物和K句话，判断假话数量。</p>",
           "inputDescription": "<p>第一行两个整数N和K。接下来K行，每行两个整数x y z（x=1表示y和z同类，x=2表示y吃z）。</p>",
           "outputDescription": "<p>一行，假话的数量。</p>",
-          "hint": "<p>扩展并查集：每个点拆成3个，模3判断关系。</p><p><a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 240 | JD140",
-          "samples": [
-            {
-              "input": "100 7\n1 101 1\n2 1 2\n2 2 3\n2 3 3\n1 1 3\n2 3 1\n1 5 5",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>扩展并查集：每个点拆成3个，模3判断关系。<a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\140.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nconst int N = 150010;\r\nint p[N];\r\n\r\nint find(int x) {\r\n    if (p[x] != x) p[x] = find(p[x]);\r\n    return p[x];\r\n}\r\n\r\nint main() {\r\n    int n, k;\r\n    cin >> n >> k;\r\n    \r\n    for (int i = 1; i <= 3 * n; i++) p[i] = i;\r\n    \r\n    int ans = 0;\r\n    \r\n    while (k--) {\r\n        int op, x, y;\r\n        cin >> op >> x >> y;\r\n        \r\n        if (x > n || y > n) {\r\n            ans++;\r\n            continue;\r\n        }\r\n        \r\n        if (op == 1) {\r\n            // x和y是同类\r\n            if (find(x) == find(y + n) || find(x) == find(y + 2 * n)) {\r\n                ans++;\r\n            } else {\r\n                p[find(x)] = find(y);\r\n                p[find(x + n)] = find(y + n);\r\n                p[find(x + 2 * n)] = find(y + 2 * n);\r\n            }\r\n        } else {\r\n            // x吃y\r\n            if (x == y || find(x) == find(y) || find(x) == find(y + 2 * n)) {\r\n                ans++;\r\n            } else {\r\n                p[find(x)] = find(y + n);\r\n                p[find(x + n)] = find(y + 2 * n);\r\n                p[find(x + 2 * n)] = find(y);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD141",
@@ -4747,18 +4192,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD141/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>迷雾弥漫的林间小径上，梁嘉峰递给李少白n枚令牌：&quot;按字典序列出1到n的所有排列。每步选一个没用过的令牌，选完所有就回头换一个——这就是DFS回溯。&quot;</p><p>给定整数n，按字典序输出1到n的所有全排列。</p>",
+          "description": "<p>迷雾弥漫的林间小径上，梁嘉峰递给李少白n枚令牌：&quot;按字典序列出1到n的所有排列。每步选一个没用过的令牌，选完所有就回头换一个——这就是DFS回溯。&quot;给定整数n，按字典序输出1到n的所有全排列。</p>",
           "inputDescription": "<p>一个整数n（1≤n≤9）。</p>",
           "outputDescription": "<p>每行一个排列，数字之间空格隔开，按字典序输出。</p>",
-          "hint": "<p>DFS+回溯：选→递归→撤销。用used[]标记。</p><p><a href=\"https://www.acwing.com/problem/content/844/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 842 | JD141",
-          "samples": [
-            {
-              "input": "3",
-              "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>DFS+回溯：选→递归→撤销。用used[]标记。<a href=\"https://www.acwing.com/problem/content/844/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\141.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstdio>\r\n\r\nusing namespace std;\r\n\r\nconst int N = 10;\r\n\r\nint n;\r\nint path[N];       // 从0到n-1共n个位置 存放一个排列\r\nbool state[N];     // 存放每个数字的使用状态 true表示使用了 false表示没使用过\r\n\r\nvoid dfs(int u)\r\n{\r\n    if (u == n)    // 一个排列填充完成\r\n    {\r\n        for (int i = 0; i < n; i ++) printf(\"%d \",path[i]);  // 注意格式 别忘了每两个数字间用空格隔开\r\n        puts(\"\");  // 相当于输出一个回车\r\n        return;\r\n    }\r\n\r\n    for (int i = 1; i <= n; i ++)\r\n    {\r\n        if (!state[i])\r\n        {\r\n            path[u] = i;       // 把 i 填入数字排列的位置上\r\n            state[i] = true;   // 表示该数字用过了 不能再用\r\n            dfs(u + 1);        // 这个位置的数填好 递归到右面一个位置\r\n            state[i] = false;  // 恢复现场 该数字后续可用\r\n        }\r\n    }\r\n    // for 循环全部结束了 dfs(u)才全部完成 回溯\r\n\r\n    return;        // 可写可不写\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\", &n);\r\n\r\n    dfs(0);    // 在path[0]处开始填数\r\n\r\n    return 0;\r\n}\r\n\r\n//作者：EvanMe\r\n//链接：https://www.acwing.com/file_system/file/content/whole/index/content/3758356/\r\n//来源：AcWing\r\n//著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD142",
@@ -4766,18 +4210,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD142/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着一个n×n的棋盘：&quot;放n个皇后，不能同行、同列、同对角线。有多少种放法？&quot;</p><p>李少白逐行放置，用三个布尔数组标记列和对角线。&quot;每行选一个安全的位置放皇后，递归下一行。冲突就回退。&quot;</p><p>给定n，求n皇后的所有解。</p>",
+          "description": "<p>赵晴儿指着一个n×n的棋盘：&quot;放n个皇后，不能同行、同列、同对角线。有多少种放法？&quot;李少白逐行放置，用三个布尔数组标记列和对角线。&quot;每行选一个安全的位置放皇后，递归下一行。冲突就回退。&quot;给定n，求n皇后的所有解。</p>",
           "inputDescription": "<p>一个整数n。</p>",
           "outputDescription": "<p>所有解，每个解n行（Q表示皇后，.表示空），解之间空行。</p>",
-          "hint": "<p>DFS+回溯：逐行放置，标记列和两条对角线。</p><p><a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 843 | JD142",
-          "samples": [
-            {
-              "input": "4",
-              "output": ".Q..\n...Q\nQ...\n..Q.\n\n..Q.\nQ...\n...Q\n.Q.."
-            }
-          ],
-          "solution": null
+          "hint": "<p>DFS+回溯：逐行放置，标记列和两条对角线。<a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\142.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\nusing namespace std;\n\nconst int N = 20;\nint n;\nchar board[N][N];\nbool col[N], dg[N], udg[N]; // 列、主对角线、副对角线\n\n// 逐行放置皇后，r为当前行\nvoid dfs(int r) {\n    if (r == n) {\n        // 输出解\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                cout << board[i][j];\n            }\n            cout << '\\n';\n        }\n        cout << '\\n'; // 解之间空行\n        return;\n    }\n\n    for (int c = 0; c < n; c++) {\n        // r+c相同→同一主对角线，r-c+n相同→同一副对角线\n        if (!col[c] && !dg[r + c] && !udg[r - c + n]) {\n            col[c] = dg[r + c] = udg[r - c + n] = true;\n            board[r][c] = 'Q';\n            dfs(r + 1);\n            board[r][c] = '.';\n            col[c] = dg[r + c] = udg[r - c + n] = false;\n        }\n    }\n}\n\nint main() {\n    cin >> n;\n    // 初始化棋盘\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            board[i][j] = '.';\n        }\n    }\n    dfs(0);\n    return 0;\n}\n"
+          }
         },
         {
           "id": "JD143",
@@ -4785,18 +4228,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD143/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>石墙围成的迷宫，入口在左上角，出口在右下角。赵晴儿问：&quot;最短路径有多长？&quot;</p><p>梁嘉峰说：&quot;BFS——从入口开始，一层一层向外扩展。第一次到达出口时，层数就是最短路径。&quot;</p><p>给定一个n×m的迷宫（0可走，1是墙），求最短路径长度。</p>",
+          "description": "<p>石墙围成的迷宫，入口在左上角，出口在右下角。赵晴儿问：&quot;最短路径有多长？&quot;梁嘉峰说：&quot;BFS——从入口开始，一层一层向外扩展。第一次到达出口时，层数就是最短路径。&quot;给定一个n×m的迷宫（0可走，1是墙），求最短路径长度。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来n行每行m个整数（0可走，1是墙）。</p>",
           "outputDescription": "<p>一行，最短路径长度。不可达输出-1。</p>",
-          "hint": "<p>BFS层序遍历，第一次到达终点就是最短路径。</p><p><a href=\"https://www.acwing.com/problem/content/846/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 844 | JD143",
-          "samples": [
-            {
-              "input": "5 5\n0 1 0 0 0\n0 1 0 1 0\n0 0 0 0 0\n0 1 1 1 0\n0 0 0 1 0",
-              "output": "8"
-            }
-          ],
-          "solution": null
+          "hint": "<p>BFS层序遍历，第一次到达终点就是最短路径。<a href=\"https://www.acwing.com/problem/content/846/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\143.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <queue>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint g[N][N], dist[N][N];\r\nint n, m;\r\nint dx[4] = {-1, 0, 1, 0};\r\nint dy[4] = {0, 1, 0, -1};\r\n\r\nint bfs() {\r\n    queue<pair<int, int>> q;\r\n    q.push({0, 0});\r\n    dist[0][0] = 0;\r\n    \r\n    while (!q.empty()) {\r\n        auto t = q.front();\r\n        q.pop();\r\n        \r\n        int x = t.first, y = t.second;\r\n        \r\n        if (x == n - 1 && y == m - 1) {\r\n            return dist[x][y];\r\n        }\r\n        \r\n        for (int i = 0; i < 4; i++) {\r\n            int nx = x + dx[i];\r\n            int ny = y + dy[i];\r\n            \r\n            if (nx >= 0 && nx < n && ny >= 0 && ny < m && g[nx][ny] == 0 && dist[nx][ny] == -1) {\r\n                dist[nx][ny] = dist[x][y] + 1;\r\n                q.push({nx, ny});\r\n            }\r\n        }\r\n    }\r\n    \r\n    return -1;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < m; j++) {\r\n            cin >> g[i][j];\r\n            dist[i][j] = -1;\r\n        }\r\n    }\r\n    \r\n    cout << bfs() << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD144",
@@ -4804,18 +4246,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD144/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>迷雾中出现一个3×3数字拼盘，有一个空格。赵晴儿说：&quot;从初始状态移到目标状态，最少几步？每次只能把空格和相邻数字交换。&quot;</p><p>梁嘉峰说：&quot;BFS+状态压缩——把整个拼盘编码成一个字符串，每次移动生成新状态，用哈希表判重。&quot;</p><p>给定初始状态和目标状态，求最少移动步数。</p>",
+          "description": "<p>迷雾中出现一个3×3数字拼盘，有一个空格。赵晴儿说：&quot;从初始状态移到目标状态，最少几步？每次只能把空格和相邻数字交换。&quot;梁嘉峰说：&quot;BFS+状态压缩——把整个拼盘编码成一个字符串，每次移动生成新状态，用哈希表判重。&quot;给定初始状态和目标状态，求最少移动步数。</p>",
           "inputDescription": "<p>两行，每行9个字符（3×3拼盘，x表示空格）。第一行初始状态，第二行目标状态。</p>",
           "outputDescription": "<p>一行，最少移动步数。无解输出-1。</p>",
-          "hint": "<p>BFS+状态编码为字符串，哈希表判重。</p><p><a href=\"https://www.acwing.com/problem/content/847/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 845 | JD144",
-          "samples": [
-            {
-              "input": "1 2 3\nx 4 6\n7 5 8\n\n1 2 3\n4 5 6\n7 8 x",
-              "output": "2"
-            }
-          ],
-          "solution": null
+          "hint": "<p>BFS+状态编码为字符串，哈希表判重。<a href=\"https://www.acwing.com/problem/content/847/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\144.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <string>\nusing namespace std;\n\nstring start, target;\nint dx[4] = {-1, 0, 1, 0};\nint dy[4] = {0, 1, 0, -1};\n\nint bfs() {\n    queue<string> q;\n    unordered_map<string, int> dist;\n    \n    q.push(start);\n    dist[start] = 0;\n    \n    while (!q.empty()) {\n        string t = q.front();\n        q.pop();\n        \n        if (t == target) {\n            return dist[t];\n        }\n        \n        int pos = t.find('x');\n        int x = pos / 3, y = pos % 3;\n        \n        for (int i = 0; i < 4; i++) {\n            int nx = x + dx[i];\n            int ny = y + dy[i];\n            \n            if (nx >= 0 && nx < 3 && ny >= 0 && ny < 3) {\n                int npos = nx * 3 + ny;\n                string next = t;\n                swap(next[pos], next[npos]);\n                \n                if (!dist.count(next)) {\n                    dist[next] = dist[t] + 1;\n                    q.push(next);\n                }\n            }\n        }\n    }\n    \n    return -1;\n}\n\nint main() {\n    cin >> start >> target;\n    cout << bfs() << endl;\n    return 0;\n}"
+          }
         },
         {
           "id": "JD145",
@@ -4823,18 +4264,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD145/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>迷踪林深处有一棵大树。梁嘉峰说：&quot;找到它的重心——删除后最大子树最小的那个节点。&quot;</p><p>赵晴儿说：&quot;DFS遍历树，对每个节点计算：删掉它后，最大子树有多少个节点。取最小的那个。&quot;</p><p>给定一棵树，求其重心和最大子树的最小大小。</p>",
+          "description": "<p>迷踪林深处有一棵大树。梁嘉峰说：&quot;找到它的重心——删除后最大子树最小的那个节点。&quot;赵晴儿说：&quot;DFS遍历树，对每个节点计算：删掉它后，最大子树有多少个节点。取最小的那个。&quot;给定一棵树，求其重心和最大子树的最小大小。</p>",
           "inputDescription": "<p>第一行一个整数n。接下来n-1行每行两个整数表示一条边。</p>",
           "outputDescription": "<p>一行，最大子树的最小大小。</p>",
-          "hint": "<p>DFS遍历树，计算每个节点的最大子树大小。重心=max(n-subSize, 各子树size)最小的节点。</p><p><a href=\"https://www.acwing.com/problem/content/848/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 846 | JD145",
-          "samples": [
-            {
-              "input": "9\n1 2\n1 7\n1 4\n2 8\n2 5\n4 3\n4 6\n6 9",
-              "output": "4"
-            }
-          ],
-          "solution": null
+          "hint": "<p>DFS遍历树，计算每个节点的最大子树大小。重心=max(n-subSize, 各子树size)最小的节点。<a href=\"https://www.acwing.com/problem/content/848/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\145.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\n#include <algorithm>\n#include <cstring>\n\nusing namespace std;\n\nconst int N = 1e5 + 10; //数据范围是10的5次方\nconst int M = 2 * N; //以有向图的格式存储无向图，所以每个节点至多对应2n-2条边\n\nint h[N]; //邻接表存储树，有n个节点，所以需要n个队列头节点\nint e[M]; //存储元素\nint ne[M]; //存储列表的next值\nint idx; //单链表指针\nint n; //题目所给的输入，n个节点\nint ans = N; //表示重心的所有的子树中，最大的子树的结点数目\n\nbool st[N]; //记录节点是否被访问过，访问过则标记为true\n\n//a所对应的单链表中插入b  a作为根 \nvoid add(int a, int b) {\n    e[idx] = b, ne[idx] = h[a], h[a] = idx++;\n}\n\n// dfs 框架\n/*\nvoid dfs(int u){\n    st[u]=true; // 标记一下，记录为已经被搜索过了，下面进行搜索过程\n    for(int i=h[u];i!=-1;i=ne[i]){\n        int j=e[i];\n        if(!st[j]) {\n            dfs(j);\n        }\n    }\n}\n*/\n\n//返回以u为根的子树中节点的个数，包括u节点\nint dfs(int u) {\n    int res = 0; //存储 删掉某个节点之后，最大的连通子图节点数\n    st[u] = true; //标记访问过u节点\n    int sum = 1; //存储 以u为根的树 的节点数, 包括u，如图中的4号节点\n\n    //访问u的每个子节点\n    for (int i = h[u]; i != -1; i = ne[i]) {\n        int j = e[i];\n        //因为每个节点的编号都是不一样的，所以 用编号为下标 来标记是否被访问过\n        if (!st[j]) {\n            int s = dfs(j);  // u节点的单棵子树节点数 如图中的size值\n            res = max(res, s); // 记录最大联通子图的节点数\n            sum += s; //以j为根的树 的节点数\n        }\n    }\n\n    //n-sum 如图中的n-size值，不包括根节点4；\n    res = max(res, n - sum); // 选择u节点为重心，最大的 连通子图节点数\n    ans = min(res, ans); //遍历过的假设重心中，最小的最大联通子图的 节点数\n    return sum;\n}\n\nint main() {\n    memset(h, -1, sizeof h); //初始化h数组 -1表示尾节点\n    cin >> n; //表示树的结点数\n\n    // 题目接下来会输入，n-1行数据，\n    // 树中是不存在环的，对于有n个节点的树，必定是n-1条边\n    for (int i = 0; i < n - 1; i++) {\n        int a, b;\n        cin >> a >> b;\n        add(a, b), add(b, a); //无向图\n    }\n\n    dfs(1); //可以任意选定一个节点开始 u<=n\n\n    cout << ans << endl;\n\n    return 0;\n}\n\n// 作者：松鼠爱葡萄\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/542619/\n// 来源：AcWing\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD146",
@@ -4842,18 +4282,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD146/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>城际连横。赵晴儿铺开城池图：&quot;城池之间有道路相连。从城1出发，到每个城池的最短距离是多少？&quot;</p><p>梁嘉峰说：&quot;BFS——从城1开始，每层扩展一步。第一次到达的城池，层数就是最短距离。&quot;</p><p>给定一个有向图和起点1，求每个点到起点的最短距离。</p>",
+          "description": "<p>城际连横。赵晴儿铺开城池图：&quot;城池之间有道路相连。从城1出发，到每个城池的最短距离是多少？&quot;梁嘉峰说：&quot;BFS——从城1开始，每层扩展一步。第一次到达的城池，层数就是最短距离。&quot;给定一个有向图和起点1，求每个点到起点的最短距离。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行两个整数a b表示一条有向边。</p>",
           "outputDescription": "<p>一行，n个整数表示每个点到点1的最短距离，不可达输出-1。</p>",
-          "hint": "<p>BFS层序遍历，每层距离+1。</p><p><a href=\"https://www.acwing.com/problem/content/849/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 847 | JD146",
-          "samples": [
-            {
-              "input": "4 4\n1 2\n2 3\n1 3\n3 4",
-              "output": "0 1 1 2"
-            }
-          ],
-          "solution": null
+          "hint": "<p>BFS层序遍历，每层距离+1。<a href=\"https://www.acwing.com/problem/content/849/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\146.cpp",
+            "language": "cpp",
+            "code": "#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\n\r\nint n, m;\r\nint h[N], e[N], ne[N], idx;\r\nint d[N];\r\n\r\nvoid add(int a, int b){\r\n    e[idx] = b, ne[idx] = h[a], h[a] = idx ++ ;\r\n}\r\n\r\nint bfs(){//宽搜遍历\r\n    memset(d, -1, sizeof d);\r\n\r\n    queue<int> q;\r\n    d[1] = 0;//第一格需要0步\r\n    q.push(1);//放入队列\r\n\r\n    while (q.size()){//循环遍历整个队列\r\n        int t = q.front();\r\n        q.pop();\r\n\r\n        for (int i = h[t]; i != -1; i = ne[i]){\r\n            int j = e[i];//获取当前值\r\n            if (d[j] == -1){//未走过\r\n                d[j] = d[t] + 1;//等于上一个点加1步\r\n                q.push(j);//放入队列\r\n            }\r\n        }\r\n    }\r\n\r\n    return d[n];//返回n号点所需的步数\r\n}\r\n\r\nint main(){\r\n    scanf(\"%d%d\", &n, &m);\r\n    memset(h, -1, sizeof h);\r\n\r\n    for (int i = 0; i < m; i ++ ){\r\n        int a, b;\r\n        scanf(\"%d%d\", &a, &b);\r\n        add(a, b);//单项连接(有向图)\r\n    }\r\n\r\n    cout << bfs() << endl;\r\n\r\n    return 0;\r\n}\r\n\r\n// 作者：Lucky_Three\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/9655978/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD147",
@@ -4861,18 +4300,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD147/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>城际连横。赵晴儿铺开城池图：&quot;城池之间有方向道路。排出一个合法的建设顺序——每条道路都是从先建的城池指向后建的。&quot;</p><p>梁嘉峰说：&quot;拓扑排序——找入度为0的点，输出后删除它的出边，再找下一个入度为0的点。如果有环，就不可能全部输出。&quot;</p><p>给定一个有向图，输出拓扑序。有环则输出-1。</p>",
+          "description": "<p>城际连横。赵晴儿铺开城池图：&quot;城池之间有方向道路。排出一个合法的建设顺序——每条道路都是从先建的城池指向后建的。&quot;梁嘉峰说：&quot;拓扑排序——找入度为0的点，输出后删除它的出边，再找下一个入度为0的点。如果有环，就不可能全部输出。&quot;给定一个有向图，输出拓扑序。有环则输出-1。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行两个整数a b表示一条有向边。</p>",
           "outputDescription": "<p>一行，拓扑序，空格隔开。有环输出-1。</p>",
-          "hint": "<p>BFS+入度维护。有环则无解。</p><p><a href=\"https://www.acwing.com/problem/content/850/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 848 | JD147",
-          "samples": [
-            {
-              "input": "3 3\n1 2\n2 3\n1 3",
-              "output": "1 2 3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>BFS+入度维护。有环则无解。<a href=\"https://www.acwing.com/problem/content/850/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\147.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <queue>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nvector<int> g[N];\r\nint d[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        g[a].push_back(b);\r\n        d[b]++;\r\n    }\r\n    \r\n    queue<int> q;\r\n    for (int i = 1; i <= n; i++) {\r\n        if (d[i] == 0) {\r\n            q.push(i);\r\n        }\r\n    }\r\n    \r\n    vector<int> ans;\r\n    while (!q.empty()) {\r\n        int u = q.front();\r\n        q.pop();\r\n        ans.push_back(u);\r\n        \r\n        for (int i = 0; i < g[u].size(); i++) {\r\n            int v = g[u][i];\r\n            d[v]--;\r\n            if (d[v] == 0) {\r\n                q.push(v);\r\n            }\r\n        }\r\n    }\r\n    \r\n    if (ans.size() != n) {\r\n        cout << -1 << endl;\r\n    } else {\r\n        for (int i = 0; i < ans.size(); i++) {\r\n            cout << ans[i] << (i == ans.size() - 1 ? '\\n' : ' ');\r\n        }\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD148",
@@ -4880,18 +4318,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD148/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿在城池图上标了距离：&quot;从城1出发，到每个城池的最短距离是多少？边权都是正数。&quot;</p><p>梁嘉峰说：&quot;朴素Dijkstra——每次选未访问的最近点，用它更新邻居的距离。选过的点不再更新。&quot;</p><p>给定一个带权有向图和起点，求到每个点的最短距离。</p>",
+          "description": "<p>赵晴儿在城池图上标了距离：&quot;从城1出发，到每个城池的最短距离是多少？边权都是正数。&quot;梁嘉峰说：&quot;朴素Dijkstra——每次选未访问的最近点，用它更新邻居的距离。选过的点不再更新。&quot;给定一个带权有向图和起点，求到每个点的最短距离。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行三个整数a b w表示一条从a到b的权为w的有向边。</p>",
           "outputDescription": "<p>一行，n个整数表示到点1的最短距离。</p>",
-          "hint": "<p>Dijkstra：O(n²)。每次选最近未访问点，更新邻居。</p><p><a href=\"https://www.acwing.com/problem/content/851/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 849 | JD148",
-          "samples": [
-            {
-              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
-              "output": "0 2 3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>Dijkstra：O(n²)。每次选最近未访问点，更新邻居。<a href=\"https://www.acwing.com/problem/content/851/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\148.cpp",
+            "language": "cpp",
+            "code": "#include <cstring>\r\n#include <iostream>\r\n#include <algorithm>\r\n#include <queue>//堆的头文件\r\n\r\nusing namespace std;\r\n\r\ntypedef pair<int, int> PII;//堆里存储距离和节点编号\r\n\r\nconst int N = 1e6 + 10;\r\n\r\nint n, m;//节点数量和边数\r\nint h[N], w[N], e[N], ne[N], idx;//邻接表存储图\r\nint dist[N];//存储距离\r\nbool st[N];//存储状态\r\n\r\nvoid add(int a, int b, int c)\r\n{\r\n    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx ++ ;\r\n}\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist, 0x3f, sizeof dist);//距离初始化为无穷大\r\n    dist[1] = 0;\r\n    priority_queue<PII, vector<PII>, greater<PII>> heap;//小根堆\r\n    heap.push({0, 1});//插入距离和节点编号\r\n\r\n    while (heap.size())\r\n    {\r\n        auto t = heap.top();//取距离源点最近的点\r\n        heap.pop();\r\n\r\n        int ver = t.second, distance = t.first;//ver:节点编号，distance:源点距离ver 的距离\r\n\r\n        if (st[ver]) continue;//如果距离已经确定，则跳过该点\r\n        st[ver] = true;\r\n\r\n        for (int i = h[ver]; i != -1; i = ne[i])//更新ver所指向的节点距离\r\n        {\r\n            int j = e[i];\r\n            if (dist[j] > dist[ver] + w[i])\r\n            {\r\n                dist[j] = dist[ver] + w[i];\r\n                heap.push({dist[j], j});//距离变小，则入堆\r\n            }\r\n        }\r\n    }\r\n\r\n    if (dist[n] == 0x3f3f3f3f) return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\", &n, &m);\r\n\r\n    memset(h, -1, sizeof h);\r\n    while (m -- )\r\n    {\r\n        int a, b, c;\r\n        scanf(\"%d%d%d\", &a, &b, &c);\r\n        add(a, b, c);\r\n    }\r\n\r\n    cout << dijkstra() << endl;\r\n\r\n    return 0;\r\n}\r\n\r\n//参考yxc\r\n\r\n// 作者：Hasity\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/1906644/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD149",
@@ -4899,18 +4336,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD149/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>&quot;点很多，边很少。用堆优化Dijkstra——用小根堆代替遍历找最近点。&quot;赵晴儿说，&quot;每次从堆顶取最近的未访问点。&quot;</p><p>给定一个带权有向图和起点，求到每个点的最短距离。边数远小于点数的平方。</p>",
+          "description": "<p>&quot;点很多，边很少。用堆优化Dijkstra——用小根堆代替遍历找最近点。&quot;赵晴儿说，&quot;每次从堆顶取最近的未访问点。&quot;给定一个带权有向图和起点，求到每个点的最短距离。边数远小于点数的平方。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行三个整数a b w。</p>",
           "outputDescription": "<p>一行，到点1的最短距离。</p>",
-          "hint": "<p>堆优化Dijkstra：O(mlogn)。用小根堆取最近点。</p><p><a href=\"https://www.acwing.com/problem/content/852/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 850 | JD149",
-          "samples": [
-            {
-              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
-              "output": "0 2 3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>堆优化Dijkstra：O(mlogn)。用小根堆取最近点。<a href=\"https://www.acwing.com/problem/content/852/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\149.cpp",
+            "language": "cpp",
+            "code": "#include<iostream>\r\n#include<cstring>\r\n#include<cstdio>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N = 510, M = 100010;\r\n\r\nint g[N][N], dist[N];\r\nbool visited[N];\r\n\r\nint n, m;\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist, 0x3f, sizeof(dist));\r\n    dist[1] = 0;\r\n    for(int i = 1; i <= n; i++)\r\n    {\r\n        int t = -1;\r\n        for(int j = 1; j <= n; j++)\r\n        {\r\n            if(!visited[j] && (t == -1 || dist[j] < dist[t]))\r\n                t = j;\r\n        }\r\n        visited[t] = true;\r\n        for(int j = 1; j <= n; j++)\r\n            dist[j] = min(dist[j], dist[t] + g[t][j]);\r\n    }\r\n    if(dist[n] == 0x3f3f3f3f) return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\", &n, &m);\r\n\r\n    memset(g, 0x3f, sizeof(g));\r\n    while (m--)\r\n    {\r\n        int x, y, c;\r\n        scanf(\"%d%d%d\", &x, &y, &c);\r\n        g[x][y] = min(g[x][y], c);\r\n    }\r\n    cout << dijkstra() << endl;\r\n    return 0;\r\n}\r\n\r\n// 作者：optimjie\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/154643/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD150",
@@ -4918,18 +4354,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD150/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着图上的负权边：&quot;Dijkstra处理不了负权边。用SPFA——BFS+松弛。把待更新的点放入队列，每次取一个点，用它更新邻居。邻居变短了就入队。&quot;</p><p>给定一个可能有负权边的图，求最短距离。</p>",
+          "description": "<p>赵晴儿指着图上的负权边：&quot;Dijkstra处理不了负权边。用SPFA——BFS+松弛。把待更新的点放入队列，每次取一个点，用它更新邻居。邻居变短了就入队。&quot;给定一个可能有负权边的图，求最短距离。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行三个整数a b w（w可为负）。</p>",
           "outputDescription": "<p>一行，到点1的最短距离。</p>",
-          "hint": "<p>SPFA：队列优化Bellman-Ford。</p><p><a href=\"https://www.acwing.com/problem/content/853/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 851 | JD150",
-          "samples": [
-            {
-              "input": "3 3\n1 2 -1\n2 3 2\n1 3 3",
-              "output": "0 -1 1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>SPFA：队列优化Bellman-Ford。<a href=\"https://www.acwing.com/problem/content/853/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\150.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <algorithm>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint h[N], e[N], w[N], ne[N], idx;//邻接表，存储图\r\nint st[N];//标记顶点是不是在队列中\r\nint dist[N];//保存最短路径的值\r\nint q[N], hh, tt = -1;//队列\r\n\r\nvoid add(int a, int b, int c){//图中添加边和边的端点\r\n    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;\r\n}\r\n\r\nvoid spfa(){\r\n    q[++tt] = 1;//从1号顶点开始松弛，1号顶点入队\r\n    dist[1] = 0;//1号到1号的距离为 0\r\n    st[1] = 1;//1号顶点在队列中\r\n    while(tt >= hh){//不断进行松弛\r\n        int a = q[hh++];//取对头记作a，进行松弛\r\n        st[a] = 0;//取完队头后，a不在队列中了\r\n        for(int i = h[a]; i != -1; i = ne[i])//遍历所有和a相连的点\r\n        {\r\n            int b = e[i], c = w[i];//获得和a相连的点和边\r\n            if(dist[b] > dist[a] + c){//如果可以距离变得更短，则更新距离\r\n\r\n                dist[b] = dist[a] + c;//更新距离\r\n\r\n                if(!st[b]){//如果没在队列中\r\n                    q[++tt] = b;//入队\r\n                    st[b] = 1;//打标记\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\nint main(){\r\n    memset(h, -1, sizeof h);//初始化邻接表\r\n    memset(dist, 0x3f, sizeof dist);//初始化距离\r\n    int n, m;//保存点的数量和边的数量\r\n    cin >> n >> m;\r\n    for(int i = 0; i < m; i++){//读入每条边和边的端点\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        add(a, b, w);//加入到邻接表\r\n    }\r\n    spfa();\r\n    if(dist[n] == 0x3f3f3f3f )//如果到n点的距离是无穷，则不能到达 \r\n        cout << \"impossible\";\r\n    else cout << dist[n];//否则能到达，输出距离\r\n    return 0;\r\n}\r\n\r\n// 作者：Hasity\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/4486341/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD151",
@@ -4937,18 +4372,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD151/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰铺开全图：&quot;多源最短路——任意两点之间的最短距离。Floyd算法：三重循环，dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j])。&quot;</p><p>给定一个带权图，求任意两点之间的最短距离。</p>",
+          "description": "<p>梁嘉峰铺开全图：&quot;多源最短路——任意两点之间的最短距离。Floyd算法：三重循环，dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j])。&quot;给定一个带权图，求任意两点之间的最短距离。</p>",
           "inputDescription": "<p>第一行三个整数n、m和q。接下来m行每行三个整数a b w。接下来q行每行两个整数a b。</p>",
           "outputDescription": "<p>q行，每行一个整数。不可达输出impossible。</p>",
-          "hint": "<p>Floyd：O(n³)。三重循环枚举中间点。</p><p><a href=\"https://www.acwing.com/problem/content/856/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 854 | JD151",
-          "samples": [
-            {
-              "input": "3 3 2\n1 2 2\n2 3 1\n1 3 4\n1 3\n2 1",
-              "output": "3\n3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>Floyd：O(n³)。三重循环枚举中间点。<a href=\"https://www.acwing.com/problem/content/856/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\151.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 210;\r\nconst int INF = 0x3f3f3f3f;\r\nint d[N][N];\r\nint n, m, q;\r\n\r\nint main() {\r\n    cin >> n >> m >> q;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= n; j++) {\r\n            if (i == j) d[i][j] = 0;\r\n            else d[i][j] = INF;\r\n        }\r\n    }\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        d[a][b] = min(d[a][b], w);\r\n    }\r\n    \r\n    for (int k = 1; k <= n; k++) {\r\n        for (int i = 1; i <= n; i++) {\r\n            for (int j = 1; j <= n; j++) {\r\n                if (d[i][k] != INF && d[k][j] != INF) {\r\n                    d[i][j] = min(d[i][j], d[i][k] + d[k][j]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    \r\n    while (q--) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        if (d[a][b] == INF) cout << \"impossible\" << endl;\r\n        else cout << d[a][b] << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD152",
@@ -4956,18 +4390,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD152/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着散落的城池：&quot;用最少的路把所有城池连起来，总路长最短。&quot;</p><p>梁嘉峰说：&quot;Prim算法——类似Dijkstra，每次选离已连通部分最近的未加入点，把那条边加入生成树。&quot;</p><p>给定一个带权无向图，求最小生成树的总权值。</p>",
+          "description": "<p>赵晴儿指着散落的城池：&quot;用最少的路把所有城池连起来，总路长最短。&quot;梁嘉峰说：&quot;Prim算法——类似Dijkstra，每次选离已连通部分最近的未加入点，把那条边加入生成树。&quot;给定一个带权无向图，求最小生成树的总权值。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行三个整数a b w。</p>",
           "outputDescription": "<p>一行，最小生成树的总权值。不连通输出impossible。</p>",
-          "hint": "<p>Prim：O(n²)。每次选最近未加入点。</p><p><a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 858 | JD152",
-          "samples": [
-            {
-              "input": "4 5\n1 2 1\n1 3 2\n2 3 3\n2 4 4\n3 4 5",
-              "output": "7"
-            }
-          ],
-          "solution": null
+          "hint": "<p>Prim：O(n²)。每次选最近未加入点。<a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\152.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 510;\r\nconst int INF = 0x3f3f3f3f;\r\nint g[N][N];\r\nint dist[N];\r\nbool st[N];\r\nint n, m;\r\n\r\nint prim() {\r\n    memset(dist, 0x3f, sizeof(dist));\r\n    int res = 0;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int t = -1;\r\n        for (int j = 1; j <= n; j++) {\r\n            if (!st[j] && (t == -1 || dist[t] > dist[j])) {\r\n                t = j;\r\n            }\r\n        }\r\n        \r\n        if (i && dist[t] == INF) return -1;\r\n        \r\n        if (i) res += dist[t];\r\n        st[t] = true;\r\n        \r\n        for (int j = 1; j <= n; j++) {\r\n            if (dist[j] > g[t][j]) {\r\n                dist[j] = g[t][j];\r\n            }\r\n        }\r\n    }\r\n    \r\n    return res;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    memset(g, 0x3f, sizeof(g));\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        g[a][b] = g[b][a] = min(g[a][b], w);\r\n    }\r\n    \r\n    int ans = prim();\r\n    \r\n    if (ans == -1) cout << \"impossible\" << endl;\r\n    else cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD153",
@@ -4975,18 +4408,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD153/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>梁嘉峰说：&quot;Kruskal——按边权从小到大排序，逐条加入。如果这条边的两个端点已经在同一连通块里（用并查集判断），就跳过；否则加入。&quot;</p><p>给定一个带权无向图，求最小生成树的总权值。</p>",
+          "description": "<p>梁嘉峰说：&quot;Kruskal——按边权从小到大排序，逐条加入。如果这条边的两个端点已经在同一连通块里（用并查集判断），就跳过；否则加入。&quot;给定一个带权无向图，求最小生成树的总权值。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行三个整数a b w。</p>",
           "outputDescription": "<p>一行，最小生成树的总权值。不连通输出impossible。</p>",
-          "hint": "<p>Kruskal：O(mlogm)。按边权排序，并查集判环。</p><p><a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 859 | JD153",
-          "samples": [
-            {
-              "input": "4 5\n1 2 1\n1 3 2\n2 3 3\n2 4 4\n3 4 5",
-              "output": "7"
-            }
-          ],
-          "solution": null
+          "hint": "<p>Kruskal：O(mlogm)。按边权排序，并查集判环。<a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\153.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nconst int M = 200010;\r\nint p[N];\r\nint n, m;\r\n\r\nstruct Edge {\r\n    int a, b, w;\r\n    bool operator< (const Edge &W) const {\r\n        return w < W.w;\r\n    }\r\n} edges[M];\r\n\r\nint find(int x) {\r\n    if (p[x] != x) p[x] = find(p[x]);\r\n    return p[x];\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 1; i <= n; i++) p[i] = i;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        edges[i] = {a, b, w};\r\n    }\r\n    \r\n    sort(edges, edges + m);\r\n    \r\n    int res = 0, cnt = 0;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a = edges[i].a, b = edges[i].b, w = edges[i].w;\r\n        int pa = find(a), pb = find(b);\r\n        \r\n        if (pa != pb) {\r\n            p[pa] = pb;\r\n            res += w;\r\n            cnt++;\r\n        }\r\n    }\r\n    \r\n    if (cnt < n - 1) cout << \"impossible\" << endl;\r\n    else cout << res << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD154",
@@ -4994,18 +4426,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD154/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>赵晴儿指着一个图：&quot;能不能把所有点分成两组，同组之间没有直接相连的边？&quot;</p><p>梁嘉峰说：&quot;染色法——从任意点开始，染红色；它的邻居染蓝色；邻居的邻居染红色……如果某个点需要同时染两种颜色，就不是二分图。&quot;</p><p>给定一个无向图，判断是否是二分图。</p>",
+          "description": "<p>赵晴儿指着一个图：&quot;能不能把所有点分成两组，同组之间没有直接相连的边？&quot;梁嘉峰说：&quot;染色法——从任意点开始，染红色；它的邻居染蓝色；邻居的邻居染红色……如果某个点需要同时染两种颜色，就不是二分图。&quot;给定一个无向图，判断是否是二分图。</p>",
           "inputDescription": "<p>第一行两个整数n和m。接下来m行每行两个整数a b。</p>",
           "outputDescription": "<p>一行，Yes或No。</p>",
-          "hint": "<p>BFS/DFS染色，冲突则不是二分图。</p><p><a href=\"https://www.acwing.com/problem/content/862/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 860 | JD154",
-          "samples": [
-            {
-              "input": "4 4\n1 2\n2 3\n3 4\n4 1",
-              "output": "Yes"
-            }
-          ],
-          "solution": null
+          "hint": "<p>BFS/DFS染色，冲突则不是二分图。<a href=\"https://www.acwing.com/problem/content/862/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\154.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nvector<int> g[N];\r\nint color[N];\r\nint n, m;\r\n\r\nbool dfs(int u, int c) {\r\n    color[u] = c;\r\n    \r\n    for (int i = 0; i < g[u].size(); i++) {\r\n        int v = g[u][i];\r\n        if (!color[v]) {\r\n            if (!dfs(v, 3 - c)) return false;\r\n        } else if (color[v] == c) {\r\n            return false;\r\n        }\r\n    }\r\n    \r\n    return true;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        g[a].push_back(b);\r\n        g[b].push_back(a);\r\n    }\r\n    \r\n    bool flag = true;\r\n    for (int i = 1; i <= n; i++) {\r\n        if (!color[i]) {\r\n            if (!dfs(i, 1)) {\r\n                flag = false;\r\n                break;\r\n            }\r\n        }\r\n    }\r\n    \r\n    if (flag) cout << \"Yes\" << endl;\r\n    else cout << \"No\" << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD155",
@@ -5013,18 +4444,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD155/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山脚下，试剑台前。西域刀客赫连铁拔出背上唯一的刀鞘，鞘中却藏着N柄短刀，每柄有重量和锋芒。刀鞘容量有限——选哪些刀，才能让锋芒之和最大？</p><p>李少白拔剑上前。梁嘉峰低声道：&quot;每柄刀只能选一次——01背包。逆序遍历容量，dp[j] = max(dp[j], dp[j-v]+w)。&quot;</p><p>李少白深吸一口气，提笔写下。赫连铁看了答案，缓缓点头：&quot;第一关，过了。&quot;</p>",
+          "description": "<p>华山脚下，试剑台前。西域刀客赫连铁拔出背上唯一的刀鞘，鞘中却藏着N柄短刀，每柄有重量和锋芒。刀鞘容量有限——选哪些刀，才能让锋芒之和最大？李少白拔剑上前。梁嘉峰低声道：&quot;每柄刀只能选一次——01背包。逆序遍历容量，dp[j] = max(dp[j], dp[j-v]+w)。&quot;李少白深吸一口气，提笔写下。赫连铁看了答案，缓缓点头：&quot;第一关，过了。&quot;</p>",
           "inputDescription": "<p>第一行两个整数N和V。接下来N行每行两个整数v和w。</p>",
           "outputDescription": "<p>一行，最大价值。</p>",
-          "hint": "<p>01背包：dp[j] = max(dp[j], dp[j-v[i]]+w[i])，逆序遍历j。</p><p><a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 2 | JD155",
-          "samples": [
-            {
-              "input": "4 5\n1 2\n2 4\n3 4\n4 5",
-              "output": "8"
-            }
-          ],
-          "solution": null
+          "hint": "<p>01背包：dp[j] = max(dp[j], dp[j-v[i]]+w[i])，逆序遍历j。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\155.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 1010;\nint f[N];\nint n, m;\n\nint main() {\n    cin >> n >> m;\n    \n    for (int i = 0; i < n; i++) {\n        int v, w;\n        cin >> v >> w;\n        for (int j = m; j >= v; j--) {\n            f[j] = max(f[j], f[j - v] + w);\n        }\n    }\n    \n    cout << f[m] << endl;\n    \n    return 0;\n}"
+          }
         },
         {
           "id": "JD156",
@@ -5032,18 +4462,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD156/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>第二阵。铸剑山庄庄主出场，身后跟着仆从，抬着无数柄相同的剑。&quot;每柄剑重v，锋利w。我的剑取之不尽——你能装多少？&quot;</p><p>赵晴儿上前一步：&quot;完全背包——每种剑可以拿无限柄，内层循环正序遍历。&quot;她提笔如飞，片刻交卷。庄主愕然：&quot;这么快？&quot;</p>",
+          "description": "<p>第二阵。铸剑山庄庄主出场，身后跟着仆从，抬着无数柄相同的剑。&quot;每柄剑重v，锋利w。我的剑取之不尽——你能装多少？&quot;赵晴儿上前一步：&quot;完全背包——每种剑可以拿无限柄，内层循环正序遍历。&quot;她提笔如飞，片刻交卷。庄主愕然：&quot;这么快？&quot;</p>",
           "inputDescription": "<p>第一行两个整数N和V。接下来N行每行两个整数v和w。</p>",
           "outputDescription": "<p>一行，最大价值。</p>",
-          "hint": "<p>完全背包：内层正序遍历。每种物品可选无限次。</p><p><a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 3 | JD156",
-          "samples": [
-            {
-              "input": "4 5\n1 2\n2 4\n3 4\n4 5",
-              "output": "10"
-            }
-          ],
-          "solution": null
+          "hint": "<p>完全背包：内层正序遍历。每种物品可选无限次。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\156.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint f[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w;\r\n        cin >> v >> w;\r\n        for (int j = v; j <= m; j++) {\r\n            f[j] = max(f[j], f[j - v] + w);\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD157",
@@ -5051,18 +4480,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD157/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山云梯，台阶排成三角形，每级刻着一个数字。从顶到底，每步只能向左下或右下。&quot;找出一条路径，使数字之和最大。&quot;裁判宣布。</p><p>李少白仰望云梯，忽然笑了：&quot;从底向上——每级取下方两个方向中较大的，加上自己。一层层往上推，山顶就是答案。&quot;</p>",
+          "description": "<p>华山云梯，台阶排成三角形，每级刻着一个数字。从顶到底，每步只能向左下或右下。&quot;找出一条路径，使数字之和最大。&quot;裁判宣布。李少白仰望云梯，忽然笑了：&quot;从底向上——每级取下方两个方向中较大的，加上自己。一层层往上推，山顶就是答案。&quot;</p>",
           "inputDescription": "<p>第一行一个整数n。接下来n行第i行有i个整数。</p>",
           "outputDescription": "<p>一行，最大路径和。</p>",
-          "hint": "<p>从底向上DP。dp[i][j] = max(dp[i+1][j], dp[i+1][j+1]) + a[i][j]。</p><p><a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 898 | JD157",
-          "samples": [
-            {
-              "input": "5\n7\n3 8\n8 1 0\n2 7 4 4\n4 5 2 6 5",
-              "output": "30"
-            }
-          ],
-          "solution": null
+          "hint": "<p>从底向上DP。dp[i][j] = max(dp[i+1][j], dp[i+1][j+1]) + a[i][j]。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\157.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 510;\r\nint f[N][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= i; j++) {\r\n            cin >> f[i][j];\r\n        }\r\n    }\r\n    \r\n    for (int i = n - 1; i >= 1; i--) {\r\n        for (int j = 1; j <= i; j++) {\r\n            f[i][j] += max(f[i + 1][j], f[i + 1][j + 1]);\r\n        }\r\n    }\r\n    \r\n    cout << f[1][1] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD158",
@@ -5070,18 +4498,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD158/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>擂台上，青城派弟子摆出一排剑，每把刻着一个数字。&quot;选出最长的递增序列——数字必须递增，不必相邻。&quot;</p><p>李少白用O(n²)的DP接下第一招。梁嘉峰却摇头：&quot;后面数据更大。贪心+二分——维护最小末尾数组，O(nlogn)。&quot;</p><p>李少白重写代码，青城弟子面色一变：&quot;好快的剑！&quot;</p>",
+          "description": "<p>擂台上，青城派弟子摆出一排剑，每把刻着一个数字。&quot;选出最长的递增序列——数字必须递增，不必相邻。&quot;李少白用O(n²)的DP接下第一招。梁嘉峰却摇头：&quot;后面数据更大。贪心+二分——维护最小末尾数组，O(nlogn)。&quot;李少白重写代码，青城弟子面色一变：&quot;好快的剑！&quot;</p>",
           "inputDescription": "<p>第一行一个整数n。第二行n个整数。</p>",
           "outputDescription": "<p>一行，最长递增子序列的长度。</p>",
-          "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。</p><p><a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 895 | JD158",
-          "samples": [
-            {
-              "input": "7\n3 1 2 1 8 5 6",
-              "output": "4"
-            }
-          ],
-          "solution": null
+          "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\158.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint a[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> a[i];\r\n    }\r\n    \r\n    vector<int> tails;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        auto it = lower_bound(tails.begin(), tails.end(), a[i]);\r\n        if (it == tails.end()) {\r\n            tails.push_back(a[i]);\r\n        } else {\r\n            *it = a[i];\r\n        }\r\n    }\r\n    \r\n    cout << tails.size() << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD159",
@@ -5089,18 +4516,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD159/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>峨眉派女侠递来两卷剑谱：&quot;找出两谱中最长的公共剑招序列——顺序一致但不必连续。&quot;</p><p>赵晴儿接过剑谱：&quot;LCS——dp[i][j]表示前i招和前j招的最长公共子序列。相等时加一，否则取较大值。&quot;</p><p>女侠看了答案，微微一笑：&quot;峨眉输了。&quot;</p>",
+          "description": "<p>峨眉派女侠递来两卷剑谱：&quot;找出两谱中最长的公共剑招序列——顺序一致但不必连续。&quot;赵晴儿接过剑谱：&quot;LCS——dp[i][j]表示前i招和前j招的最长公共子序列。相等时加一，否则取较大值。&quot;女侠看了答案，微微一笑：&quot;峨眉输了。&quot;</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行长度为n的字符串。第三行长度为m的字符串。</p>",
           "outputDescription": "<p>一行，最长公共子序列的长度。</p>",
-          "hint": "<p>LCS：二维DP。相等时dp[i][j]=dp[i-1][j-1]+1，否则取max(dp[i-1][j], dp[i][j-1])。</p><p><a href=\"https://www.acwing.com/problem/content/877/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 897 | JD159",
-          "samples": [
-            {
-              "input": "4 5\nabcd\nacebd",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>LCS：二维DP。相等时dp[i][j]=dp[i-1][j-1]+1，否则取max(dp[i-1][j], dp[i][j-1])。<a href=\"https://www.acwing.com/problem/content/877/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\159.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint f[N][N];\r\nchar a[N], b[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    cin >> a + 1;\r\n    cin >> b + 1;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= m; j++) {\r\n            if (a[i] == b[j]) {\r\n                f[i][j] = f[i - 1][j - 1] + 1;\r\n            } else {\r\n                f[i][j] = max(f[i - 1][j], f[i][j - 1]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[n][m] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD160",
@@ -5108,18 +4534,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD160/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山脚下的石阵——N堆石子排成一行，每次只能合并相邻两堆，代价是两堆之和。&quot;全部合并的最小代价？&quot;</p><p>少林高僧双手合十：&quot;贪心不行，必须区间DP。枚举分割点k，dp[i][j] = min(dp[i][k] + dp[k+1][j]) + sum(i..j)。&quot;</p><p>李少白闭目凝神，三重循环缓缓展开。高僧点头：&quot;施主悟了。&quot;</p>",
+          "description": "<p>华山脚下的石阵——N堆石子排成一行，每次只能合并相邻两堆，代价是两堆之和。&quot;全部合并的最小代价？&quot;少林高僧双手合十：&quot;贪心不行，必须区间DP。枚举分割点k，dp[i][j] = min(dp[i][k] + dp[k+1][j]) + sum(i..j)。&quot;李少白闭目凝神，三重循环缓缓展开。高僧点头：&quot;施主悟了。&quot;</p>",
           "inputDescription": "<p>第一行一个整数N。第二行N个整数。</p>",
           "outputDescription": "<p>一行，最小总代价。</p>",
-          "hint": "<p>区间DP：枚举分割点。dp[i][j] = min(dp[i][k] + dp[k+1][j]) + sum(i..j)。O(n³)。</p><p><a href=\"https://www.acwing.com/problem/content/870/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 282 | JD160",
-          "samples": [
-            {
-              "input": "4\n1 3 5 2",
-              "output": "22"
-            }
-          ],
-          "solution": null
+          "hint": "<p>区间DP：枚举分割点。dp[i][j] = min(dp[i][k] + dp[k+1][j]) + sum(i..j)。O(n³)。<a href=\"https://www.acwing.com/problem/content/870/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\160.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 310;\r\nint a[N], s[N];\r\nint f[N][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        cin >> a[i];\r\n        s[i] = s[i - 1] + a[i];\r\n    }\r\n    \r\n    memset(f, 0x3f, sizeof(f));\r\n    for (int i = 1; i <= n; i++) f[i][i] = 0;\r\n    \r\n    for (int len = 2; len <= n; len++) {\r\n        for (int i = 1; i + len - 1 <= n; i++) {\r\n            int j = i + len - 1;\r\n            for (int k = i; k < j; k++) {\r\n                f[i][j] = min(f[i][j], f[i][k] + f[k + 1][j] + s[j] - s[i - 1]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[1][n] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD161",
@@ -5127,18 +4552,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD161/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>武当道长递来两卷经文：&quot;把A卷改成B卷，最少几步？增、删、改，每次算一步。&quot;</p><p>李少白沉思：&quot;dp[i][j]表示A的前i个改成B的前j个的最少操作。三种操作取min+1。&quot;</p><p>道长抚须而笑：&quot;小友的剑法，已经入了化境。&quot;</p>",
+          "description": "<p>武当道长递来两卷经文：&quot;把A卷改成B卷，最少几步？增、删、改，每次算一步。&quot;李少白沉思：&quot;dp[i][j]表示A的前i个改成B的前j个的最少操作。三种操作取min+1。&quot;道长抚须而笑：&quot;小友的剑法，已经入了化境。&quot;</p>",
           "inputDescription": "<p>第一行两个整数n和m。第二行长度为n的字符串A。第三行长度为m的字符串B。</p>",
           "outputDescription": "<p>一行，编辑距离。</p>",
-          "hint": "<p>编辑距离：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。</p><p><a href=\"https://www.acwing.com/problem/content/904/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 902 | JD161",
-          "samples": [
-            {
-              "input": "3 3\nabc\nadc",
-              "output": "1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>编辑距离：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。<a href=\"https://www.acwing.com/problem/content/904/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\161.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cmath>\r\n#include <string>\r\nusing namespace std;\r\nconst int N = 1009;\r\nchar a[N], b[N];\r\nint dp[2][N]; \r\nint main(){\r\n    ios::sync_with_stdio(0); cin.tie(0);\r\n    int n, m;\r\n    cin>>n>>a+1>>m>>b+1;\r\n    //初始化\r\n    for(int i = 0; i <= m; i++) dp[0][i] = i;\r\n    for(int i = 1; i <= n; i++){\r\n    //两行dp循环使用\r\n        int now = (i & 1), old = (i - 1 & 1);\r\n        dp[now][0] = i;//初始化\r\n        for(int j = 1; j <= m; j++){\r\n            if(a[i] == b[j]) dp[now][j] = dp[old][j-1];\r\n            else dp[now][j] = min(min(dp[old][j], dp[now][j-1]), dp[old][j-1]) + 1;\r\n        }\r\n    }\r\n    cout<<dp[n & 1][m];\r\n    return 0;\r\n}\r\n\r\n// 作者：stary_sky\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/11245790/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD162",
@@ -5146,18 +4570,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD162/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山后山，白雪皑皑。一个R×C的滑雪场，从任意高处滑向相邻的低处。&quot;最长能滑多远？&quot;</p><p>赵晴儿踏雪而行：&quot;记忆化搜索——DFS+缓存。每个格子只算一次，取四个方向中最长的路径加一。&quot;</p><p>她的身影在雪道上飞驰，划出一道完美的弧线。</p>",
+          "description": "<p>华山后山，白雪皑皑。一个R×C的滑雪场，从任意高处滑向相邻的低处。&quot;最长能滑多远？&quot;赵晴儿踏雪而行：&quot;记忆化搜索——DFS+缓存。每个格子只算一次，取四个方向中最长的路径加一。&quot;她的身影在雪道上飞驰，划出一道完美的弧线。</p>",
           "inputDescription": "<p>第一行两个整数R和C。接下来R行每行C个整数表示高度。</p>",
           "outputDescription": "<p>一行，最长递减路径的长度。</p>",
-          "hint": "<p>记忆化搜索：DFS+缓存。每个格子只算一次，取四个方向中最长路径+1。</p><p><a href=\"https://www.acwing.com/problem/content/903/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 901 | JD162",
-          "samples": [
-            {
-              "input": "5 5\n1 2 3 4 5\n16 17 18 19 6\n15 24 25 20 7\n14 23 22 21 8\n13 12 11 10 9",
-              "output": "25"
-            }
-          ],
-          "solution": null
+          "hint": "<p>记忆化搜索：DFS+缓存。每个格子只算一次，取四个方向中最长路径+1。<a href=\"https://www.acwing.com/problem/content/903/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\162.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 310;\r\nint g[N][N];\r\nint f[N][N];\r\nint r, c;\r\nint dx[4] = {-1, 0, 1, 0};\r\nint dy[4] = {0, 1, 0, -1};\r\n\r\nint dfs(int x, int y) {\r\n    if (f[x][y] != -1) return f[x][y];\r\n    \r\n    f[x][y] = 1;\r\n    for (int i = 0; i < 4; i++) {\r\n        int nx = x + dx[i];\r\n        int ny = y + dy[i];\r\n        if (nx >= 1 && nx <= r && ny >= 1 && ny <= c && g[nx][ny] < g[x][y]) {\r\n            f[x][y] = max(f[x][y], dfs(nx, ny) + 1);\r\n        }\r\n    }\r\n    \r\n    return f[x][y];\r\n}\r\n\r\nint main() {\r\n    cin >> r >> c;\r\n    \r\n    for (int i = 1; i <= r; i++) {\r\n        for (int j = 1; j <= c; j++) {\r\n            cin >> g[i][j];\r\n        }\r\n    }\r\n    \r\n    memset(f, -1, sizeof(f));\r\n    \r\n    int ans = 0;\r\n    for (int i = 1; i <= r; i++) {\r\n        for (int j = 1; j <= c; j++) {\r\n            ans = max(ans, dfs(i, j));\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD163",
@@ -5165,18 +4588,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD163/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>论剑峰上，铠甲大师出场。他有N种铠甲，每种有重量、防御和库存。&quot;每种最多拿s件——你能装多少防御？&quot;</p><p>李少白眉头一皱：&quot;逐件拆分太慢……二进制优化！把s拆成1、2、4、8…的和，转化为01背包。&quot;</p><p>铠甲大师大惊：&quot;你竟然知道这种方法！&quot;</p>",
+          "description": "<p>论剑峰上，铠甲大师出场。他有N种铠甲，每种有重量、防御和库存。&quot;每种最多拿s件——你能装多少防御？&quot;李少白眉头一皱：&quot;逐件拆分太慢……二进制优化！把s拆成1、2、4、8…的和，转化为01背包。&quot;铠甲大师大惊：&quot;你竟然知道这种方法！&quot;</p>",
           "inputDescription": "<p>第一行两个整数N和V。接下来N行每行三个整数v、w和s（体积、价值、数量）。</p>",
           "outputDescription": "<p>一行，最大价值。</p>",
-          "hint": "<p>多重背包二进制优化：拆分s为2的幂次，转化为01背包。O(N*V*logS)。</p><p><a href=\"https://www.acwing.com/problem/content/4/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 4 | JD163",
-          "samples": [
-            {
-              "input": "3 12\n76 84 46\n34 31 44",
-              "output": "0"
-            }
-          ],
-          "solution": null
+          "hint": "<p>多重背包二进制优化：拆分s为2的幂次，转化为01背包。O(N*V*logS)。<a href=\"https://www.acwing.com/problem/content/4/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\163.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20010;\r\nint f[N];\r\nint n, m;\r\n\r\nstruct Item {\r\n    int v, w;\r\n};\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    vector<Item> items;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w, s;\r\n        cin >> v >> w >> s;\r\n        \r\n        for (int k = 1; k <= s; k *= 2) {\r\n            s -= k;\r\n            items.push_back({v * k, w * k});\r\n        }\r\n        if (s > 0) {\r\n            items.push_back({v * s, w * s});\r\n        }\r\n    }\r\n    \r\n    for (int i = 0; i < items.size(); i++) {\r\n        for (int j = m; j >= items[i].v; j--) {\r\n            f[j] = max(f[j], f[j - items[i].v] + items[i].w);\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD164",
@@ -5184,18 +4606,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD164/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>第二轮铠甲战。数据更大——N和V都到了极限。&quot;同样的方法还管用吗？&quot;对手冷笑。</p><p>梁嘉峰在台下喊道：&quot;方法不变，多重背包的经典解法！&quot;</p><p>李少白再次出手，代码如剑，一气呵成。</p>",
+          "description": "<p>第二轮铠甲战。数据更大——N和V都到了极限。&quot;同样的方法还管用吗？&quot;对手冷笑。梁嘉峰在台下喊道：&quot;方法不变，多重背包的经典解法！&quot;李少白再次出手，代码如剑，一气呵成。</p>",
           "inputDescription": "<p>第一行两个整数N和V。接下来N行每行三个整数v、w和s。</p>",
           "outputDescription": "<p>一行，最大价值。</p>",
-          "hint": "<p>多重背包二进制优化。与JD163相同思路，数据范围更大。</p><p><a href=\"https://www.acwing.com/problem/content/5/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 5 | JD164",
-          "samples": [
-            {
-              "input": "680 1562\n866 815 599\n1355 680 202",
-              "output": "742560"
-            }
-          ],
-          "solution": null
+          "hint": "<p>多重背包二进制优化。与JD163相同思路，数据范围更大。<a href=\"https://www.acwing.com/problem/content/5/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\164.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20010;\r\nint f[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w, s;\r\n        cin >> v >> w >> s;\r\n        \r\n        int k = 1;\r\n        while (k <= s) {\r\n            for (int j = m; j >= k * v; j--) {\r\n                f[j] = max(f[j], f[j - k * v] + k * w);\r\n            }\r\n            s -= k;\r\n            k *= 2;\r\n        }\r\n        if (s > 0) {\r\n            for (int j = m; j >= s * v; j--) {\r\n                f[j] = max(f[j], f[j - s * v] + s * w);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD165",
@@ -5203,18 +4624,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD165/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>宝物被分成若干组，每组只能选一件。&quot;分组背包——三重循环：外层遍历组，内层逆序容量，最内层遍历组内物品。&quot;</p><p>对手是丐帮长老，手中竹棒一点：&quot;小子，你确定每组只选一件？&quot;</p><p>李少白微微一笑：&quot;确定。每组选最优的那一件。&quot;长老哈哈大笑：&quot;好！&quot;</p>",
+          "description": "<p>宝物被分成若干组，每组只能选一件。&quot;分组背包——三重循环：外层遍历组，内层逆序容量，最内层遍历组内物品。&quot;对手是丐帮长老，手中竹棒一点：&quot;小子，你确定每组只选一件？&quot;李少白微微一笑：&quot;确定。每组选最优的那一件。&quot;长老哈哈大笑：&quot;好！&quot;</p>",
           "inputDescription": "<p>第一行两个整数N和V。接下来每组：第一行S（组内物品数），接下来S行每行两个整数v和w。</p>",
           "outputDescription": "<p>一行，最大价值。</p>",
-          "hint": "<p>分组背包：外层遍历组，内层逆序容量，最内层遍历组内物品。</p><p><a href=\"https://www.acwing.com/problem/content/9/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 9 | JD165",
-          "samples": [
-            {
-              "input": "71 46\n80\n84 76",
-              "output": "1869"
-            }
-          ],
-          "solution": null
+          "hint": "<p>分组背包：外层遍历组，内层逆序容量，最内层遍历组内物品。<a href=\"https://www.acwing.com/problem/content/9/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\165.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 110;\r\nint f[N];\r\nint v[N], w[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int s;\r\n        cin >> s;\r\n        for (int j = 0; j < s; j++) {\r\n            cin >> v[j] >> w[j];\r\n        }\r\n        for (int j = m; j >= 0; j--) {\r\n            for (int k = 0; k < s; k++) {\r\n                if (j >= v[k]) {\r\n                    f[j] = max(f[j], f[j - v[k]] + w[k]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD166",
@@ -5222,18 +4642,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD166/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>擂台第二轮——剑的数量到了十万。O(n²)的剑法已经不够用了。</p><p>梁嘉峰在台下传音：&quot;贪心+二分——维护最小末尾数组，O(nlogn)。这是剑法的极致。&quot;</p><p>李少白闭上眼睛，剑意如丝，层层递进。对手的剑阵瞬间崩溃。</p>",
+          "description": "<p>擂台第二轮——剑的数量到了十万。O(n²)的剑法已经不够用了。梁嘉峰在台下传音：&quot;贪心+二分——维护最小末尾数组，O(nlogn)。这是剑法的极致。&quot;李少白闭上眼睛，剑意如丝，层层递进。对手的剑阵瞬间崩溃。</p>",
           "inputDescription": "<p>第一行一个整数N。第二行N个整数。</p>",
           "outputDescription": "<p>一行，最长递增子序列的长度。</p>",
-          "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。</p><p><a href=\"https://www.acwing.com/problem/content/898/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 896 | JD166",
-          "samples": [
-            {
-              "input": "7\n3 1 2 1 8 5 6",
-              "output": "4"
-            }
-          ],
-          "solution": null
+          "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/898/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\166.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint a[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> a[i];\r\n    }\r\n    \r\n    vector<int> tails;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        auto it = lower_bound(tails.begin(), tails.end(), a[i]);\r\n        if (it == tails.end()) {\r\n            tails.push_back(a[i]);\r\n        } else {\r\n            *it = a[i];\r\n        }\r\n    }\r\n    \r\n    cout << tails.size() << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD167",
@@ -5241,18 +4660,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD167/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>对手是一位数学大师，他写下数字n：&quot;把它拆成若干正整数之和，有多少种拆法？&quot;</p><p>赵晴儿上前：&quot;完全背包——从1到n，每个数可以用无限次。dp[j] += dp[j-i]，模1e9+7。&quot;</p><p>大师推了推眼镜：&quot;你用背包来解整数划分？有意思。&quot;</p>",
+          "description": "<p>对手是一位数学大师，他写下数字n：&quot;把它拆成若干正整数之和，有多少种拆法？&quot;赵晴儿上前：&quot;完全背包——从1到n，每个数可以用无限次。dp[j] += dp[j-i]，模1e9+7。&quot;大师推了推眼镜：&quot;你用背包来解整数划分？有意思。&quot;</p>",
           "inputDescription": "<p>一个整数n（1≤n≤1000）。</p>",
           "outputDescription": "<p>一行，划分方案数模1e9+7。</p>",
-          "hint": "<p>完全背包DP：dp[j] += dp[j-i]，i从1到n。模1e9+7。</p><p><a href=\"https://www.acwing.com/problem/content/902/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 900 | JD167",
-          "samples": [
-            {
-              "input": "5",
-              "output": "7"
-            }
-          ],
-          "solution": null
+          "hint": "<p>完全背包DP：dp[j] += dp[j-i]，i从1到n。模1e9+7。<a href=\"https://www.acwing.com/problem/content/902/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\167.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nconst int MOD = 1e9 + 7;\r\nint f[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    f[0] = 1;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = i; j <= n; j++) {\r\n            f[j] = (f[j] + f[j - i]) % MOD;\r\n        }\r\n    }\r\n    \r\n    cout << f[n] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD168",
@@ -5260,18 +4678,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD168/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山石壁上刻着从a到b的所有数字。&quot;0到9每个数字各出现了几次？&quot;对手出了一道算术题。</p><p>李少白没有一个个数。&quot;数位统计——对每个数字和位置，用数学公式算出现次数。f(b)-f(a-1)。&quot;</p><p>对手目瞪口呆：&quot;你……你怎么算得这么快？&quot;</p>",
+          "description": "<p>华山石壁上刻着从a到b的所有数字。&quot;0到9每个数字各出现了几次？&quot;对手出了一道算术题。李少白没有一个个数。&quot;数位统计——对每个数字和位置，用数学公式算出现次数。f(b)-f(a-1)。&quot;对手目瞪口呆：&quot;你……你怎么算得这么快？&quot;</p>",
           "inputDescription": "<p>一行两个整数a和b。</p>",
           "outputDescription": "<p>一行，10个整数，分别表示数字0~9在[a,b]中出现的次数，空格隔开。</p>",
-          "hint": "<p>数位统计：对每个数字和位置用数学公式计算出现次数。f(b)-f(a-1)。</p><p><a href=\"https://www.acwing.com/problem/content/340/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 338 | JD168",
-          "samples": [
-            {
-              "input": "1 10",
-              "output": "1 2 1 1 1 1 1 1 1 1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>数位统计：对每个数字和位置用数学公式计算出现次数。f(b)-f(a-1)。<a href=\"https://www.acwing.com/problem/content/340/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\168.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <algorithm>\r\n#include <vector>\r\n#include <cmath>\r\nusing namespace std;\r\n\r\nint a, b;\r\n\r\n// 得到一个数中某几个相邻的数字构成的数值\r\n// 一定要记住从高位往低位遍历\r\nint get_num(vector<int> num, int l, int r){\r\n    int ans = 0;\r\n    for (int i = l; i >= r; i --) ans = ans * 10 + num[i];\r\n    return ans;\r\n}\r\n\r\n// 计算1到n的所有的数中数字x出现的次数\r\nint count(int n, int x){\r\n    vector<int> num;\r\n    while (n){\r\n        num.push_back(n % 10);\r\n        n /= 10;\r\n    }\r\n    int len = num.size(), ans = 0;\r\n    for (int i = len - 1 - !x; i >= 0; i --){ // 此处减去 !x 是精华\r\n        // 000 ~ abc-1\r\n        ans += get_num(num, len - 1, i + 1) * (int)pow(10, i);\r\n        if (!x) ans -= (int)pow(10, i);  // x==0时，001 ~ abc-1\r\n        // abc\r\n        if (x == num[i]) ans += (get_num(num, i - 1, 0) + 1);\r\n        else if (x < num[i]) ans += (int)pow(10, i);\r\n    }\r\n    return ans;\r\n\r\n}\r\n\r\nint main(){\r\n    while (cin >> a >> b, a || b){ // a b 不全为0\r\n        if (a > b) swap(a, b);\r\n        for (int i = 0; i <= 9; i ++) printf(\"%d \", count(b, i) - count(a - 1, i));\r\n        puts(\"\");\r\n    }\r\n\r\n    return 0;\r\n}\r\n\r\n// 作者：Qiner\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/12793336/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          }
         },
         {
           "id": "JD169",
@@ -5279,18 +4696,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD169/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山之巅，云雾缭绕。四位绝顶高手已经等候多时。</p><p>第一位是棋圣。他摆出一个n×m的棋盘和一堆1×2的骨牌：&quot;铺满整个棋盘，有多少种铺法？&quot;</p><p>赵晴儿凝视棋盘，忽然眼中一亮：&quot;状压DP——逐列处理。用二进制掩码表示哪些格子被前一列的横骨牌占了。&quot;</p><p>棋圣抚掌而笑：&quot;好一个状压！老夫输了。&quot;</p>",
+          "description": "<p>华山之巅，云雾缭绕。四位绝顶高手已经等候多时。第一位是棋圣。他摆出一个n×m的棋盘和一堆1×2的骨牌：&quot;铺满整个棋盘，有多少种铺法？&quot;赵晴儿凝视棋盘，忽然眼中一亮：&quot;状压DP——逐列处理。用二进制掩码表示哪些格子被前一列的横骨牌占了。&quot;棋圣抚掌而笑：&quot;好一个状压！老夫输了。&quot;</p>",
           "inputDescription": "<p>多组数据，每组两个整数n和m。以0 0结束。</p>",
           "outputDescription": "<p>每组一行，铺法总数。</p>",
-          "hint": "<p>状压DP：逐列处理，状态掩码表示被前一列横骨牌占的格子。</p><p><a href=\"https://www.acwing.com/problem/content/293/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 291 | JD169",
-          "samples": [
-            {
-              "input": "2 3",
-              "output": "3"
-            }
-          ],
-          "solution": null
+          "hint": "<p>状压DP：逐列处理，状态掩码表示被前一列横骨牌占的格子。<a href=\"https://www.acwing.com/problem/content/293/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\169.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 12;\nlong long f[N][1 << N];\nint n, m;\n\nvoid dfs(int col, int row, int cur_state, int next_state) {\n    if (row == n) {\n        f[col + 1][next_state] += f[col][cur_state];\n        return;\n    }\n    \n    if (cur_state & (1 << row)) {\n        dfs(col, row + 1, cur_state, next_state);\n    } else {\n        // 竖放\n        dfs(col, row + 1, cur_state, next_state | (1 << row));\n        // 横放\n        if (row + 1 < n && !(cur_state & (1 << (row + 1)))) {\n            dfs(col, row + 2, cur_state, next_state);\n        }\n    }\n}\n\nint main() {\n    while (cin >> n >> m && n && m) {\n        if (n > m) swap(n, m);\n        \n        memset(f, 0, sizeof(f));\n        f[0][0] = 1;\n        \n        for (int col = 0; col < m; col++) {\n            for (int state = 0; state < (1 << n); state++) {\n                if (f[col][state]) {\n                    dfs(col, 0, state, 0);\n                }\n            }\n        }\n        \n        cout << f[m][0] << endl;\n    }\n    \n    return 0;\n}"
+          }
         },
         {
           "id": "JD170",
@@ -5298,18 +4714,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD170/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>第二位绝顶高手——游侠。他铺开一张城池图：&quot;从城0出发，每座城恰好走一次，到城n-1。最短路径？&quot;</p><p>李少白眼中精光一闪：&quot;状压DP——dp[mask][i]表示访问集合mask、当前在城i的最小代价。枚举所有状态和转移。O(2^n × n²)。&quot;</p><p>游侠击节赞叹：&quot;好！这一剑，我甘拜下风！&quot;</p>",
+          "description": "<p>第二位绝顶高手——游侠。他铺开一张城池图：&quot;从城0出发，每座城恰好走一次，到城n-1。最短路径？&quot;李少白眼中精光一闪：&quot;状压DP——dp[mask][i]表示访问集合mask、当前在城i的最小代价。枚举所有状态和转移。O(2^n × n²)。&quot;游侠击节赞叹：&quot;好！这一剑，我甘拜下风！&quot;</p>",
           "inputDescription": "<p>第一行一个整数n。接下来n行每行n个整数，表示邻接矩阵。</p>",
           "outputDescription": "<p>一行，最短Hamilton路径长度。</p>",
-          "hint": "<p>状压DP：dp[mask][i]表示访问集合mask、当前在城i的最小代价。O(2^n * n²)。</p><p><a href=\"https://www.acwing.com/problem/content/93/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 91 | JD170",
-          "samples": [
-            {
-              "input": "5\n0 2 4 5 1\n2 0 6 5 3\n4 6 0 8 3\n5 5 8 0 5\n1 3 3 5 0",
-              "output": "19"
-            }
-          ],
-          "solution": null
+          "hint": "<p>状压DP：dp[mask][i]表示访问集合mask、当前在城i的最小代价。O(2^n * n²)。<a href=\"https://www.acwing.com/problem/content/93/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\170.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20;\r\nconst int M = 1 << N;\r\nint g[N][N];\r\nint f[M][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < n; j++) {\r\n            cin >> g[i][j];\r\n        }\r\n    }\r\n    \r\n    memset(f, 0x3f, sizeof(f));\r\n    f[1][0] = 0;\r\n    \r\n    for (int mask = 1; mask < (1 << n); mask++) {\r\n        for (int i = 0; i < n; i++) {\r\n            if (!(mask & (1 << i))) continue;\r\n            for (int j = 0; j < n; j++) {\r\n                if (i == j) continue;\r\n                if (!(mask & (1 << j))) continue;\r\n                f[mask][i] = min(f[mask][i], f[mask ^ (1 << i)][j] + g[j][i]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[(1 << n) - 1][n - 1] << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD171",
@@ -5317,18 +4732,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD171/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>第三位——藏经阁阁主。他取出一本字典和一段经文：&quot;字典里有多少个词，和这段经文的编辑距离不超过k？&quot;</p><p>赵晴儿沉吟片刻：&quot;对字典里每个词，算它和经文的编辑距离。标准编辑距离DP——dp[i][j] = min(三种操作)。&quot;</p><p>阁主长叹：&quot;当年我花了十年才悟出此法，你竟片刻之间……&quot;</p>",
+          "description": "<p>第三位——藏经阁阁主。他取出一本字典和一段经文：&quot;字典里有多少个词，和这段经文的编辑距离不超过k？&quot;赵晴儿沉吟片刻：&quot;对字典里每个词，算它和经文的编辑距离。标准编辑距离DP——dp[i][j] = min(三种操作)。&quot;阁主长叹：&quot;当年我花了十年才悟出此法，你竟片刻之间……&quot;</p>",
           "inputDescription": "<p>第一行两个整数N和M。接下来N行每行一个字符串（字典）。接下来M行每行一个字符串和一个整数k。</p>",
           "outputDescription": "<p>M行，每行一个整数（字典中编辑距离≤k的字符串个数）。</p>",
-          "hint": "<p>编辑距离DP：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。</p><p><a href=\"https://www.acwing.com/problem/content/901/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 899 | JD171",
-          "samples": [
-            {
-              "input": "2 2\nabc\ndef\nabc 1\nadc 2",
-              "output": "1\n1"
-            }
-          ],
-          "solution": null
+          "hint": "<p>编辑距离DP：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。<a href=\"https://www.acwing.com/problem/content/901/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\171.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <cstring>\r\n#include <string>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint dp[N][N];\r\nstring dict[N];\r\nint n, m;\r\n\r\nint edit_distance(string a, string b) {\r\n    int len1 = a.length(), len2 = b.length();\r\n    \r\n    for (int i = 0; i <= len1; i++) dp[i][0] = i;\r\n    for (int j = 0; j <= len2; j++) dp[0][j] = j;\r\n    \r\n    for (int i = 1; i <= len1; i++) {\r\n        for (int j = 1; j <= len2; j++) {\r\n            if (a[i - 1] == b[j - 1]) {\r\n                dp[i][j] = dp[i - 1][j - 1];\r\n            } else {\r\n                dp[i][j] = min(dp[i - 1][j], min(dp[i][j - 1], dp[i - 1][j - 1])) + 1;\r\n            }\r\n        }\r\n    }\r\n    \r\n    return dp[len1][len2];\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> dict[i];\r\n    }\r\n    \r\n    while (m--) {\r\n        string s;\r\n        int k;\r\n        cin >> s >> k;\r\n        \r\n        int cnt = 0;\r\n        for (int i = 0; i < n; i++) {\r\n            if (edit_distance(dict[i], s) <= k) {\r\n                cnt++;\r\n            }\r\n        }\r\n        \r\n        cout << cnt << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+          }
         },
         {
           "id": "JD172",
@@ -5336,20 +4750,17 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "url": "http://www.xmuoj.com/contest/359/problem/JD172/",
           "timeLimit": 1000,
           "memoryLimit": 256,
-          "description": "<p>华山绝顶，风雷激荡。最后一位对手——棋魔，传说中的千机棋圣。他缓缓展开一张巨大的人员图谱：&quot;这是宗门的命脉——每个人有一个直属上司。现在要派人出征，但一个士兵和他的上司不能同时出征——否则后方崩溃。每个士兵有不同的战斗力。&quot;</p><p>梁嘉峰在台下喊道：&quot;树形DP！dp[u][0]表示u留守时子树的最大战力，dp[u][1]表示u出征时。出征则下属必须留守，留守则下属可出可留。找到根节点，DFS一遍！&quot;</p><p>李少白深吸一口气，闭上眼睛。他想起了第一天来到剑道宗的那个下午——梁嘉峰递给他两枚铁令，赵晴儿在沙盘上画圆。从变量到递归，从数组到图论，从排序到动态规划……每一步都是剑道的修行。</p><p>他睁开眼睛，提笔写下最后一行代码。</p><p>棋魔看着答案，沉默良久，终于起身，深深一揖：&quot;华山论剑，到此为止。&quot;</p><p>梁嘉峰走上前来，拍了拍李少白的肩膀：&quot;恭喜。你可以出师了。&quot;</p><p>赵晴儿在一旁笑了：&quot;别急，回去还得教下一届呢。&quot;</p>",
+          "description": "<p>华山绝顶，风雷激荡。最后一位对手——棋魔，传说中的千机棋圣。他缓缓展开一张巨大的人员图谱：&quot;这是宗门的命脉——每个人有一个直属上司。现在要派人出征，但一个士兵和他的上司不能同时出征——否则后方崩溃。每个士兵有不同的战斗力。&quot;梁嘉峰在台下喊道：&quot;树形DP！dp[u][0]表示u留守时子树的最大战力，dp[u][1]表示u出征时。出征则下属必须留守，留守则下属可出可留。找到根节点，DFS一遍！&quot;李少白深吸一口气，闭上眼睛。他想起了第一天来到剑道宗的那个下午——梁嘉峰递给他两枚铁令，赵晴儿在沙盘上画圆。从变量到递归，从数组到图论，从排序到动态规划……每一步都是剑道的修行。他睁开眼睛，提笔写下最后一行代码。棋魔看着答案，沉默良久，终于起身，深深一揖：&quot;华山论剑，到此为止。&quot;梁嘉峰走上前来，拍了拍李少白的肩膀：&quot;恭喜。你可以出师了。&quot;赵晴儿在一旁笑了：&quot;别急，回去还得教下一届呢。&quot;</p>",
           "inputDescription": "<p>第一行一个整数N。第二行N个整数（每个员工的快乐值）。接下来N-1行每行两个整数l k（l的上司是k）。</p>",
           "outputDescription": "<p>一行，最大总快乐值。</p>",
-          "hint": "<p>树形DP：dp[u][0/1]表示u不出征/出征时的最大值。DFS从根遍历。dp[u][1] = h[u] + Σdp[v][0]，dp[u][0] = Σmax(dp[v][0], dp[v][1])。</p><p><a href=\"https://www.acwing.com/problem/content/287/\" target=\"_blank\">原题链接</a></p>",
-          "source": "AcWing 285 | JD172",
-          "samples": [
-            {
-              "input": "7\n1 1 1 1 1 1 1\n2 6\n3 6\n4 6\n6 7\n5 7",
-              "output": "5"
-            }
-          ],
-          "solution": null
+          "hint": "<p>树形DP：dp[u][0/1]表示u不出征/出征时的最大值。DFS从根遍历。dp[u][1] = h[u] + Σdp[v][0]，dp[u][0] = Σmax(dp[v][0], dp[v][1])。<a href=\"https://www.acwing.com/problem/content/287/\" target=\"_blank\">原题链接</a></p>",
+          "source": "",
+          "samples": [],
+          "solution": {
+            "path": "solutions\359\172.cpp",
+            "language": "cpp",
+            "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 6010;\r\nvector<int> g[N];\r\nint happy[N];\r\nint dp[N][2];\r\nbool has_parent[N];\r\nint n;\r\n\r\nvoid dfs(int u) {\r\n    dp[u][0] = 0;\r\n    dp[u][1] = happy[u];\r\n    \r\n    for (int i = 0; i < g[u].size(); i++) {\r\n        int v = g[u][i];\r\n        dfs(v);\r\n        dp[u][0] += max(dp[v][0], dp[v][1]);\r\n        dp[u][1] += dp[v][0];\r\n    }\r\n}\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        cin >> happy[i];\r\n    }\r\n    \r\n    for (int i = 0; i < n - 1; i++) {\r\n        int l, k;\r\n        cin >> l >> k;\r\n        g[k].push_back(l);\r\n        has_parent[l] = true;\r\n    }\r\n    \r\n    int root = 1;\r\n    while (has_parent[root]) root++;\r\n    \r\n    dfs(root);\r\n    \r\n    cout << max(dp[root][0], dp[root][1]) << endl;\r\n    \r\n    return 0;\r\n}"
+          }
         }
       ]
-    }
-  ]
-};
+    };

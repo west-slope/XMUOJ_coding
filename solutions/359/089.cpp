@@ -1,4 +1,3 @@
-// 每行末尾有空格
 #include<iostream>
 using namespace std;
 int main()
@@ -16,12 +15,12 @@ int main()
     {
         for(int j=0;j<col;j++)
         {
-            //cout<<" ";
-            cout<<a[i][j]<<" ";
+            if(j!=0)cout<<" ";
+            cout<<a[i][j];
         }
         cout<<endl;
     }
     
-
-
+ 
+ 
 }

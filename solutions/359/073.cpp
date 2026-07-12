@@ -7,11 +7,11 @@ int main()
     getline(cin,a);
     for(int i=0;a[i]!='\0';i++)
     {
-        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y')
+        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y'||a[i]>='0'&&a[i]<='8')
             a[i]+=1;
         else if(a[i]=='Z')a[i]='A';
         else if(a[i]=='z')a[i]='a';
-        //else if(a[i]=='9')a[i]='0';
+        else if(a[i]=='9')a[i]='0';
     }
     cout<<a<<endl;
     return 0;

@@ -1,3 +1,5 @@
+//简单题：A*B
+
 #include <iostream>
 using namespace std;
 int main()

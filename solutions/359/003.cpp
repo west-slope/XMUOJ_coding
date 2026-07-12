@@ -1,3 +1,5 @@
+//简单题：根据描述得出结果
+
 #include <iostream>
 using namespace std;
 int main()

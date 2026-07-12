@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/10 15:42:53",
+  "generatedAt": "2026/7/12 18:28:05",
   "solutions": {
     "359": {
       "100": {
@@ -17,55 +17,405 @@ window.XMUOJ_SOLUTIONS_CODE = {
         "language": "cpp",
         "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\n#include<iomanip>\r\nusing namespace std;\r\nstruct sanyuan\r\n{\r\n    int num;\r\n    double m;\r\n    string str;\r\n};\r\n\r\nint main()\r\n{\r\n    int N;\r\n    cin>>N;\r\n    sanyuan s[200]; \r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cin>>s[i].num>>s[i].m>>s[i].str;\r\n    }\r\n    for(int i=0;i<N-1;i++)\r\n    {\r\n        for(int j=0;j<N-i-1;j++)\r\n        {\r\n            if(s[j].num>s[j+1].num||(s[j].num==s[j+1].num&&s[j].m>s[j+1].m))\r\n            {\r\n                sanyuan temp=s[j];\r\n                s[j]=s[j+1];\r\n                s[j+1]=temp;\r\n            }\r\n        }\r\n    }\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cout<<s[i].num<<\" \"<<fixed<<setprecision(2)<<s[i].m<<\" \"<<s[i].str<<endl;\r\n    }\r\n}"
       },
+      "103": {
+        "path": "solutions/359/103.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\nint a[1000000],n;\r\nvoid quick_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int i=l-1,j=r+1,x=arr[(l+r)>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(arr[i]<x);\r\n        do j--;while(arr[j]>x);\r\n        if(i<j){swap(arr[i],arr[j]);\r\n        }\r\n    }\r\n    quick_sort(arr,l,j);\r\n    quick_sort(arr,j+1,r);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }   \r\n    quick_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        //if(i!=0)cout<<\" \";\r\n        printf(\"%d \",a[i]);\r\n    }\r\n    return 0;\r\n}"
+      },
+      "104": {
+        "path": "solutions/359/104.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint a[1000];\r\nint quick_sort(int arr[],int l,int r,int k)\r\n{\r\n    if(l>=r)return arr[l];\r\n    int i=l-1,j=r+1,x=arr[(l+r)>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(x>arr[i]);\r\n        do j--;while(x<arr[j]);\r\n        if(i<j)swap(arr[i],arr[j]);\r\n    }\r\n    int s1=j-l+1;\r\n    if(k<=s1)return quick_sort(arr,l,j,k);\r\n    else return quick_sort(arr,j+1,r,k-s1);\r\n}\r\n\r\nint main()\r\n{\r\n    int n,k;\r\n    cin>>n>>k;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    cout<<quick_sort(a,0,n-1,k)<<endl;\r\n    \r\n}"
+      },
+      "105": {
+        "path": "solutions/359/105.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\nint a[1000],temp[1000],n;\r\nvoid merge_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int mid=(l+r)>>1;//中间数\r\n    merge_sort(arr,l,mid);\r\n    merge_sort(arr,mid+1,r);\r\n    int i=l,j=mid+1,k=0;\r\n    while(i<=mid&&j<=r)\r\n    {\r\n        if(arr[i]<=arr[j]){\r\n            temp[k]=arr[i];\r\n            i++;\r\n        }\r\n        else {\r\n            temp[k]=arr[j];\r\n            j++;\r\n        }\r\n        k++;\r\n    }\r\n    while(i<=mid)\r\n        {\r\n            temp[k++]=arr[i++];\r\n        }\r\n    while(j<=r)\r\n    {\r\n            temp[k++]=arr[j++];\r\n    }\r\n    for(int i=l,k=0;i<=r;i++,k++)\r\n    {\r\n        arr[i]=temp[k];\r\n    }\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    merge_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        printf(\"%d \",a[i]);\r\n    }\r\n\r\n    return 0;\r\n}"
+      },
+      "106": {
+        "path": "solutions/359/106.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL n,a[1000000],temp[1000000];\r\n\r\nLL merge_sort(LL arr[],LL l,LL r)\r\n{\r\n    if(l>=r)return 0;\r\n    LL mid=l+r>>1,res=0;\r\n    res+=merge_sort(arr,l,mid)+ merge_sort(arr,mid+1,r);\r\n    LL i=l,j=mid+1,k=0;\r\n    while(i<=mid&&j<=r)\r\n    {\r\n        if(arr[i]<=arr[j])\r\n        {\r\n            temp[k++]=arr[i++];\r\n        }\r\n        else if(arr[i]>temp[j])\r\n        {\r\n            temp[k++]=arr[j++];\r\n            res+=mid-i+1;\r\n        }\r\n    }\r\n    while(i<=mid)\r\n    {\r\n        temp[k++]=arr[i++];\r\n    }\r\n    while(j<=r)\r\n    {\r\n        temp[k++]=arr[j++];\r\n    }\r\n    for(int i=l,k=0;i<=r;i++,k++)//为了进一步排序，不可忽略\r\n    {\r\n        arr[i]=temp[k];\r\n    }\r\n   return res;\r\n\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    cout<<merge_sort(a,0,n-1)<<endl;\r\n\r\n\r\n}"
+      },
+      "107": {
+        "path": "solutions/359/107.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\nint a[20000],n,q,j;\r\n\r\nvoid search(int m)\r\n{\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        if(a[i]==m)\r\n        {\r\n            j=i;\r\n            cout<<i<<\" \";\r\n            while(a[j]==m)\r\n            {\r\n                j++;\r\n            }\r\n            if(j==i)cout<<i;\r\n            else cout<<j-1<<endl;\r\n            break;\r\n        }\r\n        else if(i==n-1)\r\n        {\r\n            cout<<-1<<\" \"<<-1<<endl;\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int m;\r\n    cin>>n>>q;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=0;i<q;i++)\r\n    {\r\n        cin>>m;\r\n        search(m);\r\n    }\r\n\r\n}"
+      },
+      "108": {
+        "path": "solutions/359/108.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<cmath>\r\n#include<iomanip>\r\nusing namespace std;\r\n\r\n\r\nint main(){\r\n    double n;\r\n    double mid;\r\n    cin>>n;\r\n    double left=-10000,right=10000;\r\n    while(right-left>1e-8)\r\n    {\r\n        mid=(left+right)/2;\r\n        if(pow(mid,3)>=n)\r\n            right=mid;\r\n        else left=mid;\r\n    }\r\n    cout<<fixed<<setprecision(6)<<mid<<endl;\r\n}"
+      },
+      "109": {
+        "path": "solutions/359/109.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int m,n;\r\n    cin>>m;\r\n    while(m--){\r\n        cin>>n;\r\n        int count=0;\r\n        while(n>0)\r\n        {\r\n            count+=n&1;\r\n            n>>=1;\r\n        }\r\n        cout<<count<<\" \";\r\n    }\r\n}"
+      },
+      "110": {
+        "path": "solutions/359/110.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n#include<cstring>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\ntypedef long long LL;\r\n\r\nvector<int>add(vector<int> &A,vector<int>&B)\r\n{\r\n    vector<int>C;\r\n    for(int i=0,t=0;i<A.size()||i<B.size()||t;i++)\r\n    {\r\n        if(i<A.size())t+=A[i];\r\n        if(i<B.size())t+=B[i];\r\n        C.push_back(t%10);\r\n        t/=10;\r\n    }\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n        cout<<A[i];\r\n    cout<<endl;\r\n}\r\n\r\nint main()\r\n{\r\n    string a,b;\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n\r\n    for(int i=a.size()-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=b.size()-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    print(add(A,B));\r\n\r\n}\r\n\r\n\r\n\r\n\r\n// int main()\r\n// {\r\n//     string arr[3];\r\n//     int a[3][100001]={0};\r\n//     cin>>arr[0];\r\n//     cin>>arr[1];\r\n//     int a0=arr[0].length(),a1=arr[1].length();\r\n//     int m=max(a0,a1);\r\n//     for(int i=0;i<a0;i++)\r\n//     {\r\n//         a[0][i]=arr[0][a0-i-1]-'0';\r\n//     }\r\n//     for(int i=0;i<a1;i++)\r\n//     {\r\n//         a[1][i]=arr[1][a1-i-1]-'0';\r\n//     }\r\n//     for(int i=0;i<m;i++)\r\n//     {\r\n//         a[2][i]+=a[0][i]+a[1][i];\r\n//         if(a[2][i]>=10)\r\n//         {\r\n//             a[2][i]-=10;\r\n//             a[2][i+1]++;\r\n//         }\r\n//     }\r\n//     for(int i=m;i>=0;i--)\r\n//     {\r\n//         if(i==m&&a[2][m]==0)continue;\r\n//         cout<<a[2][i];\r\n//     }\r\n\r\n\r\n\r\n\r\n\r\n// }"
+      },
+      "111": {
+        "path": "solutions/359/111.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<cstring>\r\n#include<string>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nstring a,b;\r\n\r\nvoid compare(vector<int>&A,vector<int>&B)\r\n{\r\n    if(A.size()<B.size())swap(A,B);\r\n    else if(A.size()==B.size())\r\n    {\r\n        int i=A.size()-1;\r\n        while(i>=0&&A[i]==B[i])i--;\r\n        if(A[i]<B[i])swap(A,B);\r\n    }\r\n}\r\n\r\nvector<int> sub(vector<int>&A,vector<int>&B)\r\n{\r\n    vector<int>C;\r\n    int t=0;\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        t+=A[i];\r\n        if(i<B.size())t-=B[i];\r\n        C.push_back((t+10)%10);\r\n        if(t<0)t=-1;\r\n        else t=0;\r\n    }\r\n    while(!C.back())C.pop_back();\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int> A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n    {\r\n        cout<<A[i];\r\n    }\r\n}\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n    int len1=a.length(),len2=b.length();\r\n    for(int i=len1-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=len2-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    compare(A,B);\r\n    print(sub(A,B));\r\n    cout<<endl;\r\n    return 0;\r\n}"
+      },
+      "112": {
+        "path": "solutions/359/112.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<algorithm>\r\n#include<string>\r\n#include<vector>\r\n\r\nusing namespace std;\r\n\r\nstring a,b;\r\n\r\nvector<int> mul(vector<int>&A,vector<int>&B)\r\n{\r\n    vector<int>C(A.size()+B.size());\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        for(int j=0;j<B.size();j++)\r\n        {\r\n            C[i+j]+=A[i]*B[j];\r\n        }\r\n    }\r\n    for(int i=0,t=0;i<C.size();i++)\r\n    {\r\n        t+=C[i];\r\n        C[i]=t%10;\r\n        t/=10;\r\n    }\r\n    while(C.back()==0&&C.size()>1)C.pop_back();\r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n    for(int i=A.size()-1;i>=0;i--)\r\n        cout<<A[i];\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A,B;\r\n    for(int i=a.size()-1;i>=0;i--)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    for(int i=b.size()-1;i>=0;i--)\r\n    {\r\n        B.push_back(b[i]-'0');\r\n    }\r\n\r\n    print(mul(A,B));\r\n\r\n    return 0;\r\n}"
+      },
+      "113": {
+        "path": "solutions/359/113.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\n#include<vector>\r\n\r\nusing namespace std;\r\n\r\nstring a;\r\nint b,m;\r\nvector<int>div(vector<int>&A,int b)\r\n{\r\n    vector<int>C(A.size()-to_string(b).length());\r\n    int t=0;\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        t*=10;\r\n        t+=A[i];\r\n        C.push_back(t/b);\r\n        t%=b;\r\n    }\r\n    m=t;\r\n    while(C.front()==0&&C.size()>1)C.erase(C.begin()); \r\n    return C;\r\n}\r\n\r\nvoid print(vector<int>A)\r\n{\r\n\r\n    for(int i=0;i<A.size();i++)\r\n    {\r\n        cout<<A[i];\r\n    }\r\n    cout<<endl;\r\n    cout<<m<<endl;\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a>>b;\r\n    vector<int>A;\r\n    for(int i=0;i<a.size();i++)\r\n    {\r\n        A.push_back(a[i]-'0');\r\n    }\r\n    print(div(A,b));\r\n\r\n    return 0;\r\n}\r\n"
+      },
+      "114": {
+        "path": "solutions/359/114.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint a[100001],b[100001];\r\nint n,m,k;\r\nint main()\r\n{\r\n    cin>>n>>m>>k;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    for(int i=0;i<m;i++)cin>>b[i];\r\n\r\n    int i=0,j=m-1,t=a[i]+b[j];\r\n\r\n    while(t!=k)\r\n    {\r\n        if(t<k)i++;\r\n        else if(t>k)j--;\r\n        t=a[i]+b[j];\r\n    }\r\n    cout<<i<<\" \"<<j;\r\n}"
+      },
+      "115": {
+        "path": "solutions/359/115.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n,m;\r\n    int a[100001],b[100001];\r\n    cin>>n>>m;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    for(int i=0;i<m;i++)cin>>b[i];\r\n\r\n    int i=0,j=0;\r\n\r\n    while(j<m)\r\n    {\r\n        if(a[i]==b[j])\r\n        {\r\n            i++,j++;\r\n        }\r\n        else j++;\r\n    }\r\n    if(i==n)cout<<\"Yes\"<<endl;\r\n    else cout<<\"No\"<<endl;\r\n\r\n    return 0;\r\n}"
+      },
+      "116": {
+        "path": "solutions/359/116.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n;\r\n    int a[100001];\r\n    vector<int>b;\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    vector<int>v;\r\n    int t=0;\r\n    for(int i=0;i<n;i++)//1 2 4 2 5 6 7是：5\r\n    {\r\n\r\n        if(find(v.begin(),v.end(),a[i])==v.end()){\r\n            t++;\r\n            v.push_back(a[i]);\r\n        }\r\n        else {\r\n            b.push_back(t);\r\n            t=0;\r\n            v.erase(v.begin(), find(v.begin(),v.end(),a[i])+1); \r\n            v.push_back(a[i]);\r\n            t=v.size();\r\n        }\r\n    }b.push_back(t);\r\n    sort(b.begin(),b.end());\r\n    cout<<b.back();\r\n}"
+      },
+      "117": {
+        "path": "solutions/359/117.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    int a[100001];\r\n    vector<int>b;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n        if(find(b.begin(),b.end(),a[i])==b.end())b.push_back(a[i]);\r\n        else b.erase(find(b.begin(),b.end(),a[i]));\r\n    }\r\n\r\n    for(int i=0;i<b.size();i++)\r\n        if(b[i]!=0){\r\n            cout<<b[i];break;\r\n        }\r\n}"
+      },
+      "118": {
+        "path": "solutions/359/118.cpp",
+        "language": "cpp",
+        "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;if(!(cin>>n))return 0;\r\nfor(int mask=1;mask<(1<<n);mask++){bool first=true;for(int i=0;i<n;i++)if(mask>>i&1){if(!first)cout<<' ';first=false;cout<<i+1;}cout<<\"\\n\";}}\r\n"
+      },
+      "119": {
+        "path": "solutions/359/119.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m;\r\nconst int N=100;\r\nint arr[N];\r\nbool st[N];\r\nvoid dfs(int u,int start)//多一个start方便判断\r\n{\r\n    if(u>m)\r\n    {\r\n        for(int i=1;i<=m;i++)\r\n        {\r\n            if(i!=1)cout<<\" \";\r\n            cout<<arr[i];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else {\r\n        for(int i=start;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1,i+1);\r\n                arr[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    dfs(1,1);\r\n    return 0;\r\n}"
+      },
+      "120": {
+        "path": "solutions/359/120.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nint parent[50005], dist[50005];\r\n\r\nint find(int x)\r\n{\r\n    if(parent[x] == x) return x;\r\n    int t = parent[x];\r\n    int root = find(t);\r\n    dist[x] = (dist[x] + dist[t]) % 3;\r\n    parent[x] = root;\r\n    return root;\r\n}\r\n\r\nint main()\r\n{\r\n    int n, m;\r\n    cin >> n >> m;\r\n    \r\n    for(int i = 1; i <= n; i++)\r\n    {\r\n        parent[i] = i;\r\n        dist[i] = 0;\r\n    }\r\n    \r\n    int ans = 0;\r\n    \r\n    for(int i = 0; i < m; i++)\r\n    {\r\n        int d, x, y;\r\n        cin >> d >> x >> y;\r\n        \r\n        if(x > n || y > n)\r\n        {\r\n            ans++;\r\n            continue;\r\n        }\r\n        \r\n        int rx = find(x);\r\n        int ry = find(y);\r\n        \r\n        if(d == 1)\r\n        {\r\n            if(rx == ry)\r\n            {\r\n                if(((dist[x] - dist[y]) % 3 + 3) % 3 != 0) ans++;\r\n            }\r\n            else\r\n            {\r\n                parent[rx] = ry;\r\n                dist[rx] = ((dist[y] - dist[x]) % 3 + 3) % 3;\r\n            }\r\n        }\r\n        else\r\n        {\r\n            if(rx == ry)\r\n            {\r\n                if(((dist[x] - dist[y]) % 3 + 3) % 3 != 1) ans++;\r\n            }\r\n            else\r\n            {\r\n                parent[rx] = ry;\r\n                dist[rx] = ((dist[y] - dist[x] + 1) % 3 + 3) % 3;\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "121": {
+        "path": "solutions/359/121.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m,ss=0;\r\nint l,r;\r\nint a[100001],s[100001];\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++){\r\n        cin>>a[i];\r\n        ss+=a[i];\r\n        s[i]=ss;\r\n    }\r\n    while(cin>>l&&cin>>r)\r\n    {\r\n        cout<<s[r]-s[l-1];\r\n        cout<<endl;\r\n    }\r\n\r\n}\r\n"
+      },
+      "122": {
+        "path": "solutions/359/122.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n//测试样例有问题\r\nint main()\r\n{\r\n    int n,m,q;\r\n    int x1,y1,x2,y2;\r\n    int a[1001][1001],s[1001][1001],ss=0;\r\n    cin>>n>>m>>q;\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            s[i][j] = s[i-1][j] + s[i][j-1] - s[i-1][j-1] + a[i][j];\r\n            //ss+=a[i][j];\r\n            //s[i][j]=ss;\r\n        }\r\n    while(q--)\r\n    {\r\n        cin>>x1>>y1>>x2>>y2;\r\n        cout<<s[x2][y2]-s[x1-1][y2]-s[x2][y1-1]+s[x1-1][y1-1]<<endl;\r\n    }\r\n\r\n\r\n\r\n\r\n}"
+      },
+      "123": {
+        "path": "solutions/359/123.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n// 测试样例有误\r\nint n,m,ss=0,num;\r\nint l,r;\r\nint a[100001],s[100001];\r\nint main()\r\n{\r\n    cin>>n>>m;//差分\r\n    for(int i=1;i<=n;i++){\r\n        cin>>a[i];\r\n        s[i]=a[i]-a[i-1];\r\n    }\r\n    while(m--)\r\n    {\r\n        cin>>l>>r>>num;\r\n        s[l]+=num,s[r+1]-=num;\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        a[i]=a[i-1]+s[i];\r\n        cout<<a[i]<<\" \";\r\n    }\r\n    cout<<endl;\r\n    return 0;\r\n\r\n}\r\n"
+      },
+      "124": {
+        "path": "solutions/359/124.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n//题目出错\r\nint main()\r\n{\r\n    int n,m,q;\r\n    int a[1001][1001]={0},s[1001][1001]={0},sum=0;\r\n    cin>>n>>m>>q;\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            \r\n        }\r\n    }\r\n    int x1,y1,x2,y2,c;\r\n    while(q--)\r\n    {\r\n        cin>>x1>>y1>>x2>>y2>>c;\r\n        s[x1][y1] += c;\r\n        if(y2 + 1 <= m) s[x1][y2 + 1] -= c;\r\n        if(x2 + 1 <= n) s[x2 + 1][y1] -= c;\r\n        if(x2 + 1 <= n && y2 + 1 <= m) s[x2 + 1][y2 + 1] += c;\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n           s[i][j] += s[i-1][j] + s[i][j-1] - s[i-1][j-1];\r\n            a[i][j] += s[i][j];\r\n            cout<<a[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n}"
+      },
+      "125": {
+        "path": "solutions/359/125.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<algorithm>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int n, m;\r\n    cin >> n >> m;\r\n    \r\n    vector<pair<int, int>> add;  // 存储加操作 (位置, 加的值)\r\n    vector<pair<int, int>> query; // 存储查询 (l, r)\r\n    vector<int> alls;            // 所有需要离散化的坐标\r\n    \r\n    // 读入 n 次加操作\r\n    for(int i = 0; i < n; i++)\r\n    {\r\n        int x, c;\r\n        cin >> x >> c;\r\n        add.push_back({x, c});\r\n        alls.push_back(x);\r\n    }\r\n    \r\n    // 读入 m 次查询\r\n    for(int i = 0; i < m; i++)\r\n    {\r\n        int l, r;\r\n        cin >> l >> r;\r\n        query.push_back({l, r});\r\n        alls.push_back(l);\r\n        alls.push_back(r);\r\n    }\r\n    \r\n    // 排序去重\r\n    sort(alls.begin(), alls.end());\r\n    alls.erase(unique(alls.begin(), alls.end()), alls.end());\r\n    \r\n    // 离散化后的数组\r\n    vector<int> a(alls.size() + 1, 0);\r\n    \r\n    // 处理加操作\r\n    for(auto p : add)\r\n    {\r\n        int x = p.first;\r\n        int c = p.second;\r\n        int idx = lower_bound(alls.begin(), alls.end(), x) - alls.begin() + 1;\r\n        a[idx] += c;\r\n    }\r\n    \r\n    // 计算前缀和\r\n    vector<long long> prefix(alls.size() + 1, 0);\r\n    for(int i = 1; i <= alls.size(); i++)\r\n    {\r\n        prefix[i] = prefix[i-1] + a[i];\r\n    }\r\n    \r\n    // 处理查询\r\n    for(auto q : query)\r\n    {\r\n        int l = q.first;\r\n        int r = q.second;\r\n        int left = lower_bound(alls.begin(), alls.end(), l) - alls.begin() + 1;\r\n        int right = lower_bound(alls.begin(), alls.end(), r) - alls.begin() + 1;\r\n        cout << prefix[right] - prefix[left - 1] << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "126": {
+        "path": "solutions/359/126.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n//贪心算法\r\nstruct Node \r\n{ \r\n    int l, r; \r\n};\r\n\r\nbool cmp(Node a, Node b) \r\n{ \r\n    return a.l < b.l; \r\n}\r\n\r\nint main() {\r\n    int n;\r\n    cin >> n;\r\n    if (n == 0) { cout << 0; return 0; }\r\n    Node a[5000];\r\n    for (int i = 0; i < n; i++) cin >> a[i].l >> a[i].r;\r\n    sort(a, a + n, cmp);\r\n    int cnt = 1, curR = a[0].r;\r\n    for (int i = 1; i < n; i++) {\r\n        if (a[i].l <= curR) curR = max(curR, a[i].r);\r\n        else { cnt++; curR = a[i].r; }\r\n    }\r\n    cout << cnt;\r\n    return 0;\r\n}"
+      },
+      "127": {
+        "path": "solutions/359/127.cpp",
+        "language": "cpp",
+        "code": "\r\n#include <bits/stdc++.h>\r\nusing namespace std;\r\ntypedef pair<int,int> PII;\r\nint main(){\r\n    ios::sync_with_stdio(false);\r\n    cin.tie(nullptr);\r\n    int n; if(!(cin>>n)) return 0;\r\n    vector<PII> segs;\r\n    for(int i=0;i<n;i++){\r\n        int l,r; cin>>l>>r;\r\n        segs.push_back({r,l});\r\n    }\r\n    sort(segs.begin(),segs.end());\r\n    int res=0, ed=-2e9;\r\n    for(auto seg:segs){\r\n        if(seg.second>ed){\r\n            res++;\r\n            ed=seg.first;\r\n        }\r\n    }\r\n    cout<<res<<\"\\n\";\r\n}\r\n\r\n"
+      },
+      "128": {
+        "path": "solutions/359/128.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    int N,x,temp=0;\r\n    vector<int>a;//容器用于存放数据\r\n    cin>>N;\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        cin>>x;\r\n        a.push_back(x);\r\n    }\r\n    while(N!=1)//每次排序然后最小的两个元素相加代价最小\r\n    {\r\n        sort(a.begin(),a.end());\r\n        a[1]=a[0]+a[1];\r\n        temp+=a[1];\r\n        a.erase(a.begin());//相加完删除第一项\r\n        N--;\r\n\r\n    }\r\n    cout<<temp<<endl;\r\n\r\n}"
+      },
+      "129": {
+        "path": "solutions/359/129.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n//排序后取中位数（下标 n/2），计算所有点到中位数的距离之和\r\nint main()\r\n{\r\n    int a[100001],l=0;//l用于计数\r\n    int N,mid;\r\n    cin>>N;\r\n    for(int i=0;i<N;i++)cin>>a[i];\r\n    sort(a,a+N);\r\n    mid=N/2;//mid为中位数\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        l+=abs(a[mid]-a[i]);//距离要取绝对值\r\n    }\r\n    cout<<l<<endl;\r\n\r\n\r\n}"
+      },
+      "130": {
+        "path": "solutions/359/130.cpp",
+        "language": "cpp",
+        "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint m;if(!(cin>>m))return 0;vector<int>e(m+5),ne(m+5);int head=-1,idx=0;auto add_head=[&](int x){e[idx]=x;ne[idx]=head;head=idx++;};auto add=[&](int k,int x){e[idx]=x;ne[idx]=ne[k];ne[k]=idx++;};auto del=[&](int k){if(k==-1)head=ne[head];else ne[k]=ne[ne[k]];};\r\nwhile(m--){char op;cin>>op;if(op=='H'){int x;cin>>x;add_head(x);}else if(op=='I'){int k,x;cin>>k>>x;add(k-1,x);}else{int k;cin>>k;if(k==0)del(-1);else del(k-1);}}\r\nfor(int i=head;i!=-1;i=ne[i])cout<<e[i]<<' ';cout<<\"\\n\";}\r\n"
+      },
+      "131": {
+        "path": "solutions/359/131.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nconst int N = 100010; \r\nint st[N], tt = 0;    // tt 指向栈顶元素位置，0 表示空栈\r\n\r\nint main() {\r\n    int n, x;\r\n    string op;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        cin >> op;\r\n        \r\n        if (op == \"push\") {\r\n            cin >> x;\r\n            st[++tt] = x;   // 1. 先移动指针，再赋值\r\n        } \r\n        else if (op == \"pop\") {\r\n            if (tt > 0) tt--; // 2. 必须判空！否则栈顶指针变为 -1 会越界\r\n        } \r\n        else if (op == \"query\") {\r\n            if (tt > 0) cout << st[tt] << endl; // 3. 必须判空！\r\n        } \r\n        else if (op == \"empty\") {\r\n            // 4. 你的判断完全正确：tt为0则为空\r\n            if (tt == 0) cout << \"YES\" << endl;\r\n            else cout << \"NO\" << endl;\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n\r\n\r\n//不使用数组的做法\r\n\r\n\r\n// #include<iostream>\r\n// #include<stack>\r\n// #include<string>\r\n// using namespace std;\r\n\r\n// int main()\r\n// {\r\n//     stack<int>a;\r\n//     int n,m;\r\n//     string c;\r\n//     cin>>n;\r\n//     while(n--)\r\n//     {\r\n//         cin>>c;\r\n//         if(c==\"push\")\r\n//         {\r\n//             cin>>m;\r\n//             a.push(m);\r\n//         }\r\n//         else if(c==\"pop\")\r\n//         {\r\n//             a.pop();\r\n//         }\r\n//         else if(c[0]=='q')\r\n//         {\r\n//             cout<<a.top()<<endl;\r\n//         }\r\n//         else if(c[0]=='e')\r\n//         {\r\n//             if(a.empty())\r\n//             {\r\n//                 cout<<\"YES\"<<endl;\r\n//             }\r\n//             else cout<<\"NO\"<<endl;\r\n//         }\r\n//     }\r\n\r\n\r\n\r\n// }"
+      },
+      "132": {
+        "path": "solutions/359/132.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include<string>\r\nusing namespace std;\r\n\r\nconst int N = 100010; \r\nint st[N], tt = -1,hh=0;    // tt 指向栈顶元素位置为-1，hh指向头为0\r\n\r\nint main() {\r\n    int n, x;\r\n    string op;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        cin >> op;\r\n        if (op == \"push\") {\r\n            cin >> x;\r\n            st[++tt] = x;  \r\n        } \r\n        else if (op == \"pop\") {\r\n            hh++; \r\n        } \r\n        else if (op == \"query\") {\r\n            cout << st[hh] << endl;\r\n        } \r\n        else if (op == \"empty\") {\r\n            if (tt<hh) cout << \"YES\" << endl;\r\n            else cout << \"NO\" << endl;\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n"
+      },
+      "133": {
+        "path": "solutions/359/133.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <stack>\r\n#include <string>\r\n#include <unordered_map>\r\nusing namespace std;\r\n\r\n// 判断字符是否为数字\r\nbool isDigit(char c) {\r\n    return c >= '0' && c <= '9';\r\n}\r\n\r\n// 计算两个数的结果\r\nint calc(int a, int b, char op) {\r\n    if (op == '+') return a + b;\r\n    if (op == '-') return a - b;\r\n    if (op == '*') return a * b;\r\n    if (op == '/') return a / b;  // 题目保证整除\r\n    return 0;\r\n}\r\n\r\nint main() {\r\n    string s;\r\n    cin >> s;\r\n    \r\n    stack<int> num;      // 数字栈\r\n    stack<char> op;      // 运算符栈\r\n    \r\n    // 优先级映射：数值越大优先级越高\r\n    unordered_map<char, int> priority = {\r\n        {'+', 1},\r\n        {'-', 1},\r\n        {'*', 2},\r\n        {'/', 2}\r\n    };\r\n    \r\n    for (int i = 0; i < s.size(); i++) {\r\n        char c = s[i];\r\n        \r\n        // 1. 遇到数字：读取完整数字（可能有多位）\r\n        if (isDigit(c)) {\r\n            int x = 0;\r\n            while (i < s.size() && isDigit(s[i])) {\r\n                x = x * 10 + (s[i] - '0');\r\n                i++;\r\n            }\r\n            i--;  // 回退一步，因为for循环会自增\r\n            num.push(x);\r\n        }\r\n        // 2. 遇到左括号：直接入栈\r\n        else if (c == '(') {\r\n            op.push(c);\r\n        }\r\n        // 3. 遇到右括号：一直计算到左括号\r\n        else if (c == ')') {\r\n            while (!op.empty() && op.top() != '(') {\r\n                int b = num.top(); num.pop();\r\n                int a = num.top(); num.pop();\r\n                char oper = op.top(); op.pop();\r\n                num.push(calc(a, b, oper));\r\n            }\r\n            if (!op.empty()) op.pop();  // 弹出左括号\r\n        }\r\n        // 4. 遇到运算符：处理优先级\r\n        else if (c == '+' || c == '-' || c == '*' || c == '/') {\r\n            // 当前运算符优先级 <= 栈顶运算符优先级时，先计算栈顶\r\n            while (!op.empty() && op.top() != '(' && priority[op.top()] >= priority[c]) {\r\n                int b = num.top(); num.pop();\r\n                int a = num.top(); num.pop();\r\n                char oper = op.top(); op.pop();\r\n                num.push(calc(a, b, oper));\r\n            }\r\n            op.push(c);  // 当前运算符入栈\r\n        }\r\n    }\r\n    \r\n    // 5. 处理剩余的运算符\r\n    while (!op.empty()) {\r\n        int b = num.top(); num.pop();\r\n        int a = num.top(); num.pop();\r\n        char oper = op.top(); op.pop();\r\n        num.push(calc(a, b, oper));\r\n    }\r\n    \r\n    cout << num.top() << endl;\r\n    return 0;\r\n}"
+      },
+      "134": {
+        "path": "solutions/359/134.cpp",
+        "language": "cpp",
+        "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint n;if(!(cin>>n))return 0;vector<int>st;for(int i=0;i<n;i++){int x;cin>>x;while(!st.empty()&&st.back()>=x)st.pop_back();if(i)cout<<' ';cout<<(st.empty()?-1:st.back());st.push_back(x);}cout<<\"\\n\";}\r\n"
+      },
+      "135": {
+        "path": "solutions/359/135.cpp",
+        "language": "cpp",
+        "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nconst int N=1000010;\r\nint a[N],q[N];\r\nint main(){\r\n    ios::sync_with_stdio(false); cin.tie(nullptr);\r\n    int n,k; if(!(cin>>n>>k)) return 0;\r\n    for(int i=0;i<n;i++) cin>>a[i];\r\n    int hh=0,tt=-1;\r\n    for(int i=0;i<n;i++){\r\n        if(hh<=tt && i-k+1>q[hh]) hh++;\r\n        while(hh<=tt && a[q[tt]]>=a[i]) tt--;\r\n        q[++tt]=i;\r\n        if(i>=k-1) cout<<a[q[hh]]<<' ';\r\n    }\r\n    cout<<\"\\n\";\r\n    hh=0,tt=-1;\r\n    for(int i=0;i<n;i++){\r\n        if(hh<=tt && i-k+1>q[hh]) hh++;\r\n        while(hh<=tt && a[q[tt]]<=a[i]) tt--;\r\n        q[++tt]=i;\r\n        if(i>=k-1) cout<<a[q[hh]]<<' ';\r\n    }\r\n    cout<<\"\\n\";\r\n}"
+      },
+      "136": {
+        "path": "solutions/359/136.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <string>\r\nusing namespace std;\r\n\r\nint main() {\r\n    int n, m;\r\n    string pattern, text;\r\n    \r\n    cin >> n >> pattern;\r\n    cin >> m >> text;\r\n    \r\n    // 计算next数组\r\n    vector<int> next(n, 0);\r\n    for (int i = 1, j = 0; i < n; i++) {\r\n        while (j > 0 && pattern[i] != pattern[j]) {\r\n            j = next[j - 1];\r\n        }\r\n        if (pattern[i] == pattern[j]) {\r\n            j++;\r\n        }\r\n        next[i] = j;\r\n    }\r\n    \r\n    // KMP匹配\r\n    vector<int> positions;\r\n    for (int i = 0, j = 0; i < m; i++) {\r\n        while (j > 0 && text[i] != pattern[j]) {\r\n            j = next[j - 1];\r\n        }\r\n        if (text[i] == pattern[j]) {\r\n            j++;\r\n        }\r\n        if (j == n) {\r\n            positions.push_back(i - n + 1); // 匹配起始位置\r\n            j = next[j - 1]; // 继续寻找下一个匹配\r\n        }\r\n    }\r\n    \r\n    // 输出结果\r\n    for (int i = 0; i < positions.size(); i++) {\r\n        cout << positions[i] << (i == positions.size() - 1 ? '\\n' : ' ');\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "137": {
+        "path": "solutions/359/137.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <string>\r\nusing namespace std;\r\n//测试点有问题\r\nconst int N = 100010;\r\nint h[N], ph[N], hp[N], sz = 0, idx = 0;\r\n\r\nvoid heap_swap(int a, int b) {\r\n    swap(ph[hp[a]], ph[hp[b]]);\r\n    swap(hp[a], hp[b]);\r\n    swap(h[a], h[b]);\r\n}\r\n\r\nvoid up(int u) {\r\n    while (u / 2 && h[u] < h[u / 2]) {\r\n        heap_swap(u, u / 2);\r\n        u /= 2;\r\n    }\r\n}\r\n\r\nvoid down(int u) {\r\n    int t = u;\r\n    if (u * 2 <= sz && h[u * 2] < h[t]) t = u * 2;\r\n    if (u * 2 + 1 <= sz && h[u * 2 + 1] < h[t]) t = u * 2 + 1;\r\n    if (t != u) {\r\n        heap_swap(u, t);\r\n        down(t);\r\n    }\r\n}\r\n\r\nint main() {\r\n    int n;\r\n    cin >> n;\r\n    \r\n    while (n--) {\r\n        string op;\r\n        cin >> op;\r\n        \r\n        if (op == \"I\") {\r\n            int x;\r\n            cin >> x;\r\n            idx++;\r\n            sz++;\r\n            ph[idx] = sz;\r\n            hp[sz] = idx;\r\n            h[sz] = x;\r\n            up(sz);\r\n        } \r\n        else if (op == \"PM\") {\r\n            cout << h[1] << endl;\r\n        } \r\n        else if (op == \"DM\") {\r\n            heap_swap(1, sz);\r\n            sz--;\r\n            down(1);\r\n        } \r\n        else if (op == \"D\") {\r\n            int k;\r\n            cin >> k;\r\n            int pos = ph[k];\r\n            heap_swap(pos, sz);\r\n            sz--;\r\n            down(pos);\r\n            up(pos);\r\n        } \r\n        else if (op == \"C\") {\r\n            int k, x;\r\n            cin >> k >> x;\r\n            int pos = ph[k];\r\n            h[pos] = x;\r\n            down(pos);\r\n            up(pos);\r\n        }\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "138": {
+        "path": "solutions/359/138.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nconst int N = 100010;\nint p[N];\n\nint find(int x) {\n    if (p[x] != x) p[x] = find(p[x]);\n    return p[x];\n}\n\nint main() {\n    int n, m;\n    cin >> n >> m;\n    \n    for (int i = 1; i <= n; i++) p[i] = i;\n    \n    while (m--) {\n        char op;\n        int a, b;\n        cin >> op >> a >> b;\n        \n        if (op == 'M') {\n            int pa = find(a), pb = find(b);\n            if (pa != pb) p[pa] = pb;\n        } else if (op == 'Q') {\n            if (find(a) == find(b)) cout << \"Yes\" << endl;\n            else cout << \"No\" << endl;\n        }\n    }\n    \n    return 0;\n}"
+      },
+      "139": {
+        "path": "solutions/359/139.cpp",
+        "language": "cpp",
+        "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint p[100010], sz[100010];\r\nint findp(int x){ return p[x]==x?x:p[x]=findp(p[x]); }\r\nint main(){\r\n    ios::sync_with_stdio(false);\r\n    cin.tie(nullptr);\r\n    int n,m;\r\n    if(!(cin>>n>>m)) return 0;\r\n    for(int i=1;i<=n;i++) p[i]=i, sz[i]=1;\r\n    while(m--){\r\n        string op; int a,b;\r\n        cin >> op;\r\n        if(op==\"C\"){\r\n            cin >> a >> b;\r\n            int ra=findp(a), rb=findp(b);\r\n            if(ra!=rb){ p[ra]=rb; sz[rb]+=sz[ra]; }\r\n        }else if(op==\"Q1\"){\r\n            cin >> a >> b;\r\n            cout << (findp(a)==findp(b) ? \"Yes\" : \"No\") << \"\\n\";\r\n        }else{\r\n            cin >> a;\r\n            cout << sz[findp(a)] << \"\\n\";\r\n        }\r\n    }\r\n}"
+      },
+      "140": {
+        "path": "solutions/359/140.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nconst int N = 150010;\r\nint p[N];\r\n\r\nint find(int x) {\r\n    if (p[x] != x) p[x] = find(p[x]);\r\n    return p[x];\r\n}\r\n\r\nint main() {\r\n    int n, k;\r\n    cin >> n >> k;\r\n    \r\n    for (int i = 1; i <= 3 * n; i++) p[i] = i;\r\n    \r\n    int ans = 0;\r\n    \r\n    while (k--) {\r\n        int op, x, y;\r\n        cin >> op >> x >> y;\r\n        \r\n        if (x > n || y > n) {\r\n            ans++;\r\n            continue;\r\n        }\r\n        \r\n        if (op == 1) {\r\n            // x和y是同类\r\n            if (find(x) == find(y + n) || find(x) == find(y + 2 * n)) {\r\n                ans++;\r\n            } else {\r\n                p[find(x)] = find(y);\r\n                p[find(x + n)] = find(y + n);\r\n                p[find(x + 2 * n)] = find(y + 2 * n);\r\n            }\r\n        } else {\r\n            // x吃y\r\n            if (x == y || find(x) == find(y) || find(x) == find(y + 2 * n)) {\r\n                ans++;\r\n            } else {\r\n                p[find(x)] = find(y + n);\r\n                p[find(x + n)] = find(y + 2 * n);\r\n                p[find(x + 2 * n)] = find(y);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "141": {
+        "path": "solutions/359/141.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstdio>\r\n\r\nusing namespace std;\r\n\r\nconst int N = 10;\r\n\r\nint n;\r\nint path[N];       // 从0到n-1共n个位置 存放一个排列\r\nbool state[N];     // 存放每个数字的使用状态 true表示使用了 false表示没使用过\r\n\r\nvoid dfs(int u)\r\n{\r\n    if (u == n)    // 一个排列填充完成\r\n    {\r\n        for (int i = 0; i < n; i ++) printf(\"%d \",path[i]);  // 注意格式 别忘了每两个数字间用空格隔开\r\n        puts(\"\");  // 相当于输出一个回车\r\n        return;\r\n    }\r\n\r\n    for (int i = 1; i <= n; i ++)\r\n    {\r\n        if (!state[i])\r\n        {\r\n            path[u] = i;       // 把 i 填入数字排列的位置上\r\n            state[i] = true;   // 表示该数字用过了 不能再用\r\n            dfs(u + 1);        // 这个位置的数填好 递归到右面一个位置\r\n            state[i] = false;  // 恢复现场 该数字后续可用\r\n        }\r\n    }\r\n    // for 循环全部结束了 dfs(u)才全部完成 回溯\r\n\r\n    return;        // 可写可不写\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\", &n);\r\n\r\n    dfs(0);    // 在path[0]处开始填数\r\n\r\n    return 0;\r\n}\r\n\r\n//作者：EvanMe\r\n//链接：https://www.acwing.com/file_system/file/content/whole/index/content/3758356/\r\n//来源：AcWing\r\n//著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "142": {
+        "path": "solutions/359/142.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\nusing namespace std;\n\nconst int N = 20;\nint n;\nchar board[N][N];\nbool col[N], dg[N], udg[N]; // 列、主对角线、副对角线\n\n// 逐行放置皇后，r为当前行\nvoid dfs(int r) {\n    if (r == n) {\n        // 输出解\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                cout << board[i][j];\n            }\n            cout << '\\n';\n        }\n        cout << '\\n'; // 解之间空行\n        return;\n    }\n\n    for (int c = 0; c < n; c++) {\n        // r+c相同→同一主对角线，r-c+n相同→同一副对角线\n        if (!col[c] && !dg[r + c] && !udg[r - c + n]) {\n            col[c] = dg[r + c] = udg[r - c + n] = true;\n            board[r][c] = 'Q';\n            dfs(r + 1);\n            board[r][c] = '.';\n            col[c] = dg[r + c] = udg[r - c + n] = false;\n        }\n    }\n}\n\nint main() {\n    cin >> n;\n    // 初始化棋盘\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            board[i][j] = '.';\n        }\n    }\n    dfs(0);\n    return 0;\n}\n"
+      },
+      "143": {
+        "path": "solutions/359/143.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <queue>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint g[N][N], dist[N][N];\r\nint n, m;\r\nint dx[4] = {-1, 0, 1, 0};\r\nint dy[4] = {0, 1, 0, -1};\r\n\r\nint bfs() {\r\n    queue<pair<int, int>> q;\r\n    q.push({0, 0});\r\n    dist[0][0] = 0;\r\n    \r\n    while (!q.empty()) {\r\n        auto t = q.front();\r\n        q.pop();\r\n        \r\n        int x = t.first, y = t.second;\r\n        \r\n        if (x == n - 1 && y == m - 1) {\r\n            return dist[x][y];\r\n        }\r\n        \r\n        for (int i = 0; i < 4; i++) {\r\n            int nx = x + dx[i];\r\n            int ny = y + dy[i];\r\n            \r\n            if (nx >= 0 && nx < n && ny >= 0 && ny < m && g[nx][ny] == 0 && dist[nx][ny] == -1) {\r\n                dist[nx][ny] = dist[x][y] + 1;\r\n                q.push({nx, ny});\r\n            }\r\n        }\r\n    }\r\n    \r\n    return -1;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < m; j++) {\r\n            cin >> g[i][j];\r\n            dist[i][j] = -1;\r\n        }\r\n    }\r\n    \r\n    cout << bfs() << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "144": {
+        "path": "solutions/359/144.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <string>\nusing namespace std;\n\nstring start, target;\nint dx[4] = {-1, 0, 1, 0};\nint dy[4] = {0, 1, 0, -1};\n\nint bfs() {\n    queue<string> q;\n    unordered_map<string, int> dist;\n    \n    q.push(start);\n    dist[start] = 0;\n    \n    while (!q.empty()) {\n        string t = q.front();\n        q.pop();\n        \n        if (t == target) {\n            return dist[t];\n        }\n        \n        int pos = t.find('x');\n        int x = pos / 3, y = pos % 3;\n        \n        for (int i = 0; i < 4; i++) {\n            int nx = x + dx[i];\n            int ny = y + dy[i];\n            \n            if (nx >= 0 && nx < 3 && ny >= 0 && ny < 3) {\n                int npos = nx * 3 + ny;\n                string next = t;\n                swap(next[pos], next[npos]);\n                \n                if (!dist.count(next)) {\n                    dist[next] = dist[t] + 1;\n                    q.push(next);\n                }\n            }\n        }\n    }\n    \n    return -1;\n}\n\nint main() {\n    cin >> start >> target;\n    cout << bfs() << endl;\n    return 0;\n}"
+      },
+      "145": {
+        "path": "solutions/359/145.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\n#include <algorithm>\n#include <cstring>\n\nusing namespace std;\n\nconst int N = 1e5 + 10; //数据范围是10的5次方\nconst int M = 2 * N; //以有向图的格式存储无向图，所以每个节点至多对应2n-2条边\n\nint h[N]; //邻接表存储树，有n个节点，所以需要n个队列头节点\nint e[M]; //存储元素\nint ne[M]; //存储列表的next值\nint idx; //单链表指针\nint n; //题目所给的输入，n个节点\nint ans = N; //表示重心的所有的子树中，最大的子树的结点数目\n\nbool st[N]; //记录节点是否被访问过，访问过则标记为true\n\n//a所对应的单链表中插入b  a作为根 \nvoid add(int a, int b) {\n    e[idx] = b, ne[idx] = h[a], h[a] = idx++;\n}\n\n// dfs 框架\n/*\nvoid dfs(int u){\n    st[u]=true; // 标记一下，记录为已经被搜索过了，下面进行搜索过程\n    for(int i=h[u];i!=-1;i=ne[i]){\n        int j=e[i];\n        if(!st[j]) {\n            dfs(j);\n        }\n    }\n}\n*/\n\n//返回以u为根的子树中节点的个数，包括u节点\nint dfs(int u) {\n    int res = 0; //存储 删掉某个节点之后，最大的连通子图节点数\n    st[u] = true; //标记访问过u节点\n    int sum = 1; //存储 以u为根的树 的节点数, 包括u，如图中的4号节点\n\n    //访问u的每个子节点\n    for (int i = h[u]; i != -1; i = ne[i]) {\n        int j = e[i];\n        //因为每个节点的编号都是不一样的，所以 用编号为下标 来标记是否被访问过\n        if (!st[j]) {\n            int s = dfs(j);  // u节点的单棵子树节点数 如图中的size值\n            res = max(res, s); // 记录最大联通子图的节点数\n            sum += s; //以j为根的树 的节点数\n        }\n    }\n\n    //n-sum 如图中的n-size值，不包括根节点4；\n    res = max(res, n - sum); // 选择u节点为重心，最大的 连通子图节点数\n    ans = min(res, ans); //遍历过的假设重心中，最小的最大联通子图的 节点数\n    return sum;\n}\n\nint main() {\n    memset(h, -1, sizeof h); //初始化h数组 -1表示尾节点\n    cin >> n; //表示树的结点数\n\n    // 题目接下来会输入，n-1行数据，\n    // 树中是不存在环的，对于有n个节点的树，必定是n-1条边\n    for (int i = 0; i < n - 1; i++) {\n        int a, b;\n        cin >> a >> b;\n        add(a, b), add(b, a); //无向图\n    }\n\n    dfs(1); //可以任意选定一个节点开始 u<=n\n\n    cout << ans << endl;\n\n    return 0;\n}\n\n// 作者：松鼠爱葡萄\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/542619/\n// 来源：AcWing\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "146": {
+        "path": "solutions/359/146.cpp",
+        "language": "cpp",
+        "code": "#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\n\r\nint n, m;\r\nint h[N], e[N], ne[N], idx;\r\nint d[N];\r\n\r\nvoid add(int a, int b){\r\n    e[idx] = b, ne[idx] = h[a], h[a] = idx ++ ;\r\n}\r\n\r\nint bfs(){//宽搜遍历\r\n    memset(d, -1, sizeof d);\r\n\r\n    queue<int> q;\r\n    d[1] = 0;//第一格需要0步\r\n    q.push(1);//放入队列\r\n\r\n    while (q.size()){//循环遍历整个队列\r\n        int t = q.front();\r\n        q.pop();\r\n\r\n        for (int i = h[t]; i != -1; i = ne[i]){\r\n            int j = e[i];//获取当前值\r\n            if (d[j] == -1){//未走过\r\n                d[j] = d[t] + 1;//等于上一个点加1步\r\n                q.push(j);//放入队列\r\n            }\r\n        }\r\n    }\r\n\r\n    return d[n];//返回n号点所需的步数\r\n}\r\n\r\nint main(){\r\n    scanf(\"%d%d\", &n, &m);\r\n    memset(h, -1, sizeof h);\r\n\r\n    for (int i = 0; i < m; i ++ ){\r\n        int a, b;\r\n        scanf(\"%d%d\", &a, &b);\r\n        add(a, b);//单项连接(有向图)\r\n    }\r\n\r\n    cout << bfs() << endl;\r\n\r\n    return 0;\r\n}\r\n\r\n// 作者：Lucky_Three\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/9655978/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "147": {
+        "path": "solutions/359/147.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <queue>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nvector<int> g[N];\r\nint d[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        g[a].push_back(b);\r\n        d[b]++;\r\n    }\r\n    \r\n    queue<int> q;\r\n    for (int i = 1; i <= n; i++) {\r\n        if (d[i] == 0) {\r\n            q.push(i);\r\n        }\r\n    }\r\n    \r\n    vector<int> ans;\r\n    while (!q.empty()) {\r\n        int u = q.front();\r\n        q.pop();\r\n        ans.push_back(u);\r\n        \r\n        for (int i = 0; i < g[u].size(); i++) {\r\n            int v = g[u][i];\r\n            d[v]--;\r\n            if (d[v] == 0) {\r\n                q.push(v);\r\n            }\r\n        }\r\n    }\r\n    \r\n    if (ans.size() != n) {\r\n        cout << -1 << endl;\r\n    } else {\r\n        for (int i = 0; i < ans.size(); i++) {\r\n            cout << ans[i] << (i == ans.size() - 1 ? '\\n' : ' ');\r\n        }\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "148": {
+        "path": "solutions/359/148.cpp",
+        "language": "cpp",
+        "code": "#include <cstring>\r\n#include <iostream>\r\n#include <algorithm>\r\n#include <queue>//堆的头文件\r\n\r\nusing namespace std;\r\n\r\ntypedef pair<int, int> PII;//堆里存储距离和节点编号\r\n\r\nconst int N = 1e6 + 10;\r\n\r\nint n, m;//节点数量和边数\r\nint h[N], w[N], e[N], ne[N], idx;//邻接表存储图\r\nint dist[N];//存储距离\r\nbool st[N];//存储状态\r\n\r\nvoid add(int a, int b, int c)\r\n{\r\n    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx ++ ;\r\n}\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist, 0x3f, sizeof dist);//距离初始化为无穷大\r\n    dist[1] = 0;\r\n    priority_queue<PII, vector<PII>, greater<PII>> heap;//小根堆\r\n    heap.push({0, 1});//插入距离和节点编号\r\n\r\n    while (heap.size())\r\n    {\r\n        auto t = heap.top();//取距离源点最近的点\r\n        heap.pop();\r\n\r\n        int ver = t.second, distance = t.first;//ver:节点编号，distance:源点距离ver 的距离\r\n\r\n        if (st[ver]) continue;//如果距离已经确定，则跳过该点\r\n        st[ver] = true;\r\n\r\n        for (int i = h[ver]; i != -1; i = ne[i])//更新ver所指向的节点距离\r\n        {\r\n            int j = e[i];\r\n            if (dist[j] > dist[ver] + w[i])\r\n            {\r\n                dist[j] = dist[ver] + w[i];\r\n                heap.push({dist[j], j});//距离变小，则入堆\r\n            }\r\n        }\r\n    }\r\n\r\n    if (dist[n] == 0x3f3f3f3f) return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\", &n, &m);\r\n\r\n    memset(h, -1, sizeof h);\r\n    while (m -- )\r\n    {\r\n        int a, b, c;\r\n        scanf(\"%d%d%d\", &a, &b, &c);\r\n        add(a, b, c);\r\n    }\r\n\r\n    cout << dijkstra() << endl;\r\n\r\n    return 0;\r\n}\r\n\r\n//参考yxc\r\n\r\n// 作者：Hasity\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/1906644/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "149": {
+        "path": "solutions/359/149.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<cstring>\r\n#include<cstdio>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N = 510, M = 100010;\r\n\r\nint g[N][N], dist[N];\r\nbool visited[N];\r\n\r\nint n, m;\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist, 0x3f, sizeof(dist));\r\n    dist[1] = 0;\r\n    for(int i = 1; i <= n; i++)\r\n    {\r\n        int t = -1;\r\n        for(int j = 1; j <= n; j++)\r\n        {\r\n            if(!visited[j] && (t == -1 || dist[j] < dist[t]))\r\n                t = j;\r\n        }\r\n        visited[t] = true;\r\n        for(int j = 1; j <= n; j++)\r\n            dist[j] = min(dist[j], dist[t] + g[t][j]);\r\n    }\r\n    if(dist[n] == 0x3f3f3f3f) return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\", &n, &m);\r\n\r\n    memset(g, 0x3f, sizeof(g));\r\n    while (m--)\r\n    {\r\n        int x, y, c;\r\n        scanf(\"%d%d%d\", &x, &y, &c);\r\n        g[x][y] = min(g[x][y], c);\r\n    }\r\n    cout << dijkstra() << endl;\r\n    return 0;\r\n}\r\n\r\n// 作者：optimjie\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/154643/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "150": {
+        "path": "solutions/359/150.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <algorithm>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint h[N], e[N], w[N], ne[N], idx;//邻接表，存储图\r\nint st[N];//标记顶点是不是在队列中\r\nint dist[N];//保存最短路径的值\r\nint q[N], hh, tt = -1;//队列\r\n\r\nvoid add(int a, int b, int c){//图中添加边和边的端点\r\n    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;\r\n}\r\n\r\nvoid spfa(){\r\n    q[++tt] = 1;//从1号顶点开始松弛，1号顶点入队\r\n    dist[1] = 0;//1号到1号的距离为 0\r\n    st[1] = 1;//1号顶点在队列中\r\n    while(tt >= hh){//不断进行松弛\r\n        int a = q[hh++];//取对头记作a，进行松弛\r\n        st[a] = 0;//取完队头后，a不在队列中了\r\n        for(int i = h[a]; i != -1; i = ne[i])//遍历所有和a相连的点\r\n        {\r\n            int b = e[i], c = w[i];//获得和a相连的点和边\r\n            if(dist[b] > dist[a] + c){//如果可以距离变得更短，则更新距离\r\n\r\n                dist[b] = dist[a] + c;//更新距离\r\n\r\n                if(!st[b]){//如果没在队列中\r\n                    q[++tt] = b;//入队\r\n                    st[b] = 1;//打标记\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\nint main(){\r\n    memset(h, -1, sizeof h);//初始化邻接表\r\n    memset(dist, 0x3f, sizeof dist);//初始化距离\r\n    int n, m;//保存点的数量和边的数量\r\n    cin >> n >> m;\r\n    for(int i = 0; i < m; i++){//读入每条边和边的端点\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        add(a, b, w);//加入到邻接表\r\n    }\r\n    spfa();\r\n    if(dist[n] == 0x3f3f3f3f )//如果到n点的距离是无穷，则不能到达 \r\n        cout << \"impossible\";\r\n    else cout << dist[n];//否则能到达，输出距离\r\n    return 0;\r\n}\r\n\r\n// 作者：Hasity\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/4486341/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "151": {
+        "path": "solutions/359/151.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 210;\r\nconst int INF = 0x3f3f3f3f;\r\nint d[N][N];\r\nint n, m, q;\r\n\r\nint main() {\r\n    cin >> n >> m >> q;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= n; j++) {\r\n            if (i == j) d[i][j] = 0;\r\n            else d[i][j] = INF;\r\n        }\r\n    }\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        d[a][b] = min(d[a][b], w);\r\n    }\r\n    \r\n    for (int k = 1; k <= n; k++) {\r\n        for (int i = 1; i <= n; i++) {\r\n            for (int j = 1; j <= n; j++) {\r\n                if (d[i][k] != INF && d[k][j] != INF) {\r\n                    d[i][j] = min(d[i][j], d[i][k] + d[k][j]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    \r\n    while (q--) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        if (d[a][b] == INF) cout << \"impossible\" << endl;\r\n        else cout << d[a][b] << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "152": {
+        "path": "solutions/359/152.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 510;\r\nconst int INF = 0x3f3f3f3f;\r\nint g[N][N];\r\nint dist[N];\r\nbool st[N];\r\nint n, m;\r\n\r\nint prim() {\r\n    memset(dist, 0x3f, sizeof(dist));\r\n    int res = 0;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int t = -1;\r\n        for (int j = 1; j <= n; j++) {\r\n            if (!st[j] && (t == -1 || dist[t] > dist[j])) {\r\n                t = j;\r\n            }\r\n        }\r\n        \r\n        if (i && dist[t] == INF) return -1;\r\n        \r\n        if (i) res += dist[t];\r\n        st[t] = true;\r\n        \r\n        for (int j = 1; j <= n; j++) {\r\n            if (dist[j] > g[t][j]) {\r\n                dist[j] = g[t][j];\r\n            }\r\n        }\r\n    }\r\n    \r\n    return res;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    memset(g, 0x3f, sizeof(g));\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        g[a][b] = g[b][a] = min(g[a][b], w);\r\n    }\r\n    \r\n    int ans = prim();\r\n    \r\n    if (ans == -1) cout << \"impossible\" << endl;\r\n    else cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "153": {
+        "path": "solutions/359/153.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nconst int M = 200010;\r\nint p[N];\r\nint n, m;\r\n\r\nstruct Edge {\r\n    int a, b, w;\r\n    bool operator< (const Edge &W) const {\r\n        return w < W.w;\r\n    }\r\n} edges[M];\r\n\r\nint find(int x) {\r\n    if (p[x] != x) p[x] = find(p[x]);\r\n    return p[x];\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 1; i <= n; i++) p[i] = i;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b, w;\r\n        cin >> a >> b >> w;\r\n        edges[i] = {a, b, w};\r\n    }\r\n    \r\n    sort(edges, edges + m);\r\n    \r\n    int res = 0, cnt = 0;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a = edges[i].a, b = edges[i].b, w = edges[i].w;\r\n        int pa = find(a), pb = find(b);\r\n        \r\n        if (pa != pb) {\r\n            p[pa] = pb;\r\n            res += w;\r\n            cnt++;\r\n        }\r\n    }\r\n    \r\n    if (cnt < n - 1) cout << \"impossible\" << endl;\r\n    else cout << res << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "154": {
+        "path": "solutions/359/154.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nvector<int> g[N];\r\nint color[N];\r\nint n, m;\r\n\r\nbool dfs(int u, int c) {\r\n    color[u] = c;\r\n    \r\n    for (int i = 0; i < g[u].size(); i++) {\r\n        int v = g[u][i];\r\n        if (!color[v]) {\r\n            if (!dfs(v, 3 - c)) return false;\r\n        } else if (color[v] == c) {\r\n            return false;\r\n        }\r\n    }\r\n    \r\n    return true;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < m; i++) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        g[a].push_back(b);\r\n        g[b].push_back(a);\r\n    }\r\n    \r\n    bool flag = true;\r\n    for (int i = 1; i <= n; i++) {\r\n        if (!color[i]) {\r\n            if (!dfs(i, 1)) {\r\n                flag = false;\r\n                break;\r\n            }\r\n        }\r\n    }\r\n    \r\n    if (flag) cout << \"Yes\" << endl;\r\n    else cout << \"No\" << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "155": {
+        "path": "solutions/359/155.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 1010;\nint f[N];\nint n, m;\n\nint main() {\n    cin >> n >> m;\n    \n    for (int i = 0; i < n; i++) {\n        int v, w;\n        cin >> v >> w;\n        for (int j = m; j >= v; j--) {\n            f[j] = max(f[j], f[j - v] + w);\n        }\n    }\n    \n    cout << f[m] << endl;\n    \n    return 0;\n}"
+      },
+      "156": {
+        "path": "solutions/359/156.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint f[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w;\r\n        cin >> v >> w;\r\n        for (int j = v; j <= m; j++) {\r\n            f[j] = max(f[j], f[j - v] + w);\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "157": {
+        "path": "solutions/359/157.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 510;\r\nint f[N][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= i; j++) {\r\n            cin >> f[i][j];\r\n        }\r\n    }\r\n    \r\n    for (int i = n - 1; i >= 1; i--) {\r\n        for (int j = 1; j <= i; j++) {\r\n            f[i][j] += max(f[i + 1][j], f[i + 1][j + 1]);\r\n        }\r\n    }\r\n    \r\n    cout << f[1][1] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "158": {
+        "path": "solutions/359/158.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint a[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> a[i];\r\n    }\r\n    \r\n    vector<int> tails;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        auto it = lower_bound(tails.begin(), tails.end(), a[i]);\r\n        if (it == tails.end()) {\r\n            tails.push_back(a[i]);\r\n        } else {\r\n            *it = a[i];\r\n        }\r\n    }\r\n    \r\n    cout << tails.size() << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "159": {
+        "path": "solutions/359/159.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint f[N][N];\r\nchar a[N], b[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    cin >> a + 1;\r\n    cin >> b + 1;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = 1; j <= m; j++) {\r\n            if (a[i] == b[j]) {\r\n                f[i][j] = f[i - 1][j - 1] + 1;\r\n            } else {\r\n                f[i][j] = max(f[i - 1][j], f[i][j - 1]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[n][m] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "160": {
+        "path": "solutions/359/160.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 310;\r\nint a[N], s[N];\r\nint f[N][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        cin >> a[i];\r\n        s[i] = s[i - 1] + a[i];\r\n    }\r\n    \r\n    memset(f, 0x3f, sizeof(f));\r\n    for (int i = 1; i <= n; i++) f[i][i] = 0;\r\n    \r\n    for (int len = 2; len <= n; len++) {\r\n        for (int i = 1; i + len - 1 <= n; i++) {\r\n            int j = i + len - 1;\r\n            for (int k = i; k < j; k++) {\r\n                f[i][j] = min(f[i][j], f[i][k] + f[k + 1][j] + s[j] - s[i - 1]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[1][n] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "161": {
+        "path": "solutions/359/161.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cmath>\r\n#include <string>\r\nusing namespace std;\r\nconst int N = 1009;\r\nchar a[N], b[N];\r\nint dp[2][N]; \r\nint main(){\r\n    ios::sync_with_stdio(0); cin.tie(0);\r\n    int n, m;\r\n    cin>>n>>a+1>>m>>b+1;\r\n    //初始化\r\n    for(int i = 0; i <= m; i++) dp[0][i] = i;\r\n    for(int i = 1; i <= n; i++){\r\n    //两行dp循环使用\r\n        int now = (i & 1), old = (i - 1 & 1);\r\n        dp[now][0] = i;//初始化\r\n        for(int j = 1; j <= m; j++){\r\n            if(a[i] == b[j]) dp[now][j] = dp[old][j-1];\r\n            else dp[now][j] = min(min(dp[old][j], dp[now][j-1]), dp[old][j-1]) + 1;\r\n        }\r\n    }\r\n    cout<<dp[n & 1][m];\r\n    return 0;\r\n}\r\n\r\n// 作者：stary_sky\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/11245790/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "162": {
+        "path": "solutions/359/162.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 310;\r\nint g[N][N];\r\nint f[N][N];\r\nint r, c;\r\nint dx[4] = {-1, 0, 1, 0};\r\nint dy[4] = {0, 1, 0, -1};\r\n\r\nint dfs(int x, int y) {\r\n    if (f[x][y] != -1) return f[x][y];\r\n    \r\n    f[x][y] = 1;\r\n    for (int i = 0; i < 4; i++) {\r\n        int nx = x + dx[i];\r\n        int ny = y + dy[i];\r\n        if (nx >= 1 && nx <= r && ny >= 1 && ny <= c && g[nx][ny] < g[x][y]) {\r\n            f[x][y] = max(f[x][y], dfs(nx, ny) + 1);\r\n        }\r\n    }\r\n    \r\n    return f[x][y];\r\n}\r\n\r\nint main() {\r\n    cin >> r >> c;\r\n    \r\n    for (int i = 1; i <= r; i++) {\r\n        for (int j = 1; j <= c; j++) {\r\n            cin >> g[i][j];\r\n        }\r\n    }\r\n    \r\n    memset(f, -1, sizeof(f));\r\n    \r\n    int ans = 0;\r\n    for (int i = 1; i <= r; i++) {\r\n        for (int j = 1; j <= c; j++) {\r\n            ans = max(ans, dfs(i, j));\r\n        }\r\n    }\r\n    \r\n    cout << ans << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "163": {
+        "path": "solutions/359/163.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20010;\r\nint f[N];\r\nint n, m;\r\n\r\nstruct Item {\r\n    int v, w;\r\n};\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    vector<Item> items;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w, s;\r\n        cin >> v >> w >> s;\r\n        \r\n        for (int k = 1; k <= s; k *= 2) {\r\n            s -= k;\r\n            items.push_back({v * k, w * k});\r\n        }\r\n        if (s > 0) {\r\n            items.push_back({v * s, w * s});\r\n        }\r\n    }\r\n    \r\n    for (int i = 0; i < items.size(); i++) {\r\n        for (int j = m; j >= items[i].v; j--) {\r\n            f[j] = max(f[j], f[j - items[i].v] + items[i].w);\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "164": {
+        "path": "solutions/359/164.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20010;\r\nint f[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w, s;\r\n        cin >> v >> w >> s;\r\n        \r\n        int k = 1;\r\n        while (k <= s) {\r\n            for (int j = m; j >= k * v; j--) {\r\n                f[j] = max(f[j], f[j - k * v] + k * w);\r\n            }\r\n            s -= k;\r\n            k *= 2;\r\n        }\r\n        if (s > 0) {\r\n            for (int j = m; j >= s * v; j--) {\r\n                f[j] = max(f[j], f[j - s * v] + s * w);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "165": {
+        "path": "solutions/359/165.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 110;\r\nint f[N];\r\nint v[N], w[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int s;\r\n        cin >> s;\r\n        for (int j = 0; j < s; j++) {\r\n            cin >> v[j] >> w[j];\r\n        }\r\n        for (int j = m; j >= 0; j--) {\r\n            for (int k = 0; k < s; k++) {\r\n                if (j >= v[k]) {\r\n                    f[j] = max(f[j], f[j - v[k]] + w[k]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "166": {
+        "path": "solutions/359/166.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <algorithm>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint a[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> a[i];\r\n    }\r\n    \r\n    vector<int> tails;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        auto it = lower_bound(tails.begin(), tails.end(), a[i]);\r\n        if (it == tails.end()) {\r\n            tails.push_back(a[i]);\r\n        } else {\r\n            *it = a[i];\r\n        }\r\n    }\r\n    \r\n    cout << tails.size() << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "167": {
+        "path": "solutions/359/167.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nconst int MOD = 1e9 + 7;\r\nint f[N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    f[0] = 1;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        for (int j = i; j <= n; j++) {\r\n            f[j] = (f[j] + f[j - i]) % MOD;\r\n        }\r\n    }\r\n    \r\n    cout << f[n] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "168": {
+        "path": "solutions/359/168.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <algorithm>\r\n#include <vector>\r\n#include <cmath>\r\nusing namespace std;\r\n\r\nint a, b;\r\n\r\n// 得到一个数中某几个相邻的数字构成的数值\r\n// 一定要记住从高位往低位遍历\r\nint get_num(vector<int> num, int l, int r){\r\n    int ans = 0;\r\n    for (int i = l; i >= r; i --) ans = ans * 10 + num[i];\r\n    return ans;\r\n}\r\n\r\n// 计算1到n的所有的数中数字x出现的次数\r\nint count(int n, int x){\r\n    vector<int> num;\r\n    while (n){\r\n        num.push_back(n % 10);\r\n        n /= 10;\r\n    }\r\n    int len = num.size(), ans = 0;\r\n    for (int i = len - 1 - !x; i >= 0; i --){ // 此处减去 !x 是精华\r\n        // 000 ~ abc-1\r\n        ans += get_num(num, len - 1, i + 1) * (int)pow(10, i);\r\n        if (!x) ans -= (int)pow(10, i);  // x==0时，001 ~ abc-1\r\n        // abc\r\n        if (x == num[i]) ans += (get_num(num, i - 1, 0) + 1);\r\n        else if (x < num[i]) ans += (int)pow(10, i);\r\n    }\r\n    return ans;\r\n\r\n}\r\n\r\nint main(){\r\n    while (cin >> a >> b, a || b){ // a b 不全为0\r\n        if (a > b) swap(a, b);\r\n        for (int i = 0; i <= 9; i ++) printf(\"%d \", count(b, i) - count(a - 1, i));\r\n        puts(\"\");\r\n    }\r\n\r\n    return 0;\r\n}\r\n\r\n// 作者：Qiner\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/12793336/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+      },
+      "169": {
+        "path": "solutions/359/169.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 12;\nlong long f[N][1 << N];\nint n, m;\n\nvoid dfs(int col, int row, int cur_state, int next_state) {\n    if (row == n) {\n        f[col + 1][next_state] += f[col][cur_state];\n        return;\n    }\n    \n    if (cur_state & (1 << row)) {\n        dfs(col, row + 1, cur_state, next_state);\n    } else {\n        // 竖放\n        dfs(col, row + 1, cur_state, next_state | (1 << row));\n        // 横放\n        if (row + 1 < n && !(cur_state & (1 << (row + 1)))) {\n            dfs(col, row + 2, cur_state, next_state);\n        }\n    }\n}\n\nint main() {\n    while (cin >> n >> m && n && m) {\n        if (n > m) swap(n, m);\n        \n        memset(f, 0, sizeof(f));\n        f[0][0] = 1;\n        \n        for (int col = 0; col < m; col++) {\n            for (int state = 0; state < (1 << n); state++) {\n                if (f[col][state]) {\n                    dfs(col, 0, state, 0);\n                }\n            }\n        }\n        \n        cout << f[m][0] << endl;\n    }\n    \n    return 0;\n}"
+      },
+      "170": {
+        "path": "solutions/359/170.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 20;\r\nconst int M = 1 << N;\r\nint g[N][N];\r\nint f[M][N];\r\nint n;\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < n; j++) {\r\n            cin >> g[i][j];\r\n        }\r\n    }\r\n    \r\n    memset(f, 0x3f, sizeof(f));\r\n    f[1][0] = 0;\r\n    \r\n    for (int mask = 1; mask < (1 << n); mask++) {\r\n        for (int i = 0; i < n; i++) {\r\n            if (!(mask & (1 << i))) continue;\r\n            for (int j = 0; j < n; j++) {\r\n                if (i == j) continue;\r\n                if (!(mask & (1 << j))) continue;\r\n                f[mask][i] = min(f[mask][i], f[mask ^ (1 << i)][j] + g[j][i]);\r\n            }\r\n        }\r\n    }\r\n    \r\n    cout << f[(1 << n) - 1][n - 1] << endl;\r\n    \r\n    return 0;\r\n}"
+      },
+      "171": {
+        "path": "solutions/359/171.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <cstring>\r\n#include <string>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint dp[N][N];\r\nstring dict[N];\r\nint n, m;\r\n\r\nint edit_distance(string a, string b) {\r\n    int len1 = a.length(), len2 = b.length();\r\n    \r\n    for (int i = 0; i <= len1; i++) dp[i][0] = i;\r\n    for (int j = 0; j <= len2; j++) dp[0][j] = j;\r\n    \r\n    for (int i = 1; i <= len1; i++) {\r\n        for (int j = 1; j <= len2; j++) {\r\n            if (a[i - 1] == b[j - 1]) {\r\n                dp[i][j] = dp[i - 1][j - 1];\r\n            } else {\r\n                dp[i][j] = min(dp[i - 1][j], min(dp[i][j - 1], dp[i - 1][j - 1])) + 1;\r\n            }\r\n        }\r\n    }\r\n    \r\n    return dp[len1][len2];\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        cin >> dict[i];\r\n    }\r\n    \r\n    while (m--) {\r\n        string s;\r\n        int k;\r\n        cin >> s >> k;\r\n        \r\n        int cnt = 0;\r\n        for (int i = 0; i < n; i++) {\r\n            if (edit_distance(dict[i], s) <= k) {\r\n                cnt++;\r\n            }\r\n        }\r\n        \r\n        cout << cnt << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+      },
+      "172": {
+        "path": "solutions/359/172.cpp",
+        "language": "cpp",
+        "code": "#include <iostream>\r\n#include <vector>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 6010;\r\nvector<int> g[N];\r\nint happy[N];\r\nint dp[N][2];\r\nbool has_parent[N];\r\nint n;\r\n\r\nvoid dfs(int u) {\r\n    dp[u][0] = 0;\r\n    dp[u][1] = happy[u];\r\n    \r\n    for (int i = 0; i < g[u].size(); i++) {\r\n        int v = g[u][i];\r\n        dfs(v);\r\n        dp[u][0] += max(dp[v][0], dp[v][1]);\r\n        dp[u][1] += dp[v][0];\r\n    }\r\n}\r\n\r\nint main() {\r\n    cin >> n;\r\n    \r\n    for (int i = 1; i <= n; i++) {\r\n        cin >> happy[i];\r\n    }\r\n    \r\n    for (int i = 0; i < n - 1; i++) {\r\n        int l, k;\r\n        cin >> l >> k;\r\n        g[k].push_back(l);\r\n        has_parent[l] = true;\r\n    }\r\n    \r\n    int root = 1;\r\n    while (has_parent[root]) root++;\r\n    \r\n    dfs(root);\r\n    \r\n    cout << max(dp[root][0], dp[root][1]) << endl;\r\n    \r\n    return 0;\r\n}"
+      },
       "001": {
         "path": "solutions/359/001.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << A + B;\r\n    return 0;\r\n}\r\n"
+        "code": "//简单题：A+B\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << A + B;\r\n    return 0;\r\n}\r\n"
       },
       "002": {
         "path": "solutions/359/002.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << \"PROD = \" << A * B << endl;\r\n    return 0;\r\n}"
+        "code": "//简单题：A*B\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    cin >> A >> B;\r\n    cout << \"PROD = \" << A * B << endl;\r\n    return 0;\r\n}"
       },
       "003": {
         "path": "solutions/359/003.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B, C, D;\r\n    cin >> A >> B >> C >> D;\r\n    cout <<\"DIFFERENCE = \" << A * B - C * D << endl;\r\n    return 0;\r\n}//输出案例缺少\"DIFFERENCE = \""
+        "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B, C, D;\r\n    cin >> A >> B >> C >> D;\r\n    cout <<\"DIFFERENCE = \" << A * B - C * D << endl;\r\n    return 0;\r\n}//输出案例缺少\"DIFFERENCE = \""
       },
       "004": {
         "path": "solutions/359/004.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    double C;\r\n    scanf(\"%d%d%lf\",&A,&B,&C);\r\n    printf(\"TOTAL = %.2lf\", B * C);\r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int A, B;\r\n    double C;\r\n    scanf(\"%d%d%lf\",&A,&B,&C);\r\n    printf(\"TOTAL = %.2lf\", B * C);//注意小数位数\r\n    return 0;\r\n}"
       },
       "005": {
         "path": "solutions/359/005.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\n#define pi 3.14159\r\nusing namespace std;\r\nint main()\r\n{\r\n    double A;\r\n    scanf(\"%lf\",&A);\r\n    printf(\"A=%.4lf\", A * A * pi);\r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\n#define pi 3.14159\r\nusing namespace std;\r\nint main()\r\n{\r\n    double A;\r\n    scanf(\"%lf\",&A);\r\n    printf(\"A=%.4lf\", A * A * pi);\r\n    return 0;\r\n}"
       },
       "006": {
         "path": "solutions/359/006.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"Average = %.5lf\", (a*3.5+b*7.5)/11.0 );\r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);//剑术权重3.5，心法权重7.5\r\n    printf(\"Average = %.5lf\", (a*3.5+b*7.5)/11.0 );//注意位数\r\n    return 0;\r\n}"
       },
       "007": {
         "path": "solutions/359/007.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double b;\r\n    int a,c;\r\n    scanf(\"%d\", &c);\r\n    scanf(\"%d%lf\",&a,&b);\r\n    printf(\"NUMBER = %d\\n\", c);\r\n    printf(\"SALARY = U$ %.2lf\",a*b );\r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double b;\r\n    int a,c;\r\n    scanf(\"%d\", &c);\r\n    scanf(\"%d%lf\",&a,&b);\r\n    printf(\"NUMBER = %d\\n\", c);\r\n    printf(\"SALARY = U$ %.2lf\",a*b );//注意格式\r\n    return 0;\r\n}"
       },
       "008": {
         "path": "solutions/359/008.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"%.3lf km/l\",a/b );\r\n \r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    double a, b;//浮点数\r\n    scanf(\"%lf%lf\",&a,&b);\r\n    printf(\"%.3lf km/l\",a/b );\r\n \r\n    return 0;\r\n}"
       },
       "009": {
         "path": "solutions/359/009.cpp",
         "language": "cpp",
-        "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    double r;\r\n    scanf(\"%lf\",&r);\r\n    printf(\"VOLUME = %.3lf\",(4.0/3)*3.14159*r*r*r );\r\n    return 0;\r\n}"
+        "code": "//简单题：根据描述得出结果\r\n#include <stdio.h>\r\n#define pi 3.14159\r\nint main()\r\n{\r\n    double r;//浮点数\r\n    scanf(\"%lf\",&r);\r\n    printf(\"VOLUME = %.3lf\",(4.0/3)*pi*r*r*r );//注意位数\r\n    return 0;\r\n}"
       },
       "010": {
         "path": "solutions/359/010.c",
         "language": "c",
-        "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int a,b,c,d;\r\n    scanf(\"%d%d%d\",&a,&b,&c);\r\n    d = (a > b ? a : b) > c ? (a > b ? a : b) : c;\r\n    printf(\"Max = %d\", d);\r\n    return 0;\r\n}"
+        "code": "//简单题：比较大小\r\n#include <stdio.h>\r\nint main()\r\n{\r\n    int a,b,c,d;\r\n    scanf(\"%d%d%d\",&a,&b,&c);\r\n    d = (a > b ? a : b) > c ? (a > b ? a : b) : c;//用三次？：判断\r\n    printf(\"Max = %d\", d);\r\n    return 0;\r\n}"
       },
       "011": {
         "path": "solutions/359/011.c",
@@ -380,7 +730,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
       "073": {
         "path": "solutions/359/073.cpp",
         "language": "cpp",
-        "code": "#include<iostream>\r\nusing namespace std;//数字不加密！\r\n#include<string>\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y')\r\n            a[i]+=1;\r\n        else if(a[i]=='Z')a[i]='A';\r\n        else if(a[i]=='z')a[i]='a';\r\n        //else if(a[i]=='9')a[i]='0';\r\n    }\r\n    cout<<a<<endl;\r\n    return 0;\r\n}"
+        "code": "#include<iostream>\r\nusing namespace std;//数字不加密！\r\n#include<string>\r\nint main()\r\n{\r\n    string a;\r\n    getline(cin,a);\r\n    for(int i=0;a[i]!='\\0';i++)\r\n    {\r\n        if(a[i]>='a'&&a[i]<='y'||a[i]>='A'&&a[i]<='Y'||a[i]>='0'&&a[i]<='8')\r\n            a[i]+=1;\r\n        else if(a[i]=='Z')a[i]='A';\r\n        else if(a[i]=='z')a[i]='a';\r\n        else if(a[i]=='9')a[i]='0';\r\n    }\r\n    cout<<a<<endl;\r\n    return 0;\r\n}"
       },
       "074": {
         "path": "solutions/359/074.cpp",
@@ -405,7 +755,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
       "078": {
         "path": "solutions/359/078.cpp",
         "language": "cpp",
-        "code": "#include <iostream>\r\n#include <string>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nint main() {\r\n    vector<string> a;\r\n    string s;\r\n    while (getline(cin, s)) {\r\n        a.push_back(s);\r\n    }\r\n    if (a.size() >= 3) {\r\n        cout << (a[1].find(a[2]) != string::npos ? \"yes\" : \"no\") << endl;\r\n    }\r\n    return 0;\r\n}\r\n\r\n// #include<iostream>\r\n// using namespace std;\r\n// #include<string>\r\n// #include<cstring>\r\n// int main()\r\n// {\r\n//     int a;\r\n//     //cin>>a;\r\n//     cin.ignore();\r\n//     bool found=false;\r\n//     string str1,str2;\r\n//     getline(cin,str1);\r\n//     getline(cin,str2);\r\n//     int len1=str1.length(),len2=str2.length();\r\n//     for(int i=0;i<len1-len2+1;i++)\r\n//     {\r\n//         bool res=true;\r\n//         for(int j=0,k=i;str2[j]!='\\0';j++,k++)\r\n//         {\r\n//             if(str1[k]!=str2[j])\r\n//             {\r\n//                 res=false;\r\n//                 break;\r\n//             }\r\n\r\n//         }\r\n//         if(res==true)\r\n//         {\r\n//             found=true;\r\n//             break;\r\n//         }\r\n//     }\r\n//     if(found==true)\r\n//     {\r\n//         cout<<\"yes\";\r\n//     }\r\n//     else if(found==false)\r\n//     {\r\n//         cout<<\"no\";\r\n//     }\r\n\r\n// }"
+        "code": "#include <iostream>\r\n#include <string>\r\n#include <vector>\r\nusing namespace std;\r\n\r\n// int main() {\r\n//     vector<string> a;\r\n//     string s;\r\n//     while (getline(cin, s)) {\r\n//         a.push_back(s);\r\n//     }\r\n//     if (a.size() >= 3) {\r\n//         cout << (a[1].find(a[2]) != string::npos ? \"yes\" : \"no\") << endl;\r\n//     }\r\n//     return 0;\r\n// }\r\n\r\n#include<iostream>\r\nusing namespace std;\r\n#include<string>\r\n#include<cstring>\r\nint main()\r\n{\r\n    int a;\r\n    bool found=false;\r\n    string str1,str2;\r\n    getline(cin,str1);\r\n    getline(cin,str2);\r\n    int len1=str1.length(),len2=str2.length();\r\n    for(int i=0;i<len1-len2+1;i++)\r\n    {\r\n        bool res=true;\r\n        for(int j=0,k=i;str2[j]!='\\0';j++,k++)\r\n        {\r\n            if(str1[k]!=str2[j])\r\n            {\r\n                res=false;\r\n                break;\r\n            }\r\n\r\n        }\r\n        if(res==true)\r\n        {\r\n            found=true;\r\n            break;\r\n        }\r\n    }\r\n    if(found==true)\r\n    {\r\n        cout<<\"yes\";\r\n    }\r\n    else if(found==false)\r\n    {\r\n        cout<<\"no\";\r\n    }\r\n\r\n}"
       },
       "079": {
         "path": "solutions/359/079.cpp",
@@ -460,7 +810,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
       "089": {
         "path": "solutions/359/089.cpp",
         "language": "cpp",
-        "code": "// 每行末尾有空格\n#include<iostream>\nusing namespace std;\r\nint main()\r\n{\r\n    int a[200][200],row,col;\r\n    cin>>row>>col;\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            cin>>a[i][j];\r\n        }\r\n    }\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            //cout<<\" \";\r\n            cout<<a[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    \r\n\r\n\r\n}"
+        "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int a[200][200],row,col;\r\n    cin>>row>>col;\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            cin>>a[i][j];\r\n        }\r\n    }\r\n    for(int i=0;i<row;i++)\r\n    {\r\n        for(int j=0;j<col;j++)\r\n        {\r\n            if(j!=0)cout<<\" \";\r\n            cout<<a[i][j];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    \r\n \r\n \r\n}"
       },
       "090": {
         "path": "solutions/359/090.cpp",
