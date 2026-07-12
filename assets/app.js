@@ -160,93 +160,34 @@
     const value = contestSolutions[problemId] || contestSolutions[displayProblemId(problemId)] || [];
     return (Array.isArray(value) ? value : [value]).filter((item) => item && hasUsableCode(item.code)).sort((a, b) => (a.variant || 1) - (b.variant || 1));
   }
-  async function loadSolutionCode(contest, problem) {
-    const solution = problem.solution || {};
-    const candidates = solutionCandidates(contest, problem);
-
-    for (const candidatePath of candidates) {
-      try {
-        const response = await fetch("./" + candidatePath, { cache: "no-store" });
-        if (!response.ok) continue;
-        const code = await response.text();
-        if (!hasUsableCode(code)) continue;
-        problem.solutionStatus = "loaded";
-        problem.solution = {
-          path: normalizeSolutionPath(candidatePath),
-          language: languageFromPath(candidatePath),
-          code: code
-        };
-        return problem.solution;
-      } catch (e) {
-        // Try the next extension.
-      }
-    }
-
-    const bundled = findBundledSolutions(contest, problem)[0];
-    if (bundled && hasUsableCode(bundled.code)) {
+  function loadSolutionCodes(contest, problem) {
+    const bundled = findBundledSolutions(contest, problem);
+    if (bundled.length) {
       problem.solutionStatus = "loaded";
-      problem.solution = {
-        path: normalizeSolutionPath(bundled.path || solution.path),
-        language: languageFromPath(bundled.path || solution.path) || bundled.language,
-        code: bundled.code
-      };
-      return problem.solution;
+      problem.solution = bundled[0];
+      return bundled;
     }
 
-    if (hasUsableCode(solution.code)) return solution;
+    const solution = problem.solution || {};
+    if (hasUsableCode(solution.code)) {
+      problem.solutionStatus = "loaded";
+      return [solution];
+    }
 
     problem.solutionStatus = "missing";
-    problem.solution = {
-      path: normalizeSolutionPath(candidates[0] || solution.path),
-      language: languageFromPath(candidates[0] || solution.path),
-      code: ""
-    };
-    return problem.solution;
-  }
-
-  async function loadSolutionCodes(contest, problem) {
-    const solutions = findBundledSolutions(contest, problem).slice();
-    const primary = await loadSolutionCode(contest, problem);
-    if (hasUsableCode(primary.code)) {
-      const index = solutions.findIndex((item) => normalizeSolutionPath(item.path) === normalizeSolutionPath(primary.path));
-      const sameCode = solutions.some((item) => item.code === primary.code);
-      const item = { ...primary, variant: index >= 0 ? (solutions[index].variant || 1) : 1 };
-      if (index >= 0) solutions[index] = item;
-      else if (!solutions.length || !sameCode) solutions.unshift(item);
-    }
-    return solutions.filter((item, i, all) => hasUsableCode(item.code) && all.findIndex((other) => normalizeSolutionPath(other.path) === normalizeSolutionPath(item.path)) === i).sort((a,b)=>(a.variant||1)-(b.variant||1));
-  }
-
-  function renderSolutions(solutions) {
-    els.solutionList.innerHTML = "";
-    if (!solutions.length) {
-      const pre = document.createElement("pre"); pre.className = "code-block missing-code"; pre.textContent = "还没有参考代码,欢迎投稿!"; els.solutionList.appendChild(pre); return;
-    }
-    solutions.forEach((solution, index) => {
-      const panel=document.createElement("div"); panel.className="solution-item";
-      const head=document.createElement("div"); head.className="solution-item-head";
-      const title=document.createElement("h4"); title.textContent=solutions.length === 1 ? "参考代码" : "参考代码 " + (index + 1);
-      const meta=document.createElement("span"); meta.textContent=displaySolutionExt(solution);
-      const copy=document.createElement("button"); copy.type="button"; copy.className="copy-solution"; copy.textContent="复制代码";
-      copy.addEventListener("click", async () => { await navigator.clipboard.writeText(solution.code); copy.textContent="已复制"; window.setTimeout(()=>{copy.textContent="复制代码";},1200); });
-      head.append(title,meta,copy);
-      const pre=document.createElement("pre"); pre.className="code-block"; const code=document.createElement("code"); code.innerHTML=highlightCode(solution.code,solution.language); pre.appendChild(code);
-      panel.append(head,pre); els.solutionList.appendChild(panel);
-    });
+    return [];
   }
 
   function hasKnownSolution(problem) {
     return Boolean(problem.solution && hasUsableCode(problem.solution.code));
   }
 
-  async function refreshSolutionStatuses() {
+  function refreshSolutionStatuses() {
     const items = flattenProblems();
-    await Promise.all(items.map(async ({ contest, problem }) => {
-      if (problem.solution && problem.solution.code) return;
-      const solutions = await loadSolutionCodes(contest, problem);
-      const solution = solutions[0] || {};
-      problem.solutionStatus = solution && solution.code ? "loaded" : "missing";
-    }));
+    items.forEach(({ contest, problem }) => {
+      const solutions = loadSolutionCodes(contest, problem);
+      problem.solutionStatus = solutions.length ? "loaded" : "missing";
+    });
     renderHomeStats();
     renderHomeCards();
     renderNav();
@@ -312,7 +253,7 @@
     if (state.activeKey && !items.some((item) => item.key === state.activeKey) && items.length) showProblem(items[0].key, false);
   }
 
-  async function showProblem(key, rerenderNav = true) {
+  function showProblem(key, rerenderNav = true) {
     const item = flattenProblems().find((entry) => entry.key === key);
     if (!item) return;
     state.activeKey = key;
@@ -320,7 +261,7 @@
     localStorage.setItem("xmuoj.activeContestId", state.activeContestId);
 
     const { contest, problem } = item;
-    const solutions = await loadSolutionCodes(contest, problem);
+    const solutions = loadSolutionCodes(contest, problem);
     const solution = solutions[0] || {};
     els.emptyState.hidden = true;
     els.problemView.hidden = false;
