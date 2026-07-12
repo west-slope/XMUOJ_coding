@@ -43,7 +43,6 @@
     solutionLanguage: document.getElementById("solutionLanguage"),
     sourceLink: document.getElementById("sourceLink"),
     sourceInlineLink: document.getElementById("sourceInlineLink"),
-    copyCode: document.getElementById("copyCode"),
     description: document.getElementById("description"),
     inputDescription: document.getElementById("inputDescription"),
     outputDescription: document.getElementById("outputDescription"),
@@ -51,8 +50,7 @@
     samples: document.getElementById("samples"),
     hintSection: document.getElementById("hintSection"),
     hint: document.getElementById("hint"),
-    solutionPath: document.getElementById("solutionPath"),
-    solutionCode: document.getElementById("solutionCode"),
+    solutionList: document.getElementById("solutionList"),
     content: document.querySelector(".content")
   };
 
@@ -144,8 +142,9 @@
       for (const problem of contest.problems || []) {
         const problemId = String(problem.id || "");
         const displayId = displayProblemId(problemId);
-        const bundled = contestSolutions[problemId] || contestSolutions[displayId];
-        if (!bundled || !hasUsableCode(bundled.code)) continue;
+        const value = contestSolutions[problemId] || contestSolutions[displayId];
+        const bundled = (Array.isArray(value) ? value : [value]).find((item) => item && hasUsableCode(item.code));
+        if (!bundled) continue;
         problem.solutionStatus = "loaded";
         problem.solution = {
           path: normalizeSolutionPath(bundled.path || (problem.solution && problem.solution.path)),
@@ -155,11 +154,11 @@
       }
     }
   }
-  function findBundledSolution(contest, problem) {
+  function findBundledSolutions(contest, problem) {
     const contestSolutions = bundledSolutions.solutions && bundledSolutions.solutions[String(contest && contest.id)] || {};
     const problemId = String(problem && problem.id || "");
-    const displayId = displayProblemId(problemId);
-    return contestSolutions[problemId] || contestSolutions[displayId] || null;
+    const value = contestSolutions[problemId] || contestSolutions[displayProblemId(problemId)] || [];
+    return (Array.isArray(value) ? value : [value]).filter((item) => item && hasUsableCode(item.code)).sort((a, b) => (a.variant || 1) - (b.variant || 1));
   }
   async function loadSolutionCode(contest, problem) {
     const solution = problem.solution || {};
@@ -183,7 +182,7 @@
       }
     }
 
-    const bundled = findBundledSolution(contest, problem);
+    const bundled = findBundledSolutions(contest, problem)[0];
     if (bundled && hasUsableCode(bundled.code)) {
       problem.solutionStatus = "loaded";
       problem.solution = {
@@ -205,6 +204,37 @@
     return problem.solution;
   }
 
+  async function loadSolutionCodes(contest, problem) {
+    const solutions = findBundledSolutions(contest, problem).slice();
+    const primary = await loadSolutionCode(contest, problem);
+    if (hasUsableCode(primary.code)) {
+      const index = solutions.findIndex((item) => normalizeSolutionPath(item.path) === normalizeSolutionPath(primary.path));
+      const sameCode = solutions.some((item) => item.code === primary.code);
+      const item = { ...primary, variant: index >= 0 ? (solutions[index].variant || 1) : 1 };
+      if (index >= 0) solutions[index] = item;
+      else if (!solutions.length || !sameCode) solutions.unshift(item);
+    }
+    return solutions.filter((item, i, all) => hasUsableCode(item.code) && all.findIndex((other) => normalizeSolutionPath(other.path) === normalizeSolutionPath(item.path)) === i).sort((a,b)=>(a.variant||1)-(b.variant||1));
+  }
+
+  function renderSolutions(solutions) {
+    els.solutionList.innerHTML = "";
+    if (!solutions.length) {
+      const pre = document.createElement("pre"); pre.className = "code-block missing-code"; pre.textContent = "还没有参考代码,欢迎投稿!"; els.solutionList.appendChild(pre); return;
+    }
+    solutions.forEach((solution, index) => {
+      const panel=document.createElement("div"); panel.className="solution-item";
+      const head=document.createElement("div"); head.className="solution-item-head";
+      const title=document.createElement("h4"); title.textContent=solutions.length === 1 ? "参考代码" : "参考代码 " + (index + 1);
+      const meta=document.createElement("span"); meta.textContent=displaySolutionExt(solution);
+      const copy=document.createElement("button"); copy.type="button"; copy.className="copy-solution"; copy.textContent="复制代码";
+      copy.addEventListener("click", async () => { await navigator.clipboard.writeText(solution.code); copy.textContent="已复制"; window.setTimeout(()=>{copy.textContent="复制代码";},1200); });
+      head.append(title,meta,copy);
+      const pre=document.createElement("pre"); pre.className="code-block"; const code=document.createElement("code"); code.innerHTML=highlightCode(solution.code,solution.language); pre.appendChild(code);
+      panel.append(head,pre); els.solutionList.appendChild(panel);
+    });
+  }
+
   function hasKnownSolution(problem) {
     return Boolean(problem.solution && hasUsableCode(problem.solution.code));
   }
@@ -213,7 +243,8 @@
     const items = flattenProblems();
     await Promise.all(items.map(async ({ contest, problem }) => {
       if (problem.solution && problem.solution.code) return;
-      const solution = await loadSolutionCode(contest, problem);
+      const solutions = await loadSolutionCodes(contest, problem);
+      const solution = solutions[0] || {};
       problem.solutionStatus = solution && solution.code ? "loaded" : "missing";
     }));
     renderHomeStats();
@@ -289,7 +320,8 @@
     localStorage.setItem("xmuoj.activeContestId", state.activeContestId);
 
     const { contest, problem } = item;
-    const solution = await loadSolutionCode(contest, problem);
+    const solutions = await loadSolutionCodes(contest, problem);
+    const solution = solutions[0] || {};
     els.emptyState.hidden = true;
     els.problemView.hidden = false;
     els.contestLabel.textContent = 'Contest ' + contest.id;
@@ -298,7 +330,7 @@
     els.problemId.textContent = displayProblemId(problem.id) || "-";
     els.timeLimit.textContent = formatLimit(problem.timeLimit, "ms");
     els.memoryLimit.textContent = formatLimit(problem.memoryLimit, "MB");
-    els.solutionLanguage.textContent = solution.language || "-";
+    els.solutionLanguage.textContent = [...new Set(solutions.map((item) => item.language).filter(Boolean))].join(" / ") || "-";
     const sourceUrl = problem.url || ('http://www.xmuoj.com/contest/' + contest.id + '/problem/' + problem.id + '/');
     els.sourceLink.href = sourceUrl;
     els.sourceInlineLink.href = sourceUrl;
@@ -309,14 +341,10 @@
     setHtml(els.hint, problem.hint);
     els.hintSection.hidden = !textOf(problem.hint);
     renderSamples(problem.samples || []);
-    els.solutionPath.textContent = solution.path ? displaySolutionExt(solution) : "";
-    els.solutionPath.className = solution.code ? "" : "missing";
-    const fallbackCode = "还没有参考代码,欢迎投稿!";
-    els.solutionCode.innerHTML = highlightCode(solution.code || fallbackCode, solution.language);
-    els.copyCode.disabled = !solution.code;
+    renderSolutions(solutions);
     els.contributeHint.hidden = false;
-    els.contributeHint.classList.toggle("has-code", Boolean(solution.code));
-    els.contributeHint.querySelector("span").textContent = solution.code ? "若有更好的解法，欢迎投稿本题。" : "还没有参考代码,欢迎投稿!";
+    els.contributeHint.classList.toggle("has-code", solutions.length > 0);
+    els.contributeHint.querySelector("span").textContent = solutions.length ? "若有更好的解法，欢迎投稿本题。" : "还没有参考代码,欢迎投稿!";
     els.contributeProblem.dataset.problemId = problem.id || "";
     els.contributeProblem.dataset.contestId = contest.id || "";
     if (els.content) els.content.scrollTop = 0;
@@ -513,11 +541,6 @@
         els.filters.forEach((item) => item.classList.toggle("is-active", item === button));
         renderNav();
       });
-    });
-    els.copyCode.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(els.solutionCode.textContent);
-      els.copyCode.textContent = "已复制";
-      window.setTimeout(() => { els.copyCode.textContent = "复制代码"; }, 1200);
     });
 
     if (flattenProblems().length === 0) {

@@ -19,7 +19,6 @@ int main()
         }
     } \
     str.resize(len+n); 
-    //insert(max+1,substr);
     for(int i=len;i>m;i--)
     {
         str[i+n]=str[i];

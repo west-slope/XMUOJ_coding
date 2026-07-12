@@ -1238,3 +1238,11 @@ pre {
     border-radius: 8px;
   }
 }
+
+.solution-list { display:grid; gap:18px; margin-top:10px; }
+.solution-item { min-width:0; }
+.solution-item-head { min-height:36px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; }
+.solution-item-head h4 { margin:0; font-size:15px; }
+.solution-item-head span { color:var(--muted); font-size:12px; }
+.copy-solution { white-space:nowrap; }
+.missing-code { color:var(--warn); }

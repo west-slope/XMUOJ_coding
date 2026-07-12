@@ -15,16 +15,44 @@ if (fs.existsSync(solutionsRoot)) {
     const contestDir = path.join(solutionsRoot, contest);
     if (!fs.statSync(contestDir).isDirectory()) continue;
     payload.solutions[contest] = {};
-    for (const name of fs.readdirSync(contestDir)) {
+    const canonicalIds = new Map();
+    for (const name of fs.readdirSync(contestDir).sort((a, b) => {
+      const av = /-\d+\.[^.]+$/.test(a) ? 1 : 0;
+      const bv = /-\d+\.[^.]+$/.test(b) ? 1 : 0;
+      return av - bv || a.localeCompare(b);
+    })) {
       const ext = path.extname(name);
       if (!exts.includes(ext.toLowerCase())) continue;
-      const id = path.basename(name, ext);
+      const stem = path.basename(name, ext);
+      const match = stem.match(/^(.*?)(?:-(\d+))?$/);
+      const rawId = match[1];
+      const idKey = rawId.toLowerCase();
+      const id = canonicalIds.get(idKey) || rawId;
+      canonicalIds.set(idKey, id);
+      const variant = match[2] ? Number(match[2]) : 1;
       const rel = `solutions/${contest}/${name}`;
-      payload.solutions[contest][id] = {
+      const item = {
+        variant,
         path: rel,
         language: languageFromExt(ext),
         code: fs.readFileSync(path.join(contestDir, name), "utf8")
       };
+      if (!payload.solutions[contest][id]) payload.solutions[contest][id] = [];
+      payload.solutions[contest][id].push(item);
+    }
+    for (const [id, items] of Object.entries(payload.solutions[contest])) {
+      const unique = [];
+      for (const item of items) {
+        const duplicateIndex = unique.findIndex((saved) => saved.code === item.code);
+        if (duplicateIndex < 0) {
+          unique.push(item);
+          continue;
+        }
+        const codeLooksPython = /(^|\n)\s*(from\s+\w+\s+import|import\s+\w+|def\s+\w+\s*\()/m.test(item.code);
+        if (codeLooksPython && item.language === "py") unique[duplicateIndex] = item;
+      }
+      unique.sort((a, b) => a.variant - b.variant || a.path.localeCompare(b.path));
+      payload.solutions[contest][id] = unique;
     }
   }
 }
