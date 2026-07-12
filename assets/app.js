@@ -239,6 +239,7 @@
       contestItems.forEach((item) => {
         const button = document.createElement("button");
         button.type = "button";
+        button.dataset.key = item.key;
         const hasSolution = hasKnownSolution(item.problem);
         button.className = "problem-link" + (item.key === state.activeKey ? " is-active" : "") + (hasSolution ? " has-solution" : " is-missing");
         button.innerHTML = '<span>' + escapeHtml(displayProblemLabel(item.problem)) + '</span><small>' + (hasSolution ? "有" : "缺") + '</small>';
@@ -282,7 +283,14 @@
     setHtml(els.hint, problem.hint);
     els.hintSection.hidden = !textOf(problem.hint);
     renderSamples(problem.samples || []);
-    renderSolutions(solutions);
+    try {
+      renderSolutions(solutions);
+    } catch (error) {
+      console.error("参考代码渲染失败", error);
+      if (els.solutionList) {
+        els.solutionList.innerHTML = '<pre class="code-block missing-code">参考代码暂时无法显示，请刷新页面。</pre>';
+      }
+    }
     els.contributeHint.hidden = false;
     els.contributeHint.classList.toggle("has-code", solutions.length > 0);
     els.contributeHint.querySelector("span").textContent = solutions.length ? "若有更好的解法，欢迎投稿本题。" : "还没有参考代码,欢迎投稿!";
@@ -294,7 +302,11 @@
       els.problemView.classList.add("is-refreshing");
     });
 
-    if (rerenderNav) renderNav();
+    if (rerenderNav) {
+      document.querySelectorAll(".problem-link").forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.key === state.activeKey);
+      });
+    }
   }
 
   function setHtml(el, html) {
