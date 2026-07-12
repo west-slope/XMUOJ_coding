@@ -109,7 +109,7 @@
 
   function languageFromPath(path) {
     const ext = (String(path || "").match(/\.([a-z0-9]+)$/i) || [])[1] || "";
-    const map = { cc: "cpp", cxx: "cpp", hpp: "cpp" };
+    const map = { cc: "cpp", cxx: "cpp", hpp: "cpp", py: "python" };
     return map[ext.toLowerCase()] || ext.toLowerCase();
   }
 
@@ -123,14 +123,19 @@
       seen.add(normalized);
       candidates.push(normalized);
     };
-    add(solution.path);
     const contestId = String(contest && contest.id || "");
     const problemId = String(problem && problem.id || "");
     const displayId = displayProblemId(problemId);
     const bases = [problemId, displayId].filter(Boolean);
     const exts = ["cpp", "cc", "cxx", "c", "py", "java", "js", "ts", "go", "rs", "kt"];
     bases.forEach((base) => exts.forEach((ext) => add("solutions/" + contestId + "/" + base + "." + ext)));
+    add(solution.path);
     return candidates;
+  }
+
+  function hasUsableCode(code) {
+    const normalized = String(code || "").trim();
+    return normalized !== "" && normalized !== "// TODO";
   }
 
   function hydrateBundledSolutions() {
@@ -140,11 +145,11 @@
         const problemId = String(problem.id || "");
         const displayId = displayProblemId(problemId);
         const bundled = contestSolutions[problemId] || contestSolutions[displayId];
-        if (!bundled || !bundled.code) continue;
+        if (!bundled || !hasUsableCode(bundled.code)) continue;
         problem.solutionStatus = "loaded";
         problem.solution = {
           path: normalizeSolutionPath(bundled.path || (problem.solution && problem.solution.path)),
-          language: bundled.language || (problem.solution && problem.solution.language) || languageFromPath(bundled.path),
+          language: languageFromPath(bundled.path) || bundled.language || (problem.solution && problem.solution.language),
           code: bundled.code
         };
       }
@@ -158,28 +163,50 @@
   }
   async function loadSolutionCode(contest, problem) {
     const solution = problem.solution || {};
-    if (solution.code) return solution;
+    const candidates = solutionCandidates(contest, problem);
+
+    for (const candidatePath of candidates) {
+      try {
+        const response = await fetch("./" + candidatePath, { cache: "no-store" });
+        if (!response.ok) continue;
+        const code = await response.text();
+        if (!hasUsableCode(code)) continue;
+        problem.solutionStatus = "loaded";
+        problem.solution = {
+          path: normalizeSolutionPath(candidatePath),
+          language: languageFromPath(candidatePath),
+          code: code
+        };
+        return problem.solution;
+      } catch (e) {
+        // Try the next extension.
+      }
+    }
+
     const bundled = findBundledSolution(contest, problem);
-    if (bundled && bundled.code) {
+    if (bundled && hasUsableCode(bundled.code)) {
       problem.solutionStatus = "loaded";
       problem.solution = {
         path: normalizeSolutionPath(bundled.path || solution.path),
-        language: bundled.language || solution.language || languageFromPath(bundled.path || solution.path),
+        language: languageFromPath(bundled.path || solution.path) || bundled.language,
         code: bundled.code
       };
       return problem.solution;
     }
+
+    if (hasUsableCode(solution.code)) return solution;
+
     problem.solutionStatus = "missing";
     problem.solution = {
-      path: normalizeSolutionPath(solution.path || solutionCandidates(contest, problem)[0]),
-      language: solution.language || languageFromPath(solution.path || solutionCandidates(contest, problem)[0]),
+      path: normalizeSolutionPath(candidates[0] || solution.path),
+      language: languageFromPath(candidates[0] || solution.path),
       code: ""
     };
     return problem.solution;
   }
 
   function hasKnownSolution(problem) {
-    return Boolean(problem.solution && problem.solution.code);
+    return Boolean(problem.solution && hasUsableCode(problem.solution.code));
   }
 
   async function refreshSolutionStatuses() {
@@ -332,13 +359,29 @@
 
   function highlightCode(code, language) {
     const escaped = escapeHtml(code || "");
-    if (!/^(c|cc|cpp|cxx)$/i.test(language || "")) return escaped;
+    const normalizedLanguage = String(language || "").toLowerCase();
     const parts = [];
     const stash = (className) => (match) => {
       const token = "@@HL" + parts.length + "@@";
       parts.push('<span class="tok-' + className + '">' + match + '</span>');
       return token;
     };
+
+    if (/^(py|python|python3)$/.test(normalizedLanguage)) {
+      let html = escaped
+        .replace(/&quot;&quot;&quot;[\s\S]*?&quot;&quot;&quot;/g, stash("string"))
+        .replace(/&#039;&#039;&#039;[\s\S]*?&#039;&#039;&#039;/g, stash("string"))
+        .replace(/&quot;(?:\\.|[^&])*?&quot;/g, stash("string"))
+        .replace(/&#039;(?:\\.|[^&])*?&#039;/g, stash("string"))
+        .replace(/#[^\n]*/g, stash("comment"));
+      html = html
+        .replace(/\b(False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield|match|case)\b/g, '<span class="tok-keyword">$1</span>')
+        .replace(/\b(abs|all|any|bin|bool|bytearray|bytes|callable|chr|classmethod|compile|complex|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__name__)\b/g, '<span class="tok-builtin">$1</span>')
+        .replace(/\b(?:0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\b/g, '<span class="tok-number">$&</span>');
+      return html.replace(/@@HL(\d+)@@/g, (_, index) => parts[Number(index)]);
+    }
+
+    if (!/^(c|cc|cpp|cxx)$/.test(normalizedLanguage)) return escaped;
     let html = escaped
       .replace(/\/\/[^\n]*/g, stash("comment"))
       .replace(/\/\*[\s\S]*?\*\//g, stash("comment"))
@@ -539,4 +582,6 @@
 
   init();
 })();
+
+
 

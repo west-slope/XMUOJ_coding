@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/12 18:49:34",
+  "generatedAt": "2026/7/12 21:41:55",
   "solutions": {
     "359": {
       "100": {
@@ -223,9 +223,9 @@ window.XMUOJ_SOLUTIONS_CODE = {
         "code": "#include <iostream>\r\n#include <queue>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint g[N][N], dist[N][N];\r\nint n, m;\r\nint dx[4] = {-1, 0, 1, 0};\r\nint dy[4] = {0, 1, 0, -1};\r\n\r\nint bfs() {\r\n    queue<pair<int, int>> q;\r\n    q.push({0, 0});\r\n    dist[0][0] = 0;\r\n    \r\n    while (!q.empty()) {\r\n        auto t = q.front();\r\n        q.pop();\r\n        \r\n        int x = t.first, y = t.second;\r\n        \r\n        if (x == n - 1 && y == m - 1) {\r\n            return dist[x][y];\r\n        }\r\n        \r\n        for (int i = 0; i < 4; i++) {\r\n            int nx = x + dx[i];\r\n            int ny = y + dy[i];\r\n            \r\n            if (nx >= 0 && nx < n && ny >= 0 && ny < m && g[nx][ny] == 0 && dist[nx][ny] == -1) {\r\n                dist[nx][ny] = dist[x][y] + 1;\r\n                q.push({nx, ny});\r\n            }\r\n        }\r\n    }\r\n    \r\n    return -1;\r\n}\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < m; j++) {\r\n            cin >> g[i][j];\r\n            dist[i][j] = -1;\r\n        }\r\n    }\r\n    \r\n    cout << bfs() << endl;\r\n    \r\n    return 0;\r\n}"
       },
       "144": {
-        "path": "solutions/359/144.cpp",
-        "language": "cpp",
-        "code": "#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <string>\nusing namespace std;\n\nstring start, target;\nint dx[4] = {-1, 0, 1, 0};\nint dy[4] = {0, 1, 0, -1};\n\nint bfs() {\n    queue<string> q;\n    unordered_map<string, int> dist;\n    \n    q.push(start);\n    dist[start] = 0;\n    \n    while (!q.empty()) {\n        string t = q.front();\n        q.pop();\n        \n        if (t == target) {\n            return dist[t];\n        }\n        \n        int pos = t.find('x');\n        int x = pos / 3, y = pos % 3;\n        \n        for (int i = 0; i < 4; i++) {\n            int nx = x + dx[i];\n            int ny = y + dy[i];\n            \n            if (nx >= 0 && nx < 3 && ny >= 0 && ny < 3) {\n                int npos = nx * 3 + ny;\n                string next = t;\n                swap(next[pos], next[npos]);\n                \n                if (!dist.count(next)) {\n                    dist[next] = dist[t] + 1;\n                    q.push(next);\n                }\n            }\n        }\n    }\n    \n    return -1;\n}\n\nint main() {\n    cin >> start >> target;\n    cout << bfs() << endl;\n    return 0;\n}"
+        "path": "solutions/359/144.py",
+        "language": "py",
+        "code": "from collections import deque\nimport sys\nlines = sys.stdin.read().strip().split(chr(10))\nout = []\ni = 0\nwhile i < len(lines):\n    if not lines[i].strip(): i += 1; continue\n    s = ''.join(lines[i].split())\n    t = ''.join(lines[i+1].split()) if i+1 < len(lines) else '12345678x'\n    i += 2\n    if s == t: out.append('0'); continue\n    # Check solvability (inversion count parity)\n    inv_s = sum(1 for a in range(9) for b in range(a+1,9) if s[a]!='x' and s[b]!='x' and s[a]>s[b])\n    inv_t = sum(1 for a in range(9) for b in range(a+1,9) if t[a]!='x' and t[b]!='x' and t[a]>t[b])\n    if (inv_s % 2) != (inv_t % 2):\n        out.append('-1'); continue\n    d = {s: 0}\n    q = deque([s])\n    ans = -1\n    while q and ans == -1:\n        cur = q.popleft()\n        k = cur.index('x')\n        x, y = k // 3, k % 3\n        for dx, dy in [(-1,0),(0,1),(1,0),(0,-1)]:\n            nx, ny = x + dx, y + dy\n            if 0 <= nx < 3 and 0 <= ny < 3:\n                nk = nx * 3 + ny\n                ns = list(cur)\n                ns[k], ns[nk] = ns[nk], ns[k]\n                ns = ''.join(ns)\n                if ns == t: ans = d[cur] + 1; break\n                if ns not in d: d[ns] = d[cur] + 1; q.append(ns)\n    out.append(str(ans))\nprint(chr(10).join(out))"
       },
       "145": {
         "path": "solutions/359/145.cpp",
@@ -899,6 +899,46 @@ window.XMUOJ_SOLUTIONS_CODE = {
         "language": "cpp",
         "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nvector<vector<int>> threeSum(vector<int>& nums, int target)\r\n{\r\n\tvector<vector<int>> res;//储存结果\r\n\tsort(nums.begin(), nums.end());\r\n\tfor(int i=0;i<nums.size();i++)\r\n\t{\r\n\t\tif (i && nums[i] == nums[i - 1])continue;//除去重复项\r\n\t\tfor (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)\r\n\t\t{\r\n\t\t\tif (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项\r\n\t\t\twhile(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)\r\n\t\t\t{\r\n\t\t\t\tk--;\r\n\t\t\t}\r\n\t\t\tif (nums[i] + nums[j] + nums[k] == target)\r\n\t\t\t\tres.push_back({ nums[i],nums[j],nums[k] });\r\n\t\t}\r\n\t}\r\n\treturn res;\r\n}\r\nbool comp(const vector<int>& a, const vector<int>& b)\r\n{\r\n\tif (a[0] != b[0])return a[0] < b[0];\r\n\tif (a[1] != b[1])return a[1] < b[1];\r\n\treturn a[2] < b[2];\r\n}\r\nint main()\r\n{\r\n\tint target, n;\r\n\tcin >> target >> n;\r\n\tvector<int>nums(n);\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin >> nums[i];\r\n\t}\r\n\tvector<vector<int>>res;\r\n\tres = threeSum(nums, target);//求出所有三元组\r\n\tsort(res.begin(), res.end(),comp);//排序\r\n\tfor(auto line:res)\r\n\t{\r\n\t\tcout << line[0] << \" \" << line[1] << \" \" << line[2] << endl;\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}"
       },
+      "LinK09": {
+        "path": "solutions/362/LinK09.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\nusing namespace std;\n\nvoid move(char start,char target)\n{\n    cout<<start<<\"->\"<<target<<endl;\n    return ;\n}\n\nvoid Hanoi(int n,char start,char other,char target)\n{\n    if(n==1){\n        move(start,target);\n        return;\n    }\n    Hanoi(n-1,start,target,other);\n    move(start,target);\n    Hanoi(n-1,other,start,target);\n    return ;\n\n}\n\nint main()\n{\n    int n;\n    cin>>n;\n    Hanoi(n,'A','B','C');\n    return 0;\n}"
+      },
+      "LinK10": {
+        "path": "solutions/362/LinK10.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\nint k;\r\nvoid move(int n,char start,char target)\r\n{\r\n    cout<<n<<\":\"<<start<<\"->\"<<target<<endl;\r\n    return;\r\n}\r\n\r\nvoid Hanoi(int n,char start,char other,char target)\r\n{\r\n    if(n==1){\r\n        move(n,start,target);\r\n        return;\r\n    }\r\n    Hanoi(n-1,start,target,other);\r\n    move(n,start,target);\r\n    Hanoi(n-1,other,start,target);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    char a,b,c;\r\n    cin>>k;\r\n    cin>>a>>b>>c;\r\n    Hanoi(k,a,b,c);\r\n    return 0;\r\n\r\n\r\n}"
+      },
+      "LinK11": {
+        "path": "solutions/362/LinK11.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=15;\r\nint n;\r\nbool st[N];\r\nint path[N];\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>n)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<path[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                path[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                path[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n\r\n\r\n    return 0;\r\n}"
+      },
+      "LinK12": {
+        "path": "solutions/362/LinK12.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=10;\r\nbool st[N];\r\nchar arr[N]={0};\r\nstring a;\r\nint len;\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>len)\r\n    {\r\n        for(int i=1;i<=len;i++)\r\n        {\r\n            cout<<arr[i];\r\n        }\r\n        cout<<endl;\r\n        return ;\r\n    }\r\n    else {\r\n        for(int i=0;i<len;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                st[i]=true;\r\n                arr[u]=a[i];\r\n                dfs(u+1);\r\n                arr[u]='0';\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a;\r\n    len=a.size();\r\n    sort(a.begin(), a.end());\r\n    dfs(1);\r\n    return 0;\r\n}"
+      },
+      "LinK15": {
+        "path": "solutions/362/LinK15.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL tianti(LL n)\r\n{\r\n    if(n==1)return 1;\r\n    else if(n==2)return 2;\r\n    else if(n==0)return 1;\r\n    LL count=0;\r\n    count+=tianti(n-1)+tianti(n-2);\r\n    return count;\r\n}\r\nint main()\r\n{\r\n    LL N;\r\n    cin>>N;\r\n    cout<<tianti(N)<<endl;\r\n    return 0;\r\n}"
+      },
+      "LinK19": {
+        "path": "solutions/362/LinK19.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=20;\r\nint st[N];\r\nint n;\r\nvoid dfs(int u)\r\n{\r\n\r\n    if(u>n)\r\n    {\r\n        int count=0;\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(st[i])\r\n            cout<<i<<\" \";\r\n            count++;\r\n        }\r\n        if(count!=0)\r\n            cout<<endl;\r\n        return ;\r\n    }\r\n    st[u]=true;\r\n    dfs(u+1);\r\n    st[u]=false;\r\n    dfs(u+1);\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}"
+      },
+      "LinK20": {
+        "path": "solutions/362/LinK20.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m;\r\nconst int N=100;\r\nint arr[N];\r\nbool st[N];\r\nvoid dfs(int u,int start)//多一个start方便判断\r\n{\r\n    if(u>m)\r\n    {\r\n        for(int i=1;i<=m;i++)\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else {\r\n        for(int i=start;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1,i+1);\r\n                arr[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    dfs(1,1);\r\n    return 0;\r\n}"
+      },
+      "LinK21": {
+        "path": "solutions/362/LinK21.cpp",
+        "language": "cpp",
+        "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=9;\r\nbool st[N];\r\nint arr[N];\r\nint n;\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>n)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                st[i]=false;\r\n                arr[u]=0;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}"
+      },
       "LinK27": {
         "path": "solutions/362/LinK27.cpp",
         "language": "cpp",
@@ -958,11 +998,6 @@ window.XMUOJ_SOLUTIONS_CODE = {
         "path": "solutions/362/LinK39.cpp",
         "language": "cpp",
         "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nchar fates[21][21];\r\nint w,h;\r\nint dx[4]{0,0,1,-1},dy[4]={1,-1,0,0};\r\nlong long dfs(int i,int j)\r\n{\r\n    long long res=1;\r\n    fates[i][j]='#';\r\n    for(int k=0;k<4;k++)\r\n    {\r\n        int x=i+dx[k],y=j+dy[k];\r\n        if(x>=0&&y>=0&&x<h&&y<w&&fates[x][y]=='.')\r\n        {\r\n            res+=dfs(x,y);\r\n        }\r\n    }\r\n    return res;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    while(cin>>w>>h,w||h)\r\n    {\r\n        int x,y;\r\n        for(int i=0;i<h;i++)\r\n        {\r\n            for(int j=0;j<w;j++)\r\n            {\r\n                cin>>fates[i][j];\r\n                if(fates[i][j]=='@')\r\n                {\r\n                    x=i;y=j;\r\n                }\r\n            }\r\n        }\r\n        cout<<dfs(x,y)<<endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
-      },
-      "LinK40": {
-        "path": "solutions/362/LinK40.cpp",
-        "language": "cpp",
-        "code": "\r\n\r\n\r\n//A1"
       },
       "LinK43": {
         "path": "solutions/362/LinK43.cpp",
