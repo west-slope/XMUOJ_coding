@@ -486,17 +486,57 @@
     renderHomeStats();
     renderHomeCards();
     renderNav();
+
+    // --- Announcement panel ---
+    initAnnouncement();
+  }
+
+  function initAnnouncement() {
+    const toggle = document.getElementById("announcementToggle");
+    const body = document.getElementById("announcementBody");
+    const content = document.getElementById("announcementContent");
+    if (!toggle || !body || !content) return;
+
+    fetch("./assets/announcement.md?v=20260712-1")
+      .then(function (r) {
+        if (!r.ok) throw new Error("Not found");
+        return r.text();
+      })
+      .then(function (md) {
+        content.innerHTML = renderMarkdown(md);
+      })
+      .catch(function () {
+        var panel = document.getElementById("announcementPanel");
+        if (panel) panel.style.display = "none";
+      });
+
+    toggle.addEventListener("click", function () {
+      var isOpen = body.classList.toggle("is-open");
+      toggle.classList.toggle("is-open", isOpen);
+      toggle.title = isOpen ? "收起公告" : "公告";
+      if (isOpen) {
+        toggle.querySelector(".toggle-label").textContent = "收起";
+      } else {
+        toggle.querySelector(".toggle-label").textContent = "公告";
+      }
+    });
+  }
+
+  function renderMarkdown(text) {
+    var html = text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/^### (.+)$/gm, "<h3>$1</h3>")
+      .replace(/^## (.+)$/gm, "<h2>$1</h2>")
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/^- (.+)$/gm, "<li>$1</li>");
+    html = html.replace(/(<li>.*<\/li>\n?)+/g, function (m) { return "<ul>" + m.replace(/\n$/, "") + "</ul>"; });
+    html = html.replace(/\n\n/g, "</p><p>");
+    return "<p>" + html + "</p>";
   }
 
   init();
 })();
-
-
-
-
-
-
-
-
-
 
