@@ -1249,3 +1249,484 @@ pre {
 
 .rich-text img { content-visibility:auto; max-width:100%; height:auto; }
 .rich-text img.is-missing-image { display:inline-block; min-width:180px; min-height:54px; padding:16px; border:1px dashed #a8bac8; background:#f3f8fc; color:#607786; }
+
+
+/* 2026-07 color refresh */
+:root {
+  --bg: #f5f8fa;
+  --panel: #ffffff;
+  --panel-soft: #edf6f8;
+  --text: #18242b;
+  --muted: #647780;
+  --line: #d7e2e6;
+  --accent: #167d8d;
+  --accent-strong: #106775;
+  --accent-soft: #dff2f3;
+  --accent-blue: #eef7fc;
+  --accent-rose: #fff4d8;
+  --accent-gold: #fff4d8;
+  --warn: #9a681d;
+  --code-bg: #182126;
+  --code-text: #dce7eb;
+}
+
+.home-page {
+  background: linear-gradient(135deg, rgba(223, 242, 243, 0.68), transparent 36%), linear-gradient(315deg, rgba(238, 247, 252, 0.82), transparent 34%), var(--bg);
+}
+
+.brand-logo {
+  border-color: #bcdde0;
+  box-shadow: 0 8px 22px rgba(22, 125, 141, 0.14);
+}
+
+.problem-link.is-active {
+  border-color: var(--accent);
+  background: linear-gradient(90deg, var(--accent-soft), #ffffff);
+}
+
+.problem-link.has-solution small {
+  background: #e1f4ed;
+  color: #21866f;
+}
+
+.problem-link.is-missing small {
+  background: #fff4d8;
+  color: #9a681d;
+}
+
+.section {
+  border-color: #d4e8f3;
+  background: linear-gradient(180deg, #eef7fc, #ffffff);
+}
+
+.section.two-col > div:first-child {
+  padding: 14px;
+  border: 1px solid #d7e8f1;
+  border-radius: 8px;
+  background: #f2f8fb;
+}
+
+.section.two-col > div:last-child {
+  padding: 14px;
+  border: 1px solid #dcece5;
+  border-radius: 8px;
+  background: #f4faf7;
+}
+
+#hintSection {
+  border-color: #eadfbf;
+  background: #fffaf0;
+}
+
+.code-editor {
+  padding: 14px 0;
+}
+
+.code-lines {
+  display: block;
+  min-width: max-content;
+  counter-reset: code-line;
+  font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.55;
+  tab-size: 4;
+}
+
+.code-line {
+  display: grid;
+  grid-template-columns: 56px minmax(max-content, 1fr);
+  min-height: 1.55em;
+}
+
+.line-number {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  padding: 0 14px 0 8px;
+  border-right: 1px solid #2b373d;
+  background: var(--code-bg);
+  color: #718087;
+  text-align: right;
+  user-select: none;
+}
+
+.line-content {
+  display: block;
+  padding: 0 18px;
+  white-space: pre;
+}
+
+.code-line:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.tok-keyword { color: #ff7b72; }
+.tok-string { color: #a5d6ff; }
+.tok-comment { color: #8b9ca5; }
+.tok-number { color: #d2a8ff; }
+.tok-builtin { color: #7ee787; }
+.tok-preprocessor { color: #ffa657; }
+
+
+/* VS Code compact code view */
+:root {
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+}
+
+.code-editor {
+  padding: 8px 0;
+  background: #1e1e1e;
+  border: 1px solid #2b2b2b;
+  border-radius: 6px;
+}
+
+.code-lines {
+  display: block;
+  min-width: max-content;
+  font-family: Consolas, "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.38;
+  tab-size: 4;
+}
+
+.code-line {
+  display: grid;
+  grid-template-columns: 46px minmax(max-content, 1fr);
+  min-height: 1.38em;
+}
+
+.line-number {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  padding: 0 10px 0 6px;
+  border-right: 1px solid #333333;
+  background: #1e1e1e;
+  color: #858585;
+  text-align: right;
+  user-select: none;
+}
+
+.line-content {
+  display: block;
+  padding: 0 12px;
+  color: #d4d4d4;
+  white-space: pre;
+}
+
+.code-line:hover {
+  background: #2a2d2e;
+}
+
+.code-line:hover .line-number {
+  background: #2a2d2e;
+  color: #c6c6c6;
+}
+
+.tok-keyword { color: #c586c0; }
+.tok-string { color: #ce9178; }
+.tok-comment { color: #6a9955; }
+.tok-number { color: #b5cea8; }
+.tok-builtin { color: #4ec9b0; }
+.tok-preprocessor { color: #c586c0; }
+
+
+/* Tighter VS Code line spacing */
+.code-lines {
+  line-height: 1.24;
+}
+
+.code-line {
+  min-height: 1.24em;
+  margin: 0;
+}
+
+.line-number,
+.line-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.code-editor {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
+/* Restore home/sidebar palette and compact code further */
+.home-page {
+  background: linear-gradient(135deg, rgba(234, 245, 239, 0.72), transparent 34%), linear-gradient(315deg, rgba(234, 242, 251, 0.76), transparent 32%), #fafaf8;
+}
+
+.home-shell {
+  border-color: #ecefeb;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 38px rgba(29, 35, 41, 0.06);
+}
+
+.home-shell::before {
+  background: linear-gradient(180deg, #dbeee4, #eaf2fb 50%, #fff0ee);
+}
+
+.brand-logo {
+  border-color: #e0e6e1;
+  box-shadow: 0 10px 24px rgba(31, 111, 80, 0.16);
+}
+
+.course-badge,
+.problem-link.has-solution small {
+  background: #eaf5ef;
+  color: #155a42;
+}
+
+.problem-link.is-active {
+  border-color: #237a57;
+  background: linear-gradient(90deg, #eaf5ef, #fff);
+}
+
+.problem-link.is-missing small {
+  background: #fff0ee;
+  color: #a14f20;
+}
+
+.contest-title,
+.sidebar-head,
+.sidebar-actions,
+.filter-row {
+  color: #64707d;
+}
+
+.code-lines {
+  font-size: 13px;
+  line-height: 1.16;
+}
+
+.code-line {
+  grid-template-columns: 40px minmax(max-content, 1fr);
+  min-height: 1.16em;
+}
+
+.line-number {
+  padding: 0 8px 0 4px;
+}
+
+.line-content {
+  padding: 0 10px;
+}
+
+.code-editor {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+
+/* Ultra compact code lines and restored shell colors */
+body {
+  background: #f6f7f9;
+}
+
+.home-page {
+  background: linear-gradient(135deg, rgba(234, 245, 239, 0.72), transparent 34%), linear-gradient(315deg, rgba(234, 242, 251, 0.76), transparent 32%), #fafaf8;
+}
+
+.home-shell {
+  border-color: #ecefeb;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 38px rgba(29, 35, 41, 0.06);
+}
+
+.home-shell::before {
+  background: linear-gradient(180deg, #dbeee4, #eaf2fb 50%, #fff0ee);
+}
+
+.topbar,
+.sidebar,
+.sidebar-head,
+.content,
+.empty-state,
+.modal,
+.modal-head,
+.modal-actions {
+  background-color: #ffffff;
+}
+
+.layout,
+.archive-app {
+  background: #f6f7f9;
+}
+
+.content::after {
+  content: "";
+  display: block;
+  height: 28px;
+  background: #f6f7f9;
+}
+
+.code-lines {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.code-line {
+  grid-template-columns: 36px minmax(max-content, 1fr);
+  min-height: 1em;
+}
+
+.line-number {
+  padding: 0 7px 0 3px;
+}
+
+.line-content {
+  padding: 0 8px;
+}
+
+.code-editor {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+
+/* Balanced VS Code code spacing */
+.code-lines {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.code-line {
+  grid-template-columns: 44px minmax(max-content, 1fr);
+  min-height: 1.2em;
+}
+
+.line-number {
+  padding: 0 10px 0 6px;
+}
+
+.line-content {
+  padding: 0 18px 0 14px;
+}
+
+.code-editor {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+
+/* Green home/sidebar and 10 percent code leading */
+.home-page {
+  background: linear-gradient(135deg, rgba(223, 242, 231, 0.82), transparent 34%), linear-gradient(315deg, rgba(232, 245, 239, 0.88), transparent 34%), #f6fbf8;
+}
+
+.home-shell {
+  border-color: #dfeee5;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 38px rgba(31, 111, 80, 0.08);
+}
+
+.home-shell::before {
+  background: linear-gradient(180deg, #cfead9, #eaf5ef 54%, #f7fbf8);
+}
+
+.course-badge,
+.home-card-meta span,
+.problem-link.has-solution small {
+  background: #eaf5ef;
+  color: #155a42;
+}
+
+.sidebar,
+.sidebar-head,
+.contest-list {
+  background: #f7fbf8;
+}
+
+.sidebar {
+  border-right-color: #dfeee5;
+}
+
+.contest-title {
+  color: #557268;
+}
+
+.problem-link {
+  background: #ffffff;
+}
+
+.problem-link.is-active {
+  border-color: #237a57;
+  background: linear-gradient(90deg, #dff1e7, #ffffff);
+}
+
+.problem-link.has-solution small {
+  background: #dff1e7;
+  color: #155a42;
+}
+
+.problem-link.is-missing small {
+  background: #fff0ee;
+  color: #a14f20;
+}
+
+.code-lines {
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.code-line {
+  min-height: 1.1em;
+}
+
+
+/* Code block breathing room */
+.code-editor {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
+
+/* Trial half line-height */
+.code-lines {
+  line-height: 0.5;
+}
+.code-line {
+  min-height: 0.5em;
+}
+
+
+
+/* Comfortable compact line-height */
+.code-lines {
+  line-height: 0.9;
+}
+.code-line {
+  min-height: 0.9em;
+}
+
+
+
+/* One-line bottom breathing room */
+.code-editor {
+  padding-bottom: 14px;
+}
+
+
+
+/* One-em line-end padding */
+.code-editor {
+  padding-bottom: 12px;
+}
+.line-content {
+  padding-right: 1em;
+}
+
+
+
+/* One-line space after final code line */
+.code-editor {
+  padding-bottom: 14px;
+}
+.line-content {
+  padding-right: 18px;
+}
+

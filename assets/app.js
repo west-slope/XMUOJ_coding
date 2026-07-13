@@ -210,9 +210,14 @@
       });
       head.append(title, meta, copy);
       const pre = document.createElement("pre");
-      pre.className = "code-block";
+      pre.className = "code-block code-editor";
       const code = document.createElement("code");
-      code.innerHTML = highlightCode(solution.code, solution.language);
+      code.className = "code-lines";
+      const rawLines = String(solution.code || "").replace(/\r\n?/g, "\n").split("\n");
+      code.innerHTML = rawLines.map((rawLine, lineIndex) => {
+        const highlightedLine = rawLine ? highlightCode(rawLine, solution.language) : " ";
+        return '<span class="code-line"><span class="line-number" aria-hidden="true">' + (lineIndex + 1) + '</span><span class="line-content">' + highlightedLine + '</span></span>';
+      }).join("\n");
       pre.appendChild(code);
       panel.append(head, pre);
       els.solutionList.appendChild(panel);
