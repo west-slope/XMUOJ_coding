@@ -1838,7 +1838,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一个整数，即A+B的结果。</p>",
           "hint": "<p>读入两个整数，输出它们的和。最基础的输入输出练习。<a href=\"https://www.acwing.com/problem/content/1/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 2",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/001.cpp",
             "language": "cpp",
@@ -1856,7 +1861,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `PROD = ` 后跟A×B的结果。</p>",
           "hint": "<p>读入两个整数，输出乘积。注意输出格式带前缀。<a href=\"https://www.acwing.com/problem/content/607/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 9",
+              "output": "PROD = 27"
+            }
+          ],
           "solution": {
             "path": "solutions/359/002.cpp",
             "language": "cpp",
@@ -1874,7 +1884,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `DIFFERENCE = ` 后跟A×B − C×D的结果。</p>",
           "hint": "<p>先乘后减，注意运算顺序和输出格式。<a href=\"https://www.acwing.com/problem/content/610/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 6 7 8",
+              "output": "DIFFERENCE = -26"
+            }
+          ],
           "solution": {
             "path": "solutions/359/003.cpp",
             "language": "cpp",
@@ -1892,7 +1907,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 TOTAL = 后跟总价（数量×单价），保留两位小数。</p>",
           "hint": "<p>总价 = 件数₁×单价₁ + 件数₂×单价₂。<a href=\"https://www.acwing.com/problem/content/613/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "12 1 5.30",
+              "output": "TOTAL = 5.30"
+            }
+          ],
           "solution": {
             "path": "solutions/359/004.cpp",
             "language": "cpp",
@@ -1910,7 +1930,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `A=` 后跟面积，保留4位小数。</p>",
           "hint": "<p>面积 = 3.14159 × r × r，注意浮点数运算和格式化输出。<a href=\"https://www.acwing.com/problem/content/606/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "2.00",
+              "output": "A=12.5664"
+            }
+          ],
           "solution": {
             "path": "solutions/359/005.cpp",
             "language": "cpp",
@@ -1928,7 +1953,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `Average = ` 后跟加权平均分，保留5位小数。</p>",
           "hint": "<p>加权平均 = (A×3.5 + B×7.5) / 11。分母是权重之和，不是2。<a href=\"https://www.acwing.com/problem/content/608/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "9.7\n5.3",
+              "output": "Average = 6.70000"
+            }
+          ],
           "solution": {
             "path": "solutions/359/006.cpp",
             "language": "cpp",
@@ -1946,7 +1976,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出工号。第二行输出 `SALARY = U$ ` 后跟实发金额，保留两位小数。</p>",
           "hint": "<p>实发金额 = 出工天数 × 每日工钱。<a href=\"https://www.acwing.com/problem/content/611/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "25\n100 5.50",
+              "output": "NUMBER = 25\nSALARY = U$ 550.00"
+            }
+          ],
           "solution": {
             "path": "solutions/359/007.cpp",
             "language": "cpp",
@@ -1964,7 +1999,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出每升草料汁能跑的公里数，保留3位小数，后跟 km/l。</p>",
           "hint": "<p>消耗率 = 草料 / 路程，注意浮点数除法。<a href=\"https://www.acwing.com/problem/content/617/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "500 35.0",
+              "output": "14.286 km/l"
+            }
+          ],
           "solution": {
             "path": "solutions/359/008.cpp",
             "language": "cpp",
@@ -1982,7 +2022,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `VOLUME = ` 后跟体积，保留3位小数。</p>",
           "hint": "<p>体积 = (4.0/3.0) × 3.14159 × r³，注意用浮点数除法。<a href=\"https://www.acwing.com/problem/content/614/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3",
+              "output": "VOLUME = 113.097"
+            }
+          ],
           "solution": {
             "path": "solutions/359/009.cpp",
             "language": "cpp",
@@ -2000,7 +2045,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `Max = ` 后跟三个数中的最大值。</p>",
           "hint": "<p>用条件判断两两比较，或直接用max函数。<a href=\"https://www.acwing.com/problem/content/616/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7 14 106",
+              "output": "Max = 106"
+            }
+          ],
           "solution": {
             "path": "solutions/359/010.c",
             "language": "c",
@@ -2018,7 +2068,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出两点间的距离，保留两位小数。</p>",
           "hint": "<p>使用距离公式，需要引入数学库以使用sqrt函数。<a href=\"https://www.acwing.com/problem/content/618/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1.0 7.0 5.0 9.0",
+              "output": "4.4721"
+            }
+          ],
           "solution": {
             "path": "solutions/359/011.c",
             "language": "c",
@@ -2036,7 +2091,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>五行，分别输出 TRIANGULO（三角形）、CIRCULO（圆形）、TRAPEZIO（梯形）、QUADRADO（正方形）、RETANGULO（长方形）的面积，各保留3位小数。格式为 `名称: 面积`。</p>",
           "hint": "<p>注意输出格式：名称与面积之间有一个空格。π取3.14159。使用 printf(&quot;%.3f&quot;) 或 cout &lt;&lt; fixed &lt;&lt; setprecision(3) 保留3位小数。<a href=\"https://www.acwing.com/problem/content/615/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3.0 4.0 5.2",
+              "output": "TRIANGULO: 7.800\nCIRCULO: 84.949\nTRAPEZIO: 18.200\nQUADRADO: 16.000\nRETANGULO: 12.000"
+            }
+          ],
           "solution": {
             "path": "solutions/359/012.c",
             "language": "c",
@@ -2054,7 +2114,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `H:M:S` 格式的时间。</p>",
           "hint": "<p>时 = 秒 ÷ 3600，分 = 余数 ÷ 60，秒 = 最终余数。<a href=\"https://www.acwing.com/problem/content/656/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "556",
+              "output": "0:9:16"
+            }
+          ],
           "solution": {
             "path": "solutions/359/013.c",
             "language": "c",
@@ -2072,7 +2137,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出总金额N。接下来7行，按面额从大到小，每行输出 `X nota(s) de R$ Y,00`，其中X是张数，Y是面额。</p>",
           "hint": "<p>贪心策略：从大到小依次整除，记录每种面额的枚数。<a href=\"https://www.acwing.com/problem/content/655/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "576",
+              "output": "576\n5 nota(s) de R$ 100,00\n1 nota(s) de R$ 50,00\n1 nota(s) de R$ 20,00\n0 nota(s) de R$ 10,00\n1 nota(s) de R$ 5,00\n0 nota(s) de R$ 2,00\n1 nota(s) de R$ 1,00"
+            }
+          ],
           "solution": {
             "path": "solutions/359/014.c",
             "language": "c",
@@ -2090,7 +2160,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>互为倍数输出 `Yes`，否则输出 `No`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/667/\" target=\"_blank\">原题链接</a>判断 A%B==0 或 B%A==0，只要有一个成立就是倍数关系，输出Yes；否则输出No。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6 24",
+              "output": "Yes"
+            }
+          ],
           "solution": {
             "path": "solutions/359/015.c",
             "language": "c",
@@ -2108,7 +2183,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>能拼成三角形输出 `Perimeter = X.X`（周长），拼不成输出 `Area = X.X`（梯形面积）。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/666/\" target=\"_blank\">原题链接</a>三角形成立条件：任意两边之和大于第三边。如果成立，周长=A+B+C；如果不成立，梯形面积=(A+B)*C/2。注意保留1位小数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6.0 4.0 2.0",
+              "output": "Area = 10.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/016.c",
             "language": "c",
@@ -2126,7 +2206,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出一个整数，表示比武持续的小时数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/669/\" target=\"_blank\">原题链接</a>用条件判断：如果B&gt;A，输出B-A；如果B==A，输出24；否则输出24-A+B。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "0 15",
+              "output": "15"
+            }
+          ],
           "solution": {
             "path": "solutions/359/017.c",
             "language": "c",
@@ -2144,7 +2229,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>三个数从小到大输出，空格隔开。</p>",
           "hint": "<p>用条件判断两两比较确定顺序，或存入数组排序。<a href=\"https://www.acwing.com/problem/content/665/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7 21 -14",
+              "output": "-14 7 21"
+            }
+          ],
           "solution": {
             "path": "solutions/359/018.c",
             "language": "c",
@@ -2162,7 +2252,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `Total: R$ ` 后跟总价，保留两位小数。</p>",
           "hint": "<p>用数组或条件判断存储5种单价，查表后乘以数量。<a href=\"https://www.acwing.com/problem/content/662/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 2",
+              "output": "Total: R$ 10.00"
+            }
+          ],
           "solution": {
             "path": "solutions/359/019.c",
             "language": "c",
@@ -2180,7 +2275,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区间的名称，或 `Out of interval`（超出范围）。</p>",
           "hint": "<p>用 if-elif-else 逐一判断落在哪个区间。<a href=\"https://www.acwing.com/problem/content/661/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "95.29",
+              "output": "Interval (75,100]"
+            }
+          ],
           "solution": {
             "path": "solutions/359/020.c",
             "language": "c",
@@ -2198,7 +2298,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 <code>Q1</code>（第一象限）、<code>Q2</code>（第二）、<code>Q3</code>（第三）、<code>Q4</code>（第四）、<code>Eixo X</code>（X轴上）、<code>Eixo Y</code>（Y轴上）或 <code>Origem</code>（原点）。</p>",
           "hint": "<p>先判断是否在原点或坐标轴上（x==0 或 y==0），再判断象限。<a href=\"https://www.acwing.com/problem/content/664/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4.5 -2.2",
+              "output": "Q4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/021.c",
             "language": "c",
@@ -2216,7 +2321,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出比武持续时间，格式为 `H:M`。</p>",
           "hint": "<p>全部转为分钟做差。如果结果≤0，加上24×60。<a href=\"https://www.acwing.com/problem/content/670/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "8 56 7 37",
+              "output": "22:41"
+            }
+          ],
           "solution": {
             "path": "solutions/359/022.cpp",
             "language": "cpp",
@@ -2234,7 +2344,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>三行：新月钱、涨了多少、涨幅百分比（整数带%号），金额保留两位小数。</p>",
           "hint": "<p>用 if-elif 判断原月钱落在哪个区间，确定涨幅百分比p。涨额 = 原月钱 × p/100，新月钱 = 原月钱 + 涨额。注意400属于0~400区间（涨15%），400.01才属于400~800区间。<a href=\"https://www.acwing.com/problem/content/671/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "400.00",
+              "output": "New salary: 460.00\nIncrease: 60.00\nPercentage: 15 %"
+            }
+          ],
           "solution": {
             "path": "solutions/359/023.cpp",
             "language": "cpp",
@@ -2252,7 +2367,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>满足所有条件输出 `Accepted`，否则输出 `Not accepted`。</p>",
           "hint": "<p>用逻辑与（&&/and）连接五个条件，全部为真才通过。<a href=\"https://www.acwing.com/problem/content/659/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "-87 14 68 33",
+              "output": "Not accepted"
+            }
+          ],
           "solution": {
             "path": "solutions/359/024.cpp",
             "language": "cpp",
@@ -2270,7 +2390,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应分舵名称，或 `DDD nao cadastrado`。</p>",
           "hint": "<p>用 if-elif 链逐一比对，或用字典/映射表查找。<a href=\"https://www.acwing.com/problem/content/673/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "11",
+              "output": "Sao Paulo"
+            }
+          ],
           "solution": {
             "path": "solutions/359/025.cpp",
             "language": "cpp",
@@ -2288,7 +2413,16 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>不能构成三角形输出 <code>Not a triangle</code>；能构成则按以下规则输出（<b>每种满足的条件输出一行</b>）：<ol><li>先判断角度类型：输出 <code>Right</code>（直角）、<code>Acute</code>（锐角）或 <code>Obtuse</code>（钝角）之一。</li><li>再判断边长类型：若三边相等输出 <code>Equilateral</code>（等边），若恰好两边相等输出 <code>Isosceles</code>（等腰），否则不输出。</li></ol>注意：一个三角形可能同时属于多个类型，同一类型的判断用 <code>if</code> 而不是 <code>elif</code> 才能多行输出。</p>",
           "hint": "<p>先验证两边之和大于第三边。若不能构成三角形则直接输出 <code>Not a triangle</code> 并结束。能构成三角形时，角度类型和边长类型分别用独立的 <code>if</code> 判断（不要用 <code>elif</code> 串起来），以确保等边/等腰三角形能输出两行。边长已从小到大排列，第三个数即最长边。<a href=\"https://www.acwing.com/problem/content/668/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6.0 4.0 2.0",
+              "output": "Not a triangle"
+            },
+            {
+              "input": "5.0 5.0 5.0",
+              "output": "Acute\nEquilateral"
+            }
+          ],
           "solution": {
             "path": "solutions/359/026.cpp",
             "language": "cpp",
@@ -2306,7 +2440,16 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应的动物名称。</p>",
           "hint": "<p>三层嵌套 if-else：先判断第一层，再判断第二层，最后判断第三层。<a href=\"https://www.acwing.com/problem/content/672/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "vertebrate\nmammal\nomnivore",
+              "output": "man"
+            },
+            {
+              "input": "vertebrate\nbird\ncarnivore",
+              "output": "eagle"
+            }
+          ],
           "solution": {
             "path": "solutions/359/027.cpp",
             "language": "cpp",
@@ -2324,7 +2467,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出 `R$ X.XX`。免税则输出 `Isento`。</p>",
           "hint": "<p>分段计算：1000×8% + 2×18% = 80.36。每段只对超出部分征税。<a href=\"https://www.acwing.com/problem/content/674/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3002.00",
+              "output": "R$ 80.36"
+            }
+          ],
           "solution": {
             "path": "solutions/359/028.cpp",
             "language": "cpp",
@@ -2342,7 +2490,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出全部偶数，每个偶数占一行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/710/\" target=\"_blank\">原题链接</a>for循环从2开始，步长为2，到100结束。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "No input",
+              "output": "2\n4\n6\n8\n10\n12\n14\n16\n18\n20\n22\n24\n26\n28\n30\n32\n34\n36\n38\n40\n42\n44\n46\n48\n50\n52\n54\n56\n58\n60\n62\n64\n66\n68\n70\n72\n74\n76\n78\n80\n82\n84\n86\n88\n90\n92\n94\n96\n98\n100"
+            }
+          ],
           "solution": {
             "path": "solutions/359/029.cpp",
             "language": "cpp",
@@ -2360,7 +2513,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个奇数，从1到X（含）。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/711/\" target=\"_blank\">原题链接</a>for循环从1开始，步长为2，到X结束。如果X是偶数，最后一个奇数是X-1。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "8",
+              "output": "1\n3\n5\n7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/030.cpp",
             "language": "cpp",
@@ -2378,7 +2536,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个非零的X，输出1到X，每行一个数。每组之间空一行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/714/\" target=\"_blank\">原题链接</a>外层while循环读入X，遇到0停止。内层for循环从1到X输出。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n10\n3\n0",
+              "output": "1 2 3 4 5\n1 2 3 4 5 6 7 8 9 10\n1 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/031.cpp",
             "language": "cpp",
@@ -2396,7 +2559,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>从X之后开始的6个连续奇数，每行一个。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/716/\" target=\"_blank\">原题链接</a>如果X是奇数，从X+2开始；如果X是偶数，从X+1开始。循环6次，每次加2。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "8",
+              "output": "9\n11\n13\n15\n17\n19"
+            }
+          ],
           "solution": {
             "path": "solutions/359/032.cpp",
             "language": "cpp",
@@ -2414,7 +2582,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出正数的个数，格式为 `X valores positivos`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/718/\" target=\"_blank\">原题链接</a>循环读入6个数，用if判断是否&gt;0，计数器累加。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7\n-5\n6\n-3.4\n4.6\n12",
+              "output": "4 positive numbers"
+            }
+          ],
           "solution": {
             "path": "solutions/359/033.cpp",
             "language": "cpp",
@@ -2432,7 +2605,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个数，从1到10000中除以N余2的数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/723/\" target=\"_blank\">原题链接</a>for循环从1到10000，if i%N==2则输出。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "13",
+              "output": "2\n15\n28\n41\n54\n..."
+            }
+          ],
           "solution": {
             "path": "solutions/359/034.cpp",
             "language": "cpp",
@@ -2450,7 +2628,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出 X in，X为区间内个数。第二行输出 Y out，Y为区间外个数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/722/\" target=\"_blank\">原题链接</a>循环读入，判断是否 10≤X≤20，计数器累加。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n5 12 18 25 10",
+              "output": "3 in\n2 out"
+            }
+          ],
           "solution": {
             "path": "solutions/359/035.cpp",
             "language": "cpp",
@@ -2468,7 +2651,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出X和Y之间所有奇数的和。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/726/\" target=\"_blank\">原题链接</a>从X+1到Y-1循环，判断每个数是否为奇数，是则累加。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6 -5",
+              "output": "5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/036.cpp",
             "language": "cpp",
@@ -2486,7 +2674,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>从A开始N个连续整数之和。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/725/\" target=\"_blank\">原题链接</a>A固定，第二行跳过负数和零找N。从A开始循环N次累加。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3\n-5 0 -3 4 -1",
+              "output": "18"
+            }
+          ],
           "solution": {
             "path": "solutions/359/037.cpp",
             "language": "cpp",
@@ -2504,7 +2697,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出最大值和它的位置，格式见样例。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/712/\" target=\"_blank\">原题链接</a>遍历时同时记录最大值和位置。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n3 2 5 1 4",
+              "output": "5\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/038.cpp",
             "language": "cpp",
@@ -2522,7 +2720,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个约数，从小到大。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/713/\" target=\"_blank\">原题链接</a>从1到N循环，如果N%i==0则i是约数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6",
+              "output": "1\n2\n3\n6"
+            }
+          ],
           "solution": {
             "path": "solutions/359/039.cpp",
             "language": "cpp",
@@ -2540,7 +2743,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>10行，格式为 `i x N = i*N`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/720/\" target=\"_blank\">原题链接</a>for循环从1到10，每次输出i x N = i*N。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "140",
+              "output": "1 x 140 = 140\n2 x 140 = 280\n3 x 140 = 420\n4 x 140 = 560\n5 x 140 = 700\n6 x 140 = 840\n7 x 140 = 980\n8 x 140 = 1120\n9 x 140 = 1260\n10 x 140 = 1400"
+            }
+          ],
           "solution": {
             "path": "solutions/359/040.cpp",
             "language": "cpp",
@@ -2558,7 +2766,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>N行，每行M个值，最后一个用SWORD代替，值之间用空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/717/\" target=\"_blank\">原题链接</a>嵌套循环，外层控制行，内层控制列。每行第M个位置输出SWORD。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7 4",
+              "output": "1 2 3 SWORD\n5 6 7 SWORD\n9 10 11 SWORD\n13 14 15 SWORD\n17 18 19 SWORD\n21 22 23 SWORD\n25 26 27 SWORD"
+            }
+          ],
           "solution": {
             "path": "solutions/359/041.cpp",
             "language": "cpp",
@@ -2576,7 +2789,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出 Total: X weapons（总数量）。接下来三行输出每种兵器的总数：Total swords: X、Total blades: X、Total spears: X。最后三行输出各自占比：Percentage of swords: XX.XX % 等，保留两位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/715/\" target=\"_blank\">原题链接</a>三个计数器分别累加C、R、F的数量。注意每行先读数量再读类型。总数 = 所有数量之和。占比 = 各类数量 / 总数 × 100%，保留两位小数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "11\n1 F\n5 C\n4 C\n12 C\n11 F\n15 F\n2 F\n7 C\n1 C\n4 C\n9 F",
+              "output": "Total: 71 weapons\nTotal swords: 33\nTotal blades: 0\nTotal spears: 38\nPercentage of swords: 46.48 %\nPercentage of blades: 0.00 %\nPercentage of spears: 53.52 %"
+            }
+          ],
           "solution": {
             "path": "solutions/359/042.cpp",
             "language": "cpp",
@@ -2594,7 +2812,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>替换后的10个数，每行格式为 `X[i] = 值`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/739/\" target=\"_blank\">原题链接</a>遍历数组，将≤0的元素替换为1。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "-73\n27\n-35\n50\n-67\n86\n39\n-81\n-7\n31",
+              "output": "X[0] = 1\nX[1] = 27\nX[2] = 1\nX[3] = 50\nX[4] = 1\nX[5] = 86\nX[6] = 39\nX[7] = 1\nX[8] = 1\nX[9] = 31"
+            }
+          ],
           "solution": {
             "path": "solutions/359/043.cpp",
             "language": "cpp",
@@ -2612,7 +2835,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>10行，格式为 `N[i] = X`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/740/\" target=\"_blank\">原题链接</a>N[0]=V，循环N[i]=N[i-1]*2。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6",
+              "output": "N[0] = 6\nN[1] = 12\nN[2] = 24\nN[3] = 48\nN[4] = 96\nN[5] = 192\nN[6] = 384\nN[7] = 768\nN[8] = 1536\nN[9] = 3072"
+            }
+          ],
           "solution": {
             "path": "solutions/359/044.cpp",
             "language": "cpp",
@@ -2630,7 +2858,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>按顺序输出所有≤10的元素，每行格式为 `A[i] = X`（保留一位小数）。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/741/\" target=\"_blank\">原题链接</a>遍历数组，if元素≤10则输出。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "79.5\n-35.1\n65.0\n-89.9\n62.2\n-30.0\n-58.1\n-74.0\n85.7\n66.4\n-60.2\n-32.1\n11.4\n34.6\n0.2\n96.3\n-67.9\n70.1\n27.3\n53.4\n63.8\n43.2\n-68.2\n-87.9\n-13.3\n62.1\n-12.0\n66.9\n1.6\n-70.3\n-14.0\n-84.8\n19.6\n-1.9\n43.4\n36.9\n97.2\n-88.6\n52.2\n-21.0\n-54.1\n-17.3\n-11.7\n-8.5\n40.9\n-21.6\n-12.0\n87.8\n-92.9\n45.3\n-70.1\n73.7\n-23.2\n87.3\n-78.6\n38.2\n51.2\n-21.0\n3.9\n88.4\n28.3\n-67.6\n47.1\n-49.1\n73.6\n39.5\n28.0\n-80.1\n-41.4\n43.2\n-4.6\n61.1\n83.2\n65.5\n74.3\n90.1\n-80.2\n39.6\n-7.0\n-34.4\n43.1\n-62.5\n-25.3\n61.0\n68.5\n9.0\n10.3\n45.9\n-98.0\n-34.8\n88.3\n-26.6\n-48.1\n20.5\n-5.4\n-76.7\n79.7\n-90.0\n59.1\n-18.7",
+              "output": "A[1] = -35.1\nA[3] = -89.9\nA[5] = -30.0\nA[6] = -58.1\nA[7] = -74.0\nA[10] = -60.2\nA[11] = -32.1\nA[14] = 0.2\nA[16] = -67.9\nA[22] = -68.2\nA[23] = -87.9\nA[24] = -13.3\nA[26] = -12.0\nA[28] = 1.6\nA[29] = -70.3\nA[30] = -14.0\nA[31] = -84.8\nA[33] = -1.9\nA[37] = -88.6\nA[39] = -21.0\nA[40] = -54.1\nA[41] = -17.3\nA[42] = -11.7\nA[43] = -8.5\nA[45] = -21.6\nA[46] = -12.0\nA[48] = -92.9\nA[50] = -70.1\nA[52] = -23.2\nA[54] = -78.6\nA[57] = -21.0\nA[58] = 3.9\nA[61] = -67.6\nA[63] = -49.1\nA[67] = -80.1\nA[68] = -41.4\nA[70] = -4.6\nA[76] = -80.2\nA[78] = -7.0\nA[79] = -34.4\nA[81] = -62.5\nA[82] = -25.3\nA[85] = 9.0\nA[88] = -98.0\nA[89] = -34.8\nA[91] = -26.6\nA[92] = -48.1\nA[94] = -5.4\nA[95] = -76.7\nA[97] = -90.0\nA[99] = -18.7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/045.cpp",
             "language": "cpp",
@@ -2648,7 +2881,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>翻转后的20个数，每行格式为 `N[i] = X`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/745/\" target=\"_blank\">原题链接</a>双指针从两端向中间交换。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "-40\n57\n99\n2\n-20\n25\n-67\n-76\n70\n98\n-95\n-92\n-100\n-100\n-55\n48\n-55\n54\n1\n-32",
+              "output": "N[0] = -32\nN[1] = 1\nN[2] = 54\nN[3] = -55\nN[4] = 48\nN[5] = -55\nN[6] = -100\nN[7] = -100\nN[8] = -92\nN[9] = -95\nN[10] = 98\nN[11] = 70\nN[12] = -76\nN[13] = -67\nN[14] = 25\nN[15] = -20\nN[16] = 2\nN[17] = 99\nN[18] = 57\nN[19] = -40"
+            }
+          ],
           "solution": {
             "path": "solutions/359/046.cpp",
             "language": "cpp",
@@ -2666,7 +2904,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出 <code>Menor valor: X</code>，第二行输出 <code>Posicao: P</code>，其中P为最小值的下标（从0开始计数）。若最小值出现多次，输出第一次出现的位置。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/742/\" target=\"_blank\">原题链接</a>遍历时记录当前最小值和位置。注意位置从0开始计数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10\n1 2 3 4 -5 6 7 8 9 10",
+              "output": "Menor valor: -5\nPosicao: 4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/047.cpp",
             "language": "cpp",
@@ -2684,7 +2927,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一个整数，即第N个斐波那契数F(N)。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/743/\" target=\"_blank\">原题链接</a>两个变量滚动：a,b = b,a+b。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/048.cpp",
             "language": "cpp",
@@ -2702,7 +2950,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，前N个斐波那契数，空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/744/\" target=\"_blank\">原题链接</a>预处理斐波那契数组到60，查询时直接取值。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5",
+              "output": "0 1 1 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/049.cpp",
             "language": "cpp",
@@ -2720,7 +2973,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每组M和N，从小到大输出M到N之间的所有整数（空格隔开），最后输出 <code>Sum=X</code>（X为这些数的和）。每组输出占一行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/746/\" target=\"_blank\">原题链接</a>若M&gt;N则先交换。注意：结束条件为两个数均≤0（测试用例可能用0 0或-1 -1）。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 10\n2 3\n-1 -1",
+              "output": "5 6 7 8 9 10 Sum=45\n2 3 Sum=5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/050.cpp",
             "language": "cpp",
@@ -2738,7 +2996,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出该行的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/719/\" target=\"_blank\">原题链接</a>遍历指定行，根据操作类型求和或求平均。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1\nM\n94.2 65.35 7.41 -67.85 18.62 -72.49 -5.91 66.06 -20.35 -17.4 12.62 -63.04\n...",
+              "output": "17.3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/051.cpp",
             "language": "cpp",
@@ -2756,7 +3019,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出该列的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/724/\" target=\"_blank\">原题链接</a>遍历所有行取指定列元素。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1\nS\n-29.7 94.5 43.8 3.7 68.1 19.9 23.4 -0.3 -85.3 57.3 89.7 36.0\n...",
+              "output": "199.5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/052.cpp",
             "language": "cpp",
@@ -2774,7 +3042,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行输出一个不超过N的完全数（从小到大）。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/727/\" target=\"_blank\">原题链接</a>对每个数找所有真因子求和，等于自身则是完全数。注意优化：枚举因子只需到 sqrt(X)，利用约数成对出现的性质。1 不是完全数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "30",
+              "output": "6\n28"
+            }
+          ],
           "solution": {
             "path": "solutions/359/053.cpp",
             "language": "cpp",
@@ -2792,7 +3065,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出2到N之间所有的质数，每行一个。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/728/\" target=\"_blank\">原题链接</a>对每个数从2到√n试除。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10",
+              "output": "2\n3\n5\n7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/054.cpp",
             "language": "cpp",
@@ -2810,7 +3088,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/747/\" target=\"_blank\">原题链接</a>先读操作类型（S求和/M求平均），再判断行号。上方区域即i</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n5.0 65.0 82.0 54.0 60.0 96.0 64.0 88.0 81.0 2.0 86.0 29.0\n66.0 16.0 27.0 63.0 1.0 52.0 67.0 76.0 94.0 88.0 65.0 39.0\n48.0 61.0 15.0 22.0 48.0 30.0 57.0 15.0 97.0 18.0 19.0 49.0\n34.0 55.0 10.0 37.0 1.0 3.0 29.0 15.0 42.0 76.0 95.0 5.0\n29.0 92.0 53.0 60.0 44.0 35.0 96.0 64.0 15.0 16.0 35.0 87.0\n42.0 50.0 55.0 17.0 78.0 69.0 2.0 1.0 1.0 4.0 55.0 17.0\n66.0 28.0 22.0 68.0 17.0 94.0 74.0 6.0 65.0 64.0 77.0 84.0\n38.0 50.0 8.0 46.0 39.0 90.0 99.0 89.0 2.0 17.0 40.0 89.0\n65.0 72.0 54.0 60.0 11.0 99.0 37.0 21.0 37.0 9.0 42.0 14.0\n55.0 65.0 62.0 38.0 59.0 35.0 50.0 40.0 71.0 1.0 23.0 23.0\n37.0 17.0 97.0 26.0 15.0 64.0 16.0 79.0 87.0 84.0 96.0 85.0\n12.0 39.0 88.0 87.0 30.0 61.0 7.0 10.0 43.0 87.0 48.0 77.0\n",
+              "output": "1594.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/055.cpp",
             "language": "cpp",
@@ -2828,7 +3111,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/749/\" target=\"_blank\">原题链接</a>下方区域即i&gt;j的元素。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n6.0 90.0 70.0 55.0 69.0 69.0 62.0 79.0 7.0 9.0 54.0 43.0\n30.0 75.0 74.0 58.0 99.0 52.0 88.0 51.0 77.0 92.0 77.0 10.0\n89.0 99.0 84.0 60.0 90.0 25.0 95.0 82.0 96.0 5.0 92.0 10.0\n62.0 58.0 33.0 88.0 65.0 78.0 71.0 59.0 81.0 70.0 83.0 32.0\n7.0 50.0 45.0 52.0 18.0 63.0 68.0 58.0 60.0 58.0 45.0 22.0\n2.0 54.0 28.0 91.0 0.0 61.0 49.0 57.0 78.0 35.0 82.0 48.0\n7.0 54.0 36.0 30.0 46.0 48.0 45.0 22.0 18.0 24.0 77.0 17.0\n30.0 66.0 66.0 14.0 11.0 18.0 13.0 67.0 12.0 9.0 1.0 35.0\n7.0 71.0 24.0 6.0 73.0 30.0 26.0 96.0 99.0 28.0 8.0 38.0\n16.0 3.0 75.0 67.0 66.0 27.0 86.0 62.0 48.0 35.0 90.0 57.0\n76.0 4.0 92.0 24.0 53.0 31.0 95.0 52.0 69.0 39.0 16.0 64.0\n9.0 12.0 70.0 38.0 81.0 95.0 85.0 61.0 38.0 93.0 54.0 99.0\n",
+              "output": "1694.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/056.cpp",
             "language": "cpp",
@@ -2846,7 +3134,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/751/\" target=\"_blank\">原题链接</a>左方区域即满足j &lt; i && i + j &lt; 11的元素（主对角线下且反对角线上）。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n68.0 59.0 10.0 88.0 95.0 50.0 60.0 8.0 6.0 7.0 5.0 79.0\n18.0 94.0 63.0 2.0 15.0 13.0 39.0 37.0 33.0 27.0 11.0 29.0\n12.0 23.0 6.0 42.0 4.0 63.0 7.0 20.0 11.0 74.0 27.0 5.0\n63.0 67.0 98.0 85.0 10.0 28.0 37.0 10.0 72.0 34.0 65.0 48.0\n34.0 17.0 33.0 49.0 22.0 37.0 20.0 80.0 43.0 4.0 82.0 14.0\n64.0 56.0 8.0 92.0 64.0 58.0 54.0 26.0 30.0 54.0 49.0 5.0\n40.0 69.0 72.0 6.0 8.0 71.0 70.0 98.0 24.0 16.0 91.0 11.0\n15.0 70.0 71.0 53.0 75.0 96.0 97.0 55.0 6.0 20.0 73.0 54.0\n21.0 76.0 55.0 68.0 85.0 84.0 82.0 26.0 76.0 96.0 6.0 87.0\n13.0 66.0 20.0 88.0 29.0 34.0 83.0 93.0 55.0 98.0 53.0 37.0\n77.0 36.0 43.0 10.0 70.0 47.0 57.0 8.0 94.0 48.0 98.0 88.0\n3.0 25.0 3.0 35.0 50.0 22.0 11.0 90.0 18.0 43.0 55.0 96.0\n",
+              "output": "1410.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/057.cpp",
             "language": "cpp",
@@ -2864,7 +3157,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/753/\" target=\"_blank\">原题链接</a>右方区域即满足j &gt; i && i + j &gt; 11的元素（主对角线上且反对角线下）。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n69.0 84.0 98.0 42.0 4.0 23.0 58.0 99.0 32.0 14.0 26.0 40.0\n29.0 6.0 10.0 50.0 60.0 13.0 7.0 59.0 16.0 31.0 23.0 0.0\n0.0 61.0 75.0 80.0 46.0 58.0 45.0 34.0 10.0 61.0 53.0 66.0\n91.0 70.0 21.0 36.0 74.0 50.0 79.0 54.0 11.0 28.0 0.0 75.0\n59.0 75.0 25.0 41.0 49.0 65.0 39.0 21.0 88.0 46.0 39.0 2.0\n77.0 60.0 34.0 66.0 33.0 3.0 48.0 82.0 7.0 32.0 29.0 89.0\n81.0 95.0 33.0 68.0 37.0 25.0 41.0 14.0 77.0 23.0 38.0 44.0\n7.0 86.0 82.0 68.0 47.0 24.0 11.0 33.0 16.0 12.0 87.0 53.0\n63.0 28.0 72.0 61.0 47.0 15.0 24.0 54.0 85.0 15.0 72.0 11.0\n74.0 51.0 80.0 17.0 36.0 26.0 19.0 15.0 32.0 32.0 20.0 18.0\n69.0 23.0 38.0 8.0 8.0 61.0 89.0 28.0 76.0 56.0 18.0 67.0\n0.0 98.0 32.0 39.0 48.0 56.0 89.0 94.0 66.0 49.0 61.0 65.0\n",
+              "output": "1203.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/058.cpp",
             "language": "cpp",
@@ -2882,7 +3180,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出右上半部分的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/755/\" target=\"_blank\">原题链接</a>右上部分即j&gt;i的元素。S求和，M求平均。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n86.0 26.0 52.0 44.0 73.0 60.0 63.0 26.0 54.0 1.0 35.0 0.0\n60.0 49.0 95.0 82.0 59.0 59.0 69.0 19.0 72.0 79.0 82.0 75.0\n86.0 23.0 26.0 13.0 5.0 99.0 13.0 84.0 28.0 26.0 60.0 23.0\n8.0 33.0 66.0 62.0 50.0 31.0 12.0 14.0 14.0 58.0 89.0 63.0\n19.0 52.0 47.0 35.0 96.0 22.0 22.0 28.0 83.0 36.0 30.0 83.0\n20.0 51.0 45.0 44.0 60.0 44.0 81.0 59.0 77.0 90.0 12.0 69.0\n59.0 59.0 40.0 6.0 98.0 29.0 60.0 44.0 68.0 60.0 84.0 31.0\n54.0 52.0 34.0 42.0 71.0 29.0 91.0 33.0 99.0 46.0 26.0 72.0\n22.0 1.0 96.0 41.0 17.0 26.0 65.0 86.0 2.0 93.0 44.0 12.0\n80.0 73.0 61.0 22.0 17.0 65.0 25.0 79.0 51.0 59.0 31.0 13.0\n11.0 83.0 99.0 19.0 0.0 72.0 47.0 57.0 26.0 12.0 87.0 97.0\n59.0 19.0 31.0 59.0 91.0 98.0 70.0 98.0 83.0 12.0 72.0 2.0\n",
+              "output": "3319.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/059.cpp",
             "language": "cpp",
@@ -2900,7 +3203,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/750/\" target=\"_blank\">原题链接</a>左上部分即i+j&lt;11的元素。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n49.0 20.0 80.0 78.0 8.0 14.0 59.0 46.0 32.0 6.0 7.0 97.0\n59.0 80.0 31.0 74.0 20.0 20.0 88.0 27.0 11.0 18.0 28.0 12.0\n97.0 85.0 70.0 33.0 61.0 32.0 10.0 89.0 42.0 82.0 21.0 79.0\n37.0 45.0 54.0 10.0 59.0 56.0 20.0 9.0 44.0 63.0 6.0 6.0\n71.0 77.0 27.0 24.0 74.0 77.0 93.0 91.0 11.0 24.0 24.0 10.0\n42.0 10.0 51.0 19.0 46.0 33.0 80.0 84.0 6.0 40.0 59.0 10.0\n80.0 53.0 90.0 44.0 89.0 6.0 56.0 36.0 27.0 59.0 45.0 58.0\n31.0 25.0 50.0 49.0 7.0 35.0 89.0 46.0 3.0 49.0 59.0 90.0\n78.0 5.0 44.0 49.0 91.0 11.0 10.0 91.0 88.0 80.0 8.0 85.0\n38.0 21.0 19.0 72.0 87.0 64.0 5.0 85.0 82.0 3.0 61.0 74.0\n4.0 55.0 45.0 3.0 55.0 55.0 88.0 33.0 33.0 29.0 89.0 0.0\n3.0 5.0 93.0 60.0 58.0 59.0 74.0 31.0 58.0 68.0 79.0 68.0\n",
+              "output": "2981.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/060.cpp",
             "language": "cpp",
@@ -2918,7 +3226,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/748/\" target=\"_blank\">原题链接</a>右下部分即满足i + j &gt; 11的元素（反对角线以下）。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n80.0 49.0 14.0 87.0 99.0 61.0 17.0 39.0 57.0 46.0 63.0 43.0\n79.0 19.0 8.0 27.0 77.0 77.0 97.0 82.0 52.0 14.0 85.0 36.0\n61.0 75.0 96.0 20.0 78.0 6.0 1.0 72.0 15.0 46.0 23.0 98.0\n57.0 87.0 10.0 39.0 94.0 28.0 8.0 22.0 15.0 7.0 43.0 46.0\n50.0 0.0 85.0 21.0 62.0 6.0 73.0 79.0 51.0 82.0 4.0 15.0\n58.0 36.0 69.0 41.0 28.0 30.0 98.0 7.0 73.0 35.0 41.0 72.0\n12.0 72.0 36.0 54.0 11.0 47.0 6.0 38.0 53.0 26.0 55.0 10.0\n76.0 20.0 87.0 0.0 39.0 6.0 17.0 88.0 4.0 56.0 35.0 52.0\n48.0 10.0 75.0 90.0 25.0 7.0 83.0 33.0 74.0 1.0 27.0 39.0\n94.0 54.0 59.0 20.0 26.0 76.0 73.0 3.0 33.0 41.0 77.0 35.0\n43.0 13.0 0.0 56.0 43.0 18.0 60.0 47.0 49.0 58.0 12.0 58.0\n74.0 40.0 93.0 89.0 94.0 20.0 77.0 48.0 88.0 34.0 40.0 14.0\n",
+              "output": "2790.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/061.cpp",
             "language": "cpp",
@@ -2936,7 +3249,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出对应区域的和或平均值，保留一位小数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/752/\" target=\"_blank\">原题链接</a>左下部分即满足j &lt; i的元素（主对角线以下）。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "S\n43.0 96.0 42.0 21.0 34.0 15.0 13.0 59.0 82.0 4.0 35.0 93.0\n78.0 97.0 91.0 19.0 38.0 91.0 16.0 90.0 38.0 53.0 31.0 73.0\n25.0 37.0 40.0 40.0 34.0 39.0 98.0 77.0 29.0 2.0 84.0 54.0\n33.0 99.0 98.0 87.0 3.0 53.0 16.0 64.0 98.0 12.0 13.0 89.0\n2.0 25.0 65.0 10.0 40.0 8.0 97.0 42.0 32.0 70.0 98.0 95.0\n80.0 95.0 22.0 16.0 14.0 72.0 97.0 32.0 2.0 85.0 88.0 60.0\n86.0 13.0 86.0 92.0 55.0 24.0 2.0 30.0 12.0 25.0 16.0 37.0\n53.0 93.0 3.0 7.0 75.0 12.0 15.0 1.0 8.0 6.0 68.0 17.0\n51.0 14.0 23.0 98.0 99.0 92.0 28.0 91.0 13.0 88.0 91.0 65.0\n5.0 2.0 17.0 17.0 96.0 75.0 6.0 56.0 17.0 38.0 7.0 96.0\n36.0 32.0 46.0 40.0 98.0 1.0 54.0 76.0 9.0 22.0 14.0 61.0\n65.0 26.0 55.0 90.0 61.0 34.0 81.0 28.0 63.0 90.0 47.0 80.0\n",
+              "output": "3154.0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/062.cpp",
             "language": "cpp",
@@ -2954,7 +3272,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每个N输出一个N阶矩阵，每个数字占3个字符宽度。每个矩阵后跟一个空行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/754/\" target=\"_blank\">原题链接</a>每个位置的值 = min(i+1, j+1, N-i, N-j)，即到四条边的最小距离。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1\n0",
+              "output": "1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/063.cpp",
             "language": "cpp",
@@ -2972,7 +3295,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每个N输出一个N阶矩阵，每个数字占3个字符宽度。每个矩阵后跟一个空行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/756/\" target=\"_blank\">原题链接</a>M[i][j] = |i-j|+1。对角线为1，离对角线越远数越大。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1\n0",
+              "output": "1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/064.cpp",
             "language": "cpp",
@@ -2990,7 +3318,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每个N输出一个N阶矩阵，每行N个整数用空格隔开。每个矩阵后跟一个空行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/757/\" target=\"_blank\">原题链接</a>M[i][j] = 2^(i+j)。用位运算 1&lt;&lt;(i+j) 或 pow函数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 0",
+              "output": "1 2 4 \n2 4 8 \n4 8 16"
+            }
+          ],
           "solution": {
             "path": "solutions/359/065.cpp",
             "language": "cpp",
@@ -3008,7 +3341,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>n行，每行m个整数用空格隔开。输出后跟一个空行。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/758/\" target=\"_blank\">原题链接</a>模拟蛇形遍历：右→下→左→上循环。维护四个边界。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3",
+              "output": "1 2 3 \n8 9 4 \n7 6 5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/066.cpp",
             "language": "cpp",
@@ -3026,7 +3364,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出字符串的实际长度。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/762/\" target=\"_blank\">原题链接</a>读入一行字符串（含空格），输出其长度。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "Hello World",
+              "output": "11"
+            }
+          ],
           "solution": {
             "path": "solutions/359/067.cpp",
             "language": "cpp",
@@ -3044,7 +3387,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每个字符后加一个空格输出（最后一个字符后也有空格）。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/767/\" target=\"_blank\">原题链接</a>遍历字符串，每个字符后输出一个空格。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "abc",
+              "output": "a b c"
+            }
+          ],
           "solution": {
             "path": "solutions/359/068.cpp",
             "language": "cpp",
@@ -3062,7 +3410,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>替换后的字符串。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/771/\" target=\"_blank\">原题链接</a>遍历字符串，遇到目标字符输出&#039;#&#039;，否则输出原字符。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "hello\no\nworld\nl\nabc\nx\ntest\ne\nhello\na\nh\ne",
+              "output": "hell#"
+            }
+          ],
           "solution": {
             "path": "solutions/359/069.cpp",
             "language": "cpp",
@@ -3080,7 +3433,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>构造后的字符串b。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/766/\" target=\"_blank\">原题链接</a>遍历a，b[i] = chr(ord(a[i]) + ord(a[i+1]))。最后一个用a[-1]和a[0]。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "=-9+=.3'<<-!!'+5.</=+/3672?96,7'<%5 //>$#:)6*(6.(;7>*)>35#5.72#/44;/)0#864\"!51$1=00*:$&'",
+              "output": "jfdhkaZcxiNBHR`cjklhZbimiqxobc^caZUO^mbG]c_`R^dVcruhSgqhXXceiURchojXYS[njVCVfUUnm`Zd^JMd"
+            }
+          ],
           "solution": {
             "path": "solutions/359/070.cpp",
             "language": "cpp",
@@ -3098,7 +3456,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出其中数字字符（&#039;0&#039;~&#039;9&#039;）的个数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/763/\" target=\"_blank\">原题链接</a>遍历字符串，判断每个字符是否在&#039;0&#039;到&#039;9&#039;之间。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "hello2024world",
+              "output": "4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/071.cpp",
             "language": "cpp",
@@ -3116,7 +3479,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出结果：Player1 赢输出 <code>Player1</code>，Player2 赢输出 <code>Player2</code>，平局输出 <code>Tie</code>。</p>",
           "hint": "<p>先判断双方是否相等（平局）。否则按相克规则判断：Rock 胜 Scissors，Scissors 胜 Paper，Paper 胜 Rock，构成一个循环克制链。<a href=\"https://www.acwing.com/problem/content/765/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "Scissors Rock",
+              "output": "Player2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/072.cpp",
             "language": "cpp",
@@ -3134,7 +3502,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>加密后的字符串。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/774/\" target=\"_blank\">原题链接</a>遍历字符串，对字母、数字分别做+1循环偏移，其他字符原样输出。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "Hello, World!",
+              "output": "Ifmmp, Xpsme!"
+            }
+          ],
           "solution": {
             "path": "solutions/359/073.cpp",
             "language": "cpp",
@@ -3152,7 +3525,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>替换后的字符串。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/764/\" target=\"_blank\">原题链接</a>字符串替换函数，或按空格分割单词逐个比较替换。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "first late system see school still great different year Place far take same\nlife\ngroup",
+              "output": "first late system see school still great different year Place far take same"
+            }
+          ],
           "solution": {
             "path": "solutions/359/074.cpp",
             "language": "cpp",
@@ -3170,7 +3548,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>最长的单词。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/769/\" target=\"_blank\">原题链接</a>按空格分割单词（去掉末尾的&#039;.&#039;），遍历比较长度。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "I am a student of Peking University.",
+              "output": "University"
+            }
+          ],
           "solution": {
             "path": "solutions/359/075.cpp",
             "language": "cpp",
@@ -3188,7 +3571,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行输出插入后的字符串。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/775/\" target=\"_blank\">原题链接</a>找到str中ASCII码最大的字符（若有多个取最后一个），在其后面插入substr。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "hello\nX",
+              "output": "helloX"
+            }
+          ],
           "solution": {
             "path": "solutions/359/076.cpp",
             "language": "cpp",
@@ -3206,7 +3594,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一个只出现一次的字符，或&quot;no&quot;。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/772/\" target=\"_blank\">原题链接</a>先统计每个字符出现次数，再从头遍历找第一个次数为1的。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "abaccdeff",
+              "output": "b"
+            }
+          ],
           "solution": {
             "path": "solutions/359/077.cpp",
             "language": "cpp",
@@ -3224,7 +3617,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>b是a的子串输出yes，否则输出no。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/776/\" target=\"_blank\">原题链接</a>遍历a的每个位置，用strncmp比较是否与b匹配。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "abc\nd",
+              "output": "no"
+            }
+          ],
           "solution": {
             "path": "solutions/359/078.cpp",
             "language": "cpp",
@@ -3242,7 +3640,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对于每个输入的字符串（遇到&quot;.&quot;为止），输出一行一个整数n，表示该字符串最多由n个子串重复构成。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/806/\" target=\"_blank\">原题链接</a>枚举周期p（p是len的因子），检查s[0:p]重复len/p次是否等于原串。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "abcd\naaaa\nababab\n.",
+              "output": "1\n4\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/079.cpp",
             "language": "cpp",
@@ -3260,7 +3663,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>最大跨距。不满足条件输出-1。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/780/\" target=\"_blank\">原题链接</a>从左往右找S1最后出现的位置end1，从右往左找S2最后出现的位置start2。如果end1</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "abcd123dABdefghjsdef76ki,ab,ef",
+              "output": "16"
+            }
+          ],
           "solution": {
             "path": "solutions/359/080.cpp",
             "language": "cpp",
@@ -3278,7 +3686,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出n的阶乘。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/810/\" target=\"_blank\">原题链接</a>函数内用循环累乘，或递归实现。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3",
+              "output": "6"
+            }
+          ],
           "solution": {
             "path": "solutions/359/081.cpp",
             "language": "cpp",
@@ -3296,7 +3709,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出最大值。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/807/\" target=\"_blank\">原题链接</a>函数内用 if 比较或三元表达式。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 5",
+              "output": "5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/082.cpp",
             "language": "cpp",
@@ -3314,7 +3732,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出x的绝对值。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/812/\" target=\"_blank\">原题链接</a>if x &lt; 0: return -x, else: return x。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "-5",
+              "output": "5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/083.cpp",
             "language": "cpp",
@@ -3332,7 +3755,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>交换后的x和y。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/813/\" target=\"_blank\">原题链接</a>C++用引用参数 `void swap(int &x, int &y)`。Python中 a, b = b, a。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6 26",
+              "output": "26 6"
+            }
+          ],
           "solution": {
             "path": "solutions/359/084.cpp",
             "language": "cpp",
@@ -3350,7 +3778,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出a和b的最大公约数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/821/\" target=\"_blank\">原题链接</a>辗转相除法：gcd(a,b) = gcd(b, a%b)，当b==0时返回a。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "963 787",
+              "output": "1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/085.cpp",
             "language": "cpp",
@@ -3368,7 +3801,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>复制后的数组，空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/816/\" target=\"_blank\">原题链接</a>函数内循环，b[i] = a[i]，复制前size个元素。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 5 2\n1 2 3\n4 5 6 7 8",
+              "output": "1 2 6 7 8"
+            }
+          ],
           "solution": {
             "path": "solutions/359/086.cpp",
             "language": "cpp",
@@ -3386,7 +3824,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p></p>",
           "hint": "<p></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 3\n1 2 3 4 5",
+              "output": "3 2 1 4 5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/087.cpp",
             "language": "cpp",
@@ -3404,7 +3847,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p></p>",
           "hint": "<p></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 3\n1 2 3 4 5",
+              "output": "1 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/088.cpp",
             "language": "cpp",
@@ -3422,7 +3870,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>矩阵元素，每行末尾无多余空格。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/815/\" target=\"_blank\">原题链接</a>嵌套循环遍历行列，注意行末空格处理。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 4\n1 3 4 5\n2 6 9 4\n1 4 7 5",
+              "output": "1 3 4 5\n2 6 9 4\n1 4 7 5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/089.cpp",
             "language": "cpp",
@@ -3440,7 +3893,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>排序后的数组，空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/820/\" target=\"_blank\">原题链接</a>对a[l]到a[r]排序，其余元素不变。可用冒泡、选择或库函数。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 1 3\n5 3 1 4 2",
+              "output": "5 1 3 4 2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/090.cpp",
             "language": "cpp",
@@ -3458,7 +3916,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出n的阶乘。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/16/\" target=\"_blank\">原题链接</a>递归三要素：终止条件(n==1返回1)、递推关系(n*fact(n-1))、缩小规模。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5",
+              "output": "120"
+            }
+          ],
           "solution": {
             "path": "solutions/359/091.cpp",
             "language": "cpp",
@@ -3476,7 +3939,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出斐波那契数列第n项。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/822/\" target=\"_blank\">原题链接</a>递归：f(1)=1, f(2)=1, f(n)=f(n-1)+f(n-2)。注意效率问题。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/092.cpp",
             "language": "cpp",
@@ -3494,7 +3962,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出跳法总数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/823/\" target=\"_blank\">原题链接</a>f(n) = f(n-1) + f(n-2)。最后一步跳1级或2级，两种情况之和。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5",
+              "output": "8"
+            }
+          ],
           "solution": {
             "path": "solutions/359/093.cpp",
             "language": "cpp",
@@ -3512,7 +3985,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出走法总数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/824/\" target=\"_blank\">原题链接</a>从(0,0)到(n,m)的网格路径数。f(n,m) = f(n-1,m) + f(n,m-1)。边界：f(0,m)=1, f(n,0)=1。等价于组合数C(n+m, n)。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "2 3",
+              "output": "10"
+            }
+          ],
           "solution": {
             "path": "solutions/359/094.cpp",
             "language": "cpp",
@@ -3530,7 +4008,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个排列，数字之间用空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/825/\" target=\"_blank\">原题链接</a>DFS+回溯：用used[]标记已用数字，path[]记录当前排列。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3",
+              "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/095.cpp",
             "language": "cpp",
@@ -3548,7 +4031,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>替换空格为%20后的字符串。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/36/\" target=\"_blank\">原题链接</a>遍历字符串，遇到空格输出%20，否则输出原字符。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "Hello World",
+              "output": "Hello%20World"
+            }
+          ],
           "solution": {
             "path": "solutions/359/096.cpp",
             "language": "cpp",
@@ -3566,7 +4054,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出斐波那契数列第n项。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/21/\" target=\"_blank\">原题链接</a>两个变量a,b滚动：a,b = b,a+b。循环n次。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10",
+              "output": "55"
+            }
+          ],
           "solution": {
             "path": "solutions/359/097.cpp",
             "language": "cpp",
@@ -3584,7 +4077,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>从尾到头输出每个节点的值，每行一个。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/17/\" target=\"_blank\">原题链接</a>用栈存储所有节点值，然后依次弹出。或者用递归。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 2 3 -1",
+              "output": "3\n2\n1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/098.cpp",
             "language": "cpp",
@@ -3602,7 +4100,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对pop操作输出队首值，empty操作输出`yes`或`no`。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/20/\" target=\"_blank\">原题链接</a>栈1入队，栈2出队。出队时栈2空就把栈1全部倒入栈2。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "push 1\npush 2\npop\npush 3\npop\npop\nempty",
+              "output": "1\n2\n3\nyes"
+            }
+          ],
           "solution": {
             "path": "solutions/359/099.cpp",
             "language": "cpp",
@@ -3620,7 +4123,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>反转后的链表，空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/35/\" target=\"_blank\">原题链接</a>三指针法：prev=None, curr=head。循环：next=curr.next, curr.next=prev, prev=curr, curr=next。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 2 3 4 5 -1",
+              "output": "5 4 3 2 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/100.cpp",
             "language": "cpp",
@@ -3638,7 +4146,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>合并后的有序链表，空格隔开。</p>",
           "hint": "<p>双指针比较合并。一个链表遍历完后，直接接上另一个的剩余部分。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 3 5 -1\n2 4 6 -1",
+              "output": "1 2 3 4 5 6"
+            }
+          ],
           "solution": {
             "path": "solutions/359/101.cpp",
             "language": "cpp",
@@ -3656,7 +4169,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>排序后的N条记录，每行一条。x输出整数，y输出保留两位小数的浮点数，字符串原样输出，空格隔开。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/864/\" target=\"_blank\">原题链接</a>定义结构体存储三元组，自定义比较函数：先比x，再比y。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3\n1 2 abc\n3 4 def\n2 1 ghi",
+              "output": "1 2.00 abc\n2 1.00 ghi\n3 4.00 def"
+            }
+          ],
           "solution": {
             "path": "solutions/359/102.cpp",
             "language": "cpp",
@@ -3674,7 +4192,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，n个排好序的整数，空格隔开。</p>",
           "hint": "<p>选基准元素，双指针分区：左边 ≤ 基准，右边 &gt; 基准。递归处理左右两半。平均 O(nlogn)。<a href=\"https://www.acwing.com/problem/content/787/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n3 1 2 4 5",
+              "output": "1 2 3 4 5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/103.cpp",
             "language": "cpp",
@@ -3692,7 +4215,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，第k小的数。</p>",
           "hint": "<p>partition 后判断 k 在左半还是右半，只递归一半。平均 O(n)。<a href=\"https://www.acwing.com/problem/content/788/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 3\n3 1 2 4 5",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/104.cpp",
             "language": "cpp",
@@ -3710,7 +4238,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，n个排好序的整数，空格隔开。</p>",
           "hint": "<p>递归拆分 → 合并两个有序数组。需要额外空间 O(n)。稳定排序。<a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n3 1 2 4 5",
+              "output": "1 2 3 4 5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/105.cpp",
             "language": "cpp",
@@ -3728,7 +4261,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，逆序对的数量。</p>",
           "hint": "<p>归并排序过程中，当右边元素先被选中时，左边剩余元素个数就是新增的逆序对数。用 long long 存结果。<a href=\"https://www.acwing.com/problem/content/790/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n2 3 1 5 4",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/106.cpp",
             "language": "cpp",
@@ -3746,7 +4284,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行两个整数，起始位置和终止位置。不存在输出-1 -1。</p>",
           "hint": "<p>两次二分：找第一个 ≥ x 的位置（左边界），找最后一个 ≤ x 的位置（右边界）。<a href=\"https://www.acwing.com/problem/content/791/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "6 3\n1 2 2 3 3 4\n2 3 5",
+              "output": "1 2\n3 4\n-1 -1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/107.cpp",
             "language": "cpp",
@@ -3764,7 +4307,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>n的三次方根，保留6位小数。</p>",
           "hint": "<p>浮点二分：left=-10000, right=10000，while(right-left&gt;1e-8)，mid=(left+right)/2。若 mid³≥n，right=mid；否则 left=mid。<a href=\"https://www.acwing.com/problem/content/792/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1000.000000",
+              "output": "10.000000"
+            }
+          ],
           "solution": {
             "path": "solutions/359/108.cpp",
             "language": "cpp",
@@ -3782,7 +4330,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，每个数对应的1的个数，空格隔开。</p>",
           "hint": "<p>位运算：while(n &gt; 0) { count += n & 1; n &gt;&gt;= 1; }。或用 n & (n-1) 消去最低位的1，计数更快。<a href=\"https://www.acwing.com/problem/content/803/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n1 2 3 4 5",
+              "output": "1 1 2 1 2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/109.cpp",
             "language": "cpp",
@@ -3800,7 +4353,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，两数之和。</p>",
           "hint": "<p>用数组存每一位（倒序），从低位到高位逐位相加，处理进位。最后倒序输出。<a href=\"https://www.acwing.com/problem/content/793/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "123456789012345678901234567890\n987654321098765432109876543210",
+              "output": "1111111110111111111011111111100"
+            }
+          ],
           "solution": {
             "path": "solutions/359/110.cpp",
             "language": "cpp",
@@ -3818,7 +4376,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，两数之差。</p>",
           "hint": "<p>先判断大小，大减小，从低位逐位减，处理借位。如果被减数小则结果加负号。<a href=\"https://www.acwing.com/problem/content/794/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "9876543210\n1234567890",
+              "output": "8641975320"
+            }
+          ],
           "solution": {
             "path": "solutions/359/111.cpp",
             "language": "cpp",
@@ -3836,7 +4399,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，A×B的结果。</p>",
           "hint": "<p>高精度×低精度：大数每一位乘以小数，处理进位。注意结果可能有前导零需要去掉。<a href=\"https://www.acwing.com/problem/content/795/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "123456\n789",
+              "output": "97406784"
+            }
+          ],
           "solution": {
             "path": "solutions/359/112.cpp",
             "language": "cpp",
@@ -3854,7 +4422,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>两行，第一行商，第二行余数。</p>",
           "hint": "<p>高精度÷低精度：从高位到低位，当前余数×10+当前位，除以B得商的一位，更新余数。<a href=\"https://www.acwing.com/problem/content/796/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "9876543210\n123",
+              "output": "80297099\n33"
+            }
+          ],
           "solution": {
             "path": "solutions/359/113.cpp",
             "language": "cpp",
@@ -3872,7 +4445,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，两个整数i和j。</p>",
           "hint": "<p>双指针：i 从 A 的头，j 从 B 的尾。A[i]+B[j] &lt; x 则 i++，&gt; x 则 j--。O(n+m)。<a href=\"https://www.acwing.com/problem/content/802/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5 6\n1 2 4 7\n3 4 6 8 9",
+              "output": "1 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/114.cpp",
             "language": "cpp",
@@ -3890,7 +4468,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>是子序列输出Yes，否则输出No。</p>",
           "hint": "<p>双指针：i 遍历 a，j 遍历 b。a[i] == b[j] 时 i++。i 到头说明是子序列。<a href=\"https://www.acwing.com/problem/content/2819/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 5\n1 3 5\n1 2 3 4 5",
+              "output": "Yes"
+            }
+          ],
           "solution": {
             "path": "solutions/359/115.cpp",
             "language": "cpp",
@@ -3908,7 +4491,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最长连续不重复子序列的长度。</p>",
           "hint": "<p>滑动窗口：右指针扩展，用哈希表判断是否重复，重复则左指针收缩。O(n)。<a href=\"https://www.acwing.com/problem/content/801/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n1 2 2 3 5",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/116.cpp",
             "language": "cpp",
@@ -3926,7 +4514,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，只出现一次的那个数。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/92/\" target=\"_blank\">原题链接</a>异或性质：a^a=0, a^0=a。所有数异或，成对消失，独者现身。O(n) 时间，O(1) 空间。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n1 2 3 2 1",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/117.cpp",
             "language": "cpp",
@@ -3944,7 +4537,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个子集，子集内数字升序排列，子集之间按字典序排列。空集不输出。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/94/\" target=\"_blank\">原题链接</a>递归枚举：对每个位置选或不选，到达边界输出。2^n 种组合。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3",
+              "output": "1\n1 2\n1 2 3\n1 3\n2\n2 3\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/118.cpp",
             "language": "cpp",
@@ -3962,7 +4560,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行 k 个数（升序），组合之间按字典序排列。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/95/\" target=\"_blank\">原题链接</a>递归枚举，每次从上一个数+1开始。剪枝：剩余数字不够则提前返回。C(n,k) 种组合。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 2",
+              "output": "1 2\n1 3\n1 4\n2 3\n2 4\n3 4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/119.cpp",
             "language": "cpp",
@@ -3980,7 +4583,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，假话的数量。</p>",
           "hint": "<p><a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a>带权并查集。节点到根距离 mod 3：0=同类，1=吃根，2=被根吃。路径压缩时更新距离。</p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "100 7\n1 101 1\n2 1 2\n2 2 3\n2 3 3\n1 1 3\n2 3 1\n1 5 5",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/120.cpp",
             "language": "cpp",
@@ -3998,7 +4606,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>m行，每行一个整数。</p>",
           "hint": "<p>前缀和：s[i] = a[1] + ... + a[i]。区间和 = s[r] - s[l-1]。<a href=\"https://www.acwing.com/problem/content/797/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 3\n2 1 3 6 4\n1 3\n2 4\n1 5",
+              "output": "6\n10\n16"
+            }
+          ],
           "solution": {
             "path": "solutions/359/121.cpp",
             "language": "cpp",
@@ -4016,7 +4629,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>q行，每行一个整数，表示每次查询的子矩阵和。</p>",
           "hint": "<p>二维前缀和+容斥。子矩阵和 = s[x2][y2] - s[x1-1][y2] - s[x2][y1-1] + s[x1-1][y1-1]。<a href=\"https://www.acwing.com/problem/content/798/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 4 2\n1 3 4 5\n2 6 9 4\n1 4 7 5\n1 1 2 2\n2 1 3 3",
+              "output": "18\n43"
+            }
+          ],
           "solution": {
             "path": "solutions/359/122.cpp",
             "language": "cpp",
@@ -4034,7 +4652,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，n个整数，空格隔开，表示经过m次操作后的最终序列。</p>",
           "hint": "<p>差分：b[l] += c, b[r+1] -= c。所有操作完成后，对 b 求前缀和得到最终序列。<a href=\"https://www.acwing.com/problem/content/799/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 3\n1 2 3 4 5\n1 3 2\n2 4 1\n3 5 3",
+              "output": "3 5 8 8 8"
+            }
+          ],
           "solution": {
             "path": "solutions/359/123.cpp",
             "language": "cpp",
@@ -4052,7 +4675,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>n行，每行m个整数，表示操作后的矩阵。</p>",
           "hint": "<p>二维差分：在四个角加减，最后求二维前缀和。<a href=\"https://www.acwing.com/problem/content/800/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 4 2\n1 2 3 4\n5 6 7 8\n9 10 11 12\n1 1 2 2 1\n2 2 3 3 2",
+              "output": "2 3 3 4\n6 10 10 8\n9 12 14 12"
+            }
+          ],
           "solution": {
             "path": "solutions/359/124.cpp",
             "language": "cpp",
@@ -4070,7 +4698,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>m行，每行一个整数，表示每次查询的结果。</p>",
           "hint": "<p>离散化：排序去重后映射到连续下标。用前缀和回答区间查询。<a href=\"https://www.acwing.com/problem/content/804/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\n1 2\n3 6\n7 5\n1 3\n4 6\n7 8",
+              "output": "8\n0\n5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/125.cpp",
             "language": "cpp",
@@ -4088,7 +4721,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一个整数，表示合并后的区间个数。</p>",
           "hint": "<p>按左端点排序，遍历合并：当前区间左端点 ≤ 前一个右端点则合并，否则新开。<a href=\"https://www.acwing.com/problem/content/805/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n1 2\n2 4\n5 6\n7 8\n7 10",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/126.cpp",
             "language": "cpp",
@@ -4106,7 +4744,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最少需要的点数。</p>",
           "hint": "<p>按右端点排序，每次选当前区间的右端点，跳过所有包含该点的区间。<a href=\"https://www.acwing.com/problem/content/907/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3\n1 3\n2 4\n3 5",
+              "output": "1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/127.cpp",
             "language": "cpp",
@@ -4124,7 +4767,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最小总代价。</p>",
           "hint": "<p>小根堆：每次取最小的两个合并，结果放回堆中。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/150/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3\n1 2 9",
+              "output": "15"
+            }
+          ],
           "solution": {
             "path": "solutions/359/128.cpp",
             "language": "cpp",
@@ -4142,7 +4790,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最小距离之和。</p>",
           "hint": "<p>排序后取中位数（下标 n/2），计算所有点到中位数的距离之和。<a href=\"https://www.acwing.com/problem/content/106/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n1 2 3 4 5",
+              "output": "6"
+            }
+          ],
           "solution": {
             "path": "solutions/359/129.cpp",
             "language": "cpp",
@@ -4160,7 +4813,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>输出最终链表，从头到尾空格隔开。</p>",
           "hint": "<p>数组模拟链表：head, val[], ne[]。插入：新节点的ne指向原next，前驱的ne指向新节点。<a href=\"https://www.acwing.com/problem/content/828/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10\nH 9\nI 1 1\nD 1\nH 6\nI 3 6\nI 4 7\nD 3\nD 4\nI 2 2\nD 2",
+              "output": "6\n7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/130.cpp",
             "language": "cpp",
@@ -4178,7 +4836,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个query和empty操作输出一行结果。其中query输出栈顶元素，empty输出YES或NO。</p>",
           "hint": "<p>数组模拟栈：tt指向栈顶。push: st[++tt]=x。pop: tt--。query: st[tt]。empty: 判断tt是否为0。<a href=\"https://www.acwing.com/problem/content/830/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10\npush 5\nquery\npush 6\npop\nquery\nempty\npop\nempty\npush 3\nquery",
+              "output": "5\n5\nNO\nYES\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/131.cpp",
             "language": "cpp",
@@ -4196,7 +4859,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个query和empty操作输出一行结果。其中query输出队头元素，empty输出YES或NO。</p>",
           "hint": "<p>数组模拟队列：hh队头，tt队尾。push: q[++tt]=x。pop: hh++。query: q[hh]。empty: 判断hh是否大于tt。<a href=\"https://www.acwing.com/problem/content/831/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "10\npush 5\nquery\npush 3\npop\nquery\nempty\npush 7\npop\npop\nempty",
+              "output": "5\n3\nNO\nYES"
+            }
+          ],
           "solution": {
             "path": "solutions/359/132.cpp",
             "language": "cpp",
@@ -4214,7 +4882,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，表达式的值。</p>",
           "hint": "<p>双栈法：数字栈+运算符栈。比较优先级决定是否先算栈顶。<a href=\"https://www.acwing.com/problem/content/3305/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "2+3*4",
+              "output": "14"
+            }
+          ],
           "solution": {
             "path": "solutions/359/133.cpp",
             "language": "cpp",
@@ -4232,7 +4905,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，每个元素左边第一个比它小的数，不存在输出-1。</p>",
           "hint": "<p>单调栈：遍历时弹出比当前大的元素，栈顶就是答案。维护单调递增栈。<a href=\"https://www.acwing.com/problem/content/832/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n3 4 2 7 5",
+              "output": "-1 3 -1 2 2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/134.cpp",
             "language": "cpp",
@@ -4250,7 +4928,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>第一行输出每个窗口的最小值，空格隔开。第二行输出每个窗口的最大值，空格隔开。</p>",
           "hint": "<p>单调队列：维护递增队列求最小值，维护递减队列求最大值。窗口滑动时弹出过期元素。<a href=\"https://www.acwing.com/problem/content/156/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "8 3\n1 3 -1 -3 5 3 6 7",
+              "output": "-1 -3 -3 -3 3 3\n3 3 5 5 6 7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/135.cpp",
             "language": "cpp",
@@ -4268,7 +4951,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，模式串在文本串中所有出现的起始位置（从0开始），空格隔开。</p>",
           "hint": "<p>KMP：预处理next数组（最长相等前后缀），匹配时利用next跳转。<a href=\"https://www.acwing.com/problem/content/833/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3\naba\n5\nababa",
+              "output": "0 2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/136.cpp",
             "language": "cpp",
@@ -4286,7 +4974,16 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个PM操作输出一行最小值。</p>",
           "hint": "<p>数组模拟堆：上浮和下沉操作。父节点i的子节点是2i和2i+1。维护ph[]和hp[]数组记录插入顺序与堆中位置的映射。<a href=\"https://www.acwing.com/problem/content/841/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\nI 3\nI 1\nI 4\nPM\nD 1",
+              "output": "1"
+            },
+            {
+              "input": "8\nI 2\nI 1\nI 3\nPM\nDM\nPM\nC 2 8\nPM",
+              "output": "1\n2\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/137.cpp",
             "language": "cpp",
@@ -4304,7 +5001,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个Q操作输出一行Yes或No。</p>",
           "hint": "<p>并查集：find时路径压缩，union时合并两棵树。<a href=\"https://www.acwing.com/problem/content/838/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\nM 1 2\nQ 1 2\nM 2 3\nQ 1 3\nQ 1 4",
+              "output": "Yes\nYes\nNo"
+            }
+          ],
           "solution": {
             "path": "solutions/359/138.cpp",
             "language": "cpp",
@@ -4322,7 +5024,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>对每个Q1操作输出Yes或No；对每个Q2操作输出一行集合大小。</p>",
           "hint": "<p>维护size[]数组，合并时更新size。用C a b合并，Q1 a b查是否同集，Q2 a查集合大小。<a href=\"https://www.acwing.com/problem/content/839/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\nC 1 2\nQ2 1\nC 2 3\nQ2 1\nQ2 4",
+              "output": "2\n3\n1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/139.cpp",
             "language": "cpp",
@@ -4340,7 +5047,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，假话的数量。</p>",
           "hint": "<p>扩展并查集：每个点拆成3个，模3判断关系。<a href=\"https://www.acwing.com/problem/content/242/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "100 7\n1 101 1\n2 1 2\n2 2 3\n2 3 3\n1 1 3\n2 3 1\n1 5 5",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/140.cpp",
             "language": "cpp",
@@ -4358,7 +5070,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每行一个排列，数字之间空格隔开，按字典序输出。</p>",
           "hint": "<p>DFS+回溯：选→递归→撤销。用used[]标记。<a href=\"https://www.acwing.com/problem/content/844/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3",
+              "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/141.cpp",
             "language": "cpp",
@@ -4376,7 +5093,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>所有解，每个解n行（Q表示皇后，.表示空），解之间空行。</p>",
           "hint": "<p>DFS+回溯：逐行放置，标记列和两条对角线。<a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4",
+              "output": ".Q..\n...Q\nQ...\n..Q.\n\n..Q.\nQ...\n...Q\n.Q.."
+            }
+          ],
           "solution": {
             "path": "solutions/359/142.cpp",
             "language": "cpp",
@@ -4394,7 +5116,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最短路径长度。不可达输出-1。</p>",
           "hint": "<p>BFS层序遍历，第一次到达终点就是最短路径。<a href=\"https://www.acwing.com/problem/content/846/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 5\n0 1 0 0 0\n0 1 0 1 0\n0 0 0 0 0\n0 1 1 1 0\n0 0 0 1 0",
+              "output": "8"
+            }
+          ],
           "solution": {
             "path": "solutions/359/143.cpp",
             "language": "cpp",
@@ -4412,7 +5139,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最少移动步数。无解输出-1。</p>",
           "hint": "<p>BFS+状态编码为字符串，哈希表判重。<a href=\"https://www.acwing.com/problem/content/847/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 2 3\nx 4 6\n7 5 8\n\n1 2 3\n4 5 6\n7 8 x",
+              "output": "2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/144.cpp",
             "language": "python",
@@ -4430,7 +5162,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大子树的最小大小。</p>",
           "hint": "<p>DFS遍历树，计算每个节点的最大子树大小。重心=max(n-subSize, 各子树size)最小的节点。<a href=\"https://www.acwing.com/problem/content/848/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "9\n1 2\n1 7\n1 4\n2 8\n2 5\n4 3\n4 6\n6 9",
+              "output": "4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/145.cpp",
             "language": "python",
@@ -4448,7 +5185,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，n个整数表示每个点到点1的最短距离，不可达输出-1。</p>",
           "hint": "<p>BFS层序遍历，每层距离+1。<a href=\"https://www.acwing.com/problem/content/849/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 4\n1 2\n2 3\n1 3\n3 4",
+              "output": "0 1 1 2"
+            }
+          ],
           "solution": {
             "path": "solutions/359/146.cpp",
             "language": "cpp",
@@ -4466,7 +5208,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，拓扑序，空格隔开。有环输出-1。</p>",
           "hint": "<p>BFS+入度维护。有环则无解。<a href=\"https://www.acwing.com/problem/content/850/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\n1 2\n2 3\n1 3",
+              "output": "1 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/147.cpp",
             "language": "cpp",
@@ -4484,7 +5231,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，n个整数表示到点1的最短距离。</p>",
           "hint": "<p>Dijkstra：O(n²)。每次选最近未访问点，更新邻居。<a href=\"https://www.acwing.com/problem/content/851/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
+              "output": "0 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/148.cpp",
             "language": "cpp",
@@ -4502,7 +5254,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，到点1的最短距离。</p>",
           "hint": "<p>堆优化Dijkstra：O(mlogn)。用小根堆取最近点。<a href=\"https://www.acwing.com/problem/content/852/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\n1 2 2\n2 3 1\n1 3 4",
+              "output": "0 2 3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/149.cpp",
             "language": "cpp",
@@ -4520,7 +5277,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，到点1的最短距离。</p>",
           "hint": "<p>SPFA：队列优化Bellman-Ford。<a href=\"https://www.acwing.com/problem/content/853/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\n1 2 -1\n2 3 2\n1 3 3",
+              "output": "0 -1 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/150.cpp",
             "language": "cpp",
@@ -4538,7 +5300,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>q行，每行一个整数。不可达输出impossible。</p>",
           "hint": "<p>Floyd：O(n³)。三重循环枚举中间点。<a href=\"https://www.acwing.com/problem/content/856/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3 2\n1 2 2\n2 3 1\n1 3 4\n1 3\n2 1",
+              "output": "3\n3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/151.cpp",
             "language": "cpp",
@@ -4556,7 +5323,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最小生成树的总权值。不连通输出impossible。</p>",
           "hint": "<p>Prim：O(n²)。每次选最近未加入点。<a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\n1 2 1\n1 3 2\n2 3 3\n2 4 4\n3 4 5",
+              "output": "7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/152.cpp",
             "language": "cpp",
@@ -4574,7 +5346,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最小生成树的总权值。不连通输出impossible。</p>",
           "hint": "<p>Kruskal：O(mlogm)。按边权排序，并查集判环。<a href=\"https://www.acwing.com/problem/content/860/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\n1 2 1\n1 3 2\n2 3 3\n2 4 4\n3 4 5",
+              "output": "7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/153.cpp",
             "language": "cpp",
@@ -4592,7 +5369,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，Yes或No。</p>",
           "hint": "<p>BFS/DFS染色，冲突则不是二分图。<a href=\"https://www.acwing.com/problem/content/862/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 4\n1 2\n2 3\n3 4\n4 1",
+              "output": "Yes"
+            }
+          ],
           "solution": {
             "path": "solutions/359/154.cpp",
             "language": "cpp",
@@ -4610,7 +5392,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大价值。</p>",
           "hint": "<p>01背包：dp[j] = max(dp[j], dp[j-v[i]]+w[i])，逆序遍历j。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\n1 2\n2 4\n3 4\n4 5",
+              "output": "8"
+            }
+          ],
           "solution": {
             "path": "solutions/359/155.cpp",
             "language": "cpp",
@@ -4628,7 +5415,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大价值。</p>",
           "hint": "<p>完全背包：内层正序遍历。每种物品可选无限次。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\n1 2\n2 4\n3 4\n4 5",
+              "output": "10"
+            }
+          ],
           "solution": {
             "path": "solutions/359/156.cpp",
             "language": "cpp",
@@ -4646,7 +5438,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大路径和。</p>",
           "hint": "<p>从底向上DP。dp[i][j] = max(dp[i+1][j], dp[i+1][j+1]) + a[i][j]。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n7\n3 8\n8 1 0\n2 7 4 4\n4 5 2 6 5",
+              "output": "30"
+            }
+          ],
           "solution": {
             "path": "solutions/359/157.cpp",
             "language": "cpp",
@@ -4664,7 +5461,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最长递增子序列的长度。</p>",
           "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/0/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7\n3 1 2 1 8 5 6",
+              "output": "4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/158.cpp",
             "language": "cpp",
@@ -4682,7 +5484,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最长公共子序列的长度。</p>",
           "hint": "<p>LCS：二维DP。相等时dp[i][j]=dp[i-1][j-1]+1，否则取max(dp[i-1][j], dp[i][j-1])。<a href=\"https://www.acwing.com/problem/content/877/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4 5\nabcd\nacebd",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/159.cpp",
             "language": "cpp",
@@ -4700,7 +5507,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最小总代价。</p>",
           "hint": "<p>区间DP：枚举分割点。dp[i][j] = min(dp[i][k] + dp[k+1][j]) + sum(i..j)。O(n³)。<a href=\"https://www.acwing.com/problem/content/870/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "4\n1 3 5 2",
+              "output": "22"
+            }
+          ],
           "solution": {
             "path": "solutions/359/160.cpp",
             "language": "cpp",
@@ -4718,7 +5530,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，编辑距离。</p>",
           "hint": "<p>编辑距离：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。<a href=\"https://www.acwing.com/problem/content/904/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 3\nabc\nadc",
+              "output": "1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/161.cpp",
             "language": "cpp",
@@ -4736,7 +5553,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最长递减路径的长度。</p>",
           "hint": "<p>记忆化搜索：DFS+缓存。每个格子只算一次，取四个方向中最长路径+1。<a href=\"https://www.acwing.com/problem/content/903/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5 5\n1 2 3 4 5\n16 17 18 19 6\n15 24 25 20 7\n14 23 22 21 8\n13 12 11 10 9",
+              "output": "25"
+            }
+          ],
           "solution": {
             "path": "solutions/359/162.cpp",
             "language": "cpp",
@@ -4754,7 +5576,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大价值。</p>",
           "hint": "<p>多重背包二进制优化：拆分s为2的幂次，转化为01背包。O(N*V*logS)。<a href=\"https://www.acwing.com/problem/content/4/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "3 12\n76 84 46\n34 31 44",
+              "output": "0"
+            }
+          ],
           "solution": {
             "path": "solutions/359/163.cpp",
             "language": "cpp",
@@ -4772,7 +5599,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大价值。</p>",
           "hint": "<p>多重背包二进制优化。与JD163相同思路，数据范围更大。<a href=\"https://www.acwing.com/problem/content/5/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "680 1562\n866 815 599\n1355 680 202",
+              "output": "742560"
+            }
+          ],
           "solution": {
             "path": "solutions/359/164.cpp",
             "language": "cpp",
@@ -4790,7 +5622,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大价值。</p>",
           "hint": "<p>分组背包：外层遍历组，内层逆序容量，最内层遍历组内物品。<a href=\"https://www.acwing.com/problem/content/9/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "71 46\n80\n84 76",
+              "output": "1869"
+            }
+          ],
           "solution": {
             "path": "solutions/359/165.cpp",
             "language": "cpp",
@@ -4808,7 +5645,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最长递增子序列的长度。</p>",
           "hint": "<p>贪心+二分：维护最小末尾数组q[]，二分查找替换。O(nlogn)。<a href=\"https://www.acwing.com/problem/content/898/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7\n3 1 2 1 8 5 6",
+              "output": "4"
+            }
+          ],
           "solution": {
             "path": "solutions/359/166.cpp",
             "language": "cpp",
@@ -4826,7 +5668,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，划分方案数模1e9+7。</p>",
           "hint": "<p>完全背包DP：dp[j] += dp[j-i]，i从1到n。模1e9+7。<a href=\"https://www.acwing.com/problem/content/902/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5",
+              "output": "7"
+            }
+          ],
           "solution": {
             "path": "solutions/359/167.cpp",
             "language": "cpp",
@@ -4844,7 +5691,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，10个整数，分别表示数字0~9在[a,b]中出现的次数，空格隔开。</p>",
           "hint": "<p>数位统计：对每个数字和位置用数学公式计算出现次数。f(b)-f(a-1)。<a href=\"https://www.acwing.com/problem/content/340/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "1 10",
+              "output": "1 2 1 1 1 1 1 1 1 1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/168.cpp",
             "language": "cpp",
@@ -4862,7 +5714,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>每组一行，铺法总数。</p>",
           "hint": "<p>状压DP：逐列处理，状态掩码表示被前一列横骨牌占的格子。<a href=\"https://www.acwing.com/problem/content/293/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "2 3",
+              "output": "3"
+            }
+          ],
           "solution": {
             "path": "solutions/359/169.cpp",
             "language": "cpp",
@@ -4880,7 +5737,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最短Hamilton路径长度。</p>",
           "hint": "<p>状压DP：dp[mask][i]表示访问集合mask、当前在城i的最小代价。O(2^n * n²)。<a href=\"https://www.acwing.com/problem/content/93/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "5\n0 2 4 5 1\n2 0 6 5 3\n4 6 0 8 3\n5 5 8 0 5\n1 3 3 5 0",
+              "output": "19"
+            }
+          ],
           "solution": {
             "path": "solutions/359/170.cpp",
             "language": "cpp",
@@ -4898,7 +5760,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>M行，每行一个整数（字典中编辑距离≤k的字符串个数）。</p>",
           "hint": "<p>编辑距离DP：dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost)。<a href=\"https://www.acwing.com/problem/content/901/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "2 2\nabc\ndef\nabc 1\nadc 2",
+              "output": "1\n1"
+            }
+          ],
           "solution": {
             "path": "solutions/359/171.cpp",
             "language": "cpp",
@@ -4916,7 +5783,12 @@ window.XMUOJ_SOLUTIONS_DATA = {
           "outputDescription": "<p>一行，最大总快乐值。</p>",
           "hint": "<p>树形DP：dp[u][0/1]表示u不出征/出征时的最大值。DFS从根遍历。dp[u][1] = h[u] + Σdp[v][0]，dp[u][0] = Σmax(dp[v][0], dp[v][1])。<a href=\"https://www.acwing.com/problem/content/287/\" target=\"_blank\">原题链接</a></p>",
           "source": "",
-          "samples": [],
+          "samples": [
+            {
+              "input": "7\n1 1 1 1 1 1 1\n2 6\n3 6\n4 6\n6 7\n5 7",
+              "output": "5"
+            }
+          ],
           "solution": {
             "path": "solutions/359/172.cpp",
             "language": "cpp",
