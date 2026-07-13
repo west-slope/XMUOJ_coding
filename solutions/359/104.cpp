@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int a[1000];
+int a[100010];//数组太小过不了
 int quick_sort(int arr[],int l,int r,int k)
 {
     if(l>=r)return arr[l];
