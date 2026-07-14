@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/13 21:43:15",
+  "generatedAt": "2026/7/14 15:25:03",
   "solutions": {
     "359": {
       "100": [
@@ -157,7 +157,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/118.cpp",
           "language": "cpp",
-          "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;if(!(cin>>n))return 0;\r\nfor(int mask=1;mask<(1<<n);mask++){bool first=true;for(int i=0;i<n;i++)if(mask>>i&1){if(!first)cout<<' ';first=false;cout<<i+1;}cout<<\"\\n\";}}\r\n"
+          "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n;\n    if (!(cin >> n)) return 0;\n\n    for (int mask = 1; mask < (1 << n); mask++)\n    {\n        bool first = true;\n        for (int i = 0; i < n; i++)\n        {\n            if (mask >> i & 1)\n            {\n                if (!first) cout << ' ';\n                first = false;\n                cout << i + 1;\n            }\n        }\n        cout << \"\\n\";\n    }\n}\r\n"
         }
       ],
       "119": [
@@ -253,7 +253,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/130.cpp",
           "language": "cpp",
-          "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint m;if(!(cin>>m))return 0;vector<int>e(m+5),ne(m+5);int head=-1,idx=0;auto add_head=[&](int x){e[idx]=x;ne[idx]=head;head=idx++;};auto add=[&](int k,int x){e[idx]=x;ne[idx]=ne[k];ne[k]=idx++;};auto del=[&](int k){if(k==-1)head=ne[head];else ne[k]=ne[ne[k]];};\r\nwhile(m--){char op;cin>>op;if(op=='H'){int x;cin>>x;add_head(x);}else if(op=='I'){int k,x;cin>>k>>x;add(k-1,x);}else{int k;cin>>k;if(k==0)del(-1);else del(k-1);}}\r\nfor(int i=head;i!=-1;i=ne[i])cout<<e[i]<<' ';cout<<\"\\n\";}\r\n"
+          "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int m;\n    if (!(cin >> m)) return 0;\n\n    vector<int> e(m + 5), ne(m + 5);\n    int head = -1, idx = 0;\n\n    auto add_head = [&](int x) {\n        e[idx] = x;\n        ne[idx] = head;\n        head = idx++;\n    };\n\n    auto add = [&](int k, int x) {\n        e[idx] = x;\n        ne[idx] = ne[k];\n        ne[k] = idx++;\n    };\n\n    auto del = [&](int k) {\n        if (k == -1) head = ne[head];\n        else ne[k] = ne[ne[k]];\n    };\n\n    while (m--)\n    {\n        char op;\n        cin >> op;\n        if (op == 'H')\n        {\n            int x;\n            cin >> x;\n            add_head(x);\n        }\n        else if (op == 'I')\n        {\n            int k, x;\n            cin >> k >> x;\n            add(k - 1, x);\n        }\n        else\n        {\n            int k;\n            cin >> k;\n            if (k == 0) del(-1);\n            else del(k - 1);\n        }\n    }\n\n    for (int i = head; i != -1; i = ne[i]) cout << e[i] << ' ';\n    cout << \"\\n\";\n}\r\n"
         }
       ],
       "131": [
@@ -291,7 +291,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/134.cpp",
           "language": "cpp",
-          "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\nint main(){ios::sync_with_stdio(false);cin.tie(nullptr);\r\nint n;if(!(cin>>n))return 0;vector<int>st;for(int i=0;i<n;i++){int x;cin>>x;while(!st.empty()&&st.back()>=x)st.pop_back();if(i)cout<<' ';cout<<(st.empty()?-1:st.back());st.push_back(x);}cout<<\"\\n\";}\r\n"
+          "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n;\n    if (!(cin >> n)) return 0;\n\n    vector<int> st;\n    for (int i = 0; i < n; i++)\n    {\n        int x;\n        cin >> x;\n        while (!st.empty() && st.back() >= x) st.pop_back();\n        if (i) cout << ' ';\n        cout << (st.empty() ? -1 : st.back());\n        st.push_back(x);\n    }\n    cout << \"\\n\";\n}\r\n"
         }
       ],
       "135": [
@@ -323,7 +323,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/138.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nconst int N = 100010;\nint p[N];\n\nint find(int x) {\n    if (p[x] != x) p[x] = find(p[x]);\n    return p[x];\n}\n\nint main() {\n    int n, m;\n    cin >> n >> m;\n    \n    for (int i = 1; i <= n; i++) p[i] = i;\n    \n    while (m--) {\n        char op;\n        int a, b;\n        cin >> op >> a >> b;\n        \n        if (op == 'M') {\n            int pa = find(a), pb = find(b);\n            if (pa != pb) p[pa] = pb;\n        } else if (op == 'Q') {\n            if (find(a) == find(b)) cout << \"Yes\" << endl;\n            else cout << \"No\" << endl;\n        }\n    }\n    \n    return 0;\n}"
+          "code": "#include <iostream>\r\n#include <vector>\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint p[N];\r\n\r\nint find(int x) {\r\n    if (p[x] != x) p[x] = find(p[x]);\r\n    return p[x];\r\n}\r\n\r\nint main() {\r\n    int n, m;\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 1; i <= n; i++) p[i] = i;\r\n    \r\n    while (m--) {\r\n        char op;\r\n        int a, b;\r\n        cin >> op >> a >> b;\r\n        \r\n        if (op == 'M') {\r\n            int pa = find(a), pb = find(b);\r\n            if (pa != pb) p[pa] = pb;\r\n        } else if (op == 'Q') {\r\n            if (find(a) == find(b)) cout << \"Yes\" << endl;\r\n            else cout << \"No\" << endl;\r\n        }\r\n    }\r\n    \r\n    return 0;\r\n}"
         }
       ],
       "139": [
@@ -355,7 +355,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/142.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\nusing namespace std;\n\nconst int N = 20;\nint n;\nchar board[N][N];\nbool col[N], dg[N], udg[N]; // 列、主对角线、副对角线\n\n// 逐行放置皇后，r为当前行\nvoid dfs(int r) {\n    if (r == n) {\n        // 输出解\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                cout << board[i][j];\n            }\n            cout << '\\n';\n        }\n        cout << '\\n'; // 解之间空行\n        return;\n    }\n\n    for (int c = 0; c < n; c++) {\n        // r+c相同→同一主对角线，r-c+n相同→同一副对角线\n        if (!col[c] && !dg[r + c] && !udg[r - c + n]) {\n            col[c] = dg[r + c] = udg[r - c + n] = true;\n            board[r][c] = 'Q';\n            dfs(r + 1);\n            board[r][c] = '.';\n            col[c] = dg[r + c] = udg[r - c + n] = false;\n        }\n    }\n}\n\nint main() {\n    cin >> n;\n    // 初始化棋盘\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            board[i][j] = '.';\n        }\n    }\n    dfs(0);\n    return 0;\n}\n"
+          "code": "#include <iostream>\r\nusing namespace std;\r\n\r\nconst int N = 20;\r\nint n;\r\nchar board[N][N];\r\nbool col[N], dg[N], udg[N]; // 列、主对角线、副对角线\r\n\r\n// 逐行放置皇后，r为当前行\r\nvoid dfs(int r) {\r\n    if (r == n) {\r\n        // 输出解\r\n        for (int i = 0; i < n; i++) {\r\n            for (int j = 0; j < n; j++) {\r\n                cout << board[i][j];\r\n            }\r\n            cout << '\\n';\r\n        }\r\n        cout << '\\n'; // 解之间空行\r\n        return;\r\n    }\r\n\r\n    for (int c = 0; c < n; c++) {\r\n        // r+c相同→同一主对角线，r-c+n相同→同一副对角线\r\n        if (!col[c] && !dg[r + c] && !udg[r - c + n]) {\r\n            col[c] = dg[r + c] = udg[r - c + n] = true;\r\n            board[r][c] = 'Q';\r\n            dfs(r + 1);\r\n            board[r][c] = '.';\r\n            col[c] = dg[r + c] = udg[r - c + n] = false;\r\n        }\r\n    }\r\n}\r\n\r\nint main() {\r\n    cin >> n;\r\n    // 初始化棋盘\r\n    for (int i = 0; i < n; i++) {\r\n        for (int j = 0; j < n; j++) {\r\n            board[i][j] = '.';\r\n        }\r\n    }\r\n    dfs(0);\r\n    return 0;\r\n}\r\n"
         }
       ],
       "143": [
@@ -379,7 +379,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/145.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include <algorithm>\n#include <cstring>\n\nusing namespace std;\n\nconst int N = 1e5 + 10; //数据范围是10的5次方\nconst int M = 2 * N; //以有向图的格式存储无向图，所以每个节点至多对应2n-2条边\n\nint h[N]; //邻接表存储树，有n个节点，所以需要n个队列头节点\nint e[M]; //存储元素\nint ne[M]; //存储列表的next值\nint idx; //单链表指针\nint n; //题目所给的输入，n个节点\nint ans = N; //表示重心的所有的子树中，最大的子树的结点数目\n\nbool st[N]; //记录节点是否被访问过，访问过则标记为true\n\n//a所对应的单链表中插入b  a作为根 \nvoid add(int a, int b) {\n    e[idx] = b, ne[idx] = h[a], h[a] = idx++;\n}\n\n// dfs 框架\n/*\nvoid dfs(int u){\n    st[u]=true; // 标记一下，记录为已经被搜索过了，下面进行搜索过程\n    for(int i=h[u];i!=-1;i=ne[i]){\n        int j=e[i];\n        if(!st[j]) {\n            dfs(j);\n        }\n    }\n}\n*/\n\n//返回以u为根的子树中节点的个数，包括u节点\nint dfs(int u) {\n    int res = 0; //存储 删掉某个节点之后，最大的连通子图节点数\n    st[u] = true; //标记访问过u节点\n    int sum = 1; //存储 以u为根的树 的节点数, 包括u，如图中的4号节点\n\n    //访问u的每个子节点\n    for (int i = h[u]; i != -1; i = ne[i]) {\n        int j = e[i];\n        //因为每个节点的编号都是不一样的，所以 用编号为下标 来标记是否被访问过\n        if (!st[j]) {\n            int s = dfs(j);  // u节点的单棵子树节点数 如图中的size值\n            res = max(res, s); // 记录最大联通子图的节点数\n            sum += s; //以j为根的树 的节点数\n        }\n    }\n\n    //n-sum 如图中的n-size值，不包括根节点4；\n    res = max(res, n - sum); // 选择u节点为重心，最大的 连通子图节点数\n    ans = min(res, ans); //遍历过的假设重心中，最小的最大联通子图的 节点数\n    return sum;\n}\n\nint main() {\n    memset(h, -1, sizeof h); //初始化h数组 -1表示尾节点\n    cin >> n; //表示树的结点数\n\n    // 题目接下来会输入，n-1行数据，\n    // 树中是不存在环的，对于有n个节点的树，必定是n-1条边\n    for (int i = 0; i < n - 1; i++) {\n        int a, b;\n        cin >> a >> b;\n        add(a, b), add(b, a); //无向图\n    }\n\n    dfs(1); //可以任意选定一个节点开始 u<=n\n\n    cout << ans << endl;\n\n    return 0;\n}\n\n// 作者：松鼠爱葡萄\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/542619/\n// 来源：AcWing\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+          "code": "#include <iostream>\r\n#include <algorithm>\r\n#include <cstring>\r\n\r\nusing namespace std;\r\n\r\nconst int N = 1e5 + 10; //数据范围是10的5次方\r\nconst int M = 2 * N; //以有向图的格式存储无向图，所以每个节点至多对应2n-2条边\r\n\r\nint h[N]; //邻接表存储树，有n个节点，所以需要n个队列头节点\r\nint e[M]; //存储元素\r\nint ne[M]; //存储列表的next值\r\nint idx; //单链表指针\r\nint n; //题目所给的输入，n个节点\r\nint ans = N; //表示重心的所有的子树中，最大的子树的结点数目\r\n\r\nbool st[N]; //记录节点是否被访问过，访问过则标记为true\r\n\r\n//a所对应的单链表中插入b  a作为根 \r\nvoid add(int a, int b) {\r\n    e[idx] = b, ne[idx] = h[a], h[a] = idx++;\r\n}\r\n\r\n// dfs 框架\r\n/*\r\nvoid dfs(int u){\r\n    st[u]=true; // 标记一下，记录为已经被搜索过了，下面进行搜索过程\r\n    for(int i=h[u];i!=-1;i=ne[i]){\r\n        int j=e[i];\r\n        if(!st[j]) {\r\n            dfs(j);\r\n        }\r\n    }\r\n}\r\n*/\r\n\r\n//返回以u为根的子树中节点的个数，包括u节点\r\nint dfs(int u) {\r\n    int res = 0; //存储 删掉某个节点之后，最大的连通子图节点数\r\n    st[u] = true; //标记访问过u节点\r\n    int sum = 1; //存储 以u为根的树 的节点数, 包括u，如图中的4号节点\r\n\r\n    //访问u的每个子节点\r\n    for (int i = h[u]; i != -1; i = ne[i]) {\r\n        int j = e[i];\r\n        //因为每个节点的编号都是不一样的，所以 用编号为下标 来标记是否被访问过\r\n        if (!st[j]) {\r\n            int s = dfs(j);  // u节点的单棵子树节点数 如图中的size值\r\n            res = max(res, s); // 记录最大联通子图的节点数\r\n            sum += s; //以j为根的树 的节点数\r\n        }\r\n    }\r\n\r\n    //n-sum 如图中的n-size值，不包括根节点4；\r\n    res = max(res, n - sum); // 选择u节点为重心，最大的 连通子图节点数\r\n    ans = min(res, ans); //遍历过的假设重心中，最小的最大联通子图的 节点数\r\n    return sum;\r\n}\r\n\r\nint main() {\r\n    memset(h, -1, sizeof h); //初始化h数组 -1表示尾节点\r\n    cin >> n; //表示树的结点数\r\n\r\n    // 题目接下来会输入，n-1行数据，\r\n    // 树中是不存在环的，对于有n个节点的树，必定是n-1条边\r\n    for (int i = 0; i < n - 1; i++) {\r\n        int a, b;\r\n        cin >> a >> b;\r\n        add(a, b), add(b, a); //无向图\r\n    }\r\n\r\n    dfs(1); //可以任意选定一个节点开始 u<=n\r\n\r\n    cout << ans << endl;\r\n\r\n    return 0;\r\n}\r\n\r\n// 作者：松鼠爱葡萄\r\n// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/542619/\r\n// 来源：AcWing\r\n// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
         }
       ],
       "146": [
@@ -459,7 +459,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/155.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 1010;\nint f[N];\nint n, m;\n\nint main() {\n    cin >> n >> m;\n    \n    for (int i = 0; i < n; i++) {\n        int v, w;\n        cin >> v >> w;\n        for (int j = m; j >= v; j--) {\n            f[j] = max(f[j], f[j - v] + w);\n        }\n    }\n    \n    cout << f[m] << endl;\n    \n    return 0;\n}"
+          "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 1010;\r\nint f[N];\r\nint n, m;\r\n\r\nint main() {\r\n    cin >> n >> m;\r\n    \r\n    for (int i = 0; i < n; i++) {\r\n        int v, w;\r\n        cin >> v >> w;\r\n        for (int j = m; j >= v; j--) {\r\n            f[j] = max(f[j], f[j - v] + w);\r\n        }\r\n    }\r\n    \r\n    cout << f[m] << endl;\r\n    \r\n    return 0;\r\n}"
         }
       ],
       "156": [
@@ -571,7 +571,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/169.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include <cstring>\nusing namespace std;\n\nconst int N = 12;\nlong long f[N][1 << N];\nint n, m;\n\nvoid dfs(int col, int row, int cur_state, int next_state) {\n    if (row == n) {\n        f[col + 1][next_state] += f[col][cur_state];\n        return;\n    }\n    \n    if (cur_state & (1 << row)) {\n        dfs(col, row + 1, cur_state, next_state);\n    } else {\n        // 竖放\n        dfs(col, row + 1, cur_state, next_state | (1 << row));\n        // 横放\n        if (row + 1 < n && !(cur_state & (1 << (row + 1)))) {\n            dfs(col, row + 2, cur_state, next_state);\n        }\n    }\n}\n\nint main() {\n    while (cin >> n >> m && n && m) {\n        if (n > m) swap(n, m);\n        \n        memset(f, 0, sizeof(f));\n        f[0][0] = 1;\n        \n        for (int col = 0; col < m; col++) {\n            for (int state = 0; state < (1 << n); state++) {\n                if (f[col][state]) {\n                    dfs(col, 0, state, 0);\n                }\n            }\n        }\n        \n        cout << f[m][0] << endl;\n    }\n    \n    return 0;\n}"
+          "code": "#include <iostream>\r\n#include <cstring>\r\nusing namespace std;\r\n\r\nconst int N = 12;\r\nlong long f[N][1 << N];\r\nint n, m;\r\n\r\nvoid dfs(int col, int row, int cur_state, int next_state) {\r\n    if (row == n) {\r\n        f[col + 1][next_state] += f[col][cur_state];\r\n        return;\r\n    }\r\n    \r\n    if (cur_state & (1 << row)) {\r\n        dfs(col, row + 1, cur_state, next_state);\r\n    } else {\r\n        // 竖放\r\n        dfs(col, row + 1, cur_state, next_state | (1 << row));\r\n        // 横放\r\n        if (row + 1 < n && !(cur_state & (1 << (row + 1)))) {\r\n            dfs(col, row + 2, cur_state, next_state);\r\n        }\r\n    }\r\n}\r\n\r\nint main() {\r\n    while (cin >> n >> m && n && m) {\r\n        if (n > m) swap(n, m);\r\n        \r\n        memset(f, 0, sizeof(f));\r\n        f[0][0] = 1;\r\n        \r\n        for (int col = 0; col < m; col++) {\r\n            for (int state = 0; state < (1 << n); state++) {\r\n                if (f[col][state]) {\r\n                    dfs(col, 0, state, 0);\r\n                }\r\n            }\r\n        }\r\n        \r\n        cout << f[m][0] << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
         }
       ],
       "170": [
@@ -907,7 +907,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/039.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int N;\n    cin>>N;\n    for(int i=1;i<=N;i++)\n    {\n        if(N%i==0)\n        {\n            cout<<i<<endl;\n        }\n    }\n    return 0;\n}\n"
+          "code": "#include <iostream>\r\nusing namespace std;\r\n\r\nint main() {\r\n    int N;\r\n    cin>>N;\r\n    for(int i=1;i<=N;i++)\r\n    {\r\n        if(N%i==0)\r\n        {\r\n            cout<<i<<endl;\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n"
         }
       ],
       "040": [
@@ -1105,7 +1105,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/063.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include<iomanip>\nusing namespace std;\nint a[1001][1001];\nint N;\n\nint min(int a,int b,int c,int d)\n{\n    int m1=a>b?b:a;\n    int m2=c>d?d:c;\n    return m1>m2?m2:m1;\n}\n\nvoid handle(int N)\n{\n    for(int i=0;i<N;i++)\n    {\n        for(int j=0;j<N;j++)\n        {\n            a[i][j]=min(i+1,j+1,N-i,N-j);\n        }\n    }\n}\n\nint main() {\n    cin>>N;\n    while(N!=0)\n    {\n        handle(N);\n        for(int i=0;i<N;i++)\n        {\n            {\n                for(int j=0;j<N;j++)\n                cout<<setw(3)<<a[i][j];\n            }\n            cout<<endl;\n        }\n        cout<<endl;\n        cin>>N;\n    }\n    return 0;\n}\n"
+          "code": "#include <iostream>\r\n#include<iomanip>\r\nusing namespace std;\r\nint a[1001][1001];\r\nint N;\r\n\r\nint min(int a,int b,int c,int d)\r\n{\r\n    int m1=a>b?b:a;\r\n    int m2=c>d?d:c;\r\n    return m1>m2?m2:m1;\r\n}\r\n\r\nvoid handle(int N)\r\n{\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        for(int j=0;j<N;j++)\r\n        {\r\n            a[i][j]=min(i+1,j+1,N-i,N-j);\r\n        }\r\n    }\r\n}\r\n\r\nint main() {\r\n    cin>>N;\r\n    while(N!=0)\r\n    {\r\n        handle(N);\r\n        for(int i=0;i<N;i++)\r\n        {\r\n            {\r\n                for(int j=0;j<N;j++)\r\n                cout<<setw(3)<<a[i][j];\r\n            }\r\n            cout<<endl;\r\n        }\r\n        cout<<endl;\r\n        cin>>N;\r\n    }\r\n    return 0;\r\n}\r\n"
         }
       ],
       "064": [
@@ -1193,7 +1193,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/074.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\n#include <string>\n#include <sstream>\nusing namespace std;//\n\nint main()\n{\n    string line, A, B;\n    getline(cin, line);\n    cin >> A >> B;\n\n    stringstream ss(line);\n    string word, result;\n    bool first = true;\n    while (ss >> word) {\n        if (!first) result += \" \";\n        if (word == A)\n            result += B;\n        else\n            result += word;\n        first = false;\n    }\n\n    cout << result << endl;\n    return 0;\n}\n"
+          "code": "#include <iostream>\r\n#include <string>\r\n#include <sstream>\r\nusing namespace std;//\r\n\r\nint main()\r\n{\r\n    string line, A, B;\r\n    getline(cin, line);\r\n    cin >> A >> B;\r\n\r\n    stringstream ss(line);\r\n    string word, result;\r\n    bool first = true;\r\n    while (ss >> word) {\r\n        if (!first) result += \" \";\r\n        if (word == A)\r\n            result += B;\r\n        else\r\n            result += word;\r\n        first = false;\r\n    }\r\n\r\n    cout << result << endl;\r\n    return 0;\r\n}\r\n"
         }
       ],
       "075": [
