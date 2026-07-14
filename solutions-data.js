@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/14 15:25:03",
+  "generatedAt": "2026/7/14 15:29:17",
   "solutions": {
     "359": {
       "100": [
@@ -1714,6 +1714,14 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "path": "solutions/362/LinK58.cpp",
           "language": "cpp",
           "code": "#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n#include<queue>\r\n\r\nusing namespace std;\r\n\r\ntypedef pair<int,int> PII;\r\n\r\nconst int N =1e6+10;\r\n\r\nint m,n;//行、列\r\nint h[N],w[N],e[N],ne[N],idx;//数组模拟链表\r\nint dist[N];//距离\r\nbool st[N];//状态\r\n\r\nvoid add(int a,int b,int c)\r\n{\r\n    e[idx]=b,w[idx]=c,ne[idx]=h[a],h[a]=idx++;\r\n}\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist,0x3f,sizeof dist);\r\n    dist[1]=0;\r\n    priority_queue<PII,vector<PII>,greater<PII>>heap;\r\n\r\n    heap.push({0,1});\r\n    while(heap.size())\r\n    {\r\n        auto t=heap.top();\r\n        heap.pop();\r\n    \r\n        int ver=t.second,distance=t.first;\r\n\r\n        if(st[ver])continue;\r\n        st[ver]=true;\r\n        for(int i=h[ver];i!=-1;i=ne[i])\r\n        {\r\n            int j=e[i];\r\n            if(dist[j]>dist[ver]+w[i])\r\n            {\r\n                dist[j]=dist[ver]+w[i];\r\n                heap.push({dist[j],j});\r\n            }\r\n        }\r\n    }\r\n    if(dist[n]==0x3f3f3f3f)return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\",&n,&m);\r\n    memset(h,-1,sizeof h);\r\n    while(m--)\r\n    {\r\n        int a,b,c;\r\n        scanf(\"%d%d%d\",&a,&b,&c);\r\n        add(a,b,c);\r\n\r\n    }\r\n    cout<<dijkstra()<<endl;\r\n    return 0;\r\n\r\n\r\n}"
+        }
+      ],
+      "Link62": [
+        {
+          "variant": 2,
+          "path": "solutions/362/Link62-2.cpp",
+          "language": "cpp",
+          "code": "//从三角形底部网上计算\r\n//每一个点计算下面两条路线的最大值\r\n//优化版\r\n#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint n;\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=1;j<=i;j++)   \r\n            cin>>f[i][j];\r\n\r\n    for(int i=n-1;i;i--)\r\n        for(int j=1;j<=i;j++)\r\n            f[i][j]+=max(f[i+1][j],f[i+1][j+1]);//每一个点计算下面两条路线的最大值\r\n    cout<<f[1][1]<<endl;\r\n\r\n\r\n    return 0;\r\n}"
         }
       ],
       "Link63": [
