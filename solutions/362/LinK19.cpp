@@ -1,13 +1,15 @@
+//递归算法
+//通过bool类型st数组来判断是否放入u
 #include<iostream>
 using namespace std;
 
 const int N=20;
 int st[N];
 int n;
-void dfs(int u)
+void dfs(int u)//第u次
 {
 
-    if(u>n)
+    if(u>n)//递归出口
     {
         int count=0;
         for(int i=1;i<=n;i++)
@@ -20,9 +22,9 @@ void dfs(int u)
             cout<<endl;
         return ;
     }
-    st[u]=true;
+    st[u]=true;//第u个数放入
     dfs(u+1);
-    st[u]=false;
+    st[u]=false;//第u个不放入
     dfs(u+1);
 }
 
@@ -33,3 +35,4 @@ int main()
     return 0;
 
 }
+//总结：st数组来区别是否有数字u

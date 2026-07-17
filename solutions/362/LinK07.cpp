@@ -1,9 +1,10 @@
+//枚举优化算法
 #include <iostream>
 #include<vector>
 #include<algorithm>
 #include<cstring>
 using namespace std;
-
+//按两数之和的思路无法通过
 vector<vector<int>> threeSum(vector<int>& nums, int target)
 {
 	vector<vector<int>> res;//储存结果
@@ -11,10 +12,10 @@ vector<vector<int>> threeSum(vector<int>& nums, int target)
 	for(int i=0;i<nums.size();i++)
 	{
 		if (i && nums[i] == nums[i - 1])continue;//除去重复项
-		for (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)
+		for (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)//从j+1到size-1
 		{
 			if (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项
-			while(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)
+			while(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)//在j-1往前移动
 			{
 				k--;
 			}
@@ -49,3 +50,6 @@ int main()
 	}
 	return 0;
 }
+
+//总结：一个从后面往前遍历
+//每次计算前都先清除重复项

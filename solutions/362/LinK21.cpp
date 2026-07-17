@@ -1,16 +1,18 @@
+//递归算法
+//与组合不同，不设置start起点，从头开始遍历
 #include<iostream>
 using namespace std;
 
 const int N=9;
-bool st[N];
-int arr[N];
+bool st[N];//判断是否有选过
+int arr[N];//放结果
 int n;
 
 void dfs(int u)
 {
-    if(u>n)
+    if(u>n)//递归出口
     {
-        for(int i=1;i<=n;i++)
+        for(int i=1;i<=n;i++)//输出结果
         {
             cout<<arr[i]<<" ";
         }
@@ -21,10 +23,10 @@ void dfs(int u)
         {
             if(!st[i])
             {
-                arr[u]=i;
+                arr[u]=i;//设置路径
                 st[i]=true;
                 dfs(u+1);
-                st[i]=false;
+                st[i]=false;//恢复现场
                 arr[u]=0;
             }
         }
@@ -38,3 +40,5 @@ int main()
     return 0;
 
 }
+
+//总结：与组合不同，不设置start起点，从头开始遍历

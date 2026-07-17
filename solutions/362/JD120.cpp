@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void move(char start,char target)
+{
+    cout<<start<<"->"<<target;
+    return ;
+}
+
+void Hanoi(int n,char start,char other,char target)
+{
+    if(n==1){
+        move(start,target);
+        return;
+    }
+    Hanoi(n-1,start,target,other);
+    move(start,target);
+    Hanoi(n-1,other,start,target);
+    return ;
+
+}
+
+int mian()
+{
+
+    int n;
+    cin>>n;
+    Hanoi(n,'A','B','C');
+    return 0;
+}

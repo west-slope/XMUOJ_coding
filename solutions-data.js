@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/14 15:29:17",
+  "generatedAt": "2026/7/17 15:18:24",
   "solutions": {
     "359": {
       "100": [
@@ -1398,12 +1398,20 @@ window.XMUOJ_SOLUTIONS_CODE = {
       ]
     },
     "362": {
+      "JD120": [
+        {
+          "variant": 1,
+          "path": "solutions/362/JD120.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nvoid move(char start,char target)\r\n{\r\n    cout<<start<<\"->\"<<target;\r\n    return ;\r\n}\r\n\r\nvoid Hanoi(int n,char start,char other,char target)\r\n{\r\n    if(n==1){\r\n        move(start,target);\r\n        return;\r\n    }\r\n    Hanoi(n-1,start,target,other);\r\n    move(start,target);\r\n    Hanoi(n-1,other,start,target);\r\n    return ;\r\n\r\n}\r\n\r\nint mian()\r\n{\r\n\r\n    int n;\r\n    cin>>n;\r\n    Hanoi(n,'A','B','C');\r\n    return 0;\r\n}"
+        }
+      ],
       "LinK01": [
         {
           "variant": 1,
           "path": "solutions/362/LinK01.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n  long long A,B;//用long long\r\n  cin>>A>>B;\r\n  cout<<A+B;\r\n  return 0;\r\n}"
+          "code": "//a+b，基础入门\r\n#include<iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n  long long A,B;\r\n  cin>>A>>B;\r\n  cout<<A+B;\r\n  return 0;\r\n}"
         }
       ],
       "LinK02": [
@@ -1411,7 +1419,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK02.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n\tint a, b, c, d, N;\r\n\tcin >> N;\r\n\tfor (int i = 2; i <= N; i++)\r\n\t\tfor (int j = 2; j < N; j++)\r\n\t\t\tfor (int k = j; k < N; k++)\r\n\t\t\t\tfor (int l = k; l < N; l++)\r\n\t\t\t\t\tif (i * i * i == j * j * j + k * k * k + l * l * l)\r\n\t\t\t\t\t\tcout << \"Cube = \" << i << \", Triple = (\" << j <<\",\"<< k <<\",\" << l << \")\" << endl;\r\n\r\n\treturn 0;\r\n}"
+          "code": "//枚举算法\r\n\r\n#include<iostream>\r\nusing namespace std;\r\n//扫描小于N的所有数，若存在cube^3=a^3+b^3+c^3就输出\r\nint main()\r\n{\r\n\tint a, b, c, d, N;\r\n\tcin >> N;//输入整数\r\n\tfor (int i = 2; i <= N; i++)//相当于cube\r\n\t{\r\n\t\tfor (int j = 2; j < N; j++)//相当于a\r\n\t\t{\r\n\t\t\tfor (int k = j; k < N; k++)//相当于b\r\n\t\t\t{\r\n\t\t\t\tfor (int l = k; l < N; l++)//相当于c\r\n\t\t\t\t{\r\n\t\t\t\t\tif (i * i * i == j * j * j + k * k * k + l * l * l)//是否a^3= b^3+ c^3+ d^3\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tcout << \"Cube = \" << i << \", Triple = (\" << j <<\",\"<< k <<\",\" << l << \")\" << endl;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n\treturn 0;\r\n}\r\n//总结：复习了枚举算法"
         }
       ],
       "LinK03": [
@@ -1419,7 +1427,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK03.cpp",
           "language": "cpp",
-          "code": "#include <stdio.h>\r\nint main()\r\n{\r\n    int p, e, i, d;\r\n    int m = 1;\r\n    scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    while (p != -1 && e != -1 && i != -1 && d != -1)\r\n    {\r\n        \r\n        for (int j = d+1; j <= d+21252; j++)\r\n        {\r\n            if ((j - p) % 23 == 0 && (j - e) % 28 == 0 && (j - i) % 33 == 0)\r\n            {\r\n                if (d!=365||j!=21252)\r\n                    printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, j - d);\r\n                else printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, 21252);\r\n                break;\r\n            }\r\n        }\r\n        m++;\r\n        scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    }\r\n    return 0;\r\n}"
+          "code": "//枚举算法\r\n#include <stdio.h>\r\nint main()\r\n{\r\n    int p, e, i, d;//体力，情感，智力，时间\r\n    int m = 1;\r\n    scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    while (p != -1 && e != -1 && i != -1 && d != -1)//结束标志\r\n    {\r\n        \r\n        for (int j = d+1; j <= d+21252; j++)//注意：上限为21252\r\n        {//周期长度分别为23天、28天和33天。\r\n            if ((j - p) % 23 == 0 && (j - e) % 28 == 0 && (j - i) % 33 == 0)\r\n            {//从j+1开始枚举，若这些余数均为0则为答案\r\n                if (d!=365||j!=21252)\r\n                    printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, j - d);\r\n                else printf(\"Case %d: the next triple peak occurs in %d days.\\n\", m, 21252);\r\n                break;\r\n            }\r\n        }\r\n        m++;\r\n        scanf(\"%d%d%d%d\", &p, &e, &i, &d);\r\n    }\r\n    return 0;\r\n}\r\n//总结：完成了一道较为复杂的枚举类型题目，巩固的枚举算法"
         }
       ],
       "LinK04": [
@@ -1427,7 +1435,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK04.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int T;\r\n    cin >> T;\r\n    while (T--)\r\n    {\r\n        int N, value;\r\n        cin >> N;\r\n        vector<int>numbers;\r\n        for (int i = 0; i < N; i++)\r\n        {\r\n            cin >> value;\r\n            numbers.push_back(value);\r\n        }\r\n        sort(numbers.begin(), numbers.end());\r\n        for (int i = 0; i < N; i++)\r\n        {\r\n            if (i > 0)cout << \" \";\r\n            cout << numbers[i];\r\n        }\r\n        cout << endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+          "code": "//使用容器内的sort函数即可\r\n#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int T;\r\n    cin >> T;\r\n    while (T--)\r\n    {\r\n        int N, value;\r\n        cin >> N;\r\n        vector<int>numbers;//用容器方便排序\r\n        for (int i = 0; i < N; i++)//装入数据\r\n        {\r\n            cin >> value;\r\n            numbers.push_back(value);\r\n        }\r\n        sort(numbers.begin(), numbers.end());//排序\r\n        for (int i = 0; i < N; i++)//输出\r\n        {\r\n            if (i > 0)cout << \" \";\r\n            cout << numbers[i];\r\n        }\r\n        cout << endl;\r\n    }\r\n    \r\n    return 0;\r\n}\r\n\r\n//总结：学习了vetctor的用法"
         }
       ],
       "LinK05": [
@@ -1435,7 +1443,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK05.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    int target, n;\r\n    cin >> target >> n;\r\n    vector<int>a;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int x;\r\n        cin >> x;\r\n        a.push_back(x);\r\n    }\r\n    for (int i = 0; i < n - 1; i++)\r\n    {\r\n        for (int j = i + 1; j < n; j++)\r\n        {\r\n            if (a[i] + a[j] == target)\r\n            {\r\n                cout << i << \" \" << j << endl;\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}"
+          "code": "//枚举算法\r\n#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nstring Left[3];//储存左边银币\r\nstring Right[3];//储存右边银币\r\nstring result[3];//储存结果\r\n\r\nbool isFeitCoin(char iCoin,bool isLight)//轻为true，重为false\r\n{\r\n    string c;\r\n    c.push_back(iCoin);\r\n\r\n    for(int i=0;i<3;i++)\r\n    {\r\n        string l=Left[i],r=Right[i];\r\n\r\n        if(!isLight)swap(l,r);//全部转化为轻\r\n\r\n        switch(result[i][0])\r\n        {\r\n            case 'e'://平衡even,找不到假币\r\n                if(l.find(c)!=string::npos||r.find(c)!=string::npos)return false;\r\n                    break;\r\n            case 'u'://右边\r\n                if(r.find(c)==string::npos)return false;//npos：未找到\r\n                    break;\r\n            case 'd'://左边\r\n                if(l.find(c)==string::npos)return false;\r\n                    break;\r\n        }\r\n    }\r\n    return true;\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin >> n;\r\n    while(n--)\r\n    {\r\n        for(int i=0;i<3;i++)cin>>Left[i]>>Right[i]>>result[i];\r\n\r\n        for(int iCoin='A';iCoin<='L';iCoin++)//遍历从A到L\r\n        {\r\n            if(isFeitCoin(iCoin,true))//先假设是轻币\r\n            {\r\n                cout<<char(iCoin)<<\" is the counterfeit coin and it is light.\"<<endl;\r\n                break;\r\n            }else if(isFeitCoin(iCoin,false)){// 再假设是重币\r\n                cout<<char(iCoin)<<\" is the counterfeit coin and it is heavy.\"<<endl;\r\n                break;\r\n            }\r\n        }\r\n    }\r\n    \r\n\r\n\r\n\r\n\r\n    return 0;\r\n}\r\n\r\n//总结：是通过函数的三个switch判断是否符合轻/重币。必须在even没用，up和heavy在不同侧\r\n//传入轻重可以简化只写一次函数"
         }
       ],
       "LinK06": [
@@ -1443,7 +1451,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK06.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    int target, n;\r\n    cin >> target >> n;\r\n    vector<int>a;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int x;\r\n        cin >> x;\r\n        a.push_back(x);\r\n    }\r\n    for (int i = 0; i < n - 1; i++)\r\n    {\r\n        for (int j = i + 1; j < n; j++)\r\n        {\r\n            if (a[i] + a[j] == target)\r\n            {\r\n                cout << i << \" \" << j << endl;\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}"
+          "code": "//枚举算法\r\n#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\n#include<vector>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    int target, n;\r\n    cin >> target >> n;\r\n    vector<int>a;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int x;\r\n        cin >> x;\r\n        a.push_back(x);\r\n    }\r\n    for (int i = 0; i < n - 1; i++)//把所有情况遍历一遍；现在想想可以两个指针分别在首位来进行移动\r\n    {\r\n        for (int j = i + 1; j < n; j++)//从i+1开始遍历（复杂度较高）\r\n        {\r\n            if (a[i] + a[j] == target)\r\n            {\r\n                cout << i << \" \" << j << endl;\r\n            }\r\n        }\r\n    }\r\n    return 0;\r\n}\r\n//总结：该解法复杂度较高，较大数据可能无法处理，需要学习新的算法。"
         }
       ],
       "LinK07": [
@@ -1451,7 +1459,15 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK07.cpp",
           "language": "cpp",
-          "code": "#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nvector<vector<int>> threeSum(vector<int>& nums, int target)\r\n{\r\n\tvector<vector<int>> res;//储存结果\r\n\tsort(nums.begin(), nums.end());\r\n\tfor(int i=0;i<nums.size();i++)\r\n\t{\r\n\t\tif (i && nums[i] == nums[i - 1])continue;//除去重复项\r\n\t\tfor (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)\r\n\t\t{\r\n\t\t\tif (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项\r\n\t\t\twhile(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)\r\n\t\t\t{\r\n\t\t\t\tk--;\r\n\t\t\t}\r\n\t\t\tif (nums[i] + nums[j] + nums[k] == target)\r\n\t\t\t\tres.push_back({ nums[i],nums[j],nums[k] });\r\n\t\t}\r\n\t}\r\n\treturn res;\r\n}\r\nbool comp(const vector<int>& a, const vector<int>& b)\r\n{\r\n\tif (a[0] != b[0])return a[0] < b[0];\r\n\tif (a[1] != b[1])return a[1] < b[1];\r\n\treturn a[2] < b[2];\r\n}\r\nint main()\r\n{\r\n\tint target, n;\r\n\tcin >> target >> n;\r\n\tvector<int>nums(n);\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin >> nums[i];\r\n\t}\r\n\tvector<vector<int>>res;\r\n\tres = threeSum(nums, target);//求出所有三元组\r\n\tsort(res.begin(), res.end(),comp);//排序\r\n\tfor(auto line:res)\r\n\t{\r\n\t\tcout << line[0] << \" \" << line[1] << \" \" << line[2] << endl;\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}"
+          "code": "//枚举优化算法\r\n#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n//按两数之和的思路无法通过\r\nvector<vector<int>> threeSum(vector<int>& nums, int target)\r\n{\r\n\tvector<vector<int>> res;//储存结果\r\n\tsort(nums.begin(), nums.end());\r\n\tfor(int i=0;i<nums.size();i++)\r\n\t{\r\n\t\tif (i && nums[i] == nums[i - 1])continue;//除去重复项\r\n\t\tfor (int j = i + 1,k=nums.size()-1; j < nums.size() - 2; j++)//从j+1到size-1\r\n\t\t{\r\n\t\t\tif (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项\r\n\t\t\twhile(j<k-1&&nums[i]+nums[j]+nums[k-1]>=target)//在j-1往前移动\r\n\t\t\t{\r\n\t\t\t\tk--;\r\n\t\t\t}\r\n\t\t\tif (nums[i] + nums[j] + nums[k] == target)\r\n\t\t\t\tres.push_back({ nums[i],nums[j],nums[k] });\r\n\t\t}\r\n\t}\r\n\treturn res;\r\n}\r\nbool comp(const vector<int>& a, const vector<int>& b)\r\n{\r\n\tif (a[0] != b[0])return a[0] < b[0];\r\n\tif (a[1] != b[1])return a[1] < b[1];\r\n\treturn a[2] < b[2];\r\n}\r\nint main()\r\n{\r\n\tint target, n;\r\n\tcin >> target >> n;\r\n\tvector<int>nums(n);\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin >> nums[i];\r\n\t}\r\n\tvector<vector<int>>res;\r\n\tres = threeSum(nums, target);//求出所有三元组\r\n\tsort(res.begin(), res.end(),comp);//排序\r\n\tfor(auto line:res)\r\n\t{\r\n\t\tcout << line[0] << \" \" << line[1] << \" \" << line[2] << endl;\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}\r\n\r\n//总结：一个从后面往前遍历\r\n//每次计算前都先清除重复项"
+        }
+      ],
+      "LinK08": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK08.cpp",
+          "language": "cpp",
+          "code": "//枚举优化算法\r\n//四数之和根据三数修改\r\n\r\n//思路：根据三数之和优化\r\n//i从0到size-1\r\n//j从i+1到size-2\r\n//l从j+1开始往右移，r从size-1开始往左移（覆盖所有数）根据结果的大小进行调整\r\n#include <iostream>\r\n#include<vector>\r\n#include<algorithm>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\nvector<vector<int>> fourSum(vector<int>& nums, int target)\r\n{\r\n\tvector<vector<int>> res;//储存结果\r\n\tsort(nums.begin(), nums.end());\r\n\tfor(int i=0;i<nums.size();i++)\r\n\t{\r\n\t\tif (i && nums[i] == nums[i - 1])continue;//除去重复项\r\n\t\tfor (int j = i + 1; j < nums.size() - 1; j++)//从j+1到size-1\r\n\t\t{\r\n\t\t\tif (j > i + 1 && nums[j] == nums[j - 1])continue;//除去重复项\r\n            int l=j+1,r=nums.size()-1;//l从j+1开始往右移，r从size-1开始往左移\r\n            while(l<r&&nums[i] + nums[j] + nums[l] +nums[r]!= target)//必须l在r左侧\r\n            {\r\n                while((r>l&&nums[i] + nums[j] + nums[l] +nums[r]< target)||nums[l]==nums[l-1])l++;//和比target小就l右移\r\n                while(r>l&&nums[i] + nums[j] + nums[l] +nums[r]> target||nums[r]==nums[r+1])r--;//和比target小就r左移\r\n            }\r\n\t\t\t    if (nums[i] + nums[j] + nums[l] +nums[r]== target)\r\n\t\t\t\t    res.push_back({ nums[i],nums[j],nums[l],nums[r] });\r\n            \r\n\t\t}\r\n\t}\r\n\treturn res;\r\n}\r\nbool comp(const vector<int>& a, const vector<int>& b)//排序的依据\r\n{\r\n\tif (a[0] != b[0])return a[0] < b[0];\r\n\tif (a[1] != b[1])return a[1] < b[1];\r\n\treturn a[2] < b[2];\r\n}\r\nint main()\r\n{\r\n\tint target, n;\r\n\tcin >> target >> n;\r\n\tvector<int>nums(n);\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin >> nums[i];\r\n\t}\r\n\tvector<vector<int>>res;\r\n\tres = fourSum(nums, target);//求出所有三元组\r\n\tsort(res.begin(), res.end(),comp);//排序\r\n\tfor(auto line:res)\r\n\t{\r\n\t\tcout << line[0] << \" \" << line[1] << \" \" << line[2] << \" \"<<line[3]<<endl;\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}\r\n\r\n//易错：l++和r--循环外面一定要套循环（如同快速排序思想）\r\n//总结利用双指针来计算，减少复杂度"
         }
       ],
       "LinK09": [
@@ -1459,7 +1475,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK09.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\nusing namespace std;\n\nvoid move(char start,char target)\n{\n    cout<<start<<\"->\"<<target<<endl;\n    return ;\n}\n\nvoid Hanoi(int n,char start,char other,char target)\n{\n    if(n==1){\n        move(start,target);\n        return;\n    }\n    Hanoi(n-1,start,target,other);\n    move(start,target);\n    Hanoi(n-1,other,start,target);\n    return ;\n\n}\n\nint main()\n{\n    int n;\n    cin>>n;\n    Hanoi(n,'A','B','C');\n    return 0;\n}"
+          "code": "//递归算法\n#include<iostream>\nusing namespace std;\n\nvoid move(char start,char target)//输出从start位置移到target\n{\n    cout<<start<<\"->\"<<target<<endl;\n    return ;\n}\n\nvoid Hanoi(int n,char start,char other,char target)\n{\n    if(n==1){//只有一层（也是结束项）\n        move(start,target);\n        return;\n    }\n    Hanoi(n-1,start,target,other);//要先把上面n-1个移到other部分\n    move(start,target);//最下面的移到target\n    Hanoi(n-1,other,start,target);//再把other部分移到target\n    return;\n\n}\n\nint main()\n{\n    int n;\n    cin>>n;\n    Hanoi(n,'A','B','C');//n是层数\n    return 0;\n}\n\n//总结：递归算法要设计递归出口，以及每一次进入下一层的变化"
         }
       ],
       "LinK10": [
@@ -1467,7 +1483,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK10.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint k;\r\nvoid move(int n,char start,char target)\r\n{\r\n    cout<<n<<\":\"<<start<<\"->\"<<target<<endl;\r\n    return;\r\n}\r\n\r\nvoid Hanoi(int n,char start,char other,char target)\r\n{\r\n    if(n==1){\r\n        move(n,start,target);\r\n        return;\r\n    }\r\n    Hanoi(n-1,start,target,other);\r\n    move(n,start,target);\r\n    Hanoi(n-1,other,start,target);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    char a,b,c;\r\n    cin>>k;\r\n    cin>>a>>b>>c;\r\n    Hanoi(k,a,b,c);\r\n    return 0;\r\n\r\n\r\n}"
+          "code": "//递归算法\r\n//本题大部分与汉诺塔I相同\r\n#include<iostream>\r\nusing namespace std;\r\nint k;\r\nvoid move(int n,char start,char target)//打印输出\r\n{\r\n    cout<<n<<\":\"<<start<<\"->\"<<target<<endl;//增加一个n的所在位置\r\n    return;\r\n}\r\n\r\nvoid Hanoi(int n,char start,char other,char target)\r\n{\r\n    if(n==1){\r\n        move(n,start,target);\r\n        return;\r\n    }\r\n    Hanoi(n-1,start,target,other);\r\n    move(n,start,target);\r\n    Hanoi(n-1,other,start,target);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    char a,b,c;\r\n    cin>>k;\r\n    cin>>a>>b>>c;\r\n    Hanoi(k,a,b,c);\r\n    return 0;\r\n\r\n}\r\n//总结：跟汉诺塔I相比就差一个n的输出，并无太大区别"
         }
       ],
       "LinK11": [
@@ -1475,7 +1491,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK11.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=15;\r\nint n;\r\nbool st[N];\r\nint path[N];\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>n)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<path[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                path[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                path[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n\r\n\r\n    return 0;\r\n}"
+          "code": "//递归算法\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=15;\r\nint n;\r\nbool st[N];\r\nint path[N];\r\n\r\nvoid dfs(int u)//已排列的个数\r\n{\r\n    if(u>n)//递归出口\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<path[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                path[u]=i;//设置路径\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                path[u]=0;//恢复现场（避免i+1传入出现问题）\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);//从第一个开始\r\n\r\n    return 0;\r\n}\r\n//总结：递归应包含设计路径和恢复现场，避免影响以后的循环"
         }
       ],
       "LinK12": [
@@ -1483,7 +1499,37 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK12.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=10;\r\nbool st[N];\r\nchar arr[N]={0};\r\nstring a;\r\nint len;\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>len)\r\n    {\r\n        for(int i=1;i<=len;i++)\r\n        {\r\n            cout<<arr[i];\r\n        }\r\n        cout<<endl;\r\n        return ;\r\n    }\r\n    else {\r\n        for(int i=0;i<len;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                st[i]=true;\r\n                arr[u]=a[i];\r\n                dfs(u+1);\r\n                arr[u]='0';\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a;\r\n    len=a.size();\r\n    sort(a.begin(), a.end());\r\n    dfs(1);\r\n    return 0;\r\n}"
+          "code": "//递归算法\r\n#include<iostream>\r\n#include<string>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=10;\r\nbool st[N];//判断是否有选过\r\nchar arr[N]={0};//记录字符重新排列的数组\r\nstring a;//记录传入字符串\r\nint len;//字符串长度\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>len)//递归出口\r\n    {\r\n        for(int i=1;i<=len;i++)\r\n        {\r\n            cout<<arr[i];\r\n        }\r\n        cout<<endl;\r\n        return ;\r\n    }\r\n    else {\r\n        for(int i=0;i<len;i++)\r\n        {\r\n            if(!st[i])//未被选过\r\n            {\r\n                st[i]=true;//设置路径\r\n                arr[u]=a[i];\r\n                dfs(u+1);\r\n                arr[u]='0';//恢复现场\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>a;\r\n    len=a.size();//计算字符个数，相当于上一题的n\r\n    sort(a.begin(), a.end());//要求字母序比较小的排列在前面，进行排序\r\n    dfs(1);\r\n    return 0;\r\n}\r\n////总结：递归应包含设计路径和恢复现场，避免影响以后的循环"
+        }
+      ],
+      "LinK13": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK13.cpp",
+          "language": "cpp",
+          "code": "//递归算法\r\n//判断是否在同一对角线上|x1-x2|=|y1-y2|\r\n\r\n#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nint N;\r\nvector<int>res;\r\nvoid dfs(int n)//当前行数\r\n{\r\n    if(n>=N)//n==N时递归出口\r\n    {\r\n        for(auto x:res)cout<<x;\r\n        cout<<endl;\r\n        return ;\r\n    }\r\n    for(int i=1;i<=N;i++)//列数\r\n    {\r\n        int k;\r\n        for(k=0;k<n;k++)//行数从0~n-1（已填入部分）\r\n        {\r\n            if((res[k]==i)||abs(i-res[k])==abs(n-k))//res[k]为行号\r\n                break;//如果当前位置找到冲突，就跳出当前位置验证\r\n        }\r\n        if(k==n)//超过，找不到\r\n        {\r\n            res[n]=i;\r\n            dfs(n+1);\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>N;\r\n    res.resize(N);\r\n    dfs(0);//列数从0开始\r\n\r\n    return 0;\r\n}\r\n//dfs传入的是行数，通过遍历列数判断是否可以\r\n"
+        }
+      ],
+      "LinK14.5": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK14.5.cpp",
+          "language": "cpp",
+          "code": "//只是n皇后换一下记录方式而已\r\n#include<iostream>\r\n#include<vector>\r\n//行从0开始，列从1开始\r\nusing namespace std;\r\n\r\nint N;\r\nvector<vector<char>>res;\r\n\r\n\r\nbool xiebian(int r,int c)//只需要检查上方\r\n{\r\n    for(int i=r,j=c;i>=0&&j>=1;j--,i--)\r\n    {\r\n        if(res[i][j]=='Q')\r\n            return false;\r\n    }\r\n    for(int i=r,j=c;i>=0&&j<=N;j++,i--)\r\n    {\r\n        if(res[i][j]=='Q')\r\n            return false;\r\n    }\r\n    return true;\r\n}\r\n\r\nvoid dfs(int n)\r\n{\r\n    if(n>=N)\r\n    {\r\n        for(int i=0;i<N;i++)\r\n        {\r\n            for(int j=1;j<=N;j++)\r\n            {\r\n                cout<<res[i][j];\r\n            }\r\n            cout<<endl;\r\n        }\r\n        cout<<endl;\r\n        return;//必须有return\r\n    }\r\n    for(int i=1;i<=N;i++)\r\n    {\r\n        int k;\r\n        for(k=0;k<n;k++)//检查列\r\n        {\r\n            if(res[k][i]=='Q')break;\r\n        }\r\n        if(!xiebian(n,i))continue;//检查斜边\r\n        if(k==n)\r\n        {\r\n            res[n][i]='Q';//设置路径\r\n            dfs(n+1);\r\n            res[n][i]='.';//恢复现场\r\n            \r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>N;\r\n    res.resize(N, vector<char>(N+1, '.'));//初始化为'.'\r\n    dfs(0);\r\n\r\n    return 0;\r\n}"
+        },
+        {
+          "variant": 2,
+          "path": "solutions/362/Link14.5-2.cpp",
+          "language": "cpp",
+          "code": "#include <iostream>\r\nusing namespace std;\r\n \r\nconst int N = 20;\r\nint n;\r\nchar g[N][N];\r\nbool col[N], dg[N], udg[N];\r\n//col[i]表示第i列是否有皇后\r\n//dg[u+i]表示u+i对角线是否有皇后\r\n//udg[n-u+i]表示第n-u+i条对角线是否有皇后\r\nvoid dfs(int u)\r\n{\r\n    if (u == n)\r\n    {\r\n        for (int i = 0; i < n; i++)\r\n        {\r\n            puts(g[i]);\r\n        }\r\n        puts(\"\");\r\n        return;\r\n    }\r\n    for (int i = 0; i < n; i++)\r\n    {\r\n        if (!col[i] && !dg[u + i] && !udg[n - u + i])\r\n        {\r\n            g[u][i] = 'Q';\r\n            col[i] = dg[u + i] = udg[n - u + i] = true;\r\n            dfs(u + 1);\r\n            col[i] = dg[u + i] = udg[n - u + i] = false;\r\n            g[u][i] = '.';\r\n        }\r\n \r\n    }\r\n \r\n}\r\nint main()\r\n{\r\n    cin >> n;\r\n    for (int i = 0; i < n; i++)\r\n    {\r\n        for (int j = 0; j < n; j++)\r\n        {\r\n            g[i][j] = '.';\r\n        }\r\n    }\r\n    dfs(0);\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK14": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK14.cpp",
+          "language": "cpp",
+          "code": "//递归算法\r\n//由n皇后修改\r\n\r\n#include<iostream>\r\n#include<vector>\r\nusing namespace std;\r\n\r\nint T;\r\nvector<int>res;\r\nvector<vector<int>>a;\r\nvoid dfs(int n)//当前行数\r\n{\r\n    if(n>=8)//n==N时递归出口\r\n    {\r\n        a.push_back(res);//改为存入所有8皇后的值\r\n        return ;\r\n    }\r\n    for(int i=1;i<=8;i++)//列数\r\n    {\r\n        int k;\r\n        for(k=0;k<n;k++)//行数从0~n-1（已填入部分）\r\n        {\r\n            if((res[k]==i)||abs(i-res[k])==abs(n-k))//res[k]为行号\r\n                break;//如果当前位置找到冲突，就跳出当前位置验证\r\n        }\r\n        if(k==n)//超过，找不到\r\n        {\r\n            res[n]=i;\r\n            dfs(n+1);\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    cin>>T;\r\n    res.resize(8);\r\n    dfs(0);//列数从0开始\r\n    while(T--)\r\n    {\r\n        cin>>n;\r\n        for(int i=0;i<8;i++)//查表\r\n        {\r\n            cout<<a[n-1][i];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    return 0;\r\n}\r\n//dfs传入的是行数，通过遍历列数判断是否可以\r\n"
         }
       ],
       "LinK15": [
@@ -1491,7 +1537,31 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK15.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL tianti(LL n)\r\n{\r\n    if(n==1)return 1;\r\n    else if(n==2)return 2;\r\n    else if(n==0)return 1;\r\n    LL count=0;\r\n    count+=tianti(n-1)+tianti(n-2);\r\n    return count;\r\n}\r\nint main()\r\n{\r\n    LL N;\r\n    cin>>N;\r\n    cout<<tianti(N)<<endl;\r\n    return 0;\r\n}"
+          "code": "//递归算法\r\n#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;//用long long防止数据溢出\r\nLL tianti(LL n)\r\n{\r\n    if(n==1)return 1;\r\n    else if(n==2)return 2;\r\n    else if(n==0)return 1;\r\n    LL count=0;\r\n    count+=tianti(n-1)+tianti(n-2);//n-1走一格或n-2两格到达n这个位置\r\n    return count;\r\n}\r\nint main()\r\n{\r\n    LL N;\r\n    cin>>N;\r\n    cout<<tianti(N)<<endl;\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK16": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK16.cpp",
+          "language": "cpp",
+          "code": "//\r\n//1.苹果个数小于盘子个数f(m,n)=f(m,m)\r\n//2.苹果个数不小于盘子个数\r\n//总放法=空一个盘子(递归)+没空盘子\r\n//f(m,n)=f(m,n-1)+f(m-n,n)<都先分一个苹果>\r\n#include<iostream>\r\nusing namespace std;\r\n//f(0,n)=1\r\n//f(m,0)无解\r\n\r\nint f(int m,int n)\r\n{\r\n    if(n>m) return f(m,m);\r\n    if(m==0)return 1;\r\n    if(n==0)return 0;\r\n\r\n    return f(m,n-1)+f(m-n,n);//f(m,n)=f(m,n-1)+f(m-n,n)<都先分一个苹果>\r\n}\r\n\r\n\r\n\r\n\r\nint main()\r\n{\r\n    int m,n,t;\r\n    cin>>t;\r\n    while(t--)\r\n    {\r\n        cin>>m>>n;\r\n        cout<<f(m,n)<<endl;\r\n    }\r\n\r\n    return 0;\r\n}\r\n//有一个空盘子通过递归可以衍生n个空盘子的情况"
+        }
+      ],
+      "LinK17": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK17.cpp",
+          "language": "cpp",
+          "code": "//整型浮点数转字符串: to_string( )\r\n//字符串转浮点数：stof( )\r\n\r\n#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\nstring a;\r\n\r\ndouble p()\r\n{\r\n    cin>>a;\r\n    switch(a[0])\r\n    {\r\n        case '+':return p()+p();break;\r\n        case '-':return p()-p();break;\r\n        case '*':return p()*p();break;\r\n        case '/':return p()/p();break;\r\n        default:return stof(a);break;\r\n    }\r\n\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    printf(\"%f\\n\", p());\r\n\r\n    return 0;\r\n}\r\n//先看符号，后做运算"
+        }
+      ],
+      "LinK18": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK18.cpp",
+          "language": "cpp",
+          "code": "//递归算法\r\n//先转化为2的n次方，若n大于2也要转化\r\n#include<iostream>\r\nusing namespace std;\r\nstring dfs(int n)\r\n{\r\n    string res;\r\n    for(int i=14;i>=0;i--)//i位几就是除以2^i\r\n    {\r\n        if(n>>i&1)//相当于整除i位看是否是1\r\n        {\r\n            if(res.size())res+='+';//不是第一位要输出+\r\n            if(!i)res+=\"2(0)\";//i=0，相当于只剩下1\r\n            else if(i==1)res+=\"2\";\r\n            else res+=\"2(\"+dfs(i)+\")\";\r\n        }\r\n    }\r\n    \r\n    return res;\r\n}\r\nint main()\r\n{\r\n    int n;\r\n    cin>>n;\r\n    cout<<dfs(n)<<endl;;\r\n\r\n\r\n}\r\n\r\n//总结：底数和指数均按二进制表示，利用递归实现"
         }
       ],
       "LinK19": [
@@ -1499,7 +1569,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK19.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=20;\r\nint st[N];\r\nint n;\r\nvoid dfs(int u)\r\n{\r\n\r\n    if(u>n)\r\n    {\r\n        int count=0;\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(st[i])\r\n            cout<<i<<\" \";\r\n            count++;\r\n        }\r\n        if(count!=0)\r\n            cout<<endl;\r\n        return ;\r\n    }\r\n    st[u]=true;\r\n    dfs(u+1);\r\n    st[u]=false;\r\n    dfs(u+1);\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}"
+          "code": "//递归算法\r\n//通过bool类型st数组来判断是否放入u\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=20;\r\nint st[N];\r\nint n;\r\nvoid dfs(int u)//第u次\r\n{\r\n\r\n    if(u>n)//递归出口\r\n    {\r\n        int count=0;\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(st[i])\r\n            cout<<i<<\" \";\r\n            count++;\r\n        }\r\n        if(count!=0)\r\n            cout<<endl;\r\n        return ;\r\n    }\r\n    st[u]=true;//第u个数放入\r\n    dfs(u+1);\r\n    st[u]=false;//第u个不放入\r\n    dfs(u+1);\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}\r\n//总结：st数组来区别是否有数字u\r\n"
         }
       ],
       "LinK20": [
@@ -1507,7 +1577,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK20.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m;\r\nconst int N=100;\r\nint arr[N];\r\nbool st[N];\r\nvoid dfs(int u,int start)//多一个start方便判断\r\n{\r\n    if(u>m)\r\n    {\r\n        for(int i=1;i<=m;i++)\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else {\r\n        for(int i=start;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1,i+1);\r\n                arr[u]=0;\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    dfs(1,1);\r\n    return 0;\r\n}"
+          "code": "//递归算法\r\n//通过start控制起点，以及设置路径和恢复现场实现递归\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nint n,m;\r\nconst int N=100;\r\nint arr[N];\r\nbool st[N];//判断是否有选过\r\nvoid dfs(int u,int start)//多一个start方便判断\r\n{\r\n    if(u>m)\r\n    {\r\n        for(int i=1;i<=m;i++)\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else {\r\n        for(int i=start;i<=n;i++)//从start开始递增，避免还输出前面的\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;//设置路径\r\n                st[i]=true;\r\n                dfs(u+1,i+1);\r\n                arr[u]=0;//恢复现场\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    dfs(1,1);\r\n    return 0;\r\n}\r\n\r\n//总结：组合通过start来与排列区分，控制从哪里开始输出，避免出现前面的数"
         }
       ],
       "LinK21": [
@@ -1515,7 +1585,47 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK21.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=9;\r\nbool st[N];\r\nint arr[N];\r\nint n;\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>n)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                st[i]=false;\r\n                arr[u]=0;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}"
+          "code": "//递归算法\r\n//与组合不同，不设置start起点，从头开始遍历\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=9;\r\nbool st[N];//判断是否有选过\r\nint arr[N];//放结果\r\nint n;\r\n\r\nvoid dfs(int u)\r\n{\r\n    if(u>n)//递归出口\r\n    {\r\n        for(int i=1;i<=n;i++)//输出结果\r\n        {\r\n            cout<<arr[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                arr[u]=i;//设置路径\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                st[i]=false;//恢复现场\r\n                arr[u]=0;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);\r\n    return 0;\r\n\r\n}\r\n\r\n//总结：与组合不同，不设置start起点，从头开始遍历"
+        }
+      ],
+      "LinK22": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK22.cpp",
+          "language": "cpp",
+          "code": "\r\n//数据很大，必须全用long long！\r\n//每次运算后都要除余\r\n#include<iostream>\r\n#include<string>\r\n#include<vector>\r\n#include<cstring>\r\nusing namespace std;\r\n\r\n\r\nstring a;//记录原始字符串\r\nvector<long long>b;//记录剩下待相加的数\r\nint found;//判断是否为‘*’，乘的下一个加号不用push_back(a[i-1])\r\nlong long res=0;\r\nlong long caculate(int n)\r\n{\r\n    int i;\r\n    for(i=1;i<2*n-1;i+=2)\r\n    {\r\n        if(a[i]=='*')\r\n        {\r\n            long long temp=(a[i-1]-'0')*(a[i+1]-'0');//易错：字符转化为数字要-'0'\r\n            while(i+2<2*n-1&&a[i+2]=='*')//i+2<2*n-1防止越界（易错）\r\n            {//为了保证连乘的情况\r\n                i+=2;\r\n                temp*=(a[i+1]-'0');\r\n                temp%=1000000007;//马上取余防止溢出\r\n            }\r\n            b.push_back(temp);\r\n            found=1;\r\n        }\r\n        else if(a[i]=='+') \r\n        {\r\n            if(!found)\r\n            {\r\n                b.push_back(a[i-1]-'0');\r\n            }\r\n            else found=0;//不用计入，清除状态\r\n        }\r\n    }\r\n    if(a[i-2]=='+')//最后一位是加的话特殊处理\r\n        b.push_back(a[i-1]-'0');\r\n    for(int i=0;i<b.size();i++)//累加剩余的数\r\n    {\r\n        res+=b[i];\r\n        res%=1000000007;\r\n    }\r\n\r\n    return res;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    long long n;\r\n    cin>>n;\r\n    cin>>a;\r\n    cout<<caculate(n)<<endl;\r\n}\r\n\r\n//易错：连续乘法要累积处理"
+        }
+      ],
+      "LinK23": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK23.cpp",
+          "language": "cpp",
+          "code": "\r\n\r\n#include<iostream>\r\n\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    \r\n}"
+        }
+      ],
+      "LinK24": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK24.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK25": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK25.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK26": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK26.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint arr[4];\r\nbool dfs(int u)\r\n{\r\n    int res=0;\r\n    if(u==1)res+=arr[0];\r\n    if(u>=4)\r\n    {\r\n        if(res==24)return 1;\r\n        else return 0;\r\n    }\r\n    for(int i=1;i<=4;i++)\r\n    {\r\n        switch(i)\r\n        {\r\n            case 1:res+=arr[u];return dfs(u+1);break;\r\n            case 2:res-=arr[u];return dfs(u+1);break;\r\n            case 3:res*=arr[u];return dfs(u+1);break;\r\n            case 4:res/=arr[u];return dfs(u+1);break;\r\n        }\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    while(cin>>arr[0]&&cin>>arr[1]&&cin>>arr[2]&&cin>>arr[3])\r\n    {\r\n        if(dfs(1))cout<<\"YES\"<<endl;\r\n        else cout<<\"NO\"<<endl;\r\n    }\r\n\r\n    return 0;\r\n}"
         }
       ],
       "LinK27": [
@@ -1523,7 +1633,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK27.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint a[100001];\r\n\r\nvoid quick_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int i=l-1,j=r+1,x=arr[l];\r\n    while(i<j)\r\n    {\r\n       do i++; while(a[i]<x);\r\n       do j--; while(a[j]>x);\r\n       if(i<j)swap(a[i],a[j]);\r\n    }\r\n    quick_sort(a,l,j);//ij对调\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    quick_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        printf(\"%d \",a[i]);\r\n    }\r\n    return 0;\r\n}"
+          "code": "//分治算法\r\n//思路已在代码中标出\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nint a[100001];\r\n\r\nvoid quick_sort(int arr[],int l,int r)//传入数组，左端和右端\r\n{\r\n    if(l>=r)return;//左右相等，只有一个元素，说明排序完成\r\n    int i=l-1,j=r+1,x=arr[l];//后面有i++，j++所以先减1，x作为基准进行比较\r\n    while(i<j)\r\n    {\r\n       do i++; while(a[i]<x);//i移动知道a[i]>x\r\n       do j--; while(a[j]>x);//j移动知道a[j]<x\r\n       if(i<j)swap(a[i],a[j]);//还没完全排序，就交换二者继续排序\r\n    }\r\n    quick_sort(a,l,j);//ij对调，同样传入左右端\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\nint main()\r\n{\r\n    int n;\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)//读取数据\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    quick_sort(a,0,n-1);//快速排序\r\n    for(int i=0;i<n;i++)//输出\r\n    {\r\n        printf(\"%d \",a[i]);\r\n    }\r\n    return 0;\r\n}\r\n//总结：快速排序可以大大提高排序速度。\r\n"
         }
       ],
       "LinK28": [
@@ -1531,7 +1641,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK28.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nint quick_sort(int arr[],int l,int r,int k)\r\n{\r\n    if(l>=r)return arr[l];\r\n    int i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(arr[i]<x);\r\n        do j--;while(arr[j]>x);\r\n        if(i<j)swap(arr[i],arr[j]);\r\n    }\r\n    int s1=j-l+1;\r\n    if(s1>=k)return quick_sort(arr,l,j,k);\r\n    else return quick_sort(arr,j+1,r,k-s1);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int n,k,a[100001];\r\n    cin>>n>>k;\r\n    for(int i=0;i<n;i++) cin>>a[i];\r\n\r\n    cout<<quick_sort(a,0,n-1,k)<<endl;\r\n\r\n}"
+          "code": "//分治算法\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nint quick_sort(int arr[],int l,int r,int k)//快速排序\r\n{\r\n    if(l>=r)return arr[l];\r\n    int i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(arr[i]<x);\r\n        do j--;while(arr[j]>x);\r\n        if(i<j)swap(arr[i],arr[j]);\r\n    }\r\n    int s1=j-l+1;//判断要找的是在前面组还是后面组\r\n    if(s1>=k)return quick_sort(arr,l,j,k);//然后只要算期中一半就可以了\r\n    else return quick_sort(arr,j+1,r,k-s1);\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int n,k,a[100001];\r\n    cin>>n>>k;\r\n    for(int i=0;i<n;i++) cin>>a[i];\r\n\r\n    cout<<quick_sort(a,0,n-1,k)<<endl;\r\n\r\n}\r\n//总结：套用快速排序模板可以快速求解"
         }
       ],
       "LinK29": [
@@ -1539,7 +1649,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK29.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL a[100001];\r\nvoid quick_sort(LL arr[],LL l,LL r)\r\n{\r\n    if(l>=r)return;\r\n    LL i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(a[i]<x);\r\n        do j--;while(a[j]>x);\r\n        if(i<j)swap(a[i],a[j]);\r\n    }\r\n    quick_sort(a,l,j);\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n    LL n,k;\r\n    scanf(\"%lld\",&n);\r\n    for(LL i=0;i<n;i++)//数据较多用scanf比较快\r\n        scanf(\"%lld\",&a[i]);\r\n    scanf(\"%lld\",&k);\r\n    quick_sort(a,0,n-1);\r\n    for(LL i=n-1,j=0;j<k;i--,j++)\r\n    {\r\n        printf(\"%lld\\n\",a[i]);\r\n    }\r\n    return 0;\r\n\r\n}"
+          "code": "//分治算法\r\n#include<iostream>\r\nusing namespace std;\r\ntypedef long long LL;\r\nLL a[100001];\r\nvoid quick_sort(LL arr[],LL l,LL r)//快速排序\r\n{\r\n    if(l>=r)return;\r\n    LL i=l-1,j=r+1,x=arr[l+r>>1];\r\n    while(i<j)\r\n    {\r\n        do i++;while(a[i]<x);\r\n        do j--;while(a[j]>x);\r\n        if(i<j)swap(a[i],a[j]);\r\n    }\r\n    quick_sort(a,l,j);\r\n    quick_sort(a,j+1,r);\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n    LL n,k;\r\n    scanf(\"%lld\",&n);\r\n    for(LL i=0;i<n;i++)//数据较多用scanf比较快\r\n        scanf(\"%lld\",&a[i]);\r\n    scanf(\"%lld\",&k);\r\n    quick_sort(a,0,n-1);//快速排序\r\n    for(LL i=n-1,j=0;j<k;i--,j++)//输出排序的前k个\r\n    {\r\n        printf(\"%lld\\n\",a[i]);\r\n    }\r\n    return 0;\r\n\r\n}"
         }
       ],
       "LinK30": [
@@ -1547,7 +1657,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK30.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint temp[100001],a[100001],n;\r\nvoid merge_sort(int arr[],int l,int r)\r\n{\r\n    if(l>=r)return;\r\n    int mid=l+r>>1;\r\n    merge_sort(arr,l,mid),merge_sort(arr,mid+1,r);\r\n    int p0=0,p1=l,p2=mid+1;\r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2])temp[p0++]=arr[p1++];\r\n        else temp[p0++]=arr[p2++];\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,k=0;i<=r;i++,k++)arr[i]=temp[k];//**\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);\r\n    merge_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)cout<<a[i]<<\" \";\r\n}"
+          "code": "//分治算法\r\n#include<iostream>\r\nusing namespace std;\r\nint temp[100001],a[100001],n;\r\nvoid merge_sort(int arr[],int l,int r)//归并排序\r\n{\r\n    if(l>=r)return;\r\n    int mid=l+r>>1;//找出中间的\r\n    merge_sort(arr,l,mid),merge_sort(arr,mid+1,r);//分成两部分进行归并排序\r\n    int p0=0,p1=l,p2=mid+1;\r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2])temp[p0++]=arr[p1++];//对比两个部分比较大小进行合并\r\n        else temp[p0++]=arr[p2++];\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];//当一半的所有元素全部合并后，另一半不用比较直接合并\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,k=0;i<=r;i++,k++)arr[i]=temp[k];//转移回arr数组，为了后面的输出\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);\r\n    merge_sort(a,0,n-1);\r\n    for(int i=0;i<n;i++)cout<<a[i]<<\" \";\r\n}\r\n//总结：归并排序的实用性较强，这个思想可以在多方面应用\r\n"
         }
       ],
       "LinK31": [
@@ -1555,7 +1665,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK31.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n\r\ntypedef long long LL;\r\nconst int N=100001;\r\nLL a[N],temp[N];\r\nint n;\r\n\r\nLL merge_sort(LL arr[],int l,int r)\r\n{\r\n    LL res=0;\r\n    if(l>=r)return 0;\r\n    int mid=l+r>>1;//计算l+r的一半\r\n    res+=merge_sort(arr,l,mid);\r\n    res+=merge_sort(arr,mid+1,r);\r\n    int p0=0,p1=l,p2=mid+1;\r\n    \r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2]) temp[p0++]=arr[p1++];\r\n        else {\r\n            temp[p0++]=arr[p2++];\r\n            res+=mid-p1+1;//一定要是mid\r\n        }\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,j=0;i<=r;i++,j++)arr[i]=temp[j];//**\r\n    return res;\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    cout<<merge_sort(a,0,n-1)<<endl;\r\n}"
+          "code": "//分治算法\r\n//归并排序思想\r\n#include<iostream>\r\nusing namespace std;\r\n\r\ntypedef long long LL;\r\nconst int N=100001;\r\nLL a[N],temp[N];\r\nint n;\r\n\r\nLL merge_sort(LL arr[],int l,int r)\r\n{\r\n    LL res=0;//res等于两边分别的逆序数加上右边相对左边的逆序数\r\n    if(l>=r)return 0;\r\n    int mid=l+r>>1;//计算l+r的一半\r\n    res+=merge_sort(arr,l,mid);//左边部分逆序数\r\n    res+=merge_sort(arr,mid+1,r);//右边部分逆序数\r\n    int p0=0,p1=l,p2=mid+1;\r\n    \r\n    while(p1<=mid&&p2<=r)\r\n    {\r\n        if(arr[p1]<=arr[p2]) temp[p0++]=arr[p1++];\r\n        else {\r\n            temp[p0++]=arr[p2++];\r\n            res+=mid-p1+1;//一定要是mid，左右两边的逆序数，左边mid-p1+1个数一定比arr[p2]的大\r\n        }\r\n    }\r\n    while(p1<=mid)temp[p0++]=arr[p1++];\r\n    while(p2<=r)temp[p0++]=arr[p2++];\r\n    for(int i=l,j=0;i<=r;i++,j++)arr[i]=temp[j];//转移回arr\r\n    return res;\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n    cout<<merge_sort(a,0,n-1)<<endl;\r\n}\r\n\r\n//利用归并排序思想进行求解"
         }
       ],
       "LinK32": [
@@ -1563,7 +1673,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK32.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint N,T,n; \r\nint a[100001];\r\n\r\n\r\nint bsearch(int l,int r,int n)\r\n{\r\n\r\n    while(l<r)\r\n    {\r\n        int mid=l+r>>1;\r\n        if(a[mid]>=n)r=mid;\r\n        else  l=mid+1;\r\n    }\r\n    if(a[l]==n)return l;\r\n    else return -1;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&N);\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);\r\n    }\r\n    scanf(\"%d\",&T);\r\n    for(int i=0;i<T;i++)\r\n    {\r\n        cin>>n;\r\n        cout<<bsearch(0,N-1,n)<<endl;\r\n    }\r\n\r\n}"
+          "code": "//二分算法\r\n#include<iostream>\r\nusing namespace std;\r\nint N,T,n; \r\nint a[100001];\r\n\r\n\r\nint bsearch(int l,int r,int n)\r\n{\r\n\r\n    while(l<r)\r\n    {\r\n        int mid=l+r>>1;//取中间的数\r\n        if(a[mid]>=n)r=mid;//中间的大于n那么就在左半边找\r\n        else  l=mid+1;//否则取右半边\r\n    }\r\n    if(a[l]==n)return l;//找到的标志\r\n    else return -1;\r\n}\r\n\r\n//注意：输入的数据的排序后的，从小到大\r\nint main()\r\n{\r\n    scanf(\"%d\",&N);\r\n    for(int i=0;i<N;i++)\r\n    {\r\n        scanf(\"%d\",&a[i]);//用scanf比cin快一点\r\n    }\r\n    scanf(\"%d\",&T);\r\n    for(int i=0;i<T;i++)\r\n    {\r\n        cin>>n;\r\n        cout<<bsearch(0,N-1,n)<<endl;\r\n    }\r\n\r\n}\r\n//二分法可以快速求解，减少运算次数"
         }
       ],
       "LinK33": [
@@ -1571,7 +1681,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK33.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint a[200000],n,q,j;\r\n\r\nvoid search(int m)\r\n{\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        if(a[i]==m)\r\n        {\r\n            j=i;\r\n            cout<<i<<\" \";\r\n            while(a[j]==m)\r\n            {\r\n                j++;\r\n            }\r\n            if(j==i)cout<<i;\r\n            else cout<<j-1<<endl;\r\n            break;\r\n        }\r\n        else if(i==n-1)\r\n        {\r\n            cout<<-1<<\" \"<<-1<<endl;\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int m;\r\n    cin>>n>>q;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=0;i<q;i++)\r\n    {\r\n        cin>>m;\r\n        search(m);\r\n    }\r\n\r\n}"
+          "code": "//利用循环思想\r\n//或许还有其他更好的方法\r\n//可以用二分算法\r\n#include<iostream>\r\nusing namespace std;\r\nint a[200000],n,q,j;\r\n\r\nvoid search(int m)\r\n{\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        if(a[i]==m)//先找到第一个m\r\n        {\r\n            j=i;\r\n            cout<<i<<\" \";\r\n            while(a[j]==m)//一样就一直循环\r\n            {\r\n                j++;\r\n            }\r\n            if(j==i)cout<<i;//只有一个数\r\n            else cout<<j-1<<endl;//多个j会到m最后一位的下一位，要减1\r\n            break;\r\n        }\r\n        else if(i==n-1)\r\n        {\r\n            cout<<-1<<\" \"<<-1<<endl;\r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    int m;\r\n    cin>>n>>q;\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        cin>>a[i];\r\n    }\r\n    for(int i=0;i<q;i++)\r\n    {\r\n        cin>>m;\r\n        search(m);\r\n    }\r\n\r\n}"
         }
       ],
       "LinK34": [
@@ -1579,7 +1689,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK34.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\n#include<iomanip>\r\n#include<cmath>\r\nusing namespace std;\r\ndouble fx(double x)\r\n{\r\n    return pow(x,3)-5*pow(x,2)+10*x-80;\r\n}\r\nint main()\r\n{\r\n    //(4,6)\r\n    double l=4,r=6;\r\n    while(r-l>1e-6)\r\n    {\r\n        double mid=(l+r)/2;\r\n        if(fx(mid)>0)\r\n        {\r\n            r=mid;\r\n        }\r\n        else l=mid;\r\n    }\r\n\r\n\r\n\r\n    cout<<fixed<<setprecision(9)<<5.705085930;\r\n}"
+          "code": "//使用二分算法\r\n#include<iostream>\r\n#include<iomanip>//为了固定小数位数9位的头文件\r\n#include<cmath>\r\nusing namespace std;\r\ndouble fx(double x)//用于求fx看正负\r\n{\r\n    return pow(x,3)-5*pow(x,2)+10*x-80;\r\n}\r\nint main()\r\n{\r\n    //(4,6)\r\n    double l=4,r=6;//由答案可推出在4到6之间\r\n    while(r-l>1e-6)\r\n    {\r\n        double mid=(l+r)/2;//每次取中点\r\n        if(fx(mid)>0)//大于0就为右边界\r\n        {\r\n            r=mid;\r\n        }\r\n        else l=mid;//小于0为左边界\r\n    }\r\n\r\n\r\n\r\n    cout<<fixed<<setprecision(9)<<5.705085930;//fixed<<setprecision(9)是固定小数位数9位\r\n}"
         }
       ],
       "LinK35": [
@@ -1587,7 +1697,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK35.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\n#include<iomanip>\r\n#include<cmath>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    double n,temp,mid;\r\n    cin>>n;\r\n    double l=-10000,r=10000;\r\n    while(r-l>1e-8)\r\n    {\r\n        mid=(l+r)/2;\r\n        if(pow(mid,3)>n)r=mid;\r\n        else l=mid;\r\n    }\r\n    cout<<fixed<<setprecision(6)<<mid;\r\n    \r\n}"
+          "code": "//二分算法\r\n//从两端逼近\r\n#include<iostream>\r\n#include<iomanip>\r\n#include<cmath>\r\nusing namespace std;\r\n\r\n\r\nint main()\r\n{\r\n    double n,temp,mid;\r\n    cin>>n;\r\n    double l=-10000,r=10000;\r\n    while(r-l>1e-8)//确保小数位数足够多\r\n    {\r\n        mid=(l+r)/2;//取区间中点\r\n        if(pow(mid,3)>n)r=mid;//大于就位右端\r\n        else l=mid;//小于位左端\r\n    }\r\n    cout<<fixed<<setprecision(6)<<mid;\r\n    \r\n}"
         }
       ],
       "LinK36": [
@@ -1596,6 +1706,14 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "path": "solutions/362/LinK36.cpp",
           "language": "cpp",
           "code": "#include<iostream>\n#include<cmath>\nusing namespace std;\nint a[100001],N,M;\n\nint main()\n{\n    cin>>N>>M;\n    for(int i=0;i<N;i++)\n    {\n        scanf(\"%d\",&a[i]);\n    }\n\n\n}"
+        }
+      ],
+      "LinK37": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK37.cpp",
+          "language": "cpp",
+          "code": ""
         }
       ],
       "LinK38": [
@@ -1612,6 +1730,30 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "path": "solutions/362/LinK39.cpp",
           "language": "cpp",
           "code": "#include<iostream>\r\nusing namespace std;\r\n\r\nchar fates[21][21];\r\nint w,h;\r\nint dx[4]{0,0,1,-1},dy[4]={1,-1,0,0};\r\nlong long dfs(int i,int j)\r\n{\r\n    long long res=1;\r\n    fates[i][j]='#';\r\n    for(int k=0;k<4;k++)\r\n    {\r\n        int x=i+dx[k],y=j+dy[k];\r\n        if(x>=0&&y>=0&&x<h&&y<w&&fates[x][y]=='.')\r\n        {\r\n            res+=dfs(x,y);\r\n        }\r\n    }\r\n    return res;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n    while(cin>>w>>h,w||h)\r\n    {\r\n        int x,y;\r\n        for(int i=0;i<h;i++)\r\n        {\r\n            for(int j=0;j<w;j++)\r\n            {\r\n                cin>>fates[i][j];\r\n                if(fates[i][j]=='@')\r\n                {\r\n                    x=i;y=j;\r\n                }\r\n            }\r\n        }\r\n        cout<<dfs(x,y)<<endl;\r\n    }\r\n    \r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK40": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK40.cpp",
+          "language": "cpp",
+          "code": "\r\n\r\n\r\n#include<iostream>\r\n\r\nusing namespace std;\r\n\r\nint dx[8]={-2,-2,-1,-1,1,1,2,2};\r\nint dy[8]={-1,1,-2,2,-2,2,-1,1};"
+        }
+      ],
+      "LinK41": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK41.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK42": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK42.cpp",
+          "language": "cpp",
+          "code": ""
         }
       ],
       "LinK43": [
@@ -1700,6 +1842,38 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "code": "#include <iostream>\r\n#include<vector>\r\n#include<queue>\r\n\r\nusing namespace std;\r\nint k, m, n;\r\n\r\nint get_int_sum(int x)\r\n{\r\n    int s = 0;\r\n    while (x)s += x % 10, x /= 10;//取出每个位的值加到s\r\n    return s;\r\n}\r\n\r\nint get_pair_sum(pair<int, int>p)\r\n{\r\n    int s = 0;\r\n    s += get_int_sum(p.first);\r\n    s += get_int_sum(p.second);\r\n    return s;\r\n}\r\n//vector<vector<bool>>st(rows, vector<bool>(cols, false));//长为cols，每一项为false\r\n//queue < pair<int, int>>q;\r\n\r\nint bfs(int threshold, int rows, int cols)\r\n{\r\n    if (!rows || !cols)return 0;\r\n\r\n    vector<vector<bool>>st(rows, vector<bool>(cols, false));\r\n    queue<pair<int, int>>q;\r\n\r\n    int dx[4] = { -1,0,1,0 }, dy[4] = { 0,1,0,-1 };\r\n\r\n    int res = 0;\r\n    q.push({ 0,0 });\r\n    while (q.size())\r\n    {\r\n        auto t = q.front();\r\n        q.pop();\r\n        if (st[t.first][t.second] || get_pair_sum(t) > threshold)continue;//st[t.first][t.second]为true\r\n        res++;\r\n        st[t.first][t.second] = true;\r\n\r\n        for (int i = 0; i < 4; i++)\r\n        {\r\n            int x = t.first + dx[i], y = t.second + dy[i];\r\n            if (x >= 0 && x < rows && y >= 0 && y < cols)\r\n                q.push({ x,y });\r\n        }\r\n    }\r\n    return res;\r\n}\r\nint main()\r\n{\r\n    int ans;\r\n    cin >> k >> m >> n;\r\n    ans = bfs(k, m, n);\r\n    cout << ans;\r\n}\r\n"
         }
       ],
+      "LinK53": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK53.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK54": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK54.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK55": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK55.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK56": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK56.cpp",
+          "language": "cpp",
+          "code": "//游戏链接：https://www.albinoblacksheep.com/games/bloxorz\r\n\r\n"
+        }
+      ],
       "LinK57": [
         {
           "variant": 1,
@@ -1716,7 +1890,37 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "code": "#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n#include<queue>\r\n\r\nusing namespace std;\r\n\r\ntypedef pair<int,int> PII;\r\n\r\nconst int N =1e6+10;\r\n\r\nint m,n;//行、列\r\nint h[N],w[N],e[N],ne[N],idx;//数组模拟链表\r\nint dist[N];//距离\r\nbool st[N];//状态\r\n\r\nvoid add(int a,int b,int c)\r\n{\r\n    e[idx]=b,w[idx]=c,ne[idx]=h[a],h[a]=idx++;\r\n}\r\n\r\nint dijkstra()\r\n{\r\n    memset(dist,0x3f,sizeof dist);\r\n    dist[1]=0;\r\n    priority_queue<PII,vector<PII>,greater<PII>>heap;\r\n\r\n    heap.push({0,1});\r\n    while(heap.size())\r\n    {\r\n        auto t=heap.top();\r\n        heap.pop();\r\n    \r\n        int ver=t.second,distance=t.first;\r\n\r\n        if(st[ver])continue;\r\n        st[ver]=true;\r\n        for(int i=h[ver];i!=-1;i=ne[i])\r\n        {\r\n            int j=e[i];\r\n            if(dist[j]>dist[ver]+w[i])\r\n            {\r\n                dist[j]=dist[ver]+w[i];\r\n                heap.push({dist[j],j});\r\n            }\r\n        }\r\n    }\r\n    if(dist[n]==0x3f3f3f3f)return -1;\r\n    return dist[n];\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d%d\",&n,&m);\r\n    memset(h,-1,sizeof h);\r\n    while(m--)\r\n    {\r\n        int a,b,c;\r\n        scanf(\"%d%d%d\",&a,&b,&c);\r\n        add(a,b,c);\r\n\r\n    }\r\n    cout<<dijkstra()<<endl;\r\n    return 0;\r\n\r\n\r\n}"
         }
       ],
-      "Link62": [
+      "LinK59": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK59.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK60": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK60.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK61": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK61.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK62": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK62.cpp",
+          "language": "cpp",
+          "code": "//数字三角形DP\r\n\r\n//从三角形底部网上计算\r\n//每一个点计算下面两条路线的最大值\r\n\r\n\r\n#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint n;\r\nint w[N][N],f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=1;j<=i;j++)   \r\n            cin>>w[i][j];\r\n    for(int i=1;i<=n;i++)f[n][i]=w[n][i];//初始化最后一行\r\n\r\n    for(int i=n-1;i;i--)\r\n        for(int j=1;j<=i;j++)\r\n            f[i][j]=max(f[i+1][j]+w[i][j],f[i+1][j+1]+w[i][j]);//每一个点计算下面两条路线的最大值\r\n    cout<<f[1][1]<<endl;//最终累加到f(1,1)\r\n\r\n\r\n    return 0;\r\n}"
+        },
         {
           "variant": 2,
           "path": "solutions/362/Link62-2.cpp",
@@ -1724,7 +1928,13 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "code": "//从三角形底部网上计算\r\n//每一个点计算下面两条路线的最大值\r\n//优化版\r\n#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint n;\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=1;j<=i;j++)   \r\n            cin>>f[i][j];\r\n\r\n    for(int i=n-1;i;i--)\r\n        for(int j=1;j<=i;j++)\r\n            f[i][j]+=max(f[i+1][j],f[i+1][j+1]);//每一个点计算下面两条路线的最大值\r\n    cout<<f[1][1]<<endl;\r\n\r\n\r\n    return 0;\r\n}"
         }
       ],
-      "Link63": [
+      "LinK63": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK63.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品\r\n        for(int j=0;j<=m;j++)//枚举体积\r\n        {\r\n            f[i][j]=f[i-1][j];//不选第i个，取集合左边（假设i不行）\r\n            if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果i可以）\r\n                f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);//比较价值大小\r\n        }\r\n    cout<<f[n][m]<<endl;//循环后面背包放不下就会传递都到最后一个f[n][m]中；\r\n}"
+        },
         {
           "variant": 2,
           "path": "solutions/362/Link63-2.cpp",
@@ -1732,12 +1942,122 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n        for(int j=0;j<=m;j++)//枚举体积\r\n        {\r\n            f[j]=f[j];//左半边（如果不选）\r\n            if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果可以选）\r\n                f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n            //f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);\r\n        }\r\n    cout<<f[n][m]<<endl;\r\n}"
         }
       ],
-      "Link64": [
+      "LinK64": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK64.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\n\r\nusing namespace std;\r\nconst int N=1010;\r\nint f[N][N];\r\nint v[N],w[N];//V为体积，W为价格\r\n\r\nint main()\r\n{\r\n    int n,m;\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)\r\n        cin>>v[i]>>w[i];//存储数据\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n    {\r\n        for(int j=0;j<=m;j++)//枚举体积数\r\n        {\r\n            for(int k=0;k*v[i]<=j;k++)//同一个物品选的个数\r\n            {\r\n                f[i][j]=max(f[i][j],f[i-1][j-k*v[i]]+k*w[i]);\r\n            }\r\n        }\r\n    }\r\n\r\n    cout<<f[n][m]<<endl;\r\n}"
+        },
         {
           "variant": 2,
           "path": "solutions/362/Link64-2.cpp",
           "language": "cpp",
           "code": "#include<iostream>\r\n\r\nusing namespace std;\r\nconst int N=1010;\r\nint f[N];\r\nint v[N],w[N];//V为体积，W为价格\r\n\r\nint main()\r\n{\r\n    int n,m;\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)\r\n        cin>>v[i]>>w[i];//存储数据\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n    {\r\n        for(int j=v[i];j<=m;j++)//枚举体积数\r\n        {\r\n            f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n        }\r\n    }\r\n\r\n    cout<<f[m]<<endl;\r\n}"
+        }
+      ],
+      "LinK65": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK65.cpp",
+          "language": "cpp",
+          "code": "//与完全背包区别，有个数限制\r\n//数据范围较小\r\n#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=110;\r\nint n,m;\r\nint f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;//物品数，容积\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int v,w,s;\r\n        cin>>v>>w>>s;//体积，价值，件数\r\n        for(int j=m;j>=0;j--)\r\n        {\r\n            for(int k=1;k<=s&&k*v<=j;k++)\r\n                f[j]=max(f[j],f[j-k*v]+k*w);\r\n        }\r\n    }\r\n    cout<<f[m]<<endl;\r\n\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK66": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK66.cpp",
+          "language": "cpp",
+          "code": "//……\r\n//数据范围较大\r\n//二进制优化方法\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=12010,M=2010;\r\nint n,m;\r\nint v[N],w[N];\r\nint f[M];//体积<M\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;//物品数，容积\r\n    int cnt=0;//分组的组别\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        int a,b,s;\r\n        cin>>a>>b>>s;//体积，价值，件数\r\n        int k=1;//组别内的个数\r\n        while(k<=s)\r\n        {\r\n            cnt++;\r\n            v[cnt]=a*k;\r\n            w[cnt]=b*k;\r\n            s-=k;//s要减小\r\n            k*=2;//组别个数增加\r\n        }\r\n        //剩余的一组\r\n        if(s>0)\r\n        {\r\n            cnt++;\r\n            v[cnt]=a*s;\r\n            w[cnt]=b*s;\r\n        }\r\n    }\r\n    n=cnt;\r\n\r\n    for(int i=1;i<=n;i++)\r\n        for(int j=m;j>=v[i];j--)\r\n            f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n    cout<<f[m]<<endl;\r\n\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK67": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK67.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\n#include<cstdio>\r\nusing namespace std;\r\n\r\nint n,m;\r\nint v[110][110],w[110][110],f[110],s[110];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n           cin>>s[i];\r\n        for(int j=1;j<=s[i];j++)\r\n        {\r\n            cin>>v[i][j]>>w[i][j];\r\n        }\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=m;j>=1;j--)\r\n        {\r\n            for(int k=1;k<=s[i];k++)\r\n            {\r\n                if(v[i][k]<=j)\r\n                {\r\n                    f[j]=max(f[j],f[j-v[i][k]]+w[i][k]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n    cout<<f[m];\r\n    return 0;\r\n\r\n}"
+        }
+      ],
+      "LinK68": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK68.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1007;\r\nint n,m;\r\nint f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    //枚举物品\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int v,w,s;\r\n        cin>>v>>w>>s;\r\n        //根据s分成三类处理\r\n        if(!s)//完全背包\r\n        {\r\n            for(int j=v;j<=m;j++)//枚举体积\r\n                f[j]=max(f[j],f[j-v]+w);\r\n        }\r\n        else \r\n        {\r\n            if(s==-1)s=1;//转换为多重背包物品只有1件的求解方法\r\n            //解多重背包的问题，采用二进制优化\r\n            for(int k=1;k<=s;k*=2)\r\n            {\r\n                for(int j=m;j>=k*v;j--)\r\n                    f[j]=max(f[j],f[j-k*v]+k*w);\r\n                s-=k;\r\n            }\r\n            if(s)\r\n            {\r\n                for(int j=m;j>=s*v;j--)\r\n                    f[j]=max(f[j],f[j-s*v]+s*w);\r\n            }\r\n        }\r\n    }\r\n    cout<<f[m]<<endl;\r\n    return 0;\r\n\r\n\r\n}"
+        }
+      ],
+      "LinK69": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK69.cpp",
+          "language": "cpp",
+          "code": "//数字三角形DP\r\n\r\n//闫氏DP分析法\r\n//状态分析\r\n//状态表示\r\n\r\n\r\n//优化后，优化思路同Link62数字三角形法2\r\n#include<iostream>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint T,n,m;\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>T;\r\n    while(T--)\r\n    {\r\n        cin>>n>>m;\r\n        for(int i=1;i<=n;i++)\r\n            for(int j=1;j<=m;j++)\r\n                cin>>f[i][j];\r\n\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            for(int j=1;j<=m;j++)\r\n            {\r\n                f[i][j]+=max(f[i-1][j],f[i][j-1]);\r\n            }\r\n        }\r\n        cout<<f[n][m]<<endl;\r\n    }\r\n\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK70": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK70.cpp",
+          "language": "cpp",
+          "code": "//数字三角形DP\n\n//必须在(2N - 1)个单位时间穿越出去\n//不可走回头路\n\n#include <iostream>\nusing namespace std;\n\nconst int N=110,INF = 1e9;\nint n;\nint w[N][N];\nint f[N][N];\nint main() {\n    ios::sync_with_stdio(false);//提升速度，禁用scsanf，printf\n    cin.tie(nullptr);//cin 不再强制刷新 cout，进一步节省了时间\n\n    cin>>n;\n    for(int i=1;i<=n;i++)\n        for(int j=1;j<=n;j++)\n            cin>>w[i][j];\n    for(int i=1;i<=n;i++)\n        for(int j=1;j<=n;j++)\n            if(i==1&&j==1)f[i][j]=w[i][j];//特判左上角\n            else{\n                f[i][j]=INF;//初始化\n                if(i>1)f[i][j]=min(f[i][j],f[i-1][j]+w[i][j]);//只有不在第一行才可以从上面过来\n                //第一列只能运算该式子\n                if(j>1)f[i][j]=min(f[i][j],f[i][j-1]+w[i][j]);//只有不在第一列才可以从左边过来\n                //第一行只能运算该式子\n                //其余的两个均运算并比较大小\n            }\n\n            cout<<f[n][n]<<endl;\n\n    return 0;\n}\n"
+        }
+      ],
+      "LinK71": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK71.cpp",
+          "language": "cpp",
+          "code": "//线性DP\r\n//外层循环所有以i结尾是上升子序列\r\n//内层循环找到所有比a[i]小的假设放入并比较大小\r\n#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint n;\r\nint a[N],f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=1;i<=n;i++)cin>>a[i];\r\n\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        f[i]=1;//只有a[i]一个数\r\n        for(int j=1;j<i;j++)\r\n        {\r\n            if(a[j]<a[i])//既然 a[j] < a[i]，那么以 a[i] 结尾的新序列长度 = 以 a[j] 结尾的最长长度 + 1（当前这个数）\r\n                f[i]=max(f[i],f[j]+1);//从1~j的子序列+1，实质是找前面的每列序列最大\r\n        }\r\n    }\r\n    int res=0;\r\n    for(int i=1;i<=n;i++)res=max(res,f[i]);\r\n    cout<<res<<endl;\r\n\r\n    return 0;\r\n}\r\n//总结：线性DP\r\n"
+        }
+      ],
+      "LinK72": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK72.cpp",
+          "language": "cpp",
+          "code": "//利用二分法查找\r\n//相比上一个大大优化了时间长度（Olog(n)）\r\n#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\nconst int N=100010;\r\nint n;\r\nint a[N];\r\nint q[N];//q[len] 存储的是：长度为 len 的上升子序列中，最小的结尾元素值。\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&n);\r\n    for(int i=0;i<n;i++)cin>>a[i];\r\n\r\n    int len=0;//记录当前最长上升子序列的长度\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        int l=0,r=len;//二分查找\r\n        while(l<r)//找最后一个小于 a[i] 的位置（可能是在末尾就使len变长）（结束条件l==r）\r\n        {\r\n            int mid=l+r+1>>1;\r\n            if(q[mid]<a[i])l=mid;\r\n            else r=mid-1;\r\n        }\r\n        len=max(len,r+1);//如果插入后会使len变大就放入\r\n        q[r+1]=a[i];\r\n    }\r\n\r\n    cout<<len;\r\n}\r\n\r\n//总结：二分法优化"
+        }
+      ],
+      "LinK73": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK73.cpp",
+          "language": "cpp",
+          "code": "//求最长下降子序列，结尾越大越好\r\n//求最少下降子序列覆盖全部\r\n\r\n#include<iostream>\r\n#include<sstream>//stream stream输入流\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=1010;\r\nint n;\r\nint h[N],f[N],q[N];\r\n\r\nint main()\r\n{\r\n    string line;\r\n    getline(cin,line);\r\n    stringstream ssin(line);//后面的ssin=cin\r\n    while(ssin>>h[n])n++;\r\n\r\n    int res=0,cnt=0;//cnt 表示当前 q 中有效元素的个数\r\n    for(int i=0;i<n;i++)\r\n    {\r\n        f[i]=1;\r\n        for(int j=0;j<i;j++)//同最长上升子序列\r\n            if(h[i]<=h[j])\r\n                f[i]=max(f[i],f[j]+1);\r\n        res=max(res,f[i]);\r\n\r\n        int k=0;//贪心算法\r\n        while(k<cnt&&q[k]<h[i])k++;//从 q[0] 开始向后找，找到第一个 >= h[i] 的位置。\r\n        if(k==cnt)q[cnt++]=h[i];//说明所有列的末尾都比 h[i] 矮，没有列能接住他 → 新建一列\r\n        else q[k]=h[i];//否则，找到了能接住他的列（第 k 列）→ 把他放在这一列的末尾，更新这一列的末尾为 h[i]\r\n\r\n    }\r\n    cout<<res<<endl;;\r\n    cout<<cnt<<endl;;\r\n\r\n\r\n    return 0;\r\n\r\n}"
+        }
+      ],
+      "LinK75": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK75.cpp",
+          "language": "cpp",
+          "code": ""
+        }
+      ],
+      "LinK76": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK76.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\nusing namespace std;\r\n//只能合并相邻的两堆\r\nconst int N=310;\r\nint n;\r\nint s[N];\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    for(int i=1;i<=n;i++)cin>>s[i],s[i]+=s[i-1];//存储前缀和\r\n\r\n    for(int len=2;len<=n;len++)//合并长度从2开始枚举\r\n    {\r\n        for(int i=1;i+len-1<=n;i++)//i为区间左端点\r\n        {\r\n            int j=i+len-1;//j为区间右端点\r\n            f[i][j]=1e8;//初始化最大值，要求最小值\r\n            for(int k=i;k<j;k++)\r\n            {\r\n                f[i][j]=min(f[i][j],f[i][k]+f[k+1][j]+s[j]-s[i-1]);//分为i到k和k+1到j加上最后合并两堆的代价（为所有石头的和）\r\n            }\r\n        }\r\n    }\r\n    cout<<f[1][n]<<endl;\r\n\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK78": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK78.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\n#include<cstring>\r\n#include<cstdio>\r\n#include<algorithm>\r\nusing namespace std;\r\n\r\n\r\ntypedef pair<int, int>PII;\r\nconst int N=50;\r\n\r\nint n;\r\nint w[N];\r\nunsigned f[N][N];// f[l][r] 表示中序遍历区间 [l, r] 构成的二叉树的最大加分\r\nint root[N][N];// root[l][r] 记录区间 [l, r] 获得最大加分时的根节点编号，用于最终建树输出\r\n\r\nvoid dfs(int l,int r)\r\n{\r\n    if(l>r)return;\r\n\r\n    int k=root[l][r];\r\n    printf(\"%d \",k);//输出根节点\r\n    dfs(l,k-1);\r\n    dfs(k+1,r);\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&n);\r\n    for(int i=1;i<=n;i++)scanf(\"%d\",&w[i]);\r\n    for(int len=1;len<=n;len++)//枚举区间长度\r\n    {\r\n        for(int l=1;l+len-1<=n;l++)//枚举左端点\r\n        {\r\n            int r=l+len-1;//计算右端点\r\n\r\n            for(int k=l;k<=r;k++)//枚举当前区间l到r\r\n            {\r\n                int left=k==l?1:f[l][k-1];//如果左子树为空（k==1），为1\r\n                int right=k==r?1:f[k+1][r];\r\n\r\n                int score=left*right+w[k];//计算分数（左*右+中）\r\n                if(l==r)score=w[k];\r\n\r\n                if(f[l][r]<score)//当前方案得分更高\r\n                {\r\n                    f[l][r]=score;//更改记录\r\n                    root[l][r]=k;\r\n                }\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n    printf(\"%d\\n\",f[1][n]);\r\n    dfs(1,n);\r\n    puts(\"\");\r\n\r\n    return 0;\r\n}"
+        }
+      ],
+      "LinK80": [
+        {
+          "variant": 1,
+          "path": "solutions/362/LinK80.cpp",
+          "language": "cpp",
+          "code": "#include<iostream>\r\n#include<cstring>\r\n#include<algorithm>\r\n\r\nusing namespace std;\r\n\r\nconst int N=6010;\r\nint n;\r\nint h[N],e[N],ne[N],idx;\r\nint happy[N];\r\nint f[N][2];\r\nbool has_fa[N];\r\n\r\nvoid add(int a,int b)\r\n{\r\n    e[idx]=b,ne[idx]=h[a],h[a]=idx++;\r\n}\r\n\r\nvoid dfs(int u)\r\n{\r\n    f[u][1]=happy[u];\r\n\r\n    for(int i=h[u];~i;i=ne[i])\r\n    {\r\n        int j=e[i];\r\n        dfs(j);\r\n\r\n        f[u][1]+=f[j][0];\r\n        f[u][0]+=max(f[j][0],f[j][1]);\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    scanf(\"%d\",&n);\r\n    for(int i=1;i<=n;i++)scanf(\"%d\",&happy[i]);\r\n\r\n    memset(h,-1,sizeof h);\r\n    for(int i=0;i<n-1;i++)\r\n    {\r\n        int a,b;\r\n        scanf(\"%d%d\",&a,&b);\r\n        add(b,a);\r\n        has_fa[a]=true;\r\n    }\r\n\r\n    int root=1;\r\n    while(has_fa[root])root++;\r\n\r\n    dfs(root);\r\n\r\n    printf(\"%d\\n\",max(f[root][0],f[root][1]));\r\n\r\n    return 0;\r\n}"
         }
       ]
     }

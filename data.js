@@ -333,6 +333,30 @@ window.XMUOJ_SOLUTIONS_DATA = {
           }
         },
         {
+    "id": "LinK14.5",
+    "title": "DFS试炼之n皇后问题",
+    "url": "http://www.xmuoj.com/contest/362/problem/LinK14.5/",
+    "timeLimit": 1000,
+    "memoryLimit": 256,
+    "description": "<p><span style=\"color: rgb(51, 51, 51);\">n-皇后问题是指将 n 个皇后放在 n∗n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。</span><br /></p><p><span style=\"color: rgb(51, 51, 51);\"><img alt=\"image.png\" src=\"assets/problem-images/LinK14.5-2a5a85ea0922.png\" width=\"256\" height=\"272\" /><br /></span></p><p><span style=\"color: rgb(227, 55, 55);\">数据范围:1&lt;=n&lt;=12</span></p>",
+    "inputDescription": "<p><span style=\"color: rgb(51, 51, 51);\">共一行，包含整数n。</span><br /></p>",
+    "outputDescription": "<p style=\"margin-left: 0px;\">每个解决方案占n行，每行输出一个长度为n的字符串，用来表示完整的棋盘状态。</p><p>其中\".\"表示某一个位置的方格状态为空，\"Q\"表示某一个位置的方格上摆着皇后。</p><p>每个方案输出完成后，输出一个空行。</p><p>输出方案的顺序请根据样例，按照次序从小到大，从左到右输出。</p>",
+    "hint": "<p><a href=\"https://www.acwing.com/problem/content/845/\" target=\"_blank\">原题链接</a></p><p><a href=\"https://www.acwing.com/video/275/\" target=\"_blank\">Y总讲解</a></p>",
+    "source": "xmu",
+    "samples": [
+      {
+        "input": "4",
+        "output": ".Q..\\n...Q\\nQ...\\n..Q.\\n\\n..Q.\\nQ...\\n...Q\\n.Q.."
+      }
+    ],
+    "solution": {
+      "path": "solutions/362/LinK14.5.cpp",
+      "language": "cpp",
+      "code": "//只是n皇后换一下记录方式而已\r\n#include<iostream>\r\n#include<vector>\r\n//行从0开始，列从1开始\r\nusing namespace std;\r\n\r\nint N;\r\nvector<vector<char>>res;\r\n\r\n\r\nbool xiebian(int r,int c)//只需要检查上方\r\n{\r\n    for(int i=r,j=c;i>=0&&j>=1;j--,i--)\r\n    {\r\n        if(res[i][j]=='Q')\r\n            return false;\r\n    }\r\n    for(int i=r,j=c;i>=0&&j<=N;j++,i--)\r\n    {\r\n        if(res[i][j]=='Q')\r\n            return false;\r\n    }\r\n    return true;\r\n}\r\n\r\nvoid dfs(int n)\r\n{\r\n    if(n>=N)\r\n    {\r\n        for(int i=0;i<N;i++)\r\n        {\r\n            for(int j=1;j<=N;j++)\r\n            {\r\n                cout<<res[i][j];\r\n            }\r\n            cout<<endl;\r\n        }\r\n        cout<<endl;\r\n        return;//必须有return\r\n    }\r\n    for(int i=1;i<=N;i++)\r\n    {\r\n        int k;\r\n        for(k=0;k<n;k++)//检查列\r\n        {\r\n            if(res[k][i]=='Q')break;\r\n        }\r\n        if(!xiebian(n,i))continue;//检查斜边\r\n        if(k==n)\r\n        {\r\n            res[n][i]='Q';//设置路径\r\n            dfs(n+1);\r\n            res[n][i]='.';//恢复现场\r\n            \r\n        }\r\n    }\r\n\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>N;\r\n    res.resize(N, vector<char>(N+1, '.'));//初始化为'.'\r\n    dfs(0);\r\n\r\n    return 0;\r\n}"
+    }
+        },
+
+        {
           "id": "LinK15",
           "title": "爬天梯",
           "url": "http://www.xmuoj.com/contest/362/problem/LinK15/",
