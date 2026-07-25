@@ -1,50 +1,81 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <cmath>
 using namespace std;
 
-int a, b;
+// 预计算10的幂次
+int p10[10] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};
 
-// 得到一个数中某几个相邻的数字构成的数值
-// 一定要记住从高位往低位遍历
-int get_num(vector<int> num, int l, int r){
+// 获取数字n中从第l位到第r位构成的数值（从高位到低位）
+// 例如：num = [1,2,3,4]（表示数字1234），l=3, r=1，返回234
+int get_num(vector<int>& num, int l, int r) {
+    if (l < r) return 0;
     int ans = 0;
-    for (int i = l; i >= r; i --) ans = ans * 10 + num[i];
+    for (int i = l; i >= r; i--) {
+        ans = ans * 10 + num[i];
+    }
     return ans;
 }
 
-// 计算1到n的所有的数中数字x出现的次数
-int count(int n, int x){
+// 统计从1到n中数字x出现的次数
+int count(int n, int x) {
+    if (n <= 0) return 0;
+    
+    // 将n的每一位存入数组，num[0]存个位
     vector<int> num;
-    while (n){
+    while (n) {
         num.push_back(n % 10);
         n /= 10;
     }
-    int len = num.size(), ans = 0;
-    for (int i = len - 1 - !x; i >= 0; i --){ // 此处减去 !x 是精华
-        // 000 ~ abc-1
-        ans += get_num(num, len - 1, i + 1) * (int)pow(10, i);
-        if (!x) ans -= (int)pow(10, i);  // x==0时，001 ~ abc-1
-        // abc
-        if (x == num[i]) ans += (get_num(num, i - 1, 0) + 1);
-        else if (x < num[i]) ans += (int)pow(10, i);
+    
+    int len = num.size();
+    int ans = 0;
+    
+    // 从高位向低位遍历
+    // 如果x==0，跳过最高位，因为最高位不能为0
+    for (int i = len - 1 - (x == 0); i >= 0; i--) {
+        // 当前位左边的高位部分
+        int high = get_num(num, len - 1, i + 1);
+        // 当前位右边的低位部分的位数
+        int low_len = i;
+        
+        // 情况1：高位部分取 0 到 high-1
+        // 当前位固定为x，低位任意
+        ans += high * p10[low_len];
+        
+        // 当x==0时，高位不能全为0（否则会产生前导零）
+        if (x == 0) {
+            ans -= p10[low_len];
+        }
+        
+        // 情况2：高位部分取 high
+        // 比较当前位数字与x的关系
+        if (num[i] == x) {
+            // 当前位相等，低位取 0 到 low_num
+            int low_num = get_num(num, i - 1, 0);
+            ans += (low_num + 1);
+        } else if (num[i] > x) {
+            // 当前位大于x，低位任意
+            ans += p10[low_len];
+        }
+        // 如果当前位小于x，贡献为0
     }
+    
     return ans;
-
 }
 
-int main(){
-    while (cin >> a >> b, a || b){ // a b 不全为0
+int main() {
+    int a, b;
+    while (cin >> a >> b) {
+        if (a == 0 && b == 0) break;
         if (a > b) swap(a, b);
-        for (int i = 0; i <= 9; i ++) printf("%d ", count(b, i) - count(a - 1, i));
-        puts("");
+        
+        for (int i = 0; i < 10; i++) {
+            int result = count(b, i) - count(a - 1, i);
+            if (i > 0) cout << " ";
+            cout << result;
+        }
+        cout << endl;
     }
-
     return 0;
 }
-
-// 作者：Qiner
-// 链接：https://www.acwing.com/file_system/file/content/whole/index/content/12793336/
-// 来源：AcWing
-// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

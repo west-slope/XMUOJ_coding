@@ -1,3 +1,4 @@
+//广搜
 #include <iostream>
 #include<vector>
 #include<queue>
@@ -5,7 +6,7 @@
 using namespace std;
 int k, m, n;
 
-int get_int_sum(int x)
+int get_int_sum(int x)//用于计算行列坐标和
 {
     int s = 0;
     while (x)s += x % 10, x /= 10;//取出每个位的值加到s
@@ -33,7 +34,7 @@ int bfs(int threshold, int rows, int cols)
 
     int res = 0;
     q.push({ 0,0 });
-    while (q.size())
+    while (q.size())//广搜模板
     {
         auto t = q.front();
         q.pop();
@@ -57,3 +58,6 @@ int main()
     ans = bfs(k, m, n);
     cout << ans;
 }
+
+//总结：广搜模板加上判断区域
+

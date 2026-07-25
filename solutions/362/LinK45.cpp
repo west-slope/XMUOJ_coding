@@ -1,3 +1,4 @@
+//数独
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -5,7 +6,7 @@ const int N=9;
 const int M=3;
 int a[N][N],b[N][N];
 bool st[N+1];
-
+//初始化地图
 string memory[N]{{"530070000"},{"600195000"},{"098000060"},
                 {"800060003"},{"400803001"},{"700020006"},
                 {"060000280"},{"000419005"},{"000080079"}};
@@ -102,4 +103,8 @@ int main()
         cout<<"Yes"<<endl;
     }
     else cout<<"No"<<endl;
+
+    return 0;
 }
+
+//判断行列和3*3是否冲突，有无解

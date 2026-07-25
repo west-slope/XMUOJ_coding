@@ -1,3 +1,4 @@
+//广搜
 #include <iostream>
 #include<algorithm>
 #include<queue>
@@ -9,11 +10,11 @@ const int N = 25;
 int n, m;
 char g[N][N];
 
-int bfs(int sx,int sy)
+int bfs(int sx,int sy)//广搜模板
 {
-    queue<PII>q;
+    queue<PII>q;//队列
     q.push({ sx,sy });
-    g[sx][sy] = '#';
+    g[sx][sy] = '#';//墙
     int res = 0;
     int dx[] = { -1,0,1,0 }, dy[] = { 0,1,0,-1 };
     while (q.size())
@@ -39,7 +40,7 @@ int bfs(int sx,int sy)
 
 int main()
 {
-    while (cin >> m >> n && n || m)
+    while (cin >> m >> n && n || m)//读取数据并标记起点
     {
         for (int i = 0; i < n; i++)cin >> g[i];
         int x, y;

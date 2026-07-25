@@ -1,3 +1,4 @@
+//数独+深搜
 #include<iostream>
 #include<algorithm>
 #include<string>
@@ -100,3 +101,4 @@ int main()
         cout<<endl;
     }
 }
+//总结：利用二进制进行剪枝

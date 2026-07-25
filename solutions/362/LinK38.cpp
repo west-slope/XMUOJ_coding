@@ -1,3 +1,4 @@
+//深搜
 #include<iostream>
 using namespace std;
 
@@ -30,3 +31,5 @@ int main()
     cout<<dfs(0,N/2,n);
     return 0;
 }
+
+//总结：套用深搜模板
