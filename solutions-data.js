@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/25 11:19:25",
+  "generatedAt": "2026/7/26 11:07:54",
   "solutions": {
     "359": {
       "100": [
@@ -205,7 +205,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/359/124.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\n//题目出错\r\nint main()\r\n{\r\n    int n,m,q;\r\n    int a[1001][1001]={0},s[1001][1001]={0},sum=0;\r\n    cin>>n>>m>>q;\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            \r\n        }\r\n    }\r\n    int x1,y1,x2,y2,c;\r\n    while(q--)\r\n    {\r\n        cin>>x1>>y1>>x2>>y2>>c;\r\n        s[x1][y1] += c;\r\n        if(y2 + 1 <= m) s[x1][y2 + 1] -= c;\r\n        if(x2 + 1 <= n) s[x2 + 1][y1] -= c;\r\n        if(x2 + 1 <= n && y2 + 1 <= m) s[x2 + 1][y2 + 1] += c;\r\n    }\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n           s[i][j] += s[i-1][j] + s[i][j-1] - s[i-1][j-1];\r\n            a[i][j] += s[i][j];\r\n            cout<<a[i][j]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n}"
+          "code": "#include <bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main() {\r\n    ios::sync_with_stdio(false);\r\n    cin.tie(nullptr);\r\n    int n, m, q;\r\n    cin >> n >> m >> q;\r\n    vector<vector<long long>> b(n + 2, vector<long long>(m + 2));\r\n    auto add = [&](int x1, int y1, int x2, int y2, long long c) {\r\n        b[x1][y1] += c;\r\n        b[x2 + 1][y1] -= c;\r\n        b[x1][y2 + 1] -= c;\r\n        b[x2 + 1][y2 + 1] += c;\r\n    };\r\n    for (int i = 1; i <= n; ++i)\r\n        for (int j = 1; j <= m; ++j) {\r\n            long long x;\r\n            cin >> x;\r\n            add(i, j, i, j, x);\r\n        }\r\n    while (q--) {\r\n        int x1, y1, x2, y2;\r\n        long long c;\r\n        cin >> x1 >> y1 >> x2 >> y2 >> c;\r\n        add(x1, y1, x2, y2, c);\r\n    }\r\n    for (int i = 1; i <= n; ++i) {\r\n        for (int j = 1; j <= m; ++j) {\r\n            b[i][j] += b[i - 1][j] + b[i][j - 1] - b[i - 1][j - 1];\r\n            cout << b[i][j] << (j == m ? '\\n' : ' ');\r\n        }\r\n    }\r\n    return 0;\r\n}"
         }
       ],
       "125": [
