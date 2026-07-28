@@ -69,6 +69,14 @@
     return getContest(state.activeContestId) || (data.contests || [])[0];
   }
 
+  function updatedAtText() {
+    const generatedAt = bundledSolutions.generatedAt || data.generatedAt;
+    if (!generatedAt) return "未导入";
+    const match = String(generatedAt).match(/(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})/);
+    if (!match) return "更新于 " + generatedAt;
+    return "更新于 " + match[1] + "/" + Number(match[2]) + "/" + Number(match[3]);
+  }
+
   function contestShortTitle(contest) {
     const title = contest && contest.title ? contest.title : "";
     if (String(contest && contest.id) === "359") return "剑道试炼";
@@ -446,7 +454,7 @@
     const solvedCount = contests.reduce((total, contest) => total + (contest.problems || []).filter(hasKnownSolution).length, 0);
     els.homeProblemCount.textContent = '共 ' + problemCount + ' 道题';
     els.homeSolvedCount.textContent = '已整理 ' + solvedCount + ' 份答案';
-    els.homeUpdatedAt.textContent = data.generatedAt ? '更新于 ' + data.generatedAt : '未导入';
+    els.homeUpdatedAt.textContent = updatedAtText();
   }
 
   function renderHomeCards() {
@@ -534,7 +542,7 @@
       localStorage.setItem("xmuoj.sidebarCollapsed", state.sidebarCollapsed ? "1" : "0");
       applySidebarState();
     });
-    els.generatedAt.textContent = data.generatedAt ? '更新于 ' + data.generatedAt : "未导入";
+    els.generatedAt.textContent = updatedAtText();
     els.searchInput.addEventListener("input", (event) => {
       state.query = event.target.value.trim();
       renderNav();
