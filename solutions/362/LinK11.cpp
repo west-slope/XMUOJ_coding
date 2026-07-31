@@ -13,7 +13,8 @@ void dfs(int u)//已排列的个数
     {
         for(int i=1;i<=n;i++)
         {
-            cout<<path[i]<<" ";
+            if(i>1)cout<<" ";
+            cout<<path[i];
         }
         cout<<endl;
     }
