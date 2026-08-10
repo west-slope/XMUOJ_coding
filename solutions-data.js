@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/7/26 11:07:54",
+  "generatedAt": "2026/8/10 20:51:54",
   "solutions": {
     "359": {
       "100": [
@@ -1491,7 +1491,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 1,
           "path": "solutions/362/LinK11.cpp",
           "language": "cpp",
-          "code": "//递归算法\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=15;\r\nint n;\r\nbool st[N];\r\nint path[N];\r\n\r\nvoid dfs(int u)//已排列的个数\r\n{\r\n    if(u>n)//递归出口\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            cout<<path[i]<<\" \";\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                path[u]=i;//设置路径\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                path[u]=0;//恢复现场（避免i+1传入出现问题）\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);//从第一个开始\r\n\r\n    return 0;\r\n}\r\n//总结：递归应包含设计路径和恢复现场，避免影响以后的循环"
+          "code": "//递归算法\r\n#include<iostream>\r\nusing namespace std;\r\n\r\nconst int N=15;\r\nint n;\r\nbool st[N];\r\nint path[N];\r\n\r\nvoid dfs(int u)//已排列的个数\r\n{\r\n    if(u>n)//递归出口\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(i>1)cout<<\" \";\r\n            cout<<path[i];\r\n        }\r\n        cout<<endl;\r\n    }\r\n    else{\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            if(!st[i])\r\n            {\r\n                path[u]=i;//设置路径\r\n                st[i]=true;\r\n                dfs(u+1);\r\n                path[u]=0;//恢复现场（避免i+1传入出现问题）\r\n                st[i]=false;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main()\r\n{\r\n    cin>>n;\r\n    dfs(1);//从第一个开始\r\n\r\n    return 0;\r\n}\r\n//总结：递归应包含设计路径和恢复现场，避免影响以后的循环"
         }
       ],
       "LinK12": [
@@ -1939,7 +1939,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 2,
           "path": "solutions/362/Link63-2.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N][N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n        for(int j=0;j<=m;j++)//枚举体积\r\n        {\r\n            f[j]=f[j];//左半边（如果不选）\r\n            if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果可以选）\r\n                f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n            //f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);\r\n        }\r\n    cout<<f[n][m]<<endl;\r\n}"
+          "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n        for(int j=m;j>=v[i];j--)//枚举体积\r\n        {\r\n            //f[j]=f[j];//左半边（如果不选）\r\n            if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果可以选）\r\n                f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n            //f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);\r\n        }\r\n    cout<<f[m]<<endl;\r\n}"
         }
       ],
       "LinK64": [
