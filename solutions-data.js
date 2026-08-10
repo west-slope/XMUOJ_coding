@@ -1,5 +1,5 @@
 window.XMUOJ_SOLUTIONS_CODE = {
-  "generatedAt": "2026/8/10 20:51:54",
+  "generatedAt": "2026/8/10 21:01:07",
   "solutions": {
     "359": {
       "100": [
@@ -1939,7 +1939,7 @@ window.XMUOJ_SOLUTIONS_CODE = {
           "variant": 2,
           "path": "solutions/362/Link63-2.cpp",
           "language": "cpp",
-          "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n        for(int j=m;j>=v[i];j--)//枚举体积\r\n        {\r\n            //f[j]=f[j];//左半边（如果不选）\r\n            if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果可以选）\r\n                f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n            //f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);\r\n        }\r\n    cout<<f[m]<<endl;\r\n}"
+          "code": "#include<iostream>\r\nusing namespace std;\r\nint n,m;\r\nconst int N=1007;\r\nint v[N],w[N];\r\nint f[N];\r\n\r\nint main()\r\n{\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)cin>>v[i]>>w[i];//读取\r\n    for(int i=1;i<=n;i++)//枚举物品数\r\n        for(int j=m;j>=v[i];j--)//枚举体积,逆序保证前面的这轮还没被算过\r\n        {\r\n            //f[i][j]=f[i-1][j];//左半边（如果不选）\r\n            //if(j>=v[i])//剩余体积比第i个大，包含第i个的选法（如果可以选）\r\n                f[j]=max(f[j],f[j-v[i]]+w[i]);\r\n            //f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);\r\n        }\r\n    cout<<f[m]<<endl;\r\n}"
         }
       ],
       "LinK64": [
